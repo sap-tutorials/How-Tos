@@ -9,11 +9,11 @@ module.exports = function(file, callback) {
     check(["./work-in-progress/" + file + "/" + file + ".md"], function(result) {
         if (result) {
             //rename path of folder
-            fs.rename("./work-in-progress/" + file, "./tutorials/" + file, function() {
-                callback("tutorial moved");
+            fs.rename("./work-in-progress/" + file, "./how-to/" + file, function() {
+                callback("how-to moved");
             });
         } else {
-            callback("\ntutorials with errors can not be moved!\nCheck your file with \"node test.js -i " + file + ".md" + "\"");
+            callback("\nhow-tos with errors can not be moved!\nCheck your file with \"node test.js -i " + file + ".md" + "\"");
         }
     })
 

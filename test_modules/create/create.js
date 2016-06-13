@@ -11,7 +11,7 @@ module.exports = function(input, callback) {
         "---"
 
     //read content of template
-    fs.readFile('./templates/tutorial.md', 'utf8', function(err, data) {
+    fs.readFile('./templates/template.md', 'utf8', function(err, data) {
         //build file path
         var file = "./work-in-progress/" + input.filename + "/" + input.filename + '.md';
         //concatenate metadata with content of template

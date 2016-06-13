@@ -6,8 +6,8 @@ module.exports = function(filename, wholeName, callback) {
     // check first if filename equals folder name
     var folders = wholeName.split('/');
 
-    if (folders.length === 3 && folders[0] === 'tutorials') {
-        // there is no subfolder for tutorials allowed
+    if (folders.length === 3 && folders[0] === 'how-to') {
+        // there is no subfolder for how-tos allowed
         if (folders[1] !== fName) {
             return "there is no subfolder for tutorials allowed";
         }
