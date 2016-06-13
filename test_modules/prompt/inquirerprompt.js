@@ -45,7 +45,7 @@ var ask = function (array){
               ask(arraydeclaration.choiceinputarray2);
             }
             break;
-        case "from tutorials":
+        case "from how-to":
         //  //console.log("hallo tut");
           if (results.inputselection.length > 0 && results.inputselection.endsWith("*")){
             tutorialsgrouptutorials(results.inputselection);
@@ -76,7 +76,7 @@ var ask = function (array){
               wip();
             });
             break;
-        case "tutorials":
+        case "how-to":
             readtutorialnames(function (){
               tutorials();
             });
@@ -98,7 +98,7 @@ var ask = function (array){
         case "from wip":
               specificwip();
             break;
-        case "from tutorials":
+        case "from how-to":
               specifictutorials();
             break;
         default: ;
@@ -121,7 +121,7 @@ var ask = function (array){
 var readtutorialnames = function (callback){
   var fname;
   var i=0;
-  recursive('./tutorials', ['!*.md'],function (err, files) {
+  recursive('./how-to', ['!*.md'],function (err, files) {
     files.forEach(function(file){
       arraydeclaration.arraytutorials[0].choices[i]= {name: file };
       i++;

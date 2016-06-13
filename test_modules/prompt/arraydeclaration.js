@@ -11,11 +11,11 @@ exports.choicearray = [
   {
     type: "list",
     name: "scopetutorial",
-    message: "Which tutorial would you like to test?",
+    message: "Which how-to would you like to test?",
     choices: [
       "all",
       "wip",
-      "tutorials",
+      "how-to",
       "specific",
       "input"
     ]
@@ -28,10 +28,10 @@ exports.choice2array = [
   {
     type: "list",
     name: "scopetutorial",
-    message: "Which specific tutorials would you like to test?",
+    message: "Which specific how-tos would you like to test?",
     choices: [
       "from wip",
-      "from tutorials",
+      "from how-to",
     ]
   }
 ];
@@ -42,16 +42,16 @@ exports.choiceinputarray = [
   {
     type: "list",
     name: "inputscopetutorial",
-    message: "Which specific tutorials would you like to test?",
+    message: "Which specific how-tos would you like to test?",
     choices: [
       "from wip",
-      "from tutorials",
+      "from how-to",
     ]
   },
   {
     type: 'input',
     name: 'inputselection',
-    message: 'Which tutorials would you like to test? Enter beginning of filenames (you can start and or just end with *): '
+    message: 'Which how-tos would you like to test? Enter beginning of filenames (you can start and or just end with *): '
   }
 ];
 
@@ -60,22 +60,22 @@ exports.choiceinputarray2 = [
   {
     type: "list",
     name: "inputscopetutorial",
-    message: "Which specific tutorials would you like to test?",
+    message: "Which specific how-tos would you like to test?",
     choices: [
       "from wip",
-      "from tutorials",
+      "from how-to",
     ]
   },{
     type: 'input',
     name: 'inputselection',
-    message: 'input hast to end with * -> Which tutorials would you like to test? Enter beginning of filenames (you can start and or just end with *): '
+    message: 'input hast to end with * -> Which how-tos would you like to test? Enter beginning of filenames (you can start and or just end with *): '
   }
 ];
 
 //declaration of the array with all tutorials (folder: tutorial) (the input with the files comes later in another funtion)
 exports.arraytutorials = [
   {type: "checkbox",
-  message: "Choose tutorials which you would like to test",
+  message: "Choose how-tos which you would like to test",
   name: "specifictutorials", //"specificselection",
   choices: [
     ]
@@ -85,7 +85,7 @@ exports.arraytutorials = [
 //declaration of the array with all work-in-progress tutorials (folder: work-in-progress) (the input with the files comes later in another funtion)
 exports.arraywip = [
   {type: "checkbox",
-  message: "Choose specific tutorials from wip",
+  message: "Choose specific how-tos from wip",
   name: "specifictutorials", //"specificselection",
   choices: [
     ]

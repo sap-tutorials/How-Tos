@@ -47,7 +47,7 @@ if (options.progressbar){
 }
 
 if (options.help){
-  log.info("HELP: Your possibilities for the input: \n      -h or --help for Help \n      -f: to log all filenames, which get tested \n      -a: for testing everything (including files, which aren't tutorials) \n      -w & -t: for testing every tutorial in both folders \n      -w: for testing all files in the work-in-progress folder \n      -t: for testing all files in the tutorials folder \n      -s: for dialog to choose specific tutorials \n      -i: to give an filename behind with *\n          to resctrict the scope: enter -w or/and -t \n      -p: to turn off the progressbar ");
+  log.info("HELP: Your possibilities for the input: \n      -h or --help for Help \n      -f: to log all filenames, which get tested \n      -a: for testing everything (including files, which aren't how-tos) \n      -w & -t: for testing every how-to in both folders \n      -w: for testing all files in the work-in-progress folder \n      -t: for testing all files in the how-tos folder \n      -s: for dialog to choose specific how-tos \n      -i: to give an filename behind with *\n          to resctrict the scope: enter -w or/and -t \n      -p: to turn off the progressbar ");
 }
 
 else if (options.all){
