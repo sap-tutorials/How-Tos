@@ -1,0 +1,39 @@
+{
+  "name": "How-Tos",
+  "version": "1.0.0",
+  "description": "How-To documents for sap.com",
+  "main": "README.MD",
+  "license": "Apache-2.0",
+  "scripts": {
+    "test": "node test.js -pt"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAPDocuments/How-Tos.git"
+  },
+  "keywords": [
+    "sap",
+    "gthub",
+    "how-to",
+  ],
+  "author": "SAP",
+  "bugs": {
+    "url": "https://github.com/SAPDocuments/How-Tos/issues"
+  },
+  "homepage": "https://github.com/SAPDocuments/How-Tos#readme",
+  "engines": {
+    "node": "=>0.12.7",
+    "npm": "=>2.11.3"
+   },
+  "dependencies" : {},
+  "devDependencies": {
+    "checklink": "^1.0.0",
+    "color-log": "0.0.2",
+    "command-line-args": "^3.0.0",
+    "inquirer": "^1.0.3",
+    "markdown-spellcheck": "^0.10.0",
+    "mkdirp": "^0.5.1",
+    "progress": "^1.1.8",
+    "recursive-readdir": "^2.0.0"
+  }
+}
