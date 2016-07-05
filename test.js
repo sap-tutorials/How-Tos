@@ -37,91 +37,97 @@ const options = commandLineArgs(optionDefinitions)
 ****/
 console.log("reading input...");
 
-if (options.file){
-  inquirerprompt.setShowfilename(true);
-}
+var version = process.version;
+console.log("used node version " + version);
+if(version.substring(0,2) != "v4"){
+  log.error("please use node version 4.x")
+} else{
+  if (options.file){
+    inquirerprompt.setShowfilename(true);
+  }
 
-//if p flag is set it turns off the progressbar
-if (options.progressbar){
-  inquirerprompt.turnoffprogressbar(true);
-}
+  //if p flag is set it turns off the progressbar
+  if (options.progressbar){
+    inquirerprompt.turnoffprogressbar(true);
+  }
 
-if (options.help){
-  log.info("HELP: Your possibilities for the input: \n      -h or --help for Help \n      -f: to log all filenames, which get tested \n      -a: for testing everything (including files, which aren't how-tos) \n      -w & -t: for testing every how-to in both folders \n      -w: for testing all files in the work-in-progress folder \n      -t: for testing all files in the how-tos folder \n      -s: for dialog to choose specific how-tos \n      -i: to give an filename behind with *\n          to resctrict the scope: enter -w or/and -t \n      -p: to turn off the progressbar ");
-}
+  if (options.help){
+    log.info("HELP: Your possibilities for the input: \n      -h or --help for Help \n      -f: to log all filenames, which get tested \n      -a: for testing everything (including files, which aren't how-tos) \n      -w & -t: for testing every how-to in both folders \n      -w: for testing all files in the work-in-progress folder \n      -t: for testing all files in the how-tos folder \n      -s: for dialog to choose specific how-tos \n      -i: to give an filename behind with *\n          to resctrict the scope: enter -w or/and -t \n      -p: to turn off the progressbar ");
+  }
 
-else if (options.all){
-  //input flag a
-  inquirerprompt.readtutorialnames(function (){
-    inquirerprompt.readwipnames(function () {
-      inquirerprompt.readallfilenames(function () {
-        inquirerprompt.allfiles();
-      });
-    });
-  });
-}
-
-else if (options.tutorials && options.wip && !options.input){
-  //input flag w and t
-  inquirerprompt.readtutorialnames(function (){
-    inquirerprompt.readwipnames(function () {
-      inquirerprompt.alltutorials();
-    });
-  });
-}
-
-else if (options.tutorials && !options.wip && !options.input){
-  //input flag t
-  inquirerprompt.readtutorialnames(function (){
-    inquirerprompt.tutorials();
-  });
-}
-
-else if (options.wip && !options.tutorials && !options.input){
-//input flag w
-  inquirerprompt.readwipnames(function () {
-    inquirerprompt.wip();
-  });
-}
-
-else if (options.specific){
-  //input flag s
-  inquirerprompt.readtutorialnames(function (){
-    inquirerprompt.readwipnames(function () {
-      inquirerprompt.specific();
-    });
-  });
-}
-
-else if (options.input){
-  //only input or wt and input
-  if ((options.tutorials && options.wip) || (!options.tutorials && !options.wip)){
+  else if (options.all){
+    //input flag a
     inquirerprompt.readtutorialnames(function (){
       inquirerprompt.readwipnames(function () {
-        inquirerprompt.allgrouptutorials(options.input);
+        inquirerprompt.readallfilenames(function () {
+          inquirerprompt.allfiles();
+        });
       });
     });
   }
 
-  //w and  input
-  else if (options.wip){
-    inquirerprompt.readwipnames(function () {
-      inquirerprompt.wipgrouptutorials(options.input);
-    });
-  }
-  //t and  input
-  else if (options.tutorials){
+  else if (options.tutorials && options.wip && !options.input){
+    //input flag w and t
     inquirerprompt.readtutorialnames(function (){
-      inquirerprompt.tutorialsgrouptutorials(options.input);
+      inquirerprompt.readwipnames(function () {
+        inquirerprompt.alltutorials();
+      });
     });
   }
-}
 
-else {
-//  (no user input parameters (except of f))
-  if (!options.tutorials && !options.wip && !options.all && !options.help && !options.specific && !options.input)
-    inquirerprompt.ask(arraydeclaration.choicearray);
-  else{
-    log.error("Error: no available command identified )\n       prompt --help or -h for more info");
+  else if (options.tutorials && !options.wip && !options.input){
+    //input flag t
+    inquirerprompt.readtutorialnames(function (){
+      inquirerprompt.tutorials();
+    });
+  }
+
+  else if (options.wip && !options.tutorials && !options.input){
+  //input flag w
+    inquirerprompt.readwipnames(function () {
+      inquirerprompt.wip();
+    });
+  }
+
+  else if (options.specific){
+    //input flag s
+    inquirerprompt.readtutorialnames(function (){
+      inquirerprompt.readwipnames(function () {
+        inquirerprompt.specific();
+      });
+    });
+  }
+
+  else if (options.input){
+    //only input or wt and input
+    if ((options.tutorials && options.wip) || (!options.tutorials && !options.wip)){
+      inquirerprompt.readtutorialnames(function (){
+        inquirerprompt.readwipnames(function () {
+          inquirerprompt.allgrouptutorials(options.input);
+        });
+      });
+    }
+
+    //w and  input
+    else if (options.wip){
+      inquirerprompt.readwipnames(function () {
+        inquirerprompt.wipgrouptutorials(options.input);
+      });
+    }
+    //t and  input
+    else if (options.tutorials){
+      inquirerprompt.readtutorialnames(function (){
+        inquirerprompt.tutorialsgrouptutorials(options.input);
+      });
+    }
+  }
+
+  else {
+  //  (no user input parameters (except of f))
+    if (!options.tutorials && !options.wip && !options.all && !options.help && !options.specific && !options.input)
+      inquirerprompt.ask(arraydeclaration.choicearray);
+    else{
+      log.error("Error: no available command identified )\n       prompt --help or -h for more info");
+    }
   }
 }

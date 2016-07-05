@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/SAPDocuments/How-Tos#readme",
   "engines": {
-    "node": "=>0.12.7",
+    "node": "=>4.0.0",
     "npm": "=>2.11.3"
    },
   "dependencies" : {},
