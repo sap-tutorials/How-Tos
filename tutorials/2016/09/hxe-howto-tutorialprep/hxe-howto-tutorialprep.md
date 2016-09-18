@@ -59,7 +59,7 @@ The passwords referred to in the "Tutorials" will not match the passwords chosen
 
     Expected result:
 
-    ![image 1](1.png)
+    ![image 1](1.PNG)
 
 5. Verify the `WORKSHOP_01` user can connect to XSA:
 
@@ -69,7 +69,7 @@ The passwords referred to in the "Tutorials" will not match the passwords chosen
 
     Expected result:
 
-    ![image 1](2.png)
+    ![image 1](2.PNG)
 
 ## Next Steps
  - Go to the [SAP HANA, express edition tutorials page](http://go.sap.com/developer/topics/sap-hana-express.tutorials.html)
