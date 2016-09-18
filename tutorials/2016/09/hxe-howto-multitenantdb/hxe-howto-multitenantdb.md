@@ -27,7 +27,7 @@ Provides instruction on how to create a `multitenant` container database in `HAN
 
     This will take about 1 min, result will be similar to:
 
-    ![image 1](1.png)
+    ![image 1](1.PNG)
 
 2. Verify the new `multitenant` container database is accessible:
 
@@ -35,17 +35,17 @@ Provides instruction on how to create a `multitenant` container database in `HAN
     % hdbsql -i 00 -n localhost:30013 -u SYSTEM -p <SYSTEM user password> "select * from "PUBLIC"."M_DATABASES""
     ```
    
-    ![image 1](2.png)
+    ![image 1](2.PNG)
 
 3. Verify that you can connect to the database using a HANA client tool such as `HANA Studio`. To do so, select the `Add System` command in `HANA Studio`:
 
-    ![image 1](4.png)
+    ![image 1](4.PNG)
 
-    ![image 1](5.png)
+    ![image 1](5.PNG)
 
     View from HANA Plugin for Eclipse after adding "MTDB1":
 
-    ![image 1](3.png)
+    ![image 1](3.PNG)
 
 
 ## Next Steps
