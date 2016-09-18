@@ -24,14 +24,14 @@ Provides instruction on how to create a `multitenant` container database in `HAN
     % `hdbsql -i 00 -n localhost:30013 -u SYSTEM -p` `<SYSTEM user password>` `"CREATE DATABASE` `MTDB1` `SYSTEM USER PASSWORD` `<password>`"
 
     This will take about 1 min, result will be similar to:
-    
+
     ![image 1](1.png)
 
 2. Verify the new `multitenant` container database is accessible:
 
-   % `hdbsql -i 00 -n localhost:30013 -u SYSTEM -p` `<SYSTEM user password>` `"select * from "PUBLIC"."M_DATABASES""`
+    % `hdbsql -i 00 -n localhost:30013 -u SYSTEM -p` `<SYSTEM user password>` `"select * from "PUBLIC"."M_DATABASES""`
    
-   ![image 1](2.png)
+    ![image 1](2.png)
 
 3. Verify that you can connect to the database using a HANA client tool such as `HANA Studio`. To do so, select the `Add System` command in `HANA Studio`:
 
