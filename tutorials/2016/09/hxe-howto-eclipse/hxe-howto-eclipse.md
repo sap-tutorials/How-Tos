@@ -36,7 +36,7 @@ Provides instruction on how to install and update the SAP HANA Tools plugin for 
 
 8. Change perspective to SAP HANA Administrative Console **Window > Perspective > SAP HANA Administrative Console**
 
-    ![image 1](4.png)
+    ![image 1](4.PNG)
 
 9. Add your `HANAExpress` **Add System > Specify System**
 
@@ -48,7 +48,7 @@ Provides instruction on how to install and update the SAP HANA Tools plugin for 
     Select           | `System database`
     Description      | `HANAExpress Edition`
 
-    ![image 1](1.png)
+    ![image 1](1.PNG)
 
 10. Connection Properties: 
 
@@ -61,11 +61,11 @@ Provides instruction on how to install and update the SAP HANA Tools plugin for 
     - Enable SAP start service Connection
     - Click **Finish**
 
-    ![image 1](2.png)
+    ![image 1](2.PNG)
 
 1. Confirm connection:
 
-    ![image 1](3.png)
+    ![image 1](3.PNG)
 
 ## Next Steps
  - Go to the [`SAP HANA, express edition tutorials page`](http://go.sap.com/developer/topics/sap-hana-express.tutorials.html)
