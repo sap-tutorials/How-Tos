@@ -1,7 +1,7 @@
 ---
 title: How to connect to SAP HANA database server in Python
 description: A How-To that shows how to integrate python with the SAP HANA database server
-tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana,-express-edition, tutorial>how-to ]
+tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
  - **Setup:** This tutorial assumes that you have followed the [SAP HANA Client Installation and Update Guide](http://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf) to install the HANA client software. You can download the HANA client software from [SAP Store](https://store.sap.com/sap/cpa/ui/resources/store/html/SolutionDetails.html?pid=0000012950).
@@ -28,11 +28,11 @@ In many python applications, you would need access to a database for storing, re
 
 2. Then go to the `Python` directory under `hdbclient` directory and paste all three files into the `Lib` directory.
 
-    ![Lib directory](2.PNG)
+    ![Lib directory](2.png)
 
 3. Copy `pyhdbcli.pdb`, `pyhdbcli.pyd` files from `hdbclient` directory.
 
-    ![copy two more files in hdbclient directory](3.PNG)
+    ![copy two more files in hdbclient directory](3.png)
 
 4. Do the same as step 2 above, paste the files into `Python/Lib` directory. Now you are done with the configuration part.
 

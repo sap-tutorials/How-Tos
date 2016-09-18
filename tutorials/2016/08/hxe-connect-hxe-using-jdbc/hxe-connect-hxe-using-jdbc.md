@@ -1,7 +1,7 @@
 ---
 title: Connect to HXE using JDBC
 description: In this how-to, you will learn how to connect to HANA Express Edition using JDBC (Java Database Connectivity)
-tags: [  tutorial>beginner, products>sap-hana, products>sap-hana,-express-edition, tutorial>how-to ]
+tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 
 ## Prerequisites  

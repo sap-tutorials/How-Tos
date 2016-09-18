@@ -1,7 +1,7 @@
 ---
 title: Connect to HXE using R
 description: In this how-to, you will learn how to connect to HANA Express Edition using R
-tags: [  tutorial>beginner, products>sap-hana, products>sap-hana,-express-edition, tutorial>how-to ]
+tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
   - **Proficiency:** Beginner

@@ -1,7 +1,7 @@
 ---
 title: How to download and install the HANA Eclipse plugin
 description: Provide details on the install the HANA Eclipse Plugin and setup for using Eclipse to connect to HANAExpress.
-tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana, express-edition ]
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
  - Proficiency: beginner
