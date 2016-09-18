@@ -1,7 +1,7 @@
 ---
 title: SAP HANA, express edition Troubleshooting
 description: Troubleshoot common installation issues.
-tags: [  tutorial>beginner, topic>HXE, products>sap-hana,-express-edition ]
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana,-express-edition ]
 ---
 ## Prerequisites  
  - **Setup:** You are following the instructions to install the binary version of SAP HANA, express edition in the [Installing Binary](http://go.sap.com/developer/tutorials/hxe-ua-installing-binary.html) tutorial.

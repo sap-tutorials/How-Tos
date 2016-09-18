@@ -1,7 +1,7 @@
 ---
 title: Create a multitenant container database in `HANAExpress`
 description: Provide simple instructions for a user to create a multitenant database in `HANAExpress`. SAP HANA systems with multitenant database containers can contain multiple tenant databases.
-tags: [  tutorial>beginner, products>sap-hana, express-edition ]
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana, express-edition ]
 ---
 
 ## Prerequisites  

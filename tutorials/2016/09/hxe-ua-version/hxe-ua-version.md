@@ -1,7 +1,7 @@
 ---
 title: Select the correct SAP HANA, express edition version
 description: SAP HANA, express edition is available in two versions. Follow the flowchart to select the right version for you.
-tags: [  tutorial>beginner, products>sap-hana ]
+tags: [  tutorial>beginner, products>sap-hana, tutorial>how-to ]
 ---
 
 ## Prerequisites  
