@@ -62,6 +62,37 @@ You are installing SAP HANA, express edition on a Linux server using `hdblcm`. Y
 4.	If the status is inactive, start socket activation:
 `systemctl` start `uuidd.socket`
 
+### Download Manager Internal Error: "downloaded size does not match content length"
+#### Issue
+You are downloading packages using Download Manager. The download fails. The Download Manager log file displays this error message:
+*Internal error: downloaded size does not match content length*
+The Download Manager log file is located at `/tmp/hxedm_[yymmdd].log` on Linux and `%TEMP%\hxedm_[yymmdd].log` on Windows.
+
+#### Solution
+Either the file on the download server changed since your last download session, or partial download files from your previous download session are corrupted.
+Delete `*.001` to `*.008` files in your download directory and run the Download Manager again.
+
+### Download Manager Error Message: "Failed to verify {0} checksum"
+#### Issue
+You are downloading packages using Download Manager. The download fails and this error displays:
+*Failed to verify {0} checksum*
+
+#### Solution
+Either the file on the download server changed since your last download session, or the download file is inaccessible/corrupted.
+Delete the download file and/or <filename>.00* in the download directory and run the Download Manager again.
+
+### Download Manager Error Message: "Failed to join downloaded files"
+#### Issue
+You are downloading packages using Download Manager. The download fails and this error displays:
+*Failed to join download files*
+
+#### Solution
+Download manager failed to assemble the download file. This might be because of lack of disk space in the download directory.
+In Linux, run:
+**cat <filename>.001 <filename>.002 <filename>.003 <filename>.004 <filename>.005 <filename>.006 <filename>.007 <filename>.008 > < `final_filename`>**
+
+In Windows, run:
+**type <filename>.001 <filename>.002 <filename>.003 <filename>.004 <filename>.005 <filename>.006 <filename>.007 <filename>.008 > <`final_filename`>**
 
 ## Next Steps
  - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
