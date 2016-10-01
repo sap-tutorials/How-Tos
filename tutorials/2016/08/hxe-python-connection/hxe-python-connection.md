@@ -28,11 +28,11 @@ In many python applications, you would need access to a database for storing, re
 
 2. Then go to the `Python` directory under `hdbclient` directory and paste all three files into the `Lib` directory.
 
-    ![Lib directory](2.png)
+    ![Lib directory](2.PNG)
 
 3. Copy `pyhdbcli.pdb`, `pyhdbcli.pyd` files from `hdbclient` directory.
 
-    ![copy two more files in hdbclient directory](3.png)
+    ![copy two more files in hdbclient directory](3.PNG)
 
 4. Do the same as step 2 above, paste the files into `Python/Lib` directory. Now you are done with the configuration part.
 
