@@ -1,5 +1,5 @@
 ---
-title: Setup for a TI SensorTag
+title: Internet of Things (IoT) Setup for a TI SensorTag
 description: How to setup your system to access a TI `SensorTag` using Bluetooth and Node.js
 tags: [  tutorial>beginner, topic>internet-of-things ]
 ---
@@ -11,7 +11,7 @@ tags: [  tutorial>beginner, topic>internet-of-things ]
  - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html) 
 
 ## How-To Details
-
+The following describes the general procedures necessary to setup your local environment to communicate and work with a Bluetooth `TI SensorTag`.
 
 ### Time to Complete
 **10 Min**.
