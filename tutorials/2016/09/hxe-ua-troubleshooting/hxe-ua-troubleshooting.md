@@ -1,7 +1,7 @@
 ---
 title: SAP HANA, express edition Troubleshooting
 description: Troubleshoot common installation issues.
-tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
+tags: [  tutorial>beginner, topic>HXE, products>sap-hana,-express-edition ]
 ---
 ## Prerequisites  
  - **Setup:** You are following the instructions to install the binary version of SAP HANA, express edition in the [Installing Binary](http://go.sap.com/developer/tutorials/hxe-ua-installing-binary.html) tutorial.
@@ -89,10 +89,42 @@ You are downloading packages using Download Manager. The download fails and this
 #### Solution
 Download manager failed to assemble the download file. This might be because of lack of disk space in the download directory.
 In Linux, run:
-**cat <filename>.001 <filename>.002 <filename>.003 <filename>.004 <filename>.005 <filename>.006 <filename>.007 <filename>.008 > < `final_filename`>**
+**`cat <file_name>.001 <file_name>.002 <file_name>.003 .... <filename>.008 > <final_filename>`**
+
+>**Example**
+>`cat hxe.001 hxe.002 hxe.003 hxe.004 hxe.005 hxe.006 hxe.07 hxe.008 > hxe.tgz`
 
 In Windows, run:
-**type <filename>.001 <filename>.002 <filename>.003 <filename>.004 <filename>.005 <filename>.006 <filename>.007 <filename>.008 > <`final_filename`>**
+**`type <file_name>.001 <file_name>.002 <file_name>.003 .... <filename>.008 > <final_filename>`**
+
+>**Example**
+>`type hxe.001 hxe.002 hxe.003 hxe.004 hxe.005 hxe.006 hxe.007 hxe.008 > hxe.tgz`
+
+### Virtual Machine: Checking Resource Usage
+#### Issue
+You are having memory issues on your VM and want to check resource usage.
+
+#### Solution
+If you have HANA studio, right-click on the system and select **Configuration and Monitoring > Open Administration** and check the Overview and Landscape tabs for anything in red.
+
+If you don't have HANA Studio, run the following queries in `hdbsql` to view SAP HANA resource usage:
+
+`select service_name, round(effective_allocation_limit/1024/1024/1024, 1) as MemLimit, round(total_memory_used_size/1024/1024/1024,1) as MemUsed from m_service_memory;`
+
+If the `MemUsed` is close to the `MemLimit`, you may encounter problems allocating memory.
+
+Alternatively, you can run the Linux `free` command at the command line to see free resources:
+
+`free -g`
+
+The key number is in the second row (-/+ buffers/cache) in the **free** column. If this number is low, (e.g. 1 GB) you may have run out of memory when performing your recent operation.
+
+You can also run the following command to see if you are running out of disk space on the VM's `filesystem`:  
+
+`df -h`
+
+Look for the **Use%** for the `/dev/sda1 filesystem`. If it is down to just a few GB, you may have run out of disk space when performing your recent operation.
+
 
 ## Next Steps
  - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
