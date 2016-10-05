@@ -89,10 +89,16 @@ You are downloading packages using Download Manager. The download fails and this
 #### Solution
 Download manager failed to assemble the download file. This might be because of lack of disk space in the download directory.
 In Linux, run:
-**cat <filename>.001 <filename>.002 <filename>.003 <filename>.004 <filename>.005 <filename>.006 <filename>.007 <filename>.008 > < `final_filename`>**
+**`cat <file_name>.001 <file_name>.002 <file_name>.003 .... <filename>.008 > <final_filename>`**
+
+>**Example**
+>`cat hxe.001 hxe.002 hxe.003 hxe.004 hxe.005 hxe.006 hxe.07 hxe.008 > hxe.tgz`
 
 In Windows, run:
-**type <filename>.001 <filename>.002 <filename>.003 <filename>.004 <filename>.005 <filename>.006 <filename>.007 <filename>.008 > <`final_filename`>**
+**`type <file_name>.001 <file_name>.002 <file_name>.003 .... <filename>.008 > <final_filename>`**
+
+>**Example**
+>`type hxe.001 hxe.002 hxe.003 hxe.004 hxe.005 hxe.006 hxe.007 hxe.008 > hxe.tgz`
 
 ### Virtual Machine: Checking Resource Usage
 #### Issue
