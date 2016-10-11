@@ -12,7 +12,7 @@ tags: [  tutorial>beginner, topic>internet-of-things, products>sap-hana, product
 
 
 ## How-To Details
-Now to connect and configure your Tessel1 device (further calls simply `Tessel`).
+Now to connect and configure your Tessel 1 device (further calls simply `Tessel`).
 
 Prior to starting this tutorial you should have your Tessel device and a USB cable. For Windows machines simply plugging in the device will often result in the drivers be installed whereas a Apple Mac OS X or Linux machine require a bit more effort to install.
 
