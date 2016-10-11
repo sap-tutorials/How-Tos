@@ -7,7 +7,7 @@ tags: [  tutorial>beginner, topic>internet-of-things, products>sap-hana, product
  - None
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/how-to.html) 
+ - [Setup Your Tessel](http://go.sap.com/developer/how-tos/iot-tessel.html) 
  
 
 ## How-To Details
@@ -29,4 +29,4 @@ Here you will prepare your development environment to work with a Tessel Generat
 
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/how-to.html) 
+ - [Setup Your Tessel](http://go.sap.com/developer/how-tos/iot-tessel.html)
