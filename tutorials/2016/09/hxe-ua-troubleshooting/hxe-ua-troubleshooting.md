@@ -1,7 +1,7 @@
 ---
 title: SAP HANA, express edition Troubleshooting
 description: Troubleshoot common installation issues.
-tags: [  tutorial>beginner, topic>HXE, products>sap-hana,-express-edition ]
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
  - **Setup:** You are following the instructions to install the binary version of SAP HANA, express edition in the [Installing Binary](http://go.sap.com/developer/tutorials/hxe-ua-installing-binary.html) tutorial.
@@ -37,7 +37,9 @@ If you haven’t registered already, register to continue.
 4.	From the Available Extensions and Modules list, select **Legacy Module 12 `x86_64`**.
 5.	Agree to the license terms and accept the remaining installation prompts.
 6.	Restart your Linux server.
-7.	Retry your server-only installation.
+7.	Completely uninstall SAP HANA, express edition (including XSA, if installed).
+8.  Reinstall SAP HANA, express edition and restart.
+
 
 ### HDB Daemon not Running
 #### Issue
