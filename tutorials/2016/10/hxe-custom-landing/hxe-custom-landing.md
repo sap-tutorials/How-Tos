@@ -44,7 +44,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		    <script type="text/javascript">
 		        $(document).ready(function() {
 		            $("#hostfile").hide();
-		            if ( (location.hostname == "vhcalhdbdb") || (location.hostname == "hxehost”) ) {
+		            if ( location.hostname === 'hxehost' ) {
 		                $('#hostfile').hide();
 		            }else{
 		                $("#hostfile").show();
@@ -255,7 +255,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		    <script type="text/javascript">
 		        $(document).ready(function() {
 		            $("#hostfile").hide();
-		            if ( (location.hostname == "vhcalhdbdb")  || (location.hostname == "hxehost") ) {
+		            if ( location.hostname === 'hxehost' ) {
 		                $('#hostfile').hide();
 		                $('#finished').show();
 		            }else{
