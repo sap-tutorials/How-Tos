@@ -11,7 +11,7 @@ exports.choicearray = [
   {
     type: "list",
     name: "scopetutorial",
-    message: "Which directory would you like to test?",
+    message: "What would you like to test?",
     choices: [
      // "all",
      // "wip",
