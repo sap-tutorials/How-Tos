@@ -11,13 +11,13 @@ exports.choicearray = [
   {
     type: "list",
     name: "scopetutorial",
-    message: "Which how-to would you like to test?",
+    message: "Which directory would you like to test?",
     choices: [
-      "all",
-      "wip",
-      "how-to",
-      "specific",
-      "input"
+     // "all",
+     // "wip",
+      "how-to"
+     //"specific"
+     // "input"
     ]
   }
 ];
