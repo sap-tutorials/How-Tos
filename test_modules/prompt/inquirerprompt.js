@@ -121,7 +121,7 @@ var ask = function (array){
 var readtutorialnames = function (callback){
   var fname;
   var i=0;
-  recursive('./how-to', ['!*.md'],function (err, files) {
+  recursive('./tutorials', ['!*.md'],function (err, files) {
     files.forEach(function(file){
       arraydeclaration.arraytutorials[0].choices[i]= {name: file };
       i++;
