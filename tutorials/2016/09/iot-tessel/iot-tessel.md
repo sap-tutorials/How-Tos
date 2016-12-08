@@ -4,11 +4,11 @@ description: Setup and configure a Tessel device
 tags: [  tutorial>beginner, topic>internet-of-things, products>sap-hana, products>sap-hana-cloud-platform, tutorial>how-to ]
 ---
 ## Prerequisites  
- - **How-To:** [Internet of Things (IoT) Setup up your Environment](http://go.sap.com/developer/how-tos/iot-tessel-setup.html)
+ - **How-To:** [Internet of Things (IoT) Setup up your Environment](http://www.sap.com/developer/how-tos/iot-tessel-setup.html)
 
 ## Next Steps
- - [Internet of Things (IoT) Setup SAP HANA XS (On-premise or stand-alone server)](http://go.sap.com/developer/tutorials/iot-part2-hanaxs-setup.html)
- - [Internet of Things (IoT) Explore the SAP HCP IoT Services](http://go.sap.com/developer/tutorials/iot-part6-hcp-services.html)
+ - [Internet of Things (IoT) Setup SAP HANA XS (On-premise or stand-alone server)](http://www.sap.com/developer/tutorials/iot-part2-hanaxs-setup.html)
+ - [Internet of Things (IoT) Explore the SAP HCP IoT Services](http://www.sap.com/developer/tutorials/iot-part6-hcp-services.html)
 
 
 ## How-To Details
@@ -106,5 +106,5 @@ If it shows the serial number of the connected Tessel device, then you are good 
     > When working with the different modules you should create a separate folder under your `tessel-code` folder, the reason for this is that when you install the libraries for the module it’s best to do this in a new directory because when you create your JavaScript code and then run that on the device it deploys the libraries at the same time and thus best to not have everything inside the same exact folder.
 
 ## Next Steps
- - [Internet of Things (IoT) Setup SAP HANA XS (On-premise or stand-alone server)](http://go.sap.com/developer/tutorials/iot-part2-hanaxs-setup.html)
- - [Internet of Things (IoT) Explore the SAP HCP IoT Services](http://go.sap.com/developer/tutorials/iot-part6-hcp-services.html)
+ - [Internet of Things (IoT) Setup SAP HANA XS (On-premise or stand-alone server)](http://www.sap.com/developer/tutorials/iot-part2-hanaxs-setup.html)
+ - [Internet of Things (IoT) Explore the SAP HCP IoT Services](http://www.sap.com/developer/tutorials/iot-part6-hcp-services.html)

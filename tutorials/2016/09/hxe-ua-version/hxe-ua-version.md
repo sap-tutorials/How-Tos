@@ -10,7 +10,7 @@ tags: [  tutorial>beginner, products>sap-hana, tutorial>how-to, products>sap-han
 
 ## Next Steps
  - Return to the SAP HANA, express edition developer page (coming soon)
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
 
  
 
@@ -29,4 +29,4 @@ SAP HANA, express edition is available as a Virtual Machine or a binary version.
 
 ## Next Steps
  - Return to the SAP HANA, express edition developer page (coming soon)
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html)  
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)  

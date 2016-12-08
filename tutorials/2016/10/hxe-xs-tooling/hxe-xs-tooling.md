@@ -7,7 +7,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-han
  - **Systems used:** SAP HANA, express edition server only
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
  
 
 ## How-To Details
@@ -119,4 +119,4 @@ This guide will help walk you through the steps necessary to install the SAP HAN
 	![catalog](25.png)
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 

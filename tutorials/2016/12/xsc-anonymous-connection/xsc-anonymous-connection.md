@@ -7,7 +7,7 @@ tags: [  tutorial>beginner, topic>security, products>sap-hana, products>sap-hana
  - **Systems used:** SAP HAHA, SAP HANA express edition, SAP HANA Cloud Platform MDC instance
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html)
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
 
 
 ## How-To Details
@@ -48,4 +48,4 @@ The simple steps should allow you to enable your entire project or a single pack
 8. Chose edit then enter the user login information, this will enable the anonymous connection to work for users going to that particular package of your application.
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html)
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)

@@ -7,7 +7,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-han
  - **Systems used:** SAP HANA, express edition
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
  
 
 ## How-To Details
@@ -92,4 +92,4 @@ The following steps will show you how to customize the login screen of your indi
 	![halloween](16.png)
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 

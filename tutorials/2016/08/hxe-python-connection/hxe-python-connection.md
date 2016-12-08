@@ -7,7 +7,7 @@ tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-e
  - **Setup:** This tutorial assumes that you have followed the [SAP HANA Client Installation and Update Guide](http://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf) to install the HANA client software. You can download the HANA client software from [SAP Store](https://store.sap.com/sap/cpa/ui/resources/store/html/SolutionDetails.html?pid=0000012950).
 
 ## Next Steps
- - This is a standalone How-To on establishing basic connectivity to SAP HANA database server in python. [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
+ - This is a standalone How-To on establishing basic connectivity to SAP HANA database server in python. [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
 
 
 ## How-To Details
@@ -57,4 +57,4 @@ In many python applications, you would need access to a database for storing, re
 7. Run the program and if the program prints *True*, then the connection to SAP HANA database is successful.
 
 ## Next Steps
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)

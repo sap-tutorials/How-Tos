@@ -5,7 +5,7 @@ tags: [  tutorial>beginner, products>sap-hana\,-express-edition ]
 ---
 
 ## Next Steps
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html) 
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html) 
  
 
 ## How-To Details
@@ -13,7 +13,7 @@ The Intel&reg; NUC is a small form factor PC that packs an amazing amount of pow
 
 ![Intel Nuc](nuc.png)
 
-This guide will help you decide on the [best possible system](http://www.intel.com/content/www/us/en/nuc/nuc-comparison.html) for your desired SAP HANA, express edition [flavor](http://go.sap.com/developer/how-tos/hxe-ua-version.html).
+This guide will help you decide on the [best possible system](http://www.intel.com/content/www/us/en/nuc/nuc-comparison.html) for your desired SAP HANA, express edition [flavor](http://www.sap.com/developer/how-tos/hxe-ua-version.html).
 
 > Graphic from Intel&reg;
 
@@ -22,13 +22,13 @@ This guide will help you decide on the [best possible system](http://www.intel.c
 
 ---
 
-1. To begin the process you might think the best idea would be to start with deciding which NUC to purchase, however you need first decide which type of operating system you will use; which will [determine which download](https://go.sap.com/developer/topics/sap-hana-express.html) of `express` you will need.
+1. To begin the process you might think the best idea would be to start with deciding which NUC to purchase, however you need first decide which type of operating system you will use; which will [determine which download](https://www.sap.com/developer/topics/sap-hana-express.html) of `express` you will need.
     
     From this point you will need to decide between the `server` or `full system`. The difference between the two choices boil down to which type of development you would like to do and this will directly impact your choice of NUC you ultimately decide to purchase.
     
     ![What Express Offers](1.png)
     
-2. To make your decision you will need to [first register and get the download manager](https://go.sap.com/cmp/ft/crm-xu16-dat-hddedft/index.html).
+2. To make your decision you will need to [first register and get the download manager](https://www.sap.com/cmp/ft/crm-xu16-dat-hddedft/index.html).
   
     - Select your **country**
     - Enter your **email address**
@@ -74,4 +74,4 @@ This guide will help you decide on the [best possible system](http://www.intel.c
 9. The ultimate solution, the best choice based on current experiences is the  Intel&reg; NUC SKU (Intel&reg; NUC Kit `NUC6i7KY`).
 
 ## Next Steps
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html) 
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html) 

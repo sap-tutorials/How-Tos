@@ -11,7 +11,7 @@ tags: [  tutorial>beginner, topic>cloud, topic>java, products>sap-hana-cloud-pla
 
 
 ## Next Steps
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html) 
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html) 
  
 
 ## How-To Details
@@ -211,4 +211,4 @@ This document will teach you how-to develop a simple web application using [Spri
 
 
 ## Next Steps
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html) 
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html) 

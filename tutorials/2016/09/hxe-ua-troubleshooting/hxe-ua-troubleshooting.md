@@ -4,10 +4,10 @@ description: Troubleshoot common installation issues.
 tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
- - **Setup:** You are following the instructions to install the binary version of SAP HANA, express edition in the [Installing Binary](http://go.sap.com/developer/tutorials/hxe-ua-installing-binary.html) tutorial, or the VM version of SAP HANA, express edition in the [Installing the VM Image](http://go.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html tutorial.
+ - **Setup:** You are following the instructions to install the binary version of SAP HANA, express edition in the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) tutorial, or the VM version of SAP HANA, express edition in the [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html tutorial.
 
 ## Next Steps
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
 
 
 ## How-To Details
@@ -129,4 +129,4 @@ Look for the **Use%** for the `/dev/sda1 filesystem`. If it is down to just a fe
 
 
 ## Next Steps
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)

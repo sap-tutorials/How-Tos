@@ -11,7 +11,7 @@ tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-e
 - **Setup:** You must have Microsoft .NET Framework installed on your computer (Generally .NET     Framework will be installed when you install Microsoft Visual Studio).
 
 ## Next Steps
- - This is a standalone How-To on establishing basic connectivity to ADO and ODBC compliant SAP database servers.[View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
+ - This is a standalone How-To on establishing basic connectivity to ADO and ODBC compliant SAP database servers.[View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
 
 
 ## How-To Details
@@ -66,4 +66,4 @@ A Microsoft visual studio project can connect to SAP database using SAP HANA Cli
 
 ## Next Steps
  - View additional .NET [sample projects](http://scn.sap.com/docs/DOC-53652).
- - [View similar How-Tos](http://go.sap.com/developer/tutorials.html) or [View all How-Tos](http://go.sap.com/developer/tutorials.html)
+ - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)

@@ -9,7 +9,7 @@ tags: [  tutorial>beginner, products>sap-hana\,-express-edition, tutorial>how-to
  - Setup: This tutorial provides the details on creating required users for other `HANA, express edition` "Tutorials"
 
 ## Next Steps
- - Go to the [SAP HANA, express edition tutorials page](http://go.sap.com/developer/topics/sap-hana-express.tutorials.html)
+ - Go to the [SAP HANA, express edition tutorials page](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html)
 
 ## How-To Details
 The HANA, express edition "Tutorials" reference a set of users. This set of instructions assures all required users and passwords are available and correct before attempting the other `HANA, express edition` "Tutorials".
@@ -72,4 +72,4 @@ The passwords referred to in the "Tutorials" will not match the passwords chosen
     ![image 1](2.PNG)
 
 ## Next Steps
- - Go to the [SAP HANA, express edition tutorials page](http://go.sap.com/developer/topics/sap-hana-express.tutorials.html)
+ - Go to the [SAP HANA, express edition tutorials page](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html)

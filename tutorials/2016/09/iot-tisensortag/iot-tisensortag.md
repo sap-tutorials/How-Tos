@@ -8,7 +8,7 @@ tags: [  tutorial>beginner, topic>internet-of-things ]
  - Bluetooth connectivity
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
 
 ## How-To Details
 The following describes the general procedures necessary to setup your local environment to communicate and work with a Bluetooth `TI SensorTag`.
@@ -36,4 +36,4 @@ The following describes the general procedures necessary to setup your local env
 4. You may also need to check the prerequisites for [`Noble`](https://github.com/sandeepmistry/noble#prerequisites)
 
 ## Next Steps
- - [View all How-Tos](http://go.sap.com/developer/tutorial-navigator.how-to.html)  
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)  

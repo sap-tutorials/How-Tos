@@ -1,5 +1,5 @@
-# How-Tos for go.sap.com
-Welcome to the Markdown How-To repository for How-To documents on the [SAP developer pages](http://go.sap.com/developer.html). 
+# How-Tos for www.sap.com
+Welcome to the Markdown How-To repository for How-To documents on the [SAP developer pages](http://www.sap.com/developer.html). 
 
 
 # How to contribute
