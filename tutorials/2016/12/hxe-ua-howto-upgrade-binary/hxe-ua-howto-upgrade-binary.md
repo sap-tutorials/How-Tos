@@ -27,7 +27,7 @@ This installation assumes you have installed SAP HANA 1.0, express edition using
 1. Register for your SAP HANA 2.0, express edition installation and download the Download Manager. For instructions on downloading and running the Download Manager, see [Installing SAP HANA 2.0, express edition (Binary Installer Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html).
 
 2. In Download Manager, in the **Image** pull-down, select **Binary Installer**.
-    ![Download Manager](HXE_download_manager_20.PNG)
+    ![Download Manager](HXE_download_manager.png)
 
 3. Click **Browse** and select a directory where your downloads will be saved.
 
