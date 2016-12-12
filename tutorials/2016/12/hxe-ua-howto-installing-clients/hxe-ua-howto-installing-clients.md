@@ -98,7 +98,7 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
     https://<hana_hostname>:3<instance>30/v2/info
     ```
 
-    For example, the SAP HANA instance “90” on the host `xsa.acme.com`:
+    For example, the SAP HANA instance "90" on the host `xsa.acme.com`:
 
     ```
     https://xsa.acme.com:30930/v2/info  

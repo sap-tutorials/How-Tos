@@ -15,7 +15,7 @@ tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition
 
 If you wish to upgrade your SAP HANA, express edition installation from 1.0 to 2.0 without losing any data, follow this installation.
 
-This installation assumes you have installed SAP HANA 1.0, express edition using the binary installer. To upgrade the SAP HANA 1.0, express edition virtual machine, see <!-- [How to Upgrade to SAP HANA 2.0, express edition (Virtual Machine)] (http://www.sap.com/developer/how-tos/hxe-ua-howto-upgrade-vm.html). -->
+This installation assumes you have installed SAP HANA 1.0, express edition using the binary installer. To upgrade the SAP HANA 1.0, express edition virtual machine, see [How to Upgrade to SAP HANA 2.0, express edition (Virtual Machine)](http://www.sap.com/developer/how-tos/2016/12/hxe-ua-howto-upgrade-vm.html).
 
 ## Time to Complete
 **45-60 Min**.
@@ -47,7 +47,7 @@ This installation assumes you have installed SAP HANA 1.0, express edition using
 
         - **`xs.onpremise.runtime.client_ntamd64.zip`** - Command-line tools for Windows that enable access to (and control of) the SAP HANA XS advanced run-time environment.
 
-     > **Tip:** After you develop an application using SAP HANA, express edition, install Download Manager to a client machine and download the *clients only* to that client machine. You can then use the clients to connect to -- and test -- your HANA application, emulating a customer.  
+     >**Tip:** After you develop an application using SAP HANA, express edition, install Download Manager to a client machine and download the *clients only* to that client machine. You can then use the clients to connect to -- and test -- your HANA application, emulating a customer.  
 
     - **Text analysis files for additional languages** - For languages other than English and German, these files are required for the HANA Text Analysis function. (The text analysis files for English and German are already included in the **Server only** and **Server + applications** packages.)
 
@@ -69,11 +69,11 @@ This installation assumes you have installed SAP HANA 1.0, express edition using
 
 2. Extract the contents of `hxe.tgz`, and `hxexsa.tgz` if you are also installing applications:
 
-   `tar -xvzf <download_path>/hxe.tgz`
-       `tar -xvzf <download_path>/hxexsa.tgz`
+    `tar -xvzf <download_path>/hxe.tgz`
+    `tar -xvzf <download_path>/hxexsa.tgz`
 
-   >**Tip**
-   > Run the tar command from the command shell as shown, rather than using a GUI-based extraction tool.
+    >**Tip**
+    > Run the tar command from the command shell as shown, rather than using a GUI-based extraction tool.
 
 3. Navigate to the directory where you extracted the files and run `./setup_hxe.sh` as the root user:
 
@@ -91,16 +91,16 @@ Installation of SAP HANA 2.0, express edition will take some time. Installation 
 
 1. On the SAP HANA 2.0, express edition host, open a terminal and log in as the `<sid>adm` user:
 
-  `su -l <sid>adm`
+    `su -l <sid>adm`
 
 2. Recover the database from your backup:
 
-  `HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('<path-to-backup-folder>') CLEAR LOG"`
+    `HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('<path-to-backup-folder>') CLEAR LOG"`
 
-   For example:
+    For example:
 
-  `HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('/hana/backup_hxe/backup/data/SYSTEMDB/BK_SP12') CLEAR LOG"`
+    `HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('/hana/backup_hxe/backup/data/SYSTEMDB/BK_SP12') CLEAR LOG"`
 
 3. Restart the system:
 
-  `HDB stop && HDB start`
+    `HDB stop && HDB start`
