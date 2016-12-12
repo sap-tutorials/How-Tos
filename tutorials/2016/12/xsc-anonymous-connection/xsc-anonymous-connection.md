@@ -1,7 +1,7 @@
 ---
 title: Anonymous Connections in SAP HANA XSC
 description: See how to enable anonymous access to your XSC application
-tags: [  tutorial>beginner, topic>security, products>sap-hana, products>sap-hana,-express-edition ]
+tags: [  tutorial>beginner, topic>security, products>sap-hana, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HAHA, SAP HANA express edition, SAP HANA Cloud Platform MDC instance

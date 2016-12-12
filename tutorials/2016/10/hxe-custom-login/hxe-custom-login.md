@@ -1,14 +1,14 @@
 ---
 title: Adding a Custom Login Screen to your HXE system
 description: See how quickly and easily you can customize your HXE Server Only image and add a custom login screen.
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana,-express-edition ]
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HANA, express edition
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
- 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
+
 
 ## How-To Details
 The following steps will show you how to customize the login screen of your individual instance. Why might you want to do that? Well for starters if you have multiple systems this would help you distinguish between them or perhaps you simply want to make your system unique and your own.
@@ -63,18 +63,18 @@ The following steps will show you how to customize the login screen of your indi
     "default_file": "index.html"
 	}
 	```
-	
+
 7. The next step will be to jump over to the `Catalog` editor and open an SQL console window. Execute the following SQL statement.
 
 	![statement](10.png)
-	
+
 	```
 	ALTER SYSTEM ALTER CONFIGURATION ('xsengine.ini', 'SYSTEM') SET ('httpserver', 'login_screen_background_image') = '/codejam/mysystem/images/back.jpg';
 	```
 
 	![statement](11.png)
 
-8. Now Open the `Security` editor and create a new user called `_USS` and assign and save that user the role `sap.hana.xs.selfService.user.roles::USSExecutor` 
+8. Now Open the `Security` editor and create a new user called `_USS` and assign and save that user the role `sap.hana.xs.selfService.user.roles::USSExecutor`
 
 	![role](12.png)
 
@@ -92,4 +92,4 @@ The following steps will show you how to customize the login screen of your indi
 	![halloween](16.png)
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)

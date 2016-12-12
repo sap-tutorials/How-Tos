@@ -1,15 +1,15 @@
 ---
 title: Adding a Custom Landing page to your HXE system
 description: See how to alter your system and load a custom landing page.
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana,-express-edition ]
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana,\-express-edition ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HANA express edition
  - [Adding a Custom Login Screen to your HXE system](http://www.sap.com/developer/how-tos/2016/10/hxe-custom-login.html)
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
- 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
+
 
 ## How-To Details
 The purpose behind this guide is to show you how to add a custom landing page to your system, thus changing the default one and allowing for even more customization to your system.
@@ -53,7 +53,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		    </script>
 		</head>
 		<body>
-		
+
 		<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
 		    <div class="container-fluid">
 		        <div class="collapse navbar-collapse navbar-menubuilder">
@@ -78,25 +78,25 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		        </div>
 		    </div>
 		</div>
-		
+
 		<div class="container">
 		  <div class="jumbotron" style="background-color: black">
 		    <h1 class="vTitle">SPS 12 Rev 120</h1>
-		    <p class="eTitle"><img src="images/logo-sap.png"> HANA express edition</p> 
+		    <p class="eTitle"><img src="images/logo-sap.png"> HANA express edition</p>
 		  </div>
-		  
+
 		    <div class="alert alert-danger" id="hostfile">
 		        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		        <strong>Warning!</strong> Please remember to set your local 'hosts' file entry for 
+		        <strong>Warning!</strong> Please remember to set your local 'hosts' file entry for
 		        this IP address <script>document.write(location.hostname)</script> More information on this can be found <a href="hosts.html">here</a>.
 		    </div>
-		  
+
 		  <div class="row">
 		    <div class="col-sm-4">
 		        <h3>Getting Started</h3>
 		        <p>
-		        Once you've gotten this far, it's time to check out some of the sample XSC and XSA 
-		        applications weve already preloaded onto the system. Those items that prompt for 
+		        Once you've gotten this far, it's time to check out some of the sample XSC and XSA
+		        applications weve already preloaded onto the system. Those items that prompt for
 		        login you may use either the SYSTEM or CODEJAMMER or one of the other	users listed below.
 		        </p>
 		        <h2><span class="label label-primary">Server Connectivity</span></h2>
@@ -114,7 +114,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		            <br>Password: <strong>&lt;given during system creation&gt;</strong>
 		        </p>
 		        <br>
-		    
+
 		        <div class="panel panel-info">
 		            <div class="panel-heading">Get Social</div>
 		            <div class="panel-body">
@@ -129,22 +129,22 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		                </p>
 		            </div>
 		        </div>  
-		
-		    
+
+
 		        <div class="panel panel-info">
 		            <div class="panel-heading">Installing a Delivery Unit (DU)</div>
 		            <div class="panel-body">
 		                <p>
-		                Additional applications, content and material can easily be added to your 
-		                system with the use of a DU. Follow the instructions below for both import 
+		                Additional applications, content and material can easily be added to your
+		                system with the use of a DU. Follow the instructions below for both import
 		                as well as exporting these items.
 		                </p>
-		                If you would like to save your work, create a new DU and assign your repository content to it. If you would like to add 
-		                additional material simply choose import, note that due to dependcies you may need to import more than once for 
+		                If you would like to save your work, create a new DU and assign your repository content to it. If you would like to add
+		                additional material simply choose import, note that due to dependcies you may need to import more than once for
 		                everything to activate fully. Follow this <a rel="external" href="/sap/hana/xs/lm/?page=DUManagementTab"><span class="label label-info">link</span></a> to create or import DU's
 		            </div>
 		        </div>  
-		          
+
 		        <div class="panel panel-info">
 		            <div class="panel-heading">Self Signed Certificate for HTTPS</div>
 		            <div class="panel-body">
@@ -153,20 +153,20 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		                </p>
 		            </div>
 		        </div>  
-		
+
 		    </div>
-		    
+
 		    <div class="col-sm-4">
 		        <h3>Developing with XSC</h3>
 		        <p>
-		        The core concept of SAP HANA Extended Application Services is to embed a full featured 
-		        application server, web server, and development environment within the SAP HANA appliance itself. 
-		        However this isn't just another piece of software installed on the same hardware as SAP HANA; 
-		        instead SAP has decided to truly integrate this new application services functionality directly 
-		        into the deepest parts of the SAP HANA database itself, giving it an opportunity for performance 
+		        The core concept of SAP HANA Extended Application Services is to embed a full featured
+		        application server, web server, and development environment within the SAP HANA appliance itself.
+		        However this isn't just another piece of software installed on the same hardware as SAP HANA;
+		        instead SAP has decided to truly integrate this new application services functionality directly
+		        into the deepest parts of the SAP HANA database itself, giving it an opportunity for performance
 		        and access to SAP HANA differentiating features that no other application server has.  
 		        </p>
-		
+
 		    	<ul class="list-group">
 		    	    <li class="list-group-item list-group-item-info">Tools</li>
 		            <li class="list-group-item list-group-item"><a rel="external" href="/sap/hana/xs/debugger/index.html">XSC Debugging</a></li>
@@ -174,23 +174,23 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		    		<li class="list-group-item list-group-item"><a rel="external" href="/sap/hana/ide/editor/">XSC Web-based Development Workbench</a></li>
 		            <li class="list-group-item list-group-item"><a rel="external" href="/sap/hana/xs/admin/">XSC Admin</a></li>
 		    	</ul>
-		    
+
 		    	<ul class="list-group">
 		    	    <li class="list-group-item list-group-item-success"><a href="http://www.sap.com/developer/tutorials.html?" target="_self">Full Tutorial Catalog</a></li>
 		    	</ul>
-		
+
 		    </div>
 		    <div class="col-sm-4">
 		        <h3>Developing with XSA</h3>        
 		        <p>
-		          One of the driving requirements for the new SAP HANA XS Advanced was the desire to better unify 
-		          the architecture of solutions built in the cloud and on premise. Cloud Foundry provided the 
-		          kinds of scalability options and flexible runtimes that are needed in the cloud environment and 
-		          therefore makes a perfect match. Due to some changes regarding hostname vs. ip address you will 
-		          also need to maintain your "hosts" file locally to access these tools. For help with that please 
+		          One of the driving requirements for the new SAP HANA XS Advanced was the desire to better unify
+		          the architecture of solutions built in the cloud and on premise. Cloud Foundry provided the
+		          kinds of scalability options and flexible runtimes that are needed in the cloud environment and
+		          therefore makes a perfect match. Due to some changes regarding hostname vs. ip address you will
+		          also need to maintain your "hosts" file locally to access these tools. For help with that please
 		          <a href="hosts.html"><strong><span class="label label-info">see the following steps</span></strong></a>.
 		        </p>
-		
+
 		        <br />
 		    	<ul class="list-group">
 		    	    <li class="list-group-item list-group-item-info">Tools</li>
@@ -199,18 +199,18 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		                document.getElementById('XSAJobId').href = 'http://'+location.hostname+':53075/'
 		            </script>
 		    	</ul>
-		    
+
 		        <br />
 		        <br />
 		        <br />
 		        <br />
 		        <br />
 		        <br />
-		
+
 		    </div>
 		  </div>
 		</div>
-		
+
 		<br />
 		<br />
 		<br />
@@ -225,7 +225,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 			Request an SAP CodeJam? <a href="mailto:sapcodejam@sap.com">sapcodejam@sap.com</a>&nbsp;&nbsp;
 		  </div>
 		</footer>
-		
+
 		</body>
 	</html>
 	```
@@ -266,7 +266,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		    </script>
 		</head>
 		<body>
-		
+
 		<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
 		    <div class="container-fluid">
 		        <div class="collapse navbar-collapse navbar-menubuilder">
@@ -291,32 +291,32 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		        </div>
 		    </div>
 		</div>
-		
+
 		<div class="container">
 		  <div class="jumbotron" style="background-color: black">
 		    <h1 class="vTitle">SPS 12 Rev 120</h1>
-		    <p class="eTitle"><img src="images/logo-sap.png"> HANA, express edition</p> 
+		    <p class="eTitle"><img src="images/logo-sap.png"> HANA, express edition</p>
 		  </div>
-		  
+
 		    <div class="alert alert-warning" id="hostfile">
 		        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		        <strong>Warning!</strong> Please remember to set your local 'hosts' file entry for 
+		        <strong>Warning!</strong> Please remember to set your local 'hosts' file entry for
 		        this IP address <script>document.write(location.hostname)</script> More information on this can be found <a href="hosts.html">here</a>.
 		    </div>
-		    
+
 		    <div class="alert alert-info" id="main">
 		        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-		        With XSA several links require the actual hostname of the server as opposed to the IP 
+		        With XSA several links require the actual hostname of the server as opposed to the IP
 		        address and therefore it is necessary to modify your local "hosts" file to reflect that.
-		        You will need to modify a file on your system and quite possibly you will need to do this 
+		        You will need to modify a file on your system and quite possibly you will need to do this
 		        as Administrator or with user that has Administrator rights.
 		    </div>
-		
+
 		    <div class="alert alert-success" id="finished">
 		        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
 		        You seem to have successfully changed your 'host' file and are accessing the system with the hostname and not the IP address.
 		    </div>
-		
+
 		  <div class="row">
 		    <div class="col-sm-4">    
 		        <h2>Windows</h2>
@@ -331,7 +331,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		            <li>Click File > Save to save your changes.</li>
 		        </ol>
 		    </div>
-		
+
 		    <div class="col-sm-4">    
 		        <h2>Linux</h2>
 		        <ol style="margin: 0 60px 10px 36px; font-size: 14px; line-height: 17px; list-style: inherit;">
@@ -346,7 +346,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		            <li>select y to save</li>
 		        </ol>
 		    </div>
-		
+
 		    <div class="col-sm-4">    
 		        <h2>MAC OS X (10.6 to 10.8)</h2>
 		        <ol style="margin: 0 60px 10px 36px; font-size: 14px; line-height: 17px; list-style: inherit;">
@@ -368,19 +368,19 @@ The purpose behind this guide is to show you how to add a custom landing page to
 		                </p>                                                     
 		                <p>
 		                    OS X Mavericks <strong>dscacheutil -flushcache; sudo killall -HUP mDNSResponder</strong>
-		                </p> 
+		                </p>
 		            </li>
 		        </ol>
 		    </div>
 		  </div>
-		
+
 		    <p></p>
 		    <a href="index.html">&nbsp;&nbsp;Back to Sample Applications</a>
-		
+
 		    </div>
 		  </div>
 		</div>
-		
+
 		<br />
 		<br />
 		<br />
@@ -395,7 +395,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 			Request an SAP CodeJam? <a href="mailto:sapcodejam@sap.com">sapcodejam@sap.com</a>&nbsp;&nbsp;
 		  </div>
 		</footer>
-		
+
 		</body>
 	</html>
 	```
@@ -421,7 +421,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 	```
 	"anonymous_connection" : "codejam.mysystem::AnonConn",
 	```
-	
+
 7. Now you will need to go back to the XS admin tool, `http://server:8000/sap/hana/xs/admin/#/package/codejam.mysystem/sqlcc/AnonConn` and you will need to edit the service and enter your `SYSYTEM` user.
 
 	![service](5.png)
@@ -429,7 +429,7 @@ The purpose behind this guide is to show you how to add a custom landing page to
 	![user](6.png)
 
 8. Once you click save the service should be enabled for runtime usage.
-	
+
 	![enabled](7.png)
 
 9. The final step necessary to turn these changes into your landing page is to make a change to your system configuration. Run the following statement from our `Catalog` editor. HXE is typically a multi-tenancy system so you will need to make the changes to the `nameserver.ini` and if it is a single database system the changes would go to the `xsengine.ini` file.
@@ -441,11 +441,11 @@ The purpose behind this guide is to show you how to add a custom landing page to
 10. Once that statement has executed your server should change from the default to your new custom page.
 
 	![old](4.png)
-	
+
 11. Now if you return to the default URL of the server you should see your new landing page.
 
 	![new](8.png)
 
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)

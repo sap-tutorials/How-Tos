@@ -1,14 +1,14 @@
 ---
 title: Adding XS Tooling to your HXE Server Image
 description: Add the XSC tooling to your SAP HANA, express edition Server only image
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana,-express-edition, products>sap-hana-studio ]
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, products>sap-hana-studio ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HANA, express edition server only
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
- 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
+
 
 ## How-To Details
 Out of the box the SAP HANA, express edition (HXE) server only option is ready to go with a lot of basic functionality. However, to use it you need to install the SAP HANA plugin for Eclipse. This of course is not a bad thing, however you may also like the idea of using the browser based tools.
@@ -27,19 +27,19 @@ This guide will help walk you through the steps necessary to install the SAP HAN
 2. Once you have modified the amount of memory and started the instance and confirmed your HANA server is running, you will connect using the SAP HANA Studio.
 
 	![Memory](2.png)
-	
-	**Note** You may need to run the following SQL statement on your system for the Delivery Unit process about to be described here. 
+
+	**Note** You may need to run the following SQL statement on your system for the Delivery Unit process about to be described here.
 	```
 	ALTER SYSTEM ALTER CONFIGURATION ('indexserver.ini', 'SYSTEM') SET ('repository','content_vendor') = 'developers.sap.com' WITH RECONFIGURE;
-	```	
-	
+	```
+
 	In SAP HANA, the vendor ID is used primarily to define the identity of the company developing a software component that it plans to ship for use with SAP HANA, for example, “sap.com”. To create a delivery unit, it is a prerequisite to maintain a vendor ID in your system.
 
-3. The first step will be to then to choose "File" and then "Import". From the wizard you will select "Delivery Unit". 
+3. The first step will be to then to choose "File" and then "Import". From the wizard you will select "Delivery Unit".
 
 	![Import](3.png)
 	![Import](4.png)
-	
+
 4. There are several units you will need to import and there is a specific order for them.
 
 	- `SAPUI5_1`
@@ -55,7 +55,7 @@ This guide will help walk you through the steps necessary to install the SAP HAN
 
 	**Note** The first unit you are importing is the SAPUI5 one which will take quite a bit of memory and time for the import to simulate as well as install so do not panic if it seems to run on and on.
 
-5. After each import you should see that it has "successfully completed" in the log viewer. 
+5. After each import you should see that it has "successfully completed" in the log viewer.
 
 	![Import](6.png)
 	![Import](7.png)
@@ -69,8 +69,8 @@ This guide will help walk you through the steps necessary to install the SAP HAN
 	That is until the very last item which will have **errors** and that will be fine.
 
 	![Import](14.png)
-	
-6. Now that you have finished each import, go ahead and run the `HDB stop` command to shut down your server. This will help clear the processes and memory. 
+
+6. Now that you have finished each import, go ahead and run the `HDB stop` command to shut down your server. This will help clear the processes and memory.
 
 	![stop server](15.png)
 
@@ -119,4 +119,4 @@ This guide will help walk you through the steps necessary to install the SAP HAN
 	![catalog](25.png)
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html) 
+ - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
