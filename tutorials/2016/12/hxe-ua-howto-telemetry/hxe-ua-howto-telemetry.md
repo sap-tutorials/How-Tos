@@ -1,11 +1,10 @@
 ---
 title: How to Configure SAP HANA 2.0, express edition Telemetry
-description: Disable Telemetry, or change the transmission interval.
+description: Learn more about the telemetry feature, and disable telemetry if desired.
 tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites
  - You have installed SAP HANA 2.0, express edition using either the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial.
- - In the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial, you changed the telemetry technical user password.
  - In the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial, you specified your HTTP(s) Proxy settings in Cockpit. (Required only for users behind a corporate firewall.)
 
 ## Next Steps
@@ -14,8 +13,6 @@ tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition
 ## How-To Details
 
 Telemetry is enabled by default in SAP HANA 2.0, express edition. Use this tutorial to learn more about the telemetry feature, and disable telemetry if desired.
-
-This How-To assumes some familiarity with SAP HANA Cockpit.
 
 
 ### Time to Complete

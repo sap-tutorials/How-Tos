@@ -17,7 +17,7 @@ tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition
 
 If you wish to upgrade your SAP HANA, express edition installation from 1.0 to 2.0 without losing any data, follow this installation.
 
-This installation assumes you have installed the SAP HANA 1.0, express edition VM image. To upgrade the SAP HANA 1.0, express edition binary installation, see <!-- [How to Upgrade to SAP HANA 2.0, express edition (Binary Installer)] (http://www.sap.com/developer/how-tos/hxe-ua-howto-upgrade-binary.html) -->
+This installation assumes you have installed the SAP HANA 1.0, express edition VM image. To upgrade the SAP HANA 1.0, express edition binary installation, see [How to Upgrade to SAP HANA 2.0, express edition (Binary Installer)](http://www.sap.com/developer/how-tos/2016/12/hxe-ua-howto-upgrade-binary.html).
 
 ## Time to Complete
 **15 Min**.
@@ -70,14 +70,14 @@ This installation assumes you have installed the SAP HANA 1.0, express edition V
 
     4. Select "Back Up System Database..."
 
-    ![Backup System Database](Select_backup_system_a.png)
+        ![Backup System Database](Select_backup_system_a.png)
 
     5. For *Backup Type* select *Complete Data Backup* and for *Destination Type* select *File*. Select your preferred destination and prefix name for your backup. By default your system backup will create two files stored at `/usr/sap/HXE/HDB00/backup/data/SYSTEMDB` with the names `<backup_prefix>_databackup_0_1` and `<backup_prefix>_databackup_1_1`.
 
-    ![Backup Settings](Backup_Settings.png)
+        ![Backup Settings](Backup_Settings.png)
 
-    > *Note*
-    > Keep track of your *Backup Prefix* as it will be used later for recovery.
+        > *Note*
+        > Keep track of your *Backup Prefix* as it will be used later for recovery.
 
 ### Store Your Backup on Your Local Machine
 
@@ -99,16 +99,16 @@ This installation assumes you have installed the SAP HANA 1.0, express edition V
 
 5. Run the following command:
 
-  ```
-  HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('<transferred_backup_filepath/backup_filenameprefix>') CLEAR LOG"
-  ```
+    ```
+    HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('<transferred_backup_filepath/backup_filenameprefix>') CLEAR LOG"
+    ```
 
-  example
+    Example:
 
-  ```
-  HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('/usr/sap/HXE/HDB00/backup/data/SYSTEMDB/COMPLETE_DATA_BACKUP') CLEAR LOG"
-  ```
+    ```
+    HDBSettings.sh recoverSys.py --command="RECOVER DATA USING FILE ('/usr/sap/HXE/HDB00/backup/data/SYSTEMDB/COMPLETE_DATA_BACKUP') CLEAR LOG"
+    ```
 
-  The restore process begins. When recovery is completed, your server's command prompt will read `recoverSys finished successfully: <timestamp>`.
+    The restore process begins. When recovery is completed, your server's command prompt will read `recoverSys finished successfully: <timestamp>`.
 
 6. Restart your server. Ensure that your files have been successfully restored.
