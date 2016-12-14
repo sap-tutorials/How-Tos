@@ -28,13 +28,13 @@ This installation assumes you have installed the SAP HANA 1.0, express edition V
 
 1. Register for your SAP HANA 2.0, express edition installation and download the Download Manager. For instructions on downloading and running the Download Manager, see either the [Installing SAP HANA 2.0, express edition (Binary Installer Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing SAP HANA 2.0, express edition (Virtual Machine Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial.
 
-6. In Download Manager, in the **Image** pull-down, select **Virtual Machine**.
+2. In Download Manager, in the **Image** pull-down, select **Virtual Machine**.
 
     ![Download Manager](HXE_download_mgr_20.png)
 
-7. Click **Browse** and select a directory where your downloads will be saved.
+3. Click **Browse** and select a directory where your downloads will be saved.
 
-8. Select one or more of the following packages:  
+4. Select one or more of the following packages:  
 
     - **Getting Started with SAP HANA, express edition (Virtual Machine Method)** - Selected by default. Downloads the getting started guide in PDF format.
 
@@ -54,7 +54,7 @@ This installation assumes you have installed the SAP HANA 1.0, express edition V
 
     - **Text analysis files for additional languages** - For languages other than English and German, files required for the HANA Text Analysis function. (The text analysis files for English and German are already included in the **Server only virtual machine** and **Server + applications virtual machine** packages.)
 
-9. Click the **Download** button.
+5. Click the **Download** button.
 
 ### Back Up Your Current SAP HANA 1.0, express edition Files
 
