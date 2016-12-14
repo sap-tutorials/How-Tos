@@ -10,6 +10,15 @@ tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-editi
  - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
 
 
+ __ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
+
+ The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The published Tutorials and How-Tos refer to the default HANA 2.0 SP00 instance numbers. When using the SP12 version please use the old default instance number and port (3`<instance number>`15):
+
+ HANA Express Version  | Default Instance ID | Port
+ :-------------------  | :------------------ | :---------------
+ 1.0 SP12              |  00                 | 30015
+ 2.0 SP00              |  90                 | 39015
+
 ## How-To Details
 You will learn how to connect to HXE using R in `Rserve` environment
 
@@ -55,7 +64,7 @@ You will learn how to connect to HXE using R in `Rserve` environment
 7. Launch `Rserve`.
 
      ```
-    /usr/local/lib64/R/bin/Rserve --RS-port 30020   --no-save   --RS-encoding utf8
+    /usr/local/lib64/R/bin/Rserve --RS-port 39020   --no-save   --RS-encoding utf8
      ```
 
       ![image 2](2.png)

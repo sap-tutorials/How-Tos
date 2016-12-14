@@ -8,12 +8,13 @@ tags: [  tutorial>beginner, products>sap-hana\,-express-edition, tutorial>how-to
  - Proficiency: beginner
  - Setup: This tutorial provides the details on creating required users for other `HANA, express edition` "Tutorials"
 
-## Next Steps
+## Next Steps     
  - Go to the [SAP HANA, express edition tutorials page](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html)
 
-## NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials'
 
-The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The publishes Tutuorials and How-Tos refer to the default 1.0 SP12 instance numbers. When using the 2.0 version please use the new default instance number and port (3`<instance number>`15):
+__ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
+
+ The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The published Tutorials and How-Tos refer to the default HANA 2.0 SP00 instance numbers. When using the SP12 version please use the old default instance number and port (3`<instance number>`15):
 
 HANA Express Version  | Default Instance ID | Port
 :-------------------  | :------------------ | :---------------
@@ -23,7 +24,7 @@ HANA Express Version  | Default Instance ID | Port
 ## How-To Details
 The HANA, express edition "Tutorials" reference a set of users. This set of instructions assures all required users and passwords are available and correct before attempting the other `HANA, express edition` "Tutorials".
 
-The passwords referred to in the "Tutorials" will not match the passwords chosen by the user. For example, any reference to the password `"HANARocks2016"` should be replaced by the user provided password (see below).
+The passwords referred to in the "Tutorials" will not match passwords chosen by the user. For example, any reference to the password `"HANARocks2016"` should be replaced by the user provided password (see below).
 
 ### Time to Complete
 **5 Min**.
@@ -36,7 +37,7 @@ Field Name  | Value
 :---------- | :---------------
 System Host | `hxehost`
 SID         | `HXE`
-System Instance Number | `00` (version 2 SP00 `90`)
+System Instance Number | `90` (version 1 SP12 `00`)
 XSA Organization | `HANAExpress`
 XSA Space   | `SAP`
 ALL passwords | <user defined> (referred to as `HANAROCKS2016` in tutorials)
@@ -52,9 +53,9 @@ ALL passwords | <user defined> (referred to as `HANAROCKS2016` in tutorials)
 
     % xs login -u xsa_admin -p <password>
 
-Reminder version 2.0 SP00 default instance number is 90, in below hdbsql command, replace "00" with "90".
+__ Reminder version 1.0 SP12 default instance number is 00, in below hdbsql command, replace "90" with "00".__
 
-    % hdbsql -i 00 -n localhost:30013 -u SYSTEM -p <SYSTEM user password>  "CREATE USER WORKSHOP_01 PASSWORD <password> NO FORCE_FIRST_PASSWORD_CHANGE SET PARAMETER XS_RC_XS_CONTROLLER_USER = 'XS_CONTROLLER_USER' , XS_RC_DEVX_DEVELOPER = 'DEVX_DEVELOPER', XS_RC_XS_AUTHORIZATION_ADMIN = 'XS_AUTHORIZATION_ADMIN'"
+    % hdbsql -i 90 -n localhost:39013 -u SYSTEM -p <SYSTEM user password>  "CREATE USER WORKSHOP_01 PASSWORD <password> NO FORCE_FIRST_PASSWORD_CHANGE SET PARAMETER XS_RC_XS_CONTROLLER_USER = 'XS_CONTROLLER_USER' , XS_RC_DEVX_DEVELOPER = 'DEVX_DEVELOPER', XS_RC_XS_AUTHORIZATION_ADMIN = 'XS_AUTHORIZATION_ADMIN'"
     ```
 
 3. Add XSA "space role" for workshop user:
@@ -66,7 +67,7 @@ Reminder version 2.0 SP00 default instance number is 90, in below hdbsql command
 4. Verify the new `WORKSHOP_01` user can connect to `HANA, express edition`:
 
     ```
-    % hdbsql -u WORKSHOP_01 -p <password> -d SystemDB
+    % hdbsql -u WORKSHOP_01 -p <password> -d SystemDB -i 90
     ```
 
     Expected result:
