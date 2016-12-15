@@ -61,7 +61,7 @@ This installation assumes you have installed SAP HANA 1.0, express edition using
 
 3. If you are installing SAP HANA, express edition 2.0 on the same host, uninstall your 1.0 installation.
 
-   If you are installing on a different host, copy the backup folder to the new host.
+    If you are installing on a different host, copy the backup folder to the new host.
 
 ### Install SAP HANA, express edition
 
@@ -77,7 +77,7 @@ This installation assumes you have installed SAP HANA 1.0, express edition using
 
 3. Navigate to the directory where you extracted the files and run `./setup_hxe.sh` as the root user:
 
-   `cd <extracted_path>`
+    `cd <extracted_path>`
     `sudo ./setup_hxe.sh`
 
 4. Follow the prompts to configure your installation.

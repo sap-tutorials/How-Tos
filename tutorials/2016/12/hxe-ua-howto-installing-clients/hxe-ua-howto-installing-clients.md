@@ -32,7 +32,7 @@ Install the Download Manager to your client machine and download the client pack
 
 2. In Download Manager, in the **Image** pull-down, select either  **Virtual Machine** or **Binary Installer**.
 
-   ![Download Manager](HXE_download_manager_clients.png)
+    ![Download Manager](HXE_download_manager_clients.png)
 
 3. Click **Browse** and select a directory where your client package will be saved.
 
@@ -203,9 +203,9 @@ To install the SAP HANA client on a Windows machine, use either a graphical user
 
 2. In file explorer go to the `HDB_CLIENT_WINDOWS_X86_64` folder.
 
-   Or:
+    Or:
 
-   Open a command prompt and navigate to `HDB_CLIENT_WINDOWS_X86_64`.
+    Open a command prompt and navigate to `HDB_CLIENT_WINDOWS_X86_64`.
 
 3. In file explorer, double-click:
 
