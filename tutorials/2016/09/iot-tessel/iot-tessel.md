@@ -4,7 +4,7 @@ description: Setup and configure a Tessel device
 tags: [  tutorial>beginner, topic>internet-of-things, products>sap-hana, products>sap-hana-cloud-platform, tutorial>how-to ]
 ---
 ## Prerequisites  
- - **How-To:** [Internet of Things (IoT) Setup up your Environment](http://www.sap.com/developer/how-tos/iot-tessel-setup.html)
+ - **How-To:** [Internet of Things (IoT) Setup up your Environment](http://www.sap.com/developer/how-tos/2016/09/iot-tessel-setup.html)
 
 ## Next Steps
  - [Internet of Things (IoT) Setup SAP HANA XS (On-premise or stand-alone server)](http://www.sap.com/developer/tutorials/iot-part2-hanaxs-setup.html)
