@@ -263,9 +263,9 @@ Now that you've installed the SAP HANA Client, connect to an SAP HANA 2.0, expre
 
 See these `How-Tos`:
 
-- [Connect to HXE using JDBC](http://www.sap.com/developer/how-tos/hxe-connect-hxe-using-jdbc.html)
+- [Connect to HXE using JDBC](http://www.sap.com/developer/how-tos/2016/08/hxe-connect-hxe-using-jdbc.html)
 
-- [How to connect to SAP HANA database server in Python](http://www.sap.com/developer/how-tos/hxe-python-connection.html)
+- [How to connect to SAP HANA database server in Python](http://www.sap.com/developer/how-tos/2016/08/hxe-python-connection.html)
 
 ### Uninstall the SAP HANA Client
 
