@@ -10,6 +10,16 @@ tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition
 ## Next Steps
  - Go to the [`SAP HANA, express edition tutorials page`](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html)
 
+
+ __ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
+
+ The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The published Tutorials and How-Tos refer to the default HANA 2.0 SP00 instance numbers. When using the SP12 version please use the old default instance number and port (3`<instance number>`15):
+
+ HANA Express Version  | Default Instance ID | Port
+ :-------------------  | :------------------ | :---------------
+ 1.0 SP12              |  00                 | 30015
+ 2.0 SP00              |  90                 | 39015
+
 ## How-To Details
 Provides instruction on how to install and update the SAP HANA Tools plugin for Eclipse and connect `HANAExpress`.
 
@@ -43,21 +53,21 @@ Provides instruction on how to install and update the SAP HANA Tools plugin for 
     Field Name       | Value
     :-------------   | :-------------
     Hostname         | `HANAExpress` Hostname (use `/sbin/ifconfig` to find IP address of host)
-    Instance number  | `00`
+    Instance number  | `90`
     Mode             | `Multiple containers`
     Select           | `System database`
     Description      | `HANAExpress Edition`
 
     ![image 1](1.PNG)
 
-10. Connection Properties: 
+10. Connection Properties:
 
     - Select `Authentication by database user`
     - User Name: `SYSTEM`
-    - Password: `password` 
+    - Password: `password`
 
       > (Note - you might be asked to change the SYSTEM user password if this is the first login)
-      
+
     - Enable SAP start service Connection
     - Click **Finish**
 
