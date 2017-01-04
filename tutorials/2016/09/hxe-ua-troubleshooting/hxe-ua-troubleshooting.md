@@ -80,11 +80,11 @@ You are installing SAP HANA, express edition on a Linux server using `hdblcm`. Y
 
 3.	Check that socket activation is enabled and started. In a shell enter:
 
-`systemctl` status `uuidd.socket`
+    `systemctl` status `uuidd.socket`
 
 4.	If the status is inactive, start socket activation:
 
-`systemctl` start `uuidd.socket`
+    `systemctl` start `uuidd.socket`
 
 
 ### Virtual Machine: Checking Resource Usage
