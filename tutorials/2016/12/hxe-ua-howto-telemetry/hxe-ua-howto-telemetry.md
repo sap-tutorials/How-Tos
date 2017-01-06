@@ -22,9 +22,13 @@ Telemetry is enabled by default in SAP HANA 2.0, express edition. Use this tutor
 
 ### What is Telemetry?
 
-When you install SAP HANA 2.0, express edition, Telemetry is enabled by default. You can disable telemetry after installation is complete. Telemetry sends anonymous performance statistics and usage statistics to SAP, so that SAP can focus development efforts on areas most vital to the SAP HANA, express edition customer base.
+When you install SAP HANA 2.0, express edition, Telemetry is enabled by default. You can disable telemetry after installation is complete. Telemetry sends anonymous performance statistics and usage statistics to SAP, so that SAP can focus development efforts on areas most vital to the SAP HANA 2.0, express edition customer base.
 
 >**Important**: Your privacy is critical to SAP. Telemetry collects anonymous usage information while ensuring complete privacy. No identifying information or private information is collected, and you can opt out of telemetry at any time.
+
+If you are inside a corporate firewall and use a proxy for connecting to http and https servers, you need to identify your proxy settings, log in to Cockpit, and update the  **Cockpit Settings > Proxy** page.
+
+>**Note**: If you do not update the Cockpit proxy settings, telemetry will not work properly. For instructions on specifying your proxy settings in Cockpit, see topic **Test XSC, XSA, and Web IDE (Server + Applications Virtual Machine Only)** in tutorial [Start Using SAP HANA 2.0, express edition (Virtual Machine Method)](http://www.sap.com/developer/tutorials/hxe-ua-getting-started-vm.html) or **Test XSC and XSA (Applications Package Only)** in tutorial [Start Using SAP HANA 2.0, express edition (Binary Installer Method)](http://www.sap.com/developer/tutorials/hxe-ua-getting-started-binary.html).
 
 ### Disable and Enable Telemetry Using SQL
 
@@ -36,13 +40,13 @@ Disable Telemetry if you wish to stop sending anonymous telemetry data to SAP.
     ```
     /usr/sap/<sid>/home/bin/hxe_telemetry.sh -i 90 -u SYSTEM -p <your_password> -d SystemDB --disable
     ```
-    >**Tip**: If you installed using the Virtual Machine method, `<sid>` is `hxe`.
+    >**Tip**: If you installed using the Virtual Machine method, `<sid>` is `HXE`.
 
 3. To re-enable telemetry, run:
     ```
     /usr/sap/<sid>/home/bin/hxe_telemetry.sh -i 90 -u SYSTEM -p <your_password> -d SystemDB --enable
     ```
-    >**Tip**: If you installed using the Virtual Machine method, `<sid>` is `hxe`.
+    >**Tip**: If you installed using the Virtual Machine method, `<sid>` is `HXE`.
 
 If you want to learn more about the `hxe_telemetry.sh` script, type **`./hxe_telemetry.sh --help`**
 

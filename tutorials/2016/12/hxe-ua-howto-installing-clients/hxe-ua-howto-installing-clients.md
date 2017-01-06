@@ -112,8 +112,9 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
 
     On your client machine, open a command window and run the following commands:
 
+    >**Note** Linux users should run this command as `<sid>adm`.
+
     ```
-    sudo su -l <sid>adm
     xs help  
     xs -v
     ```
@@ -130,7 +131,7 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
 
     > **Note**: This command may fail due to a missing SSL certificate. This note shows you how to set up a certificate on the client so it can connect to the server. Copy the correct certificate to your client from the SAP HANA 2.0, express edition server.
 
-    > Open a command session on the server machine. From the command prompt, login as sudo and navigate to the certificate. The certificate `default.root.crt.pem` is typically located here:
+    > Open a command session on the server machine or open a PuTTY session to the server machine. From the command prompt, login as sudo and navigate to the certificate. The certificate `default.root.crt.pem` is typically located here:
 
     ```
     <installation_path>/<SID>/xs/controller_data/controller/ssl-pub/router
@@ -144,7 +145,13 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
 
     > Copy the certificate to a folder on the server where you can easily access it.
 
-    > Using an FTP client or the `scp` command, send a copy of the certificate from your server machine to your client machine.
+    > Using an FTP client or the `scp` command, send a copy of the certificate from your server machine to a safe location on your client machine.
+
+    >FTP example:
+
+    ```
+    /<path>/default.root.crt.pem
+    ```
 
     >`scp` example:
 
@@ -152,7 +159,7 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
     scp <server_machine_user>@<ip_address_server>:<file_destination>/default.root.crt.pem <client_machine_user>@<ip_address_client>:<your_desired_filepath>/
     ```
 
-    > Exit your Putty session and return to your client machine. Try the previous command again, but use the **`-cacert`** command and specify the local certificate you just copied.
+    > Exit your FTP and PuTTY sessions and return to your client machine. Try the previous command again, but use the **`-cacert`** command and specify the local certificate you just copied.
 
     ```
     xs api https://<hostname>:3<instance_number>30 -caert <copied_filepath>/default.root.crt.pem
@@ -228,7 +235,7 @@ To install the SAP HANA client on a Windows machine, use either a graphical user
 
 ### Install the SAP HANA Client (Linux)
 
-To install the SAP HANA client on a Linux machine, do the following.
+To install the SAP HANA client on a Linux machine, do the following:
 
 1. Navigate to the directory where you wish to unpack the `hdb_client_linux.tgz` files.
 
