@@ -6,9 +6,9 @@ module.exports = function(filename, wholeName, callback) {
     var isTutWip = folders[0] === 'tutorials' || folders[0] === 'work-in-progress';
 
     // there is no subfolder for tutorials allowed
-    if(folders.length > 3 && isTutWip){
+   /* if(folders.length > 3 && isTutWip){
         return "there is no subfolder for tutorials allowed";
-    }
+    }*/
 
     // check first if filename equals folder name
     if (folders.length === 3 && isTutWip) {
