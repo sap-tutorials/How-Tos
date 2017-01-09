@@ -8,11 +8,11 @@ tags: [  tutorial>beginner, products>sap-hana\,-express-edition, tutorial>how-to
  - Proficiency: beginner
  - Setup: This tutorial provides the details on creating required users for other `HANA, express edition` "Tutorials"
 
-## Next Steps     
- - Go to the [SAP HANA, express edition tutorials page](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html)
+## Next Steps
+ - Go to the [SAP HANA, express edition](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html) tutorials page
 
+ **Note on SAP HANA, express edition version 2.0 implications on "How-Tos" and "Tutorials":**
 
-__ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
 
  The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The published Tutorials and How-Tos refer to the default HANA 2.0 SP00 instance numbers. When using the SP12 version please use the old default instance number and port (3`<instance number>`15):
 
@@ -52,9 +52,11 @@ ALL passwords | <user defined> (referred to as `HANAROCKS2016` in tutorials)
     % sudo su - hxeadm
 
     % xs login -u xsa_admin -p <password>
+    ```
 
-__ Reminder version 1.0 SP12 default instance number is 00, in below hdbsql command, replace "90" with "00".__
+    Reminder: version 1.0 SP12 default instance number is 00, in below `hdbsql` command, replace "90" with "00".
 
+    ```
     % hdbsql -i 90 -n localhost:39013 -u SYSTEM -p <SYSTEM user password>  "CREATE USER WORKSHOP_01 PASSWORD <password> NO FORCE_FIRST_PASSWORD_CHANGE SET PARAMETER XS_RC_XS_CONTROLLER_USER = 'XS_CONTROLLER_USER' , XS_RC_DEVX_DEVELOPER = 'DEVX_DEVELOPER', XS_RC_XS_AUTHORIZATION_ADMIN = 'XS_AUTHORIZATION_ADMIN'"
     ```
 
@@ -85,4 +87,4 @@ __ Reminder version 1.0 SP12 default instance number is 00, in below hdbsql comm
     ![image 1](2.PNG)
 
 ## Next Steps
- - Go to the [SAP HANA, express edition tutorials page](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html)
+ - Go to the [SAP HANA, express edition](http://www.sap.com/developer/topics/sap-hana-express.tutorials.html) tutorials page
