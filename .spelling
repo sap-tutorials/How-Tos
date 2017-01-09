@@ -41,6 +41,7 @@ JAX-RS
 JPA
 JSONView
 Kapsel
+Lifecycle
 List.controller.js
 List.view.xml
 Lumira
