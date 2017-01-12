@@ -65,7 +65,7 @@ Install the Download Manager to your client machine and download the client pack
 
 The XS advanced client-tools bundle **`xs.onpremise.runtime.client_<platform>-<version>.zip`** also includes the archive **``(xs_javascript-1.3.0-bundle.tar.gz)``**, which includes a selection of mandatory Node.js packages developed by SAP for use with the Node.js applications running in the XS advanced run time.
 
-You can use the XS command-line client to perform a wide-variety of developer- and administrator-related tasks. For example, in the role of a developer, you can use the XS CLI to connect to the XS advanced run time installed on the server machine, log on as a specific user, deploy and manage your applications.
+You can use the XS command line client to perform a wide-variety of developer- and administrator-related tasks. For example, in the role of a developer, you can use the XS CLI to connect to the XS advanced run time installed on the server machine, log on as a specific user, and deploy and manage your applications.
 
 ### XS CLI Client Prerequisites
 
@@ -78,11 +78,11 @@ You can use the XS command-line client to perform a wide-variety of developer- a
 
 ### Install the XS CLI Client
 
-Install the command-line client for XS advanced on your client machine.
+Install the command line client for XS advanced on your client machine.
 
-In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set up organizations and spaces for use by your development teams, assign roles to users in the organizations and spaces, create services, and bind services to the corresponding applications.
+In this procedure, you learn how to use the XS CLI client to connect to SAP HANA.
 
-1. Using a compression utility such as WinZip or Unzip, extract either `xs.onpremise.runtime.client_ntamd64.zip` for Windows or `xs.onpremise.runtime.client_linuxx86_.zip` for Linux.
+1. Using a compression utility such as WinZip or Unzip, extract either `xs.onpremise.runtime.client_ntamd64.zip` for Windows or `xs.onpremise.runtime.client_linuxx86_64.zip` for Linux.
 
     The system will create this folder:
 
@@ -101,7 +101,7 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
     For example, the SAP HANA instance "90" on the host `xsa.acme.com`:
 
     ```
-    https://xsa.acme.com:30930/v2/info  
+    https://xsa.acme.com:39030/v2/info  
     ```
 
     The response displayed in the Web browser is a JSON string with details that indicate a successful connection to the XSA controller. This connection test is important as you want to make sure the connection exists before you attempt it from within the API command.
@@ -123,7 +123,7 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
 
 4. Connect to the XS advanced controller on the SAP HANA 2.0, express edition server.   
 
-    - Specify the URL of the API end point on the SAP HANA server you want to connect to:
+    Specify the URL of the API end point on the SAP HANA server you want to connect to:
 
     ```
     xs api https://<hostname>:3<instance_number>30
@@ -137,7 +137,7 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
     <installation_path>/<SID>/xs/controller_data/controller/ssl-pub/router
     ```
 
-    > For example, where <installation_path>=/hana/shared and <SID>=HDB:
+    > For example, where `<installation_path>`=`/hana/shared` and `<SID>`=`HDB`:
 
     ```
     /hana/shared/HDB/xs/controller_data/controller/ssl-pub/router/default.root.crt.pem
@@ -174,7 +174,7 @@ In this procedure, you learn how to use the XS CLI to connect to SAP HANA, set u
     xs login -u XSA_ADMIN -p <password>
     ```
 
-    >**Note:** The password is assigned to the XSA_ADMIN user during SAP HANA 2.0express edition installation.
+    >**Note:** The password is assigned to the XSA_ADMIN user during SAP HANA 2.0, express edition installation.
 
 6. Test your connection to XSA. Run the following command to view XS applications on the SAP HANA 2.0, express edition server.
 
@@ -218,16 +218,16 @@ To install the SAP HANA client on a Windows machine, use either a graphical user
 
     - **`hdbsetup.exe`** - GUI installation
 
-    - **`hdbinst.exe`** - Command-line installation
+    - **`hdbinst.exe`** - Command line installation
 
     Or from a command prompt:
 
-    Call the program `hdbsetup` (GUI installation) or `hdbinst` (command-line installation) by entering one of the following commands:
+    Call the program `hdbsetup` (GUI installation) or `hdbinst` (command line installation) by entering one of the following commands:
 
-   Option        | Description
-   :---------    | :--------
-   GUI            | `hdbsetup [-a client]`
-   Command Line  | `hdbinst [-a client] [<option list>]`
+    Option        | Description
+    :---------    | :--------
+    GUI           | `hdbsetup [-a client]`
+    Command Line  | `hdbinst [-a client] [<option list>]`
 
 4. Follow the instructions displayed by the installation tool.
 
@@ -246,7 +246,7 @@ To install the SAP HANA client on a Linux machine, do the following:
 2. Unpack `hdb_client_linux.tgz`:
 
     ```
-    sudo tar -xvzf <unzipped_filepath/hdb_client_linux.tgz
+    sudo tar -xvzf <unzipped_filepath>/hdb_client_linux.tgz
     ```
 
     The directory `HDB_CLIENT_LINUX_X86_64`is created.
@@ -262,7 +262,7 @@ To install the SAP HANA client on a Linux machine, do the following:
 
 ### Logging the Installation
 
-The SAP HANA client installation is automatically logged by the system. The log files are stored at `%TEMP%\hdb_client_<time_stamp>` for Windows or `/var/temp/hdb_client_<time_stamp>` for Linux.
+The SAP HANA client installation is automatically logged by the system. The log files are stored at `%TEMP%\hdb_client_<time_stamp>` for Windows and `/var/temp/hdb_client_<time_stamp>` for Linux.
 
 ### Connect SAP HANA Client to SAP HANA 2.0, express edition
 

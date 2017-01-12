@@ -18,43 +18,6 @@ Perform these steps to resolve issues when installing SAP HANA 2.0, express edit
 
 ---
 
-### Installation fails with error “Cannot load `libssl.so.0.9.8`”
-
-#### Issue
-
-You are installing SAP HANA, express edition on a Linux server using `hdblcm`. You receive this error:  
-
-**Installation of SAP HANA Database failed.**  
-  **Installation failed.**  
-    **unhandled exception. Cannot load  `libssl.so.0.9.8`**
-
-#### Solution
-
-You need to downgrade your OpenSSL to version 0.9.8.  
-
-`libopenssl` version 0.9.8 is provided in Legacy Module 12 `x86_64` of SUSE Linux Enterprise Server for SAP Applications 12 SP1.
-
-You need to be registered on the SUSE site before you can download the legacy module. If you haven’t already registered, you will be prompted to register during the download.
-
-1.	Go to **`YaST` > Add-on Product**.  
-
-2.	Click the **Add** button.  
-
-3.	Under Add-on Product, select **Extensions and Modules from Registration Server**.  
-
-    If you haven’t registered already, register to continue.
-
-4.	From the Available Extensions and Modules list, select **Legacy Module 12 `x86_64`**.  
-
-5.	Agree to the license terms and accept the remaining installation prompts.  
-
-6.	Restart your Linux server.  
-
-7.	Completely uninstall SAP HANA, express edition (including XSA, if installed).  
-
-8.  Reinstall SAP HANA, express edition and restart.
-
-
 ### HDB Daemon not Running
 
 #### Issue
@@ -62,7 +25,7 @@ You need to be registered on the SUSE site before you can download the legacy mo
 You are installing SAP HANA, express edition on a Linux server using `hdblcm`. You receive this error:  
 
 **Cannot start system.  
-  Start instance 00 on host ‘`hxehost.localdomain.com`’ failed.  
+  Start instance 00 on host '`hxehost.localdomain.com`' failed.  
     FAIL: process `hdbdaemon` HDB Daemon not running.**
 
 #### Solution
