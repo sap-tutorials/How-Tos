@@ -117,7 +117,7 @@ It may take a few minutes for the system to get started. Run `xs apps` again to 
 
 You are downloading packages using the Download Manager. The Status area and Progress Detail area show the error `Failed to concatenate downloaded files`.
 
-![Download Manager](hxe_ua_dm_failure.PNG)
+![Download Manager](hxe_dm_failure.PNG)
 
 #### Solution
 

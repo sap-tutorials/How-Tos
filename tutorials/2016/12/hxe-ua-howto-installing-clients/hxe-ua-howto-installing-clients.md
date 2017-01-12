@@ -249,7 +249,7 @@ To install the SAP HANA client on a Linux machine, do the following:
     sudo tar -xvzf <unzipped_filepath>/hdb_client_linux.tgz
     ```
 
-    The directory `HDB_CLIENT_LINUX_X86_64`is created.
+    The directory `HDB_CLIENT_LINUX_X86_64` is created.
 
 3. Move into the `HDB_CLIENT_LINUX_X86_64` directory and run `hdbinst`.
 
