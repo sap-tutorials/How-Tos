@@ -25,7 +25,7 @@ Perform these steps to resolve issues when installing SAP HANA 2.0, express edit
 You are installing SAP HANA, express edition on a Linux server using `hdblcm`. You receive this error:  
 
 **Cannot start system.  
-  Start instance 00 on host ‘`hxehost.localdomain.com`’ failed.  
+  Start instance 00 on host '`hxehost.localdomain.com`' failed.  
     FAIL: process `hdbdaemon` HDB Daemon not running.**
 
 #### Solution
