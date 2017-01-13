@@ -19,7 +19,9 @@ The following describes the general procedures necessary to setup your local env
 ---
 
 
-1. Install the following tools:    - [Node.js 4.4.3](https://nodejs.org/en/blog/release/v4.4.3/) or higher    - Install an HTML/JavaScript editor – if you don’t have one, simply search Google for something appropriate like [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), etc...
+1. Install the following tools:
+    - [Node.js 4.4.3](https://nodejs.org/en/blog/release/v4.4.3/) or higher
+    - Install an HTML/JavaScript editor &#151; if you don't have one, simply search Google for something appropriate like [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), etc...
 
 2. Install the Node.js native add-on build tool from the command prompt (or Terminal) 
 
