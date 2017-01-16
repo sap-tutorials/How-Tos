@@ -26,7 +26,7 @@ This how-to refers to the laptop with SAP HANA 2.0, express edition as the **ser
 
 Install the Download Manager to your client machine and download the client package.
 
-> **Note:** The Download Manage requires Oracle Java SE Runtime Environment 8 (JRE 8) or higher, 64-bit, on your client machine.
+> **Note:** The Download Manager requires Oracle Java SE Runtime Environment 8 (JRE 8) or higher, 64-bit, on your client machine.
 
 1. Save the Download Manager installation file to your client machine and open it. For instructions on downloading and running the Download Manager, see either the [Installing SAP HANA 2.0, express edition (Binary Installer Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing SAP HANA 2.0, express edition (Virtual Machine Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorials.
 
