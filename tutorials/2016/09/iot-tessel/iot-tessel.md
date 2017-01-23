@@ -41,7 +41,7 @@ After this tutorial you can choose either the On-Premise or the Cloud route.
 If it shows the serial number of the connected Tessel device, then you are good to proceed with exercises.
 
 
-3. Once your Tessel has been connected and you’ve checked to ensure the firmware is up to date you can run other commands such as:
+3. Once your Tessel has been connected and you've checked to ensure the firmware is up to date you can run other commands such as:
 
     `tessel version --board`
     will tell you the version of your Tessel device which can be important depending on the project you have in mind.
@@ -51,7 +51,7 @@ If it shows the serial number of the connected Tessel device, then you are good 
 
 2. Now that your device is connected you can write your first JavaScript application and execute it on our device.
 
-    The first application to write is `blinky.js` this makes the on-board LED’s of the device blink rapidly. The code is rather simple and more information can be found here: <http://start.tessel.io/blinky>.
+    The first application to write is `blinky.js` this makes the on-board LED's of the device blink rapidly. The code is rather simple and more information can be found here: <http://start.tessel.io/blinky>.
 
     Before you run this code, you do need to ensure that you have a proper text editor or preferably a code editor installed. There are several options for this such as `Chocolat` for Mac OS X or `Notepad++` you can use any but something designed for code and syntax highlighting is ideal.
 
@@ -103,7 +103,7 @@ If it shows the serial number of the connected Tessel device, then you are good 
     - <http://start.tessel.io/modules/ambient>
     - <http://start.tessel.io/modules/accelerometer>
 
-    > When working with the different modules you should create a separate folder under your `tessel-code` folder, the reason for this is that when you install the libraries for the module it’s best to do this in a new directory because when you create your JavaScript code and then run that on the device it deploys the libraries at the same time and thus best to not have everything inside the same exact folder.
+    > When working with the different modules you should create a separate folder under your `tessel-code` folder, the reason for this is that when you install the libraries for the module it's best to do this in a new directory because when you create your JavaScript code and then run that on the device it deploys the libraries at the same time and thus best to not have everything inside the same exact folder.
 
 ## Next Steps
  - [Internet of Things (IoT) Setup SAP HANA XS (On-premise or stand-alone server)](http://www.sap.com/developer/tutorials/iot-part2-hanaxs-setup.html)

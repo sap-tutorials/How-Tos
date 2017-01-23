@@ -19,7 +19,7 @@ Here you will prepare your development environment to work with a Tessel Generat
 ---
 
 1. Sign up and join the [SAP Community Network](http://scn.sap.com). This is SAP's industry leading community where you can find out more and engage with experts all over the world. (Optional)2. Install the following tools:    - [Node.js v 0.12.7](https://nodejs.org/en/blog/release/v0.12.7/)
-    	- [Node.js 4.4.3](https://nodejs.org/en/blog/release/v4.4.3/) has recently been tried and worked with the Tessel first generation    - [Google Chrome](http://www.google.com/chrome/)    - [Chrome Postman extension or application](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)    - Install an HTML/JavaScript editor – if you don’t have one, simply search Google for something appropriate like [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), etc...
+    	- [Node.js 4.4.3](https://nodejs.org/en/blog/release/v4.4.3/) has recently been tried and worked with the Tessel first generation    - [Google Chrome](http://www.google.com/chrome/)    - [Chrome Postman extension or application](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop)    - Install an HTML/JavaScript editor – if you don't have one, simply search Google for something appropriate like [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), etc...
 ### Optional - Additional Configuration Steps for the SAP HANA Cloud Platform
 
 1. Sign up for your free developer edition of [SAP HANA Cloud Platform trial edition](http://developers.sap.com)

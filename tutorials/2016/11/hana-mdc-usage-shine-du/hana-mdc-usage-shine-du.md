@@ -27,9 +27,9 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-cloud-platform, p
 
     ![Account Information Page](1.png)
 
-    If you are confused about the account name and user name, you can go to [SAP HANA Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/) and there you can see your account name on the tile and if you click on it, then in the URL. The user name is the same name, just without the “trial” part.
+    If you are confused about the account name and user name, you can go to [SAP HANA Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/) and there you can see your account name on the tile and if you click on it, then in the URL. The user name is the same name, just without the "trial" part.
 
-5. Choose your tenant database, which you’ve already created and enter the database user name **SYSTEM** and password you specified when you created this database. Then choose **Finish**.
+5. Choose your tenant database, which you've already created and enter the database user name **SYSTEM** and password you specified when you created this database. Then choose **Finish**.
 
     ![SYSTEM](2.png)
 
@@ -40,7 +40,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-cloud-platform, p
 
 ### Download SHINE DU & Manage Roles and Users
 
-1. Go to [GitHub-SHINE](https://github.com/SAP/hana-shine) and download the SHINE Delivery Unit. Just click on **Clone or download** and choose **Download ZIP**. Don’t forget to export the zip file.
+1. Go to [GitHub-SHINE](https://github.com/SAP/hana-shine) and download the SHINE Delivery Unit. Just click on **Clone or download** and choose **Download ZIP**. Don't forget to export the zip file.
 
     ![Download ZIP](4.png)
 
@@ -109,7 +109,7 @@ You can also import Delivery Unit using the Eclipse IDE
 
     ![Running](10.png)
 
-    >Note: In the end, the status should be **completed successfully** even if it is **completed with errors** that shouldn’t be a problem. The Delivery Unit is still imported.
+    >Note: In the end, the status should be **completed successfully** even if it is **completed with errors** that shouldn't be a problem. The Delivery Unit is still imported.
 
     ![Completed](11.png)
 
