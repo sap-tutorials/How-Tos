@@ -19,7 +19,7 @@ Here you will prepare your development environment on a laptop to work with a Te
 ---
 
 1. Install the following tools:    - [Node.js v. 0.12](https://nodejs.org/en/blog/release/v0.12.18/)
-      - [Node.js Latest LTS Version v6](https://nodejs.org/en/blog/release/v4.4.3/) has recently been tried on Windows and MacOS and worked well with the Tessel1. But did not work with some Linux versions    - [Google Chrome](http://www.google.com/chrome/)    - [Chrome Postman](https://www.getpostman.com/apps) as Chrome extension or the app. You can use as well some other REST API Client of your choice.    - Install an HTML/JavaScript editor – if you don't have one, simply search Google for something appropriate like [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), etc...
+      - [Node.js Latest LTS Version v. 6](https://nodejs.org/en/blog/release/v4.4.3/) has recently been tried on Windows and MacOS and worked well with the Tessel1. But did not work with some Linux versions    - [Google Chrome](http://www.google.com/chrome/)    - [Chrome Postman](https://www.getpostman.com/apps) as Chrome extension or the app. You can use as well some other REST API Client of your choice.    - Install an HTML/JavaScript editor – if you don't have one, simply search Google for something appropriate like [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), etc...
 ### Optional - Additional Configuration Steps for the SAP HANA Cloud Platform
 
 1. Sign up for your free developer account at [SAP HANA Cloud Platform trial](http://developers.sap.com/cloud)
