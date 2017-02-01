@@ -84,7 +84,7 @@ Alternatively, you can test these steps by copying the preconfigured user into a
 
 If you look at the message thrown by the client, you will find that although you explicitly call port 30030 in the `API_URL` parameter, the error message returns port 30032.  Not having the right ports open would mean more errors when trying to connect to other sites, as login requests will go through the UAA.
 
-This means we need to make sure communications into those ports are free of blocks:
+This means you need to make sure communications into those ports are free of blocks:
 
 <ol type="a">
 <li>  Make sure the instance has the proper ports enabled. In CAL, the configuration would look like this for this scenario from `Access points` section in the Virtual Machines tab:<br>
