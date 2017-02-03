@@ -33,7 +33,7 @@ This guide will help walk you through the steps necessary to install the SAP HAN
 	ALTER SYSTEM ALTER CONFIGURATION ('indexserver.ini', 'SYSTEM') SET ('repository','content_vendor') = 'developers.sap.com' WITH RECONFIGURE;
 	```
 
-	In SAP HANA, the vendor ID is used primarily to define the identity of the company developing a software component that it plans to ship for use with SAP HANA, for example, “sap.com”. To create a delivery unit, it is a prerequisite to maintain a vendor ID in your system.
+	In SAP HANA, the vendor ID is used primarily to define the identity of the company developing a software component that it plans to ship for use with SAP HANA, for example, "sap.com". To create a delivery unit, it is a prerequisite to maintain a vendor ID in your system.
 
 3. The first step will be to then to choose "File" and then "Import". From the wizard you will select "Delivery Unit".
 
