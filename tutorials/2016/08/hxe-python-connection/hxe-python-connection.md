@@ -4,7 +4,7 @@ description: A How-To that shows how to integrate python with the SAP HANA datab
 tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
- - **Setup:** This tutorial assumes that you have followed the [SAP HANA Client Installation and Update Guide](http://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf) to install the HANA client software. You can download the HANA client software from [SAP Store](https://store.sap.com/sap/cpa/ui/resources/store/html/SolutionDetails.html?pid=0000012950).
+ - **Setup:** This tutorial assumes that you have followed the [How to Install SAP HANA 2.0, express edition Clients](http://www.sap.com/developer/how-tos/2016/12/hxe-ua-howto-installing-clients.html) tutorial to install the HANA, express edition client software.
 
 ## Next Steps
  - This is a standalone How-To on establishing basic connectivity to SAP HANA database server in python. [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
@@ -52,7 +52,7 @@ In many python applications, you would need access to a database for storing, re
 
     #Replace with your hostname, unique port for the database you are connecting,
     #UserID and password in that order.
-    connection=dbapi.connect('hana-server', '39015', 'system', 'manager')
+    connection=dbapi.connect('hxehost', 39013, 'system', 'MyPassword')
 
     #This statement prints true if the connection is successfully established
     print connection.isconnected()
