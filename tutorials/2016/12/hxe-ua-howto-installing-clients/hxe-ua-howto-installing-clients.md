@@ -136,7 +136,11 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
 
     >**Note** Linux users should run this command as `<sid>adm`.
 
+<<<<<<< HEAD
+    ```bash
+=======
     ```basah
+>>>>>>> refs/remotes/SAPDocuments/master
     xs help  
     xs -v
     ```
@@ -184,7 +188,11 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
     > Exit your FTP and PuTTY sessions and return to your client machine. Try the previous command again, but use the **`-cacert`** command and specify the local certificate you just copied.
 
     ```bash
+<<<<<<< HEAD
+    xs api https://<hostname>:3<instance_number>30 -cacert "<copied_filepath>/default.root.crt.pem"
+=======
     xs api https://<hostname>:3<instance_number>30 -caert <copied_filepath>/default.root.crt.pem
+>>>>>>> refs/remotes/SAPDocuments/master
     ```
 
 
