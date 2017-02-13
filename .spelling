@@ -1,4 +1,5 @@
 _app
+Ambari
 AngularJS
 App.view.xml
 Apriori
@@ -31,6 +32,8 @@ Heilman
 HelpDesk
 hostname
 How-Tos
+hypervisor
+Hypervisor
 IoT
 JavaScript
 Jaquet
@@ -81,6 +84,7 @@ truststore
 tutorials.html
 UI5
 util
+VMware
 Vora
 weather_app
 webapp
@@ -94,3 +98,20 @@ xsaccess
 xsapp
 xsjs
 xsodata
+_DEV
+sap.hana.admin.roles
+sap.hana.xs.lm.roles
+sap.hana.xs.ide.roles
+sap.hana.xs.debugger
+_ADMIN
+_ACTIVATED
+_ROLE
+Lifecycle
+_DEMOCONTENT
+_11.1.tgz
+sap.hana.democontent.epm.roles
+hana
+democontent
+epm
+index.html
+x1F534
