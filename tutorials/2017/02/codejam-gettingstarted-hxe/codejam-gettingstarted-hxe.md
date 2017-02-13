@@ -77,7 +77,7 @@ Finally you are connected to your HXE system.
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 8: Create a new user](Create a new user)]
+[ACCORDION-BEGIN [Step 7: Create a new user](Create a new user)]
 
 Before you begin running amok in your system we do recommend you create a new user and not use the `SYSTEM` user. 
 
