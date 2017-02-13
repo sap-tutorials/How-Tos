@@ -136,6 +136,7 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
 
     >**Note** Linux users should run this command as `<sid>adm`.
 
+    ```bash
     xs help  
     xs -v
     ```
