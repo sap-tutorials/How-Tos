@@ -4,9 +4,9 @@ description: Upgrade your SAP HANA, express edition installation from 1.0 to 2.0
 tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites
- - You (or someone in your organization) has installed SAP HANA 1.0, express edition their machine using the [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial.
+ - You (or someone in your organization) has installed SAP HANA 1.0, express edition their machine.
 
- - You have completed the [Start Using SAP HANA, express edition](http://www.sap.com/developer/tutorials/hxe-ua-getting-started-vm.html) tutorial and have successfully installed the SAP HANA Eclipse plugin.
+ - You have successfully installed the SAP HANA Eclipse plugin.
 
 - You have installed and successfully used an FTP client.
 

@@ -4,9 +4,9 @@ description: Upgrade your SAP HANA, express edition installation from 1.0 to 2.0
 tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites
- - You have installed SAP HANA 1.0, express edition.
+ - You (or someone in your organization) have installed SAP HANA 1.0, express edition.
 
- - You have completed the [Start Using SAP HANA, express edition](http://www.sap.com/developer/tutorials/hxe-ua-getting-started-binary.html) tutorial and have successfully installed the SAP HANA Eclipse plugin.
+ - You have completed the have successfully installed the SAP HANA Eclipse plugin.
 
 ## Next Steps
  - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
