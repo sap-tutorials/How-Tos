@@ -47,7 +47,7 @@ In order to get your copy of the download, either the virtual machine or the bin
 
 While you begin to download your image or the binaries, again we are focused on the `Server Only` image during the event. You should head over to [Google](http://www.google.com) and search for a VM player for your system unless you are running a Linux install and plan to install the binaries directly.
 
-For Windows we recommend the VMware Workstation Player which is a free offerring and for Mac OS X we recommend Virtual Box. But the choice is entirely up to you.
+For Windows we recommend the VMware Workstation Player which is a free offering and for Mac OS X we recommend Virtual Box. But the choice is entirely up to you.
 
 [ACCORDION-END]
 
@@ -73,19 +73,18 @@ We recommend [Eclipse Neon](http://www.eclipse.org/downloads/packages/), the Jav
 
 Now that Eclipse has been installed you will need to add the appropriate plugins. The following guide will take your though [those steps](https://www.sap.com/developer/how-tos/2016/09/hxe-howto-eclipse.html).
 
-Finally you are connected to your HXE system. 
+Finally you are connected to your HXE system.
 
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 7: Create a new user](Create a new user)]
 
-Before you begin running amok in your system we do recommend you create a new user and not use the `SYSTEM` user. 
+Before you begin running amok in your system we do recommend you create a new user and not use the `SYSTEM` user.
 
 The [following guide](https://www.sap.com/developer/how-tos/2016/09/hxe-howto-tutorialprep.html) will walk you through those steps. You can name your user anything you like or even create 2 users (including the one from the guide `WORKSHOP_01`)
 
-From this point on we hit the actual `working with HXE`
- steps and that means a bit of coding, modeling and more.
- 
+From this point on we hit the actual `working with HXE` steps and that means a bit of coding, modeling and more.
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 8: Coding begins](Coding begins)]
@@ -101,7 +100,7 @@ Now that you are connected and have your new users created it is time to actuall
 
 [ACCORDION-BEGIN [Step 9: Advanced System Settings](Advanced System Settings)]
 
-If you are so inclined you can also enhance your current server installation and add in the browser based tooling to forgo the using of Eclipse for working with the server as well. 
+If you are so inclined you can also enhance your current server installation and add in the browser based tooling to forgo the using of Eclipse for working with the server as well.
 
 This [blog post](https://blogs.sap.com/2016/10/28/enhancing-hxe-server-image/) walks you through the whole process of installing the browser based tools.
 
@@ -132,7 +131,7 @@ The following tutorials and blogs are just some optional items to help you under
 
 The following items are meant for further exploration of the HXE server and things that are possible with it.
 
-- [Raspberry Pi](https://blogs.sap.com/2017/01/26/tbt-sap-hana-and-raspberry-pi/) 
+- [Raspberry Pi](https://blogs.sap.com/2017/01/26/tbt-sap-hana-and-raspberry-pi/)
 - [Fuzzy Search](https://blogs.sap.com/2016/10/26/hxe-fuzzy-search/)
 
 [ACCORDION-END]
