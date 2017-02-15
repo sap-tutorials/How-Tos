@@ -86,7 +86,7 @@ In this how-to, you will learn how to connect to HANA Express Edition using JDBC
 
 ## Related Information
 
-1. [SAP HANA Database - Client Installation and Update Guide](http://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf)
+1. [SAP HANA Database - Client Installation and Update Guide](https://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf)
 
 ## Next Steps
  - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
