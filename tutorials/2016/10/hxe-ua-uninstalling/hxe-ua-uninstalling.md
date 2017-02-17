@@ -1,7 +1,7 @@
 ---
 title: Uninstalling SAP HANA, express edition
 description: Follow these steps to uninstall the binary version of SAP HANA, express edition, or the SAP EA Designer component.
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana,-express-edition ]
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
  - **Setup:** You have installed the binary version of SAP HANA, express edition.
