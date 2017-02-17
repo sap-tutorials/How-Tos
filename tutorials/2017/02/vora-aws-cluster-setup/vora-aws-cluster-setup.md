@@ -1,10 +1,10 @@
 ---
-title: How to Set up and administer an SAP HANA Vora 1.3 Cluster for AWS
+title: How to setup and administer an SAP HANA Vora 1.3 Cluster for AWS
 description: Step by step guide to setting up and administering an SAP HANA Vora 1.3 Cluster
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 ## Prerequisites  
-1. [How to run SAP HANA Vora on Amazon Web Services] (link coming soon) is completed, and
+1. [How to run SAP HANA Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html) is completed, and
 2. SAP HANA Vora instance running with 2/2 status checks passed in the AWS console,
 3. The Manager instance is running under a VPC created following the steps in [Create a VPC in AWS for SAP HANA Vora Developer Edition in AWS] (link coming soon),
 4. The required ports are open. Refer to [AWS Step by Step guide to create Security Group SAP HANA Vora 1.3] (link coming soon),

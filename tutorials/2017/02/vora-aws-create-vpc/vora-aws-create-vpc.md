@@ -1,5 +1,5 @@
 ---
-title: Create a VPC in AWS for SAP HANA Vora Developer Edition in AWS on Vora 1.3
+title: Create a VPC in AWS for SAP HANA Vora Developer Edition
 description: Step by step guide to create a VPC in AWS for SAP HANA Vora Developer Edition in AWS on Vora 1.3
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
@@ -7,7 +7,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
  - Amazon Web Services account. Create AWS account or use existing account.
 
 ## Next Steps
- - [Set up Security Groups in AWS VPC] (coming soon)
+ - [Set up Security Groups in AWS VPC](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html)
 
 
 ## How-To Details
@@ -119,4 +119,4 @@ Select this VPC while launching a SAP HANA Vora Manager instance.
 [ACCORDION-END]
 
 ## Next Steps
-- [Set up Security Groups in AWS VPC] (coming soon)
+- [Set up Security Groups in AWS VPC](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html)
