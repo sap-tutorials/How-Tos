@@ -1,7 +1,7 @@
 ---
 title: Troubleshooting UAA Errors
 description: Troubleshooting authenticaiton error message when using XS Advanced client to log in to  SAP HANA
-tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, topic>cloud, topic>security, products>sap-hana, products>sap-hana\,-express-edition, products>sap-hana-cloud-platform ]
+tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, topic>cloud, topic>security, products>sap-hana, products>sap-hana\,-express-edition, products>sap-cloud-platform ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HANA SPS12, SAP HANA Express Edition

@@ -1,7 +1,7 @@
 ---
 title: SAP HANA MDC Usage – SHINE Delivery Unit
 description: Learn how to import/export a SAP HANA Interactive Education (SHINE) Delivery Unit (DU)
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-cloud-platform, products>sap-hana ]
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform, products>sap-hana ]
 ---
 ## Prerequisites  
  - **Proficiency:** Beginner
@@ -27,7 +27,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-cloud-platform, p
 
     ![Account Information Page](1.png)
 
-    If you are confused about the account name and user name, you can go to [SAP HANA Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/) and there you can see your account name on the tile and if you click on it, then in the URL. The user name is the same name, just without the "trial" part.
+    If you are confused about the account name and user name, you can go to [SAP Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/) and there you can see your account name on the tile and if you click on it, then in the URL. The user name is the same name, just without the "trial" part.
 
 5. Choose your tenant database, which you've already created and enter the database user name **SYSTEM** and password you specified when you created this database. Then choose **Finish**.
 
@@ -45,7 +45,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-cloud-platform, p
     ![Download ZIP](4.png)
 
 2. Create another database user.
-    Go to your [SAP HANA Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/), then **Persistence > Databases & Schemas** and open your tenant database. Then click on **SAP HANA Cockpit** and enter your **SYSTEM** database user name and password.
+    Go to your [SAP Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/), then **Persistence > Databases & Schemas** and open your tenant database. Then click on **SAP HANA Cockpit** and enter your **SYSTEM** database user name and password.
 3. From the **SAP HANA Database Administration** page, choose **Manage Roles and Users**.
 
     ![Administration Page](5.png)
@@ -128,7 +128,7 @@ You can also import Delivery Unit using the Eclipse IDE
 
 ### Edit the Code and Run the Application
 
-1. Go to your [SAP HANA Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/), then *Persistence > Database & Schemas* and open your tenant database. Then click on *SAP HANA Web-based Development Workbench.*
+1. Go to your [SAP Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/), then *Persistence > Database & Schemas* and open your tenant database. Then click on *SAP HANA Web-based Development Workbench.*
 2. Select *Editor* and enter your **`SHINE_DEV`** database user name and password.
 3. Select **`sap > hana > democontent > epm > index.html`**
 
@@ -143,7 +143,7 @@ You can also import Delivery Unit using the Eclipse IDE
 
 ### Export the Delivery Unit
 
-1. Go to your [SAP HANA Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/), then *Persistence > Database & Schemas* and open your tenant database. Then click on **SAP HANA Cockpit**.
+1. Go to your [SAP Cloud Platform Cockpit](https://account.hanatrial.ondemand.com/), then *Persistence > Database & Schemas* and open your tenant database. Then click on **SAP HANA Cockpit**.
 2. Enter your **`SHINE_DEV`** database user name and password.
 3. Choose **`HANA Application Lifecycle Management > Delivery Units > HCO_DEMOCONTENT`**
 4. Select the **Export** button above.

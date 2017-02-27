@@ -1,12 +1,12 @@
 ---
 title: Getting started with Spring Boot
 description: Learn how-to develop a simple Spring Boot sample application that can be deployed to SAP HANA Cloud Platform
-tags: [  tutorial>beginner, topic>cloud, topic>java, products>sap-hana-cloud-platform, tutorial>how-to ]
+tags: [  tutorial>beginner, topic>cloud, topic>java, products>sap-cloud-platform, tutorial>how-to ]
 ---
 ## Prerequisites  
   - **Proficiency:** Beginner
   - **Software Requirements:** Java, Maven
-  - **Tutorials:** [Getting Started with the SAP HANA Cloud Platform Tools for Java](https://hcp.sap.com/developers/TutorialCatalog/jav100_01_java_setup_eclipse.html)
+  - **Tutorials:** [Getting Started with the SAP Cloud Platform Tools for Java](https://hcp.sap.com/developers/TutorialCatalog/jav100_01_java_setup_eclipse.html)
 
 
 
@@ -98,7 +98,7 @@ This document will teach you how-to develop a simple web application using [Spri
     ```
     > Note: The first dependency to `spring-boot-devtools` is optional and just something that comes in quite handy to accelerate development via hot-code replacement etc. Please refer to [Developer Tools](http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools) for more details.
     
-    > Please also note that we explicitly specified the last two `dependencies` as `provided`, hereby specifying that these `dependencies` will not be included in the resulting `WAR` file once a build is triggered. The reason we do this is that we don't need an embedded Tomcat (see [Tomcat 8](https://help.hana.ondemand.com/help/frameset.htm?fd6b72f17a11478e87fefe3f6ad2e30d.html)), nor the logging frameworks as the target runtime of SAP HANA Cloud Platform already provides them out-of-the-box; hence including these libraries would only lead to strange classcloading issues. Please refer to the [online documentation](https://help.hana.ondemand.com/help/frameset.htm?e6e8ccd3bb571014b6afdc54744eef4d.html) for further details.
+    > Please also note that we explicitly specified the last two `dependencies` as `provided`, hereby specifying that these `dependencies` will not be included in the resulting `WAR` file once a build is triggered. The reason we do this is that we don't need an embedded Tomcat (see [Tomcat 8](https://help.hana.ondemand.com/help/frameset.htm?fd6b72f17a11478e87fefe3f6ad2e30d.html)), nor the logging frameworks as the target runtime of SAP Cloud Platform already provides them out-of-the-box; hence including these libraries would only lead to strange classcloading issues. Please refer to the [online documentation](https://help.hana.ondemand.com/help/frameset.htm?e6e8ccd3bb571014b6afdc54744eef4d.html) for further details.
     
 3. (Optional) If you intend to deploy the application to a Cloud Foundry environment, such as the SAP HANA Cloud Platform, Starter Edition for Cloud Foundry Services (Beta), then we would need to include the logging frameworks. In order to facilitate this setup we have introduced Maven `profiles` so that we can simply trigger a `build` for the respective deployment platform. 
 
@@ -197,7 +197,7 @@ This document will teach you how-to develop a simple web application using [Spri
     
     `mvn spring-boot:run`
     
-    In order to build a `WAR` file to be deployed to SAP HANA Cloud Platform run the following command:
+    In order to build a `WAR` file to be deployed to SAP Cloud Platform run the following command:
     
     `mvn clean package`
     
