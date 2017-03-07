@@ -1,7 +1,7 @@
 ---
 title: How to setup the SAP HANA Vora developer edition in SAP CAL
 description: Setup the SAP HANA Vora 1.3 developer edition using the SAP Cloud Appliance Library
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+tags: [  tutorial>how-to, tutorial>beginner, topic>cloud, products>sap-hana-vora ]
 ---
 ## Prerequisites  
  - **Systems used:**
@@ -56,16 +56,20 @@ Click **Create Instance**.
 
 On **Create Instance** screen choose the CAL account, where the instance to be created. In the example below the CAL account is `Default` and it is linked with the AWS account in Amazon Web Services.
 
-Review the cost forecast related to the instance. This is the cost charged by the cloud provider, which is AWS in this example.
-
 Define:
 - the instance name (here `myvora13`),
 - the AWS region (here `us-east-1`, which is the only AWS region, where the instance can be created),
 - the master password (make sure you remember it ;-).
 
-![Basic settings of the instance created](vorasetup03.jpg)
+![Basic settings of the instance created](vorasetup03a.jpg)
 
-Click **Create**. Read and accept **Terms and Conditions**.
+Click **Advanced Mode** and go through the wizard steps. On step 3 **Virtual Machines** change SAP VORA machine size to at least `r3.xlarge` to make sure there will be enough resources for all processes.
+
+To get better storage performance you can change as well the **Volume Type** to `Provisioned IOPS`. It has a cost impact, so choose what is more important for you. Review the cost forecast related to the instance. This is the cost charged by the cloud provider, which is AWS in this example.
+
+![Resources settings](vorasetup03b.jpg)
+
+At the end of the wizard click **Review** to review your settings, and then click **Create** if everything is good. Read and accept **Terms and Conditions** if displayed.
 
 It is important that you click **Download** and store a file with a private key. You will use it to connect to the instance's host using ssh client of your choice, like [PuTTY](http://www.putty.org/).
 
