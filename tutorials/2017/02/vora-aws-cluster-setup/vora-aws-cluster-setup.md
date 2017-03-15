@@ -1,23 +1,23 @@
 ---
-title: How to setup and administer an SAP HANA Vora 1.3 Cluster for AWS
-description: Step by step guide to setting up and administering an SAP HANA Vora 1.3 Cluster
+title: How to setup and administer an SAP Vora 1.3 Cluster for AWS
+description: Step by step guide to setting up and administering an SAP Vora 1.3 Cluster
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 ## Prerequisites  
-1. [How to run SAP HANA Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html) is completed, and
-2. SAP HANA Vora instance running with 2/2 status checks passed in the AWS console,
-3. The Manager instance is running under a VPC created following the steps in [Create a VPC in AWS for SAP HANA Vora Developer Edition in AWS](http://www.sap.com/developer/how-tos/2017/02/vora-aws-create-vpc.html),
-4. The required ports are open. Refer to [AWS Step by Step guide to create Security Group SAP HANA Vora 1.3](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html),
+1. [How to run SAP Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html) is completed, and
+2. SAP Vora instance running with 2/2 status checks passed in the AWS console,
+3. The Manager instance is running under a VPC created following the steps in [Create a VPC in AWS for SAP Vora Developer Edition in AWS](http://www.sap.com/developer/how-tos/2017/02/vora-aws-create-vpc.html),
+4. The required ports are open. Refer to [AWS Step by Step guide to create Security Group SAP Vora 1.3](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html),
 5. AWS Access key and secret key,
 6. Google Chrome (version 24 or higher)
 
 
 ## Next Steps
- - Return to the [SAP HANA Vora Developer page] (link coming soon)
+ - Return to the [SAP Vora Developer page] (link coming soon)
 
 
 ## How-To Details
-This How-to is a step-by-step guide to setting up and administering an SAP HANA Vora 1.3 Cluster
+This How-to is a step-by-step guide to setting up and administering an SAP Vora 1.3 Cluster
 
 ### Time to Complete
 **20 Min**.
@@ -58,9 +58,9 @@ Read the End User License Agreement and accept it to proceed further
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 3: ](Set up SAP HANA Vora)]
+[ACCORDION-BEGIN [Step 3: ](Set up SAP Vora)]
 
-Enter the console password and click **Set up SAP HANA Vora!**. This checks to see if the prerequisites to set up the cluster are met and shows the status if not met.
+Enter the console password and click **Set up SAP Vora!**. This checks to see if the prerequisites to set up the cluster are met and shows the status if not met.
 
 
 ![Vora](vora1.png)
@@ -69,7 +69,7 @@ Enter the console password and click **Set up SAP HANA Vora!**. This checks to s
 ![Vora](vora2.png)
 
 
-Take action on the messages shown in red and click on the button again; for example if port/s are not open, open the security group ports as needed. Refer to the "AWS Step by Step guide to create Security Group SAP HANA Vora 1.3".  `Ambari` server takes a while to start running, so in this case it is good to wait for few minutes. `Ambari` server status can be also checked by doing SSH to the Manager instance and checking the `Ambari` server status.
+Take action on the messages shown in red and click on the button again; for example if port/s are not open, open the security group ports as needed. Refer to the "AWS Step by Step guide to create Security Group SAP Vora 1.3".  `Ambari` server takes a while to start running, so in this case it is good to wait for few minutes. `Ambari` server status can be also checked by doing SSH to the Manager instance and checking the `Ambari` server status.
 
 The steps above are needed only for first-time setup. Later, the console password can be used to access the cluster to log in.
 
@@ -145,7 +145,7 @@ The services tab lists each of the services with its configuration and node assi
 
 [ACCORDION-BEGIN [Step 8: ](Vora Tools)]
 
-Vora Tools can be accessed via the link on SAP HANA Vora Console page or at `http://<public ip of manager instance>:9225`.
+Vora Tools can be accessed via the link on SAP Vora Console page or at `http://<public ip of manager instance>:9225`.
 
 The credentials for Vora Tools are `admin:<console password which was set in the setup phase>`.
 
@@ -211,7 +211,7 @@ To reset console password, click Menu -> Update Credentials in the top-right cor
 
 ![Update password](update-password2.png)
 
-For SAP HANA Vora console software updates, click **RESTART TO UPDATE NOW**. The update can also be ignored. It is recommended that you do not install updates while any configuration is happening.
+For SAP Vora console software updates, click **RESTART TO UPDATE NOW**. The update can also be ignored. It is recommended that you do not install updates while any configuration is happening.
 
 ![Software updates](software-updates.png)
 
@@ -220,4 +220,4 @@ For SAP HANA Vora console software updates, click **RESTART TO UPDATE NOW**. The
 [ACCORDION-END]
 
 ## Next Steps
-- Return to the [SAP HANA Vora Developer page] (link coming soon)
+- Return to the [SAP Vora Developer page] (link coming soon)

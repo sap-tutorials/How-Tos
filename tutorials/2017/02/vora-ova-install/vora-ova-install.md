@@ -1,6 +1,6 @@
 ---
-title: How to setup the SAP HANA Vora developer edition virtual machine
-description: Download and install the SAP HANA Vora 1.3 developer edition packaged as a virtual machine appliance
+title: How to setup the SAP Vora developer edition virtual machine
+description: Download and install the SAP Vora 1.3 developer edition packaged as a virtual machine appliance
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 ## Prerequisites  
@@ -8,14 +8,14 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
    - Personal computer with a compatible hypervisor, like VMware Workstation Player
 
 ## Next Steps
-- [Using Apache Zeppelin with SAP HANA Vora](http://www.sap.com/developer/tutorials/vora-cal-zeppelin0.html)
+- [Using Apache Zeppelin with SAP Vora](http://www.sap.com/developer/tutorials/vora-cal-zeppelin0.html)
 
 ## How-To Details
-This How-to details the procedure to download, install and verify SAP HANA Vora version 1.3 developer edition packaged as a virtual machine appliance.
+This How-to details the procedure to download, install and verify SAP Vora version 1.3 developer edition packaged as a virtual machine appliance.
 
-SAP HANA Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
+SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
 
->SAP HANA Vora is a software working in the **distributed environment**, i.e. the one that usually consists of at least several computing nodes. But in case of the **developer edition** the SAP HANA Vora software has been modified to allow you to practice with a single node instance.
+>SAP Vora is a software working in the **distributed environment**, i.e. the one that usually consists of at least several computing nodes. But in case of the **developer edition** the SAP Vora software has been modified to allow you to practice with a single node instance.
 
 ### Time to Complete
 **35 Min**.
@@ -26,7 +26,7 @@ SAP HANA Vora, developer edition, is covered by the Developer License Agreement,
 
 [ACCORDION-BEGIN [Step 1: ](Download the OVA File)]
 
-Request the free virtual machine image (the `.ova` file) of SAP HANA Vora 1.3, developer edition from the SAP Store:
+Request the free virtual machine image (the `.ova` file) of SAP Vora 1.3, developer edition from the SAP Store:
 
 https://store.sap.com/sap/cp/ui/resources/store/html/SolutionDetails.html?sap-language=EN&pid=0000014484
 
@@ -38,7 +38,7 @@ You need to have free registration at SAP Store. Once the product is requested y
 
 [ACCORDION-BEGIN [Step 2: ](Install a hypervisor)]
 
-VMware Workstation Player is a hypervisor compatible with SAP HANA Vora 1.3, developer edition. You can install any supported hypervisor, but examples in this how-to use VMware Workstation Player.
+VMware Workstation Player is a hypervisor compatible with SAP Vora 1.3, developer edition. You can install any supported hypervisor, but examples in this how-to use VMware Workstation Player.
 
 Download VMware Workstation Player from <http://www.vmware.com>, run the installer and register when prompted.
 
@@ -51,7 +51,7 @@ Download VMware Workstation Player from <http://www.vmware.com>, run the install
 
 [ACCORDION-BEGIN [Step 3: ](Import the downloaded OVA file)]
 
-Open the VMware Workstation Player and in the menu choose **`Player > File > Open`**, select the SAP HANA Vora OVA file and click **Open**, then click **Import**.
+Open the VMware Workstation Player and in the menu choose **`Player > File > Open`**, select the SAP Vora OVA file and click **Open**, then click **Import**.
 
 The import process will take a few minutes.
 
@@ -115,24 +115,24 @@ Note the IP address after `inet addr:`. It is referred to as `IP_ADDRESS` in the
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 8: ](Open SAP HANA Vora Manager)]
+[ACCORDION-BEGIN [Step 8: ](Open SAP Vora Manager)]
 
 In the virtual machine start Firefox web browser. Open the Vora Manager at `http://localhost:19000`, log in with the user `admin` and the password `admin`. Choose the **Services** tab.
 
-You should see that all SAP HANA Vora services have a green check mark, indicating that they have been started and are running correctly.
+You should see that all SAP Vora services have a green check mark, indicating that they have been started and are running correctly.
 
 ![Vora Services](voraovasetup03.jpg)
 
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 9: ](Open SAP HANA Vora Tools)]
+[ACCORDION-BEGIN [Step 9: ](Open SAP Vora Tools)]
 
-Use Firefox to open the SAP HANA Vora Tools web application from `http://localhost:9225`
+Use Firefox to open the SAP Vora Tools web application from `http://localhost:9225`
 
 The user is `admin` and the password is `admin`.
 
-> Note: Some features in the Vora Tools need a more recent browser than Firefox that runs in the virtual machine image. Use the web browser on the host machine instead and connect to `http://IP_ADDRESS:9225` to have best experience and performance with SAP HANA Vora Tools.
+> Note: Some features in the Vora Tools need a more recent browser than Firefox that runs in the virtual machine image. Use the web browser on the host machine instead and connect to `http://IP_ADDRESS:9225` to have best experience and performance with SAP Vora Tools.
 
 [DONE]
 [ACCORDION-END]
@@ -179,4 +179,4 @@ hdfs dfs -put /mnt/hgfs/shared_folder/some_file /user/vora/
 [ACCORDION-END]
 
 ## Next Steps
-- [Using Apache Zeppelin with SAP HANA Vora](http://www.sap.com/developer/tutorials/vora-cal-zeppelin0.html)
+- [Using Apache Zeppelin with SAP Vora](http://www.sap.com/developer/tutorials/vora-cal-zeppelin0.html)

@@ -1,6 +1,6 @@
 ---
-title: Create a VPC in AWS for SAP HANA Vora Developer Edition
-description: Step by step guide to create a VPC in AWS for SAP HANA Vora Developer Edition in AWS on Vora 1.3
+title: Create a VPC in AWS for SAP Vora Developer Edition
+description: Step by step guide to create a VPC in AWS for SAP Vora Developer Edition in AWS on Vora 1.3
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 ## Prerequisites  
@@ -11,7 +11,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 
 
 ## How-To Details
-This How-to is a step by step guide to create a VPC in AWS for SAP HANA Vora Developer Edition in AWS on Vora 1.3
+This How-to is a step by step guide to create a VPC in AWS for SAP Vora Developer Edition in AWS on Vora 1.3
 
 ### Time to Complete
 **20 Min**.
@@ -110,7 +110,7 @@ Click **Yes** to edit DNS host names.
 
 [ACCORDION-BEGIN [Step 6: ](Set as default VPC)]
 
-Select this VPC while launching a SAP HANA Vora Manager instance.
+Select this VPC while launching a SAP Vora Manager instance.
 
 ![Set default VPC](default-vpc.png)
 
