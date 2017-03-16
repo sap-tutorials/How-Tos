@@ -1,6 +1,6 @@
 ---
-title: How to run SAP HANA Vora on Amazon Web Services
-description: Step by step guide to Launch SAP HANA Vora Developer Edition in AWS on Vora 1.3
+title: How to run SAP Vora on Amazon Web Services
+description: Step by step guide to Launch SAP Vora Developer Edition in AWS on Vora 1.3
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 
@@ -9,14 +9,14 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
    1. Amazon Web Services account. Create AWS account or use existing account.
    2. SSH key pair. Refer to the [Amazon documentation](http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html). Store the `pem` file in safe location. For windows generate a `.ppk` file using `putty-gen`.
    3. AWS credentials. Create active Access and Secret Key and store CSV  in a safe location to be used later. Refer to the [Amazon documentation](http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSGettingStartedGuide/AWSCredentials.html).
-   4. VPC setup. Refer to [Create a VPC in AWS for SAP HANA Vora Developer Edition in AWS](http://www.sap.com/developer/how-tos/2017/02/vora-aws-create-vpc.html)
-   5. AWS Security Group for Vora Cluster. Refer to [Set up Security Groups in AWS VPC for SAP HANA Vora](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html) for the steps.
+   4. VPC setup. Refer to [Create a VPC in AWS for SAP Vora Developer Edition in AWS](http://www.sap.com/developer/how-tos/2017/02/vora-aws-create-vpc.html)
+   5. AWS Security Group for Vora Cluster. Refer to [Set up Security Groups in AWS VPC for SAP Vora](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html) for the steps.
 
 ## Next Steps
- - [ SAP HANA Vora Cluster Setup and Administration on AWS] (http://www.sap.com/developer/how-tos/2017/02/vora-aws-cluster-setup.html)
+ - [ SAP Vora Cluster Setup and Administration on AWS] (http://www.sap.com/developer/how-tos/2017/02/vora-aws-cluster-setup.html)
 
 ## How-To Details
-This How-to is a step-by-step guide for launching SAP HANA Vora Developer Edition in AWS on Vora 1.3.
+This How-to is a step-by-step guide for launching SAP Vora Developer Edition in AWS on Vora 1.3.
 
 ### Time to Complete
 **20 Min**.
@@ -26,20 +26,20 @@ This How-to is a step-by-step guide for launching SAP HANA Vora Developer Editio
 
 [ACCORDION-BEGIN [Step 1: ](Vora sign-up)]
 
- Visit the [SAP HANA Vora Sign-up](https://www.sap.com/cmp/syb/crm-xu15-int-voratrdm/index.html) page to sign up for the SAP HANA Vora Developer Edition for AWS.
+ Visit the [SAP Vora Sign-up](https://www.sap.com/cmp/syb/crm-xu15-int-voratrdm/index.html) page to sign up for the SAP Vora Developer Edition for AWS.
 
-Register for the SAP HANA Vora Developer Edition. Enter the necessary details.
+Register for the SAP Vora Developer Edition. Enter the necessary details.
 
 ![Vora signup](signup.png)
 
 ![Vora signup](signup2.png)
 
 
-Access the SAP HANA Vora Developer Edition. There are some useful videos and documentation links at the page shown in the following  image.
+Access the SAP Vora Developer Edition. There are some useful videos and documentation links at the page shown in the following  image.
 
 ![Vora home page](vora-on-aws.png)
 
-After clicking on **SAP HANA Vora Developer Edition on AWS**, in the browser, the following privacy error is displayed. Choose the advanced settings.
+After clicking on **SAP Vora Developer Edition on AWS**, in the browser, the following privacy error is displayed. Choose the advanced settings.
 
 ![Vora home page](sec-warning.png)
 
@@ -59,7 +59,7 @@ Get the link to the Image (AMI) in the AWS console
 
 [ACCORDION-BEGIN [Step 2: ](Launch manager instance in AWS)]
 
-Click the link for SAP HANA Vora AMI, right click on the image and click **Launch**.
+Click the link for SAP Vora AMI, right click on the image and click **Launch**.
 
 ![Vora AMI sign-up](vora-ami-signup.png)
 
@@ -121,11 +121,11 @@ View the instance status in the console. Wait until the instance status check sh
 
 ![Security groups](view-status2.png)
 
-Now the SAP HANA Vora instance is ready for cluster configuration and management.
+Now the SAP Vora instance is ready for cluster configuration and management.
 
 [DONE]
 [ACCORDION-END]
 
 
 ## Next Steps
- - [ SAP HANA Vora Cluster Setup and Administration on AWS] (http://www.sap.com/developer/how-tos/2017/02/vora-aws-cluster-setup.html)
+ - [ SAP Vora Cluster Setup and Administration on AWS] (http://www.sap.com/developer/how-tos/2017/02/vora-aws-cluster-setup.html)

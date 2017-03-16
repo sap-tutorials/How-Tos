@@ -4,7 +4,7 @@ description: See how to enable anonymous access to your XSC application
 tags: [  tutorial>beginner, topic>security, products>sap-hana, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
- - **Systems used:** SAP HAHA, SAP HANA express edition, SAP HANA Cloud Platform MDC instance
+ - **Systems used:** SAP HAHA, SAP HANA express edition, SAP Cloud Platform MDC instance
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)

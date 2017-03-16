@@ -1,17 +1,17 @@
 ---
-title: Set up Security Groups in AWS VPC for SAP HANA Vora 1.3
-description: Step by step guide to set up security groups in your AWS virtual private cloud for SAP HANA Vora 1.3
+title: Set up Security Groups in AWS VPC for SAP Vora 1.3
+description: Step by step guide to set up security groups in your AWS virtual private cloud for SAP Vora 1.3
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 ## Prerequisites  
- - [Create a VPC in AWS for SAP HANA Vora Developer Edition in AWS](http://www.sap.com/developer/how-tos/2017/02/vora-aws-create-vpc.html)
+ - [Create a VPC in AWS for SAP Vora Developer Edition in AWS](http://www.sap.com/developer/how-tos/2017/02/vora-aws-create-vpc.html)
 
 ## Next Steps
- - [Launch SAP HANA Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html)
+ - [Launch SAP Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html)
 
 
 ## How-To Details
-This How-to is a step by step guide for setting up security groups in your AWS virtual private cloud for SAP HANA Vora 1.3. This is one-time security group set-up can be used by SAP HANA Vora Cluster instances.
+This How-to is a step by step guide for setting up security groups in your AWS virtual private cloud for SAP Vora 1.3. This is one-time security group set-up can be used by SAP Vora Cluster instances.
 
 ### Time to Complete
 **20 Min**.
@@ -45,7 +45,7 @@ Select the newly created security group. Click on the **Inbound** tab.
 
 Add the same security group as the source for **All Traffic**. This allows all the traffic within the security group (all instances having this security group can communicate on all the ports)
 
-Now the security group is all set and can be reused while creating a Vora Cluster. While launching SAP HANA Vora Manager AMI use this security group.
+Now the security group is all set and can be reused while creating a Vora Cluster. While launching SAP Vora Manager AMI use this security group.
 
 ![Select security group](select-group.png)
 
@@ -59,4 +59,4 @@ As long as clusters are created in the same VPC, the same security group can be 
 
 
 ## Next Steps
-- [Launch SAP HANA Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html)
+- [Launch SAP Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html)
