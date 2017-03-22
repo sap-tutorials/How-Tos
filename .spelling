@@ -15,6 +15,7 @@ CodeJam
 Component.js
 CustomerDemographics
 data-center
+datanode
 DataSource
 DesignStudio
 Detail.view.xml
@@ -26,10 +27,12 @@ formatter.js
 Github
 github.com
 www.sap.com
+Hadoop
 HCPms
 hdbschema
 Heilman
 HelpDesk
+Hortonworks
 hostname
 How-Tos
 hypervisor
