@@ -5,7 +5,7 @@ primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
- - **Systems used:** SAP HANA 2.00 SPS1, SAP HANA Express Edition
+ - **Systems used:** SAP HANA 1.00 SPS12, SAP HANA 2.00 SPS0, SAP HANA Express Edition
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
