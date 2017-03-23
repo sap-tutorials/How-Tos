@@ -1,6 +1,7 @@
 ---
 title: How to Install SAP HANA 2.0, express edition Clients
 description: Download and install the client tools locally.
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites
@@ -185,7 +186,6 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
 
     ```bash
     xs api https://<hostname>:3<instance_number>30 -cacert "<copied_filepath>/default.root.crt.pem"
-
     ```
 
 

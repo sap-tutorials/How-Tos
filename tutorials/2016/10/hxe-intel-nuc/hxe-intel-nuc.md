@@ -1,6 +1,7 @@
 ---
 title: Intel&reg; NUC and SAP HANA, express edition
 description: Select the best Intel Nuc for use with SAP HANA, express edition
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, products>sap-hana\,-express-edition ]
 ---
 

@@ -1,6 +1,7 @@
 ---
-title: SAP CodeJam Getting Started with HXE
+title: SAP CodeJam Getting Started with SAP HANA, express edition
 description: Links, tips, tricks and more for getting started with the SAP HANA, express edition
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
@@ -11,7 +12,7 @@ tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, products>sap
 
 
 ## How-To Details
-The following will document links, tips and tricks and more related to the SAP CodeJam Getting Started with HXE event.
+The following will document links, tips and tricks and more related to the SAP CodeJam Getting Started with SAP HANA, express edition event.
 
 
 ### Time to Complete
@@ -27,7 +28,7 @@ Now that you have registered for the [SAP CodeJam](https://www.sap.com/developer
 
 The first step is of course to sign up and register for [SAP.com](http://developers.sap.com) this will enable your user and make future steps much easier.
 
-Now proceed to [SAP HANA, express edition](https://www.sap.com/developer/topics/sap-hana-express.html) product page where you will see the steps listed as well as more information on what exactly HXE is.
+Now proceed to [SAP HANA, express edition](https://www.sap.com/developer/topics/sap-hana-express.html) product page where you will see the steps listed as well as more information on what exactly SAP HANA, express edition is.
 
 ![HXE](2.png)
 
@@ -63,9 +64,9 @@ If you chose the option to download the binaries instead you will need to follow
 
 [ACCORDION-BEGIN [Step 5: Download Eclipse](Download Eclipse)]
 
-While the import is taking place you will need to download a copy of the Eclipse software which will allow you to add the appropriate plugins to connect to your new HXE server.
+While the import is taking place you will need to download a copy of the Eclipse software which will allow you to add the appropriate plugins to connect to your new SAP HANA, express edition server.
 
-We recommend [Eclipse Neon](http://www.eclipse.org/downloads/packages/), the Java EE version in case you later want to explore the SAP HANA Cloud Platform.
+We recommend [Eclipse Neon](http://www.eclipse.org/downloads/packages/), the Java EE version in case you later want to explore the SAP Cloud Platform.
 
 [ACCORDION-END]
 
@@ -73,7 +74,7 @@ We recommend [Eclipse Neon](http://www.eclipse.org/downloads/packages/), the Jav
 
 Now that Eclipse has been installed you will need to add the appropriate plugins. The following guide will take your though [those steps](https://www.sap.com/developer/how-tos/2016/09/hxe-howto-eclipse.html).
 
-Finally you are connected to your HXE system.
+Finally you are connected to your SAP HANA, express edition system.
 
 [ACCORDION-END]
 
@@ -119,7 +120,7 @@ If you choose to install the browser based tools in Step 9 then you can move on 
 
 [ACCORDION-BEGIN [Step 11: Personalize HXE](Personalize HXE)]
 
-The following tutorials and blogs are just some optional items to help you understand your HXE install and personalize it a bit to suit you.
+The following tutorials and blogs are just some optional items to help you understand your SAP HANA, express edition install and personalize it a bit to suit you.
 
 - [Custom Login Screen](https://blogs.sap.com/2016/10/31/customize-my-hxe/)
 - [`Changing the Default landing page`](https://blogs.sap.com/2016/11/22/hxe-customizing-the-landing-page/)
@@ -129,7 +130,7 @@ The following tutorials and blogs are just some optional items to help you under
 
 [ACCORDION-BEGIN [Step 12: Advanced Topics](Advanced Topics)]
 
-The following items are meant for further exploration of the HXE server and things that are possible with it.
+The following items are meant for further exploration of the SAP HANA, express edition server and things that are possible with it.
 
 - [Raspberry Pi](https://blogs.sap.com/2017/01/26/tbt-sap-hana-and-raspberry-pi/)
 - [Fuzzy Search](https://blogs.sap.com/2016/10/26/hxe-fuzzy-search/)

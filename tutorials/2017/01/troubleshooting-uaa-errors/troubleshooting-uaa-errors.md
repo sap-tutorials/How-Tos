@@ -1,10 +1,11 @@
 ---
 title: Troubleshooting UAA Errors
-description: Troubleshooting authenticaiton error message when using XS Advanced client to log in to  SAP HANA
-tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, topic>cloud, topic>security, products>sap-hana, products>sap-hana\,-express-edition, products>sap-cloud-platform ]
+description: Troubleshooting authentication error message when using XS Advanced client to log in to  SAP HANA
+primary_tag: products>sap-hana
+tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, topic>cloud, topic>security, products>sap-hana, products>sap-hana\,-express-edition, products>sap-hana-cloud-platform ]
 ---
 ## Prerequisites  
- - **Systems used:** SAP HANA SPS12, SAP HANA Express Edition
+ - **Systems used:** SAP HANA SPS12, SAP HANA, express edition
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
@@ -84,13 +85,13 @@ Alternatively, you can test these steps by copying the preconfigured user into a
 
 If you look at the message thrown by the client, you will find that although you explicitly call port 30030 in the `API_URL` parameter, the error message returns port 30032.  Not having the right ports open would mean more errors when trying to connect to other sites, as login requests will go through the UAA.
 
-This means you need to make sure communications into those ports are free of blocks:
+This means we need to make sure communications into those ports are free of blocks:
 
 <ol type="a">
 <li>  Make sure the instance has the proper ports enabled. In CAL, the configuration would look like this for this scenario from `Access points` section in the Virtual Machines tab:<br>
 
 <br>
-<img src="https://raw.githubusercontent.com/SAPDocuments/How-Tos/master/tutorials/2017/01/troubleshooting-uaa-errors/3.png" alt="image 3">  <br> </li>
+<img src="https://raw.githubusercontent.com/SAPDocuments/How-Tos/master/tutorials/2017/01/troubleshooting-uaa-errors/3.PNG" alt="image 1"/>  </br> </li>
 
   <li> If you are running behind a local or corporate firewall, VPN and/or proxy, make sure traffic is coming in and out.
 
@@ -100,7 +101,7 @@ This means you need to make sure communications into those ports are free of blo
       If, for example, you forgot to configure your hosts file, the host name will not get resolved and you will get a message similar to `Ping request could not find host xxxxx. Please check the name and try again`. Please remember to configure your hosts file with the reachable, external IP of the server. </li>
 
     <li> - telnet  `hostname  port`, e.g., <i> telnet  google.com  80 </i> </br>
-      If the connection is somehow unavailable, you will get a message similar to <i> Could not open connection to the host, on port 22: Connect failed</i>. Any other message probably means that the server and port are reachable, although not all servers and ports are available for telnet. A `Connect failed` clearly indicates the connection cannot be established. </li>  </ol>
+      If the connection is somehow unavailable, you will get a message similar to <i> Could not open connection to the host, on port 22: Connect failed </i>. Any other message probably means that the server and port are reachable, although not all servers and ports are available for telnet. A `Connect failed` clearly indicates the connection cannot be established. </li>  </ol>
 
       </li>
 

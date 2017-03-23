@@ -1,25 +1,17 @@
 ---
-title: Connect to HXE using JDBC
+title: Connect to SAP HANA, express edition using JDBC
 description: In this how-to, you will learn how to connect to HANA Express Edition using JDBC (Java Database Connectivity)
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 
 ## Prerequisites  
  - **Proficiency:** Beginner
- - **Setup:** This tutorial assumes that you have followed the [How to Install SAP HANA 2.0, express edition Clients](http://www.sap.com/developer/how-tos/2016/12/hxe-ua-howto-installing-clients.html) tutorial to install the HANA, express edition client software.
+ - **Setup:** This tutorial assumes that you have followed the [SAP HANA Client Installation and Update Guide](https://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf) to install the HANA client software. You can download the HANA client software from [SAP Store](https://store.sap.com/sap/cpa/ui/resources/store/html/SolutionDetails.html?pid=0000012950)
 
 ## Next Steps
  - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
 
-
- __ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
-
- The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The published Tutorials and How-Tos refer to the default HANA 2.0 SP00 instance numbers. When using the SP12 version please use the old default instance number and port (3`<instance number>`15):
-
- HANA Express Version  | Default Instance ID | Port
- :-------------------  | :------------------ | :---------------
- 1.0 SP12              |  00                 | 30015
- 2.0 SP00              |  90                 | 39015
 
 ## How-To Details
 Java Database Connectivity (JDBC) is a Java-based application programming interface (API) which includes a set of functions that enable Java applications to access a data model in a database. The SAP HANA client includes a dedicated JDBC interface.
@@ -41,11 +33,11 @@ In this how-to, you will learn how to connect to HANA Express Edition using JDBC
 
     ![image 1](1.png)
 
-3. Create a new file called ```jdemo.java```, and write Java code to create a connection to the database and execute SQL commands. Use a connection string in the form of ```jdbc:sap://<server>:<port>[/?<options>]```. For example: ```jdbc:sap://myServer:39015/?autocommit=false```. The port should be ```3<instance number>15```, for example, ```39015```, if the instance is ```90```.
+3. Create a new file called ```jdemo.java```, and write Java code to create a connection to the database and execute SQL commands. Use a connection string in the form of ```jdbc:sap://<server>:<port>[/?<options>]```. For example: ```jdbc:sap://myServer:30015/?autocommit=false```. The port should be ```3<instance number>15```, for example, ```30015```, if the instance is ```00```.
 
-    You can specify one or more failover servers by adding additional hosts, as in the following example:  ```jdbc:sap://myServer:39015;failover1:39015;failover2:39015/?autocommit=false```.
+    You can specify one or more failover servers by adding additional hosts, as in the following example:  ```jdbc:sap://myServer:30015;failover1:30015;failover2:30015/?autocommit=false```.
 
-    To connect to a specific database in a multiple-database environment, for example, ```tdb1```, use the ```databaseName``` parameter, as illustrated in the following code: ```jdbc:sap://localhost:39015/?databaseName=tdb1&user=SYSTEM&password=manager```.
+    To connect to a specific database in a multiple-database environment, for example, ```tdb1```, use the ```databaseName``` parameter, as illustrated in the following code: ```jdbc:sap://localhost:30015/?databaseName=tdb1&user=SYSTEM&password=manager```.
 
     The following is an example of connecting to an SAP HANA server called ```myhdb``` and database name ```HXE```, which was installed as instance ```07```, with user name ```myname``` and password ```mysecret```.
 

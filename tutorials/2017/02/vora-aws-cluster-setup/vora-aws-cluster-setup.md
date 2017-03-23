@@ -1,6 +1,7 @@
 ---
 title: How to setup and administer an SAP Vora 1.3 Cluster for AWS
 description: Step by step guide to setting up and administering an SAP Vora 1.3 Cluster
+primary_tag: products>sap-hana-vora
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 ## Prerequisites  
@@ -13,7 +14,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 
 
 ## Next Steps
- - Return to the [SAP Vora Developer page] (link coming soon)
+ - Return to the [SAP Vora Developer](https://www.sap.com/developer/topics/vora.html) Page
 
 
 ## How-To Details
@@ -220,4 +221,4 @@ For SAP Vora console software updates, click **RESTART TO UPDATE NOW**. The upda
 [ACCORDION-END]
 
 ## Next Steps
-- Return to the [SAP Vora Developer page] (link coming soon)
+- Return to the [SAP Vora Developer](https://www.sap.com/developer/topics/vora.html) Page

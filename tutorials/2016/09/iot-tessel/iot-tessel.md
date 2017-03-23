@@ -1,6 +1,7 @@
 ---
 title: Internet of Things (IoT) Setup the Tessel
 description: Setup and configure a Tessel device
+primary_tag: topic>internet-of-things
 tags: [  tutorial>beginner, topic>internet-of-things, products>sap-hana, products>sap-cloud-platform, tutorial>how-to ]
 ---
 ## Prerequisites  

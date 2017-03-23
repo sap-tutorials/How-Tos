@@ -1,6 +1,7 @@
 ---
 title: SAP HANA 2.0, express edition Troubleshooting
 description: Troubleshoot common installation issues.
+primary_tag: products>sap-hana\, express-edition
 tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
