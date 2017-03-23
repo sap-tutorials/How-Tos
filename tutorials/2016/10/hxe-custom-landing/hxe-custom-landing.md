@@ -2,7 +2,7 @@
 title: Adding a Custom Landing page to your HXE system
 description: See how to alter your system and load a custom landing page.
 primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana,-express-edition ]
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HANA express edition

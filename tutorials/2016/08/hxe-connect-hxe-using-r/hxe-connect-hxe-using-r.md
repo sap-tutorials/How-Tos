@@ -2,7 +2,7 @@
 title: Connect to SAP HANA, express edition using R
 description: In this how-to, you will learn how to connect to SAP HANA, express edition using R
 primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, products>sap-hana, products>sap-hana,-express-edition, tutorial>how-to ]
+tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
   - **Proficiency:** Beginner
