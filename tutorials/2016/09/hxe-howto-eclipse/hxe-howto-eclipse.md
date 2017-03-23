@@ -30,7 +30,7 @@ Provides instruction on how to install and update the SAP HANA Tools plugin for 
 1. Restart Eclipse as prescribed after adding HANA Plugin.
 8. Change perspective to SAP HANA Administrative Console Window > Perspective > SAP HANA Administrative Console
 
-    ![image 1](4.png)
+    ![image 1](4.PNG)
 
 9. Add your `HANAExpress` Add System > Specify System
   - Hostname: `HANAExpress` Hostname (use `/sbin/ifconfig` to find IP address of host)
@@ -39,7 +39,7 @@ Provides instruction on how to install and update the SAP HANA Tools plugin for 
   - Select "System database"
   - Description: `HANAExpress` Edition
 
-  ![image 1](1.png)
+  ![image 1](1.PNG)
 
 1. Connection Properties:
 - Authentication by database user:
@@ -49,10 +49,10 @@ Provides instruction on how to install and update the SAP HANA Tools plugin for 
 - Enable SAP start service Connection
 - Finish
 
-  ![image 1](2.png)
+  ![image 1](2.PNG)
 
 1. Confirm connection:
 
-  ![image 1](3.png)
+  ![image 1](3.PNG)
 ## Next Steps
  - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
