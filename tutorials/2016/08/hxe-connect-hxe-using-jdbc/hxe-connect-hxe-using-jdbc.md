@@ -1,8 +1,8 @@
 ---
 title: Connect to SAP HANA, express edition using JDBC
 description: In this how-to, you will learn how to connect to HANA Express Edition using JDBC (Java Database Connectivity)
-primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition , tutorial>how-to ]
 ---
 
 ## Prerequisites  

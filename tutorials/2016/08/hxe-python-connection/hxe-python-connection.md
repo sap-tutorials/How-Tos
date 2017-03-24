@@ -1,8 +1,8 @@
 ---
 title: How to connect to SAP HANA database server in Python
 description: A How-To that shows how to integrate python with the SAP HANA database server
-primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition , tutorial>how-to ]
 ---
 ## Prerequisites  
  - **Setup:** This tutorial assumes that you have followed the [SAP HANA Client Installation and Update Guide](https://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf) to install the HANA client software. You can download the HANA client software from [SAP Store](https://store.sap.com/sap/cpa/ui/resources/store/html/SolutionDetails.html?pid=0000012950).

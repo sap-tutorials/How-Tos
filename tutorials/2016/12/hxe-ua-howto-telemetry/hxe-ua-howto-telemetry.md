@@ -1,8 +1,8 @@
 ---
 title: How to Configure SAP HANA 2.0, express edition Telemetry
 description: Learn more about the telemetry feature, and disable telemetry if desired.
-primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites
  - You have installed SAP HANA 2.0, express edition using either the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial.

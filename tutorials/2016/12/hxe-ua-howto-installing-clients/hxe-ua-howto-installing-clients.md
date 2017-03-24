@@ -1,8 +1,8 @@
 ---
 title: How to Install SAP HANA 2.0, express edition Clients
 description: Download and install the client tools locally.
-primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites
  - You (or someone in your organization) has already installed SAP HANA 2.0, express edition on another machine using either the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial.

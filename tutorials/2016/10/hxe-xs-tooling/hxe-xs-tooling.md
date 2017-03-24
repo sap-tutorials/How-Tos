@@ -1,8 +1,8 @@
 ---
 title: Adding XS Tooling to your SAP HANA, express edition Server Image
 description: Add the XSC tooling to your SAP HANA, express edition Server only image
-primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, products>sap-hana-studio ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition , products>sap-hana-studio ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HANA, express edition server only

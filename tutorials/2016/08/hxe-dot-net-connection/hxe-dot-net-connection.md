@@ -1,8 +1,8 @@
 ---
 title: How to connect to SAP HANA using Data Provider for Microsoft .NET
 description: A tutorial that explains how to setup a sample database in Visual Studio using the ado.net data provider
-primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition , tutorial>how-to ]
 ---
 
 ## Prerequisites  
