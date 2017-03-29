@@ -23,6 +23,8 @@ This How-to is a step-by-step guide to setting up and administering an SAP Vora 
 - AWS Access key and secret key
 - Google Chrome (version 24 or higher)
 
+For additional information please refer the [FAQ's](https://www.sap.com/developer/how-tos/2017/03/vora-aws-prod-faq.html)
+
 ### Time to Complete
 **20 Min**.
 
