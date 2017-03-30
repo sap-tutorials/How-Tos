@@ -1,6 +1,7 @@
 ---
 title: SAP HANA MDC Usage – SHINE Delivery Unit
 description: Learn how to import/export a SAP HANA Interactive Education (SHINE) Delivery Unit (DU)
+primary_tag: products>sap-hana
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform, products>sap-hana ]
 ---
 ## Prerequisites  

@@ -1,6 +1,7 @@
 ---
 title: How to setup the SAP Vora developer edition virtual machine
 description: Download and install the SAP Vora 1.3 developer edition packaged as a virtual machine appliance
+primary_tag: products>sap-hana-vora
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ---
 ## Prerequisites  

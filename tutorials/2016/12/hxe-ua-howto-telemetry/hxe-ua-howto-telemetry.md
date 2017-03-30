@@ -1,7 +1,8 @@
 ---
 title: How to Configure SAP HANA 2.0, express edition Telemetry
 description: Learn more about the telemetry feature, and disable telemetry if desired.
-tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites
  - You have installed SAP HANA 2.0, express edition using either the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial.
@@ -38,13 +39,13 @@ Disable Telemetry if you wish to stop sending anonymous telemetry data to SAP.
 
 2. Run:
     ```
-    /usr/sap/<sid>/home/bin/hxe_telemetry.sh -i 90 -u SYSTEM -p <your_password> -d SystemDB --disable
+    /usr/sap/<sid>/home/bin/hxe_telemetry.sh -i 90 -u SYSTEM -p "<your_password>" -d SystemDB --disable
     ```
     >**Tip**: If you installed using the Virtual Machine method, `<sid>` is `HXE`.
 
 3. To re-enable telemetry, run:
     ```
-    /usr/sap/<sid>/home/bin/hxe_telemetry.sh -i 90 -u SYSTEM -p <your_password> -d SystemDB --enable
+    /usr/sap/<sid>/home/bin/hxe_telemetry.sh -i 90 -u SYSTEM -p "<your_password>" -d SystemDB --enable
     ```
     >**Tip**: If you installed using the Virtual Machine method, `<sid>` is `HXE`.
 

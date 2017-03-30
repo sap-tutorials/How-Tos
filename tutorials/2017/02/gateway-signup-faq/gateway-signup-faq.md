@@ -1,6 +1,7 @@
 ---
 title: SAP Gateway demonstration system FAQ
 description: SAP Gateway Demo Consumption Service signup links, and other SAP Gateway trial-related FAQs
+primary_tag: products>sap-gateway
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-gateway, topic>cloud, topic>odata ]
 ---
 ## Prerequisites  
@@ -60,7 +61,6 @@ https://sapes4.sapdevcenter.com/sap/opu
 ```
 
 Please have a look at the Sample Services and how to use them. The system is only for consumption of OData Services not for building new ones. If you are interested in building new services you have the option of choosing one of the other systems on the previous entry page. We will not hand out authorizations for developing any ABAP on this system.
-
 
 [ACCORDION-END]
 

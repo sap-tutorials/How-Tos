@@ -1,7 +1,8 @@
 ---
 title: How to prepare HANA, express edition environment for tutorials
 description: This how-to shows you how to prepare your HANA, express edition for executing the other Tutorials.
-tags: [  tutorial>beginner, products>sap-hana\,-express-edition, tutorial>how-to ]
+primary_tag: products>sap-hana\, express-edition
+tags: [  tutorial>beginner, products>sap-hana\,-express-edition , tutorial>how-to ]
 ---
 
 ## Prerequisites  

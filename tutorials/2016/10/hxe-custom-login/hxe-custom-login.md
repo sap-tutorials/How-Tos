@@ -1,7 +1,8 @@
 ---
 title: Adding a Custom Login Screen to your HXE system
 description: See how quickly and easily you can customize your HXE Server Only image and add a custom login screen.
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites  
  - **Systems used:** SAP HANA, express edition

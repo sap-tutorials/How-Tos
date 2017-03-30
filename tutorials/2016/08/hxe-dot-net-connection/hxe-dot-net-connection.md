@@ -1,27 +1,18 @@
 ---
 title: How to connect to SAP HANA using Data Provider for Microsoft .NET
 description: A tutorial that explains how to setup a sample database in Visual Studio using the ado.net data provider
-tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
+primary_tag: products>sap-hana\,-express-edition 
+tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition , tutorial>how-to ]
 ---
 
 ## Prerequisites  
 - **Proficiency:** Beginner
-- **Setup:** This tutorial assumes that you have followed the [How to Install SAP HANA 2.0, express edition Clients](http://www.sap.com/developer/how-tos/2016/12/hxe-ua-howto-installing-clients.html) tutorial to install the HANA, express edition client software.
+- **Setup:** This tutorial assumes that you have followed the [SAP HANA Client Installation and Update Guide](https://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf) to install the HANA client software. You can download the HANA client software from [SAP Store](https://store.sap.com/sap/cpa/ui/resources/store/html/SolutionDetails.html?pid=0000012950).
 - **Setup:** You must have Microsoft Visual Studio 2010 or later installed on your computer.
 - **Setup:** You must have Microsoft .NET Framework installed on your computer (Generally .NET     Framework will be installed when you install Microsoft Visual Studio).
 
 ## Next Steps
  - This is a standalone How-To on establishing basic connectivity to ADO and ODBC compliant SAP database servers.[View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
-
-
- __ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
-
-The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The published Tutorials and How-Tos refer to the default HANA 2.0 SP00 instance numbers. When using the SP12 version please use the old default instance number and port (3`<instance number>`15):
-
- HANA Express Version  | Default Instance ID | Port
- :-------------------  | :------------------ | :---------------
- 1.0 SP12              |  00                 | 30015
- 2.0 SP00              |  90                 | 39015
 
 
 ## How-To Details
@@ -50,10 +41,10 @@ A Microsoft visual studio project can connect to SAP database using SAP HANA Cli
 
 8. In the Connection String field, type a valid connection string and click Connect to connect to an SAP HANA database server. The example given below connects to a database called `HXE` assigned to the parameter `databaseName`. `HXE` is the default tenant database the server connects to on port `3< instance number >15`.
 
-    >`Server=hana-server:39015;databaseName=HXE;UserID=system;Password=manager`, connects to an SAP HANA database server with the indicated host name or its IP address, port (usually 3 followed by instance number then 15), a database, user ID, and password.
+    >`Server=hana-server:30015;databaseName=HXE;UserID=system;Password=manager`, connects to an SAP HANA database server with the indicated host name or its IP address, port (usually 3 followed by instance number then 15), a database, user ID, and password.
 
     You can also connect to the database using ODBC driver. For example,
-    >`Driver={HDBODBC};UID=system;PWD=manager;SERVERNODE=hana-server:39015;databaseName=HXE`, Note that driver can be `HDBODBC` or `HDBODBC32` depending on whether your application is 64 bit or 32 bit respectively.
+    >`Driver={HDBODBC};UID=system;PWD=manager;SERVERNODE=hana-server:30015;databaseName=HXE`, Note that driver can be `HDBODBC` or `HDBODBC32` depending on whether your application is 64 bit or 32 bit respectively.
 
     If your credentials are correct, then the .NET application connects to your SAP HANA database server. The list-box area is filled with the names of any existing tables, views, or procedures belonging to the DEMO schema.
 
