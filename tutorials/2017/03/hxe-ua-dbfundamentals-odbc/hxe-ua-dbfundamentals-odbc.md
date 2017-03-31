@@ -1,11 +1,11 @@
 ---
-title: Database Fundamentals - Install and Configure unixODBC
+title: Install and Configure unixODBC
 description: Learn how to complete common tasks when setting up a new database. In this tutorial, you will install and configure unixODBC.
 primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites  
- - [Database Fundamentals - Create a Backup](http://www.sap.com/developer/tutorials/teched-2016-6.html)
+ - [Create a Backup](https://www.sap.com/developer/how-tos/2017/03/hxe-ua-dbfundamentals-backups.html)
  - A registered version of SUSE. See the [SAP HANA Academy](https://www.youtube.com/watch?v=e6SIsAFVPoY) video for details.
 
 
