@@ -1,15 +1,15 @@
 ---
-title: Database Fundamentals - Create a Tenant Database
+title: Create a Tenant Database
 description: Learn how to complete common tasks when setting up a new database. In this tutorial, you will create a tenant database using either HANA cockpit or an SQL command line.
 primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites  
- - [Database Fundamentals - Sample Project](http://www.sap.com/developer/tutorials/teched-2016-8.html)
+ - [Sample Project](https://www.sap.com/developer/tutorials/hxe-ua-dbfundamentals-sample-project.html)
 
 
 ## Next Steps
- - [Database Fundamentals - Create a Backup](http://www.sap.com/developer/tutorials/teched-2016-8.html)
+ - [Create a Backup](https://www.sap.com/developer/how-tos/2017/03/hxe-ua-dbfundamentals-backups.html)
  - Select a tutorial from the [Tutorial Navigator](http://www.sap.com/developer/tutorial-navigator.html) or the [Tutorial Catalog](http://www.sap.com/developer/tutorials.html)
 
 ## Details
@@ -74,5 +74,5 @@ This creates the tenant database "TENANTDB" with the SYSTEM user password "`Pass
 [ACCORDION-END]
 
 ## Next Steps
- - [Database Fundamentals - Create a Backup](http://www.sap.com/developer/tutorials/teched-2016-8.html)
+ - [Create a Backup](https://www.sap.com/developer/how-tos/2017/03/hxe-ua-dbfundamentals-backups.html)
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
