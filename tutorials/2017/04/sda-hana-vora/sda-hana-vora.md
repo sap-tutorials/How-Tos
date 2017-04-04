@@ -103,14 +103,14 @@ A few tips to avoid you losing some "hair" during the install:
 
     So, in step 5, you will have to run the **`hdfs dfs`** command using `sudo`, else you will get some permission errors
 
-    ```
+    ```Bash
 sudo hdfs dfs -mkdir /user/hanaes;
 sudo hdfs dfs -chown hanaes:hdfs /user/hanaes;
 sudo hdfs dfs -chmod 744 /user/hanaes;
     ```
   - You need to set a password for the **`hanaes`** user
 
-    ```
+    ```Bash
 sudo passwd hanaes
     ```
 
@@ -118,7 +118,7 @@ sudo passwd hanaes
 
    - The "Spark Controller Environment Variables" should be set like this in the **`/usr/sap/spark/controller/conf/hana_hadoop-env.sh`** file:
 
-    ```
+    ```Bash
 export JAVA_HOME=/usr/java/sapjvm_8.1.009
 export HADOOP_HOME=/opt/hadoop-2.7.3
 export HADOOP_CONF_DIR=/opt/hadoop-2.7.3/etc/hadoop/
@@ -171,13 +171,13 @@ Before starting the SAP HANA Spark Controller, you will need to start the Hadoop
 
 In you terminal console, you will first switch to root.
 
-```
+```Bash
 su - root
 ```
 
 Then run the following commands:
 
-```
+```Bash
 export HADOOP_CONF_DIR=/opt/hadoop-2.7.3/etc/hadoop
 export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
 
@@ -189,13 +189,13 @@ nohup /opt/hadoop-2.7.3/bin/yarn nodemanager     2>&1 > /opt/hadoop-2.7.3/logs/n
 
 then you can switch to the `hanaes` user:
 
-```
+```Bash
 su - hanaes
 ```
 
 Then run the following commands:
 
-```
+```Bash
 cd /usr/sap/spark/controller/bin
 ./hanaes start
 ```
@@ -207,7 +207,7 @@ cd /usr/sap/spark/controller/bin
 
 Now, from your local machine you should be able to ping both machines from a command prompt by running:
 
-```
+```Bash
 ping <IP_HANA>
 ping <IP_VORA>
 ```
@@ -218,7 +218,7 @@ To do so edit the following file using Notepad but "As an Administrator" : **`C:
 
 And add the following entries:
 
-```
+```Bash
 <IP_HANA>   host-hana
 <IP_VORA>   host-vora
 ```
@@ -235,13 +235,13 @@ Let's now make each machine see each other.
 [ACCORDION-BEGIN [Step 6: ](Network Configuration - SAP HANA)]
 From the SAP HANA host, edit the **`/etc/hosts`** file on each virtual machine with **`vi`** and **`sudo`** using the following command:
 
-```
+```Bash
 sudo vi /etc/hosts
 ```
 
 And add the following entry:
 
-```
+```Bash
 <IP_VORA>   host-vora
 ```
 
@@ -254,13 +254,13 @@ You should now be able to ping the SAP Vora machine using this new "logical" hos
 
 From the SAP Vora host,  edit the **`/etc/hosts`** file on each virtual machine with **`vi`** and **`sudo`** using the following command:
 
-```
+```Bash
 sudo vi /etc/hosts
 ```
 
 And add the following entry:
 
-```
+```Bash
 <IP_HANA>   host-hana
 ```
 
@@ -299,7 +299,7 @@ You can check the following link to verify that all your process are running:
 
 You can also run the following command
 
-```
+```Bash
 netstat -ano | grep LISTEN | grep -e "7860" -e "8032" -e "8040" -e "9099" -e "9225" -e "19000" -e "50070"
 ```
 
