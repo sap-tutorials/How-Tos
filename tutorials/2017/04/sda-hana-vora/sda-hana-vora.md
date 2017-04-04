@@ -4,8 +4,6 @@ description: How to configure SAP HANA, express edition and SAP Vora, developer 
 primary_tag: products>sap-hana-vora
 tags: [  tutorial>how-to, topic>big-data, products>sap-hana, products>sap-hana\,-express-edition, products>sap-hana-vora ]
 ---
-## Prerequisites  
- - XXXXXXXX
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
