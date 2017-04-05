@@ -1,5 +1,5 @@
 ---
-title: Create a Backup
+title: Create a Backup 
 description: Learn how to complete common tasks when setting up a new database. In this tutorial, you will create a backup for your database using HANA cockpit, HANA studio, or SQL.
 primary_tag: products>sap-hana\,-express-edition
 tags: [ tutorial>how-to, tutorial>beginner, products>sap-hana\,-express-edition  ]

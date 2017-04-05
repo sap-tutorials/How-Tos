@@ -1,5 +1,5 @@
 ---
-title: Install and Configure unixODBC
+title: Install and Configure unixODBC 
 description: Learn how to complete common tasks when setting up a new database. In this tutorial, you will install and configure unixODBC.
 primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana\,-express-edition  ]
