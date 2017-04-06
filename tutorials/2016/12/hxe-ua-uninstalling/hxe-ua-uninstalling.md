@@ -1,7 +1,7 @@
 ---
 title: Uninstalling SAP HANA, express edition
 description: Follow these steps to uninstall the binary version of SAP HANA, express edition, or the SAP EA Designer component.
-primary_tag: products>sap-hana\,-express-edition 
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites  
@@ -34,7 +34,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana\,-express-edition
 
 1. As the `<sid>adm` user, log in to XSA:
 
-    `xs login -u xsa_admin -p <password> -s SAP`
+    `xs login -u xsa_admin -p "<password>" -s SAP`
 
 2. Uninstall the SAP EA Designer software component. To uninstall the component plus the HDI container and repository database, use the following command:
 
