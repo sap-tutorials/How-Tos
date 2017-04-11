@@ -25,9 +25,9 @@ The goal here is to :
 
 To achieve that we will use the "server only" virtual machine option available with SAP HANA, express edition and reuse existing tutorials to guide you during the setup.
 
-The version used here is 2.0 SPS0.
-
 However, we will need to apply a few additional steps to setup the environment for our scenario.
+
+The SAP HANA, express edition version used here is 2.0 SPS0.
 
 The following tutorial will guide you with the download & installation instructions:
 
@@ -47,7 +47,7 @@ Now, you can move to [Start Using SAP HANA 2.0, express edition (Virtual Machine
 
 At the end of this tutorial, you should notice that the IP address you will register in the hosts file will start with "192.168".
 
-Make a note of the IP address, which I will reference as <IP_HANA>.
+Make a note of the IP address, which will now be referenced as <IP_HANA> n the rest of the document.
 
 [DONE]
 [ACCORDION-END]
@@ -60,7 +60,8 @@ The goal here is to :
 - not run a full installation process
 
 To achieve that we will use the "SAP Vora, developer edition on premise", express edition and reuse existing tutorials to guide you during the setup.
-The version used here is 1.3.
+
+The SAP Vora, developer edition version used here is 1.3.
 
 To install SAP Vora, developer edition on-premise, I have also used existing tutorials.
 
@@ -72,7 +73,7 @@ The following tutorial will guide you with the download & installation instructi
 
 In step 4, instead of selecting the "Host-only" option, you should choose "NAT".
 
-Make a note of the IP address, which I will reference as <IP_VORA>.
+Make a note of the IP address, which will now be referenced as <IP_VORA> n the rest of the document.
 
 [DONE]
 [ACCORDION-END]
@@ -80,10 +81,9 @@ Make a note of the IP address, which I will reference as <IP_VORA>.
 [ACCORDION-BEGIN [Step 3: ](Install the SAP HANA Spark controller)]
 
 >Note: This is to be done on the SAP Vora virtual machine.
+.
 
-There are multiple options to connect SAP HANA to SAP Vora.
-
-The one that was picked here is via the SAP HANA Spark controller which needs to be installed on the SAP Vora side.
+There are multiple options to connect SAP HANA to SAP Vora. The one that was picked here is via the SAP HANA Spark controller which needs to be installed on the SAP Vora side.
 
 The other option would have been to use the HANA Wire protocol.
 
@@ -302,6 +302,117 @@ netstat -ano | grep LISTEN | grep -e "7860" -e "8032" -e "8040" -e "9099" -e "92
 ```
 
 This should return 7 entries.
+
+[DONE]
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [Step 10: ](Connect SAP HANA to SAP Vora)]
+
+As mentioned earlier, there are multiple protocol supported to connect SAP HANA to SAP Vora. And depending on the SAP Vora engine used to create your table you might use one or the other.
+
+We can run the following commands using the Eclipse plugin or SAP HANA Studio.
+
+To connect to SAP Vora via the SAP HANA Wire protocol:
+
+```SQL
+CREATE REMOTE SOURCE "VoraViaHANAWire" ADAPTER "voraodbc"
+CONFIGURATION  'ServerNode=host-vora:30115;Driver=libodbcHDB'
+WITH CREDENTIAL TYPE 'PASSWORD' USING 'user=hanaes;password=hanaes';
+```
+
+The port used here correspond to the SAP HANA Wire port.
+
+As per the documentation:
+
+*SAP HANA Wire port of the transaction coordinator, which is determined as 3<XX>15, where <XX> is the instance number of the SAP HANA Vora cluster as configured in the SAP HANA Vora Manager. (This is not the number of the SAP HANA instance adding the SAP HANA Vora cluster as a remote source). For example, when the instance number of the SAP HANA Vora cluster is configured as 25, the SAP HANA Wire port is 32515.*
+
+To connect to SAP Vora via the SAP HANA Spark Controller protocol:
+
+```SQL
+CREATE REMOTE SOURCE "VoraViaHANASpark" ADAPTER "sparksql"       
+CONFIGURATION 'server=host-vora;port=7860;ssl_mode=disabled'        
+WITH CREDENTIAL TYPE 'PASSWORD' USING 'user=hanaes;password=hanaes';
+```
+
+Make sure you adjust the settings if you have modified the one provided in this tutorial.
+
+Then you can surface your table using the following commands:
+
+  - For tables created in SAP Vora using `com.sap.spark.engines.disk`  like this:
+
+    ```SQL
+CREATE TABLE TEST_HANAWIRE (
+    Code VARCHAR(20),
+	Actor VARCHAR(100)
+)
+USING com.sap.spark.engines.disk
+OPTIONS (
+  storagebackend "hdfs",
+  files "/user/test.csv",
+  format "csv",
+  csvdelimiter "\t",
+  csvskip "0",
+  tableName "TEST_HANAWIRE",
+  tableSchema "Code VARCHAR(20), Actor VARCHAR(100)"
+)
+    ```
+    >Note: make sure you declase the table name and the schema as option, else you won't be able to surface the table and will receive an error like this:
+    `invalid remote object name: Unable to retrieve remote metadata for`
+
+    .
+
+    You would use the SAP HANA Wire protocol and create the virtual tale in SAP HANA like this:
+
+    ```SQL
+create virtual table "<HANA schema>"."<HANA virtual table name>"
+  at "VoraViaHANAWire"."NULL"."VORA"."TEST_HANAWIRE";;
+    ```
+
+  - For a table created in SAP Vora using `com.sap.spark.vora` like this:
+
+    ```SQL
+CREATE TABLE TEST_HANASPARK (
+    Code VARCHAR(20),
+	Actor VARCHAR(100)
+)
+USING com.sap.spark.vora
+OPTIONS (
+  storagebackend "hdfs",
+  files "/user/test.csv",
+  format "csv",
+  csvdelimiter "\t",
+  csvskip "0"
+)
+    ```
+
+    You would use the SAP HANA Spark Controller source and create the virtual tale in SAP HANA like this:
+
+    ```SQL
+create virtual table "<HANA schema>"."<HANA virtual table name>"
+  at "VoraViaHANASpark"."VORA"."SPARK_VORA"."TEST_HANASPARK";
+    ```
+
+>Note: I recommend to upper case table names on both side to avoid any issues when creating the virtual tables.
+
+[DONE]
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [Step 11: ](Connect SAP Vora to SAP HANA)]
+
+Surfacing table from SAP HANA in SAP Vora is pretty straight forward, and just require to execute the following SQL:
+
+```SQL
+CREATE TABLE <Vora table name>
+USING com.sap.spark.hana
+OPTIONS (
+  path "<HANA table name>",
+  dbschema "<HANA table schema>",
+  host "<HANA host name>",
+  instance "<HANA instance id>",
+  user "<HANA user name",
+  passwd "<HANA user password>"
+)
+```
 
 [DONE]
 [ACCORDION-END]
