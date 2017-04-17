@@ -45,9 +45,30 @@ If you are using `VirtualBox`, go to "Settings" > "Network" and select "NAT", an
 
 Now, you can move to [Start Using SAP HANA 2.0, express edition (Virtual Machine Method)](http://www.sap.com/developer/tutorials/hxe-ua-getting-started-vm.html).
 
-At the end of this tutorial, you should notice that the IP address you will register in the hosts file will start with "192.168".
+Make a note of the SAP HANA virtual machine IP address and the hostname running the following commands:
 
-Make a note of the IP address, which will now be referenced as <IP_HANA> n the rest of the document.
+  - For the IP address:
+
+    ```Bash
+ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+    ```
+
+  - For the hostname short name:
+
+    ```Bash
+hostname
+    ```
+
+  - For the hostname fully qualified name:
+
+    ```Bash
+hostname -f
+    ```
+
+With the SAP HANA, express edition virtual machine, you should have something like that:
+  - host short name: `hxehost`
+  - host fully qualified name: `hxehost.localdomain.com`
+  - IP address: should start with "192.168.48.XXX"
 
 [DONE]
 [ACCORDION-END]
@@ -73,7 +94,30 @@ The following tutorial will guide you with the download & installation instructi
 
 In step 4, instead of selecting the "Host-only" option, you should choose "NAT".
 
-Make a note of the IP address, which will now be referenced as <IP_VORA> n the rest of the document.
+Make a note of the SAP Vora virtual machine IP address and the hostname running the following commands:
+
+  - For the IP address:
+
+    ```Bash
+ip -4 addr show eth0 | grep -oP '(?<=inet\s)\d+(\.\d+){3}'
+    ```
+
+  - For the hostname short name:
+
+    ```Bash
+hostname
+    ```
+
+  - For the hostname fully qualified name:
+
+    ```Bash
+hostname -f
+    ```
+
+With the SAP Vora, developer edition virtual machine, you should have something like that:
+  - host short name: `linux-6rxg`
+  - host fully qualified name: `linux-6rxg.suse`
+  - IP address: should start with "192.168.48.XXX"
 
 [DONE]
 [ACCORDION-END]
@@ -125,39 +169,39 @@ export HANA_SPARK_ASSEMBLY_JAR=/opt/spark/lib/spark-assembly-1.6.1-hadoop2.6.0.j
 export HANA_SPARK_ADDITIONAL_JARS=/opt/vora/lib/vora-spark/lib/spark-sap-datasources-1.3.103-assembly.jar
     ```
 
-   - For the **`Configure hanaes-site.xml`**, here was my configuration:
+   - For the *`Configure hanaes-site.xml`* section, here was my configuration:
 
     ```xml
-<configuration>
-  <property>
-    <name>sap.hana.es.server.port</name>
-    <value>7860</value>
-    <final>true</final>
-    <description>Port of the host for HANA</description>
-  </property>
-  <property>
-    <name>spark.executor.memory</name>
-    <value>2g</value>
-    <final>true</final>
-    <description>Memory size of yarn executors</description>
-  </property>
-  <property>
-    <name>spark.executor.instances</name>
-    <value>10</value>
-    <final>true</final>
-    <description>Number of yarn executors</description>
-  </property>
-  <property>
-    <name>sap.hana.proc.security.disabled</name>
-    <value>true</value>
-    <final>true</final>
-  </property>
-  <property>
-    <name>sap.hana.hadoop.datastore</name>
-    <value>vora</value>
-    <final>true</final>
-  </property>
-</configuration>
+    <configuration>
+        <property>
+            <name>sap.hana.es.server.port</name>
+            <value>7860</value>
+            <final>true</final>
+            <description>Port of the host for HANA</description>
+        </property>
+        <property>
+            <name>spark.executor.memory</name>
+            <value>2g</value>
+            <final>true</final>
+            <description>Memory size of yarn executors</description>
+        </property>
+        <property>
+            <name>spark.executor.instances</name>
+            <value>10</value>
+            <final>true</final>
+            <description>Number of yarn executors</description>
+        </property>
+        <property>
+            <name>sap.hana.proc.security.disabled</name>
+            <value>true</value>
+            <final>true</final>
+        </property>
+        <property>
+            <name>sap.hana.hadoop.datastore</name>
+            <value>vora</value>
+            <final>true</final>
+        </property>
+    </configuration>
     ```
 
 [DONE]
@@ -177,12 +221,12 @@ Then run the following commands:
 
 ```Bash
 export HADOOP_CONF_DIR=/opt/hadoop-2.7.3/etc/hadoop
-export JAVA_HOME=$(readlink -f /usr/bin/java | sed "s:/bin/java::")
+export JAVA_HOME=/usr/java/sapjvm_8.1.009
 
 source /opt/hadoop-2.7.3/etc/hadoop/hadoop-env.sh
 
-nohup /opt/hadoop-2.7.3/bin/yarn resourcemanager 2>&1 > /opt/hadoop-2.7.3/logs/resourcemanager.log &
-nohup /opt/hadoop-2.7.3/bin/yarn nodemanager     2>&1 > /opt/hadoop-2.7.3/logs/nodemanager.log &
+nohup /opt/hadoop-2.7.3/bin/yarn resourcemanager > nohup.resourcemanager.out 2>&1 &
+nohup /opt/hadoop-2.7.3/bin/yarn nodemanager     > nohup.nodemanager.out 2>&1 &
 ```
 
 then you can switch to the `hanaes` user:
@@ -191,7 +235,7 @@ then you can switch to the `hanaes` user:
 su - hanaes
 ```
 
-Then run the following commands:
+Then run the following commands to start the SAP HANA Spark Controller:
 
 ```Bash
 cd /usr/sap/spark/controller/bin
@@ -203,27 +247,43 @@ cd /usr/sap/spark/controller/bin
 
 [ACCORDION-BEGIN [Step 5: ](Network Configuration - Local machine)]
 
-Now, from your local machine you should be able to ping both machines from a command prompt by running:
+Now, from your local machine you should be able to ping both machines using either their IP address, fully qualified name or short name from a command prompt by running:
 
 ```Bash
-ping <IP_HANA>
-ping <IP_VORA>
+ping <HANA_IP>
+ping <HANA_FULLY_QUALIFIED_NAME>
+ping <HANA_SHORT_NAME>
+
+ping <VORA_IP>
+ping <VORA_FULLY_QUALIFIED_NAME>
+ping <VORA_SHORT_NAME>
 ```
 
-If you have administrator privileges you can even add then to your host file and then reference them using a name instead of an IP address.
+If you have administrator privileges, you can even add then to your host file and then reference them using the host name instead of the IP address.
 
 To do so edit the following file using Notepad but "As an Administrator" : **`C:\Windows\System32\drivers\etc\hosts`**
 
 And add the following entries:
 
 ```Bash
-<IP_HANA>   host-hana
-<IP_VORA>   host-vora
+<HANA_IP>   <HANA_FULLY_QUALIFIED_NAME>
+<HANA_IP>   <HANA_SHORT_NAME>
+
+<VORA_IP>   <VORA_FULLY_QUALIFIED_NAME>
+<VORA_IP>   <VORA_SHORT_NAME>
 ```
 
-You can pick whatever name you want for `host-hana` & `host-vora`.
+With the SAP HANA, express edition and SAP Vora, developer edition virtual machine, you should add something like that:
 
-You should now be able to ping using this new "logical" host names from your host and your system will translate the "logical" name into the IP address.
+```Bash
+192.168.48.xxx   hxehost.localdomain.com
+192.168.48.xxx   hxehost
+
+192.168.48.xxx   linux-6rxg.suse
+192.168.48.xxx   linux-6rxg
+```
+
+You should now be able to ping using the host names from your host and your system will translate the host name into the IP address.
 
 Let's now make each machine see each other.
 
@@ -240,10 +300,18 @@ sudo vi /etc/hosts
 And add the following entry:
 
 ```Bash
-<IP_VORA>   host-vora
+<VORA_IP>   <VORA_FULLY_QUALIFIED_NAME>
+<VORA_IP>   <VORA_SHORT_NAME>
 ```
 
-You should now be able to ping the SAP Vora machine using this new "logical" host name from the SAP HANA host.
+With the SAP Vora, developer edition virtual machine, you should add something like that:
+
+```Bash
+192.168.48.xxx   linux-6rxg.suse
+192.168.48.xxx   linux-6rxg
+```
+
+You should now be able to ping the SAP Vora machine using this new host name from the SAP HANA host.
 
 [DONE]
 [ACCORDION-END]
@@ -259,10 +327,18 @@ sudo vi /etc/hosts
 And add the following entry:
 
 ```Bash
-<IP_HANA>   host-hana
+<HANA_IP>   <HANA_FULLY_QUALIFIED_NAME>
+<HANA_IP>   <HANA_SHORT_NAME>
 ```
 
-You should now be able to ping the SAP HANA machine using this new "logical" host name from the SAP Vora host.
+With the SAP HANA, express edition virtual machine, you should add something like that:
+
+```Bash
+192.168.48.xxx   hxehost.localdomain.com
+192.168.48.xxx   hxehost
+```
+
+You should now be able to ping the SAP HANA machine using this new  host name from the SAP Vora host.
 
 [DONE]
 [ACCORDION-END]
@@ -280,22 +356,22 @@ You can check the following link to verify that all your process are running:
 
 - Hadoop DFS Health page :
 
-    http://host-vora:50070/dfshealth.html#tab-overview
+    http://linux-6rxg.suse:50070/dfshealth.html#tab-overview
 
 - Hadoop Node and Resource manager endpoint
 
-    http://host-vora:8032/
-    http://host-vora:8040/
+    http://linux-6rxg.suse:8032/
+    http://linux-6rxg.suse:8040/
 
 - SAP Vora manager
 
-    http://host-vora:19000/vora-manager/web/
+    http://linux-6rxg.suse:19000/vora-manager/web/
 
 - SAP Vora tools
 
-    http://host-vora:9225/web/
+    http://linux-6rxg.suse:9225/web/
 
-You can also run the following command
+You can also run the following command to validate that port up and running:
 
 ```Bash
 netstat -ano | grep LISTEN | grep -e "7860" -e "8032" -e "8040" -e "9099" -e "9225" -e "19000" -e "50070"
@@ -316,7 +392,7 @@ To connect to SAP Vora via the SAP HANA Wire protocol:
 
 ```SQL
 CREATE REMOTE SOURCE "VoraViaHANAWire" ADAPTER "voraodbc"
-CONFIGURATION  'ServerNode=host-vora:30115;Driver=libodbcHDB'
+CONFIGURATION  'ServerNode=linux-6rxg.suse:30115;Driver=libodbcHDB'
 WITH CREDENTIAL TYPE 'PASSWORD' USING 'user=hanaes;password=hanaes';
 ```
 
@@ -330,7 +406,7 @@ To connect to SAP Vora via the SAP HANA Spark Controller protocol:
 
 ```SQL
 CREATE REMOTE SOURCE "VoraViaHANASpark" ADAPTER "sparksql"       
-CONFIGURATION 'server=host-vora;port=7860;ssl_mode=disabled'        
+CONFIGURATION 'server=linux-6rxg.suse;port=7860;ssl_mode=disabled'        
 WITH CREDENTIAL TYPE 'PASSWORD' USING 'user=hanaes;password=hanaes';
 ```
 
@@ -356,7 +432,7 @@ OPTIONS (
   tableSchema "Code VARCHAR(20), Actor VARCHAR(100)"
 )
     ```
-    >Note: make sure you declase the table name and the schema as option, else you won't be able to surface the table and will receive an error like this:
+    >Note: make sure you declare the table name and the schema as option, else you won't be able to surface the table and will receive an error like this:
     `invalid remote object name: Unable to retrieve remote metadata for`
 
     .
