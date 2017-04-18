@@ -55,15 +55,13 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform, produc
 
 5. Enter a username, for example, **`SHINE_DEV`**, specify a password and assign the following roles to this user:
 
-    `sap.hana.admin.roles::Administrator`
-
-    `sap.hana.xs.lm.roles::Administrator`
-
-    `sap.hana.xs.ide.roles::Developer`
-
-    `sap.hana.xs.debugger::Debugger`
-
-    `CONTENT_ADMIN`
+    ```
+    sap.hana.admin.roles::Administrator
+    sap.hana.xs.lm.roles::Administrator`
+    sap.hana.xs.ide.roles::Developer`
+    sap.hana.xs.debugger::Debugger`
+    CONTENT_ADMIN
+    ```
 
 6. Save the changes (after **Save**, the **`PUBLIC`** role is automatically added.)
 
@@ -86,9 +84,10 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform, produc
 3. Choose **Import** and then browse to the unzipped Delivery Unit you downloaded from GitHub. Locate the **`HCO_DEMOCONTENT_11.1.tgz`** archive and choose **Open**. Then, choose **Import**. Save the changes.
 4. Go to the SAP HANA Cockpit, log on with `SHINE_DEV` user and assign these roles:
 
-    `sap.hana.democontent.epm.roles::Admin`
-
-    `sap.hana.democontent.epm.roles::User`
+    ```
+    sap.hana.democontent.epm.roles::Admin
+    sap.hana.democontent.epm.roles::User
+    ```
 
 
 ### Import the Delivery Unit Using Eclipse IDE
@@ -120,9 +119,10 @@ You can also import Delivery Unit using the Eclipse IDE
 
 8. Go to the SAP HANA Cockpit, log on with the `SHINE_DEV` user and assign these roles and save the changes:
 
-    `sap.hana.democontent.epm.roles::Admin`
-
-    `sap.hana.democontent.epm.roles::User`
+    ```
+    sap.hana.democontent.epm.roles::Admin
+    sap.hana.democontent.epm.roles::User
+    ```
 
     ![SHINE DEV User](13.png)
 

@@ -37,7 +37,7 @@ Most Django based web applications use database back-ends for data persistence. 
 
 1. Install Django by following the [Django installation instructions]( https://docs.djangoproject.com/en/1.10/topics/install/#). Verify the installation by running `django-admin --version` in a shell. The command should return a version string such as `1.10.5`
 
-2. The Django HANA implementation relies on the pyhdb driver, a pure python HANA database driver. Run the pip installer to install pyhdb: `pip install pyhdb`. If successful, this pip install command should indicate a successful installation and the version number (e.g. `Successfully installed pyhdb-0.3.3`).
+2. The Django HANA implementation relies on the `pyhdb` driver, a pure python HANA database driver. Run the pip installer to install `pyhdb`: `pip install pyhdb`. If successful, this pip install command should indicate a successful installation and the version number (e.g. `Successfully installed pyhdb-0.3.3`).
 
 3. Verify that you can connect to the HXE database by creating a small test script.
 
@@ -98,7 +98,7 @@ Now that you have verified the installation of Django and verified connectivity 
         }
     }
     ```
-    b. Because HANA does not support Timezone, you will also need to change the value of USE_TZ in `djhxe/settings.py` from True to False: `USE_TZ=False`.
+    b. Because HANA does not support Timezone, you will also need to change the value of `USE_TZ` in `djhxe/settings.py` from True to False: `USE_TZ=False`.
     *Note: As a result of this change, there will be time zone values shown in the online tutorial that do not show in your results.*
 
 
