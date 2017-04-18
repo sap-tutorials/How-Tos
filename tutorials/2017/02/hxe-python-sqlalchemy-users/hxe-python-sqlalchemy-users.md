@@ -8,7 +8,7 @@ tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-e
  - Setup: `HANA, express edition` must be running.
 
 ## Next Steps
- - This is a standalone How-To on basic integration of the SQLAlchemy Obect Relational Mapper (ORM) with HANA, express edition. [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
+ - This is a standalone How-To on basic integration of the SQLAlchemy Object Relational Mapper (ORM) with HANA, express edition. [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
 
 
  __ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
@@ -41,7 +41,7 @@ This tutorial assumes that you are installing `SQLAlchemy` and `SQLAlchemy` HANA
 
 1. Install `sqlalchemy-hana` by following the Install `SQLAlchemy` by following the [SQLAlchemy installation instructions]( https://docs.djangoproject.com/en/1.10/topics/install/#). The `sqlalchemy-hana` installation will also install `SQLAlchemy` if it is not already installed in your environment.
 
-2. The `sql-alchemy-hana` implementation relies on the `pyhdb` driver, a pure python HANA database driver. Run the pip installer to install pyhdb: `pip install pyhdb`. If successful, this pip install command should indicate a successful installation and the version number (e.g. "Successfully installed pyhdb-0.3.3").
+2. The `sql-alchemy-hana` implementation relies on the `pyhdb` driver, a pure python HANA database driver. Run the pip installer to install `pyhdb`: `pip install pyhdb`. If successful, this pip install command should indicate a successful installation and the version number (e.g. `Successfully installed pyhdb-0.3.3`).
 
 3. Verify that you can connect to the HXE database by creating a small test script.
 
@@ -92,7 +92,7 @@ from sqlalchemy import create_engine
 engine = create_engine('hana+pyhdb://{}:{}@{}:{}'.format('system', 'myPassword', '10.125.20.57', '39013'))
 ```
 
-The order of the format arguments is user , password, ip address or host name, port.
+The order of the format arguments is user , password, IP address or host name, port.
 
 
 2. In the "Declare a Mapping" section of the [tutorial](http://docs.sqlalchemy.org/en/latest/orm/tutorial.html) you will need to add a line defining the `__table_args__` to the User class.

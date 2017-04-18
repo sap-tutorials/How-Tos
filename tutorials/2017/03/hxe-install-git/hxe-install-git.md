@@ -22,7 +22,7 @@ The HANA, express edition virtual machine uses SuSE Linux Enterprise Server (SLE
 
 1. If you are inside a firewall, you may need to configure HANA, express edition virtual machine proxies to be able to reach the internet. If you are not inside a firewall or you have already set up proxies on your virtual machine, skip ahead to `Setting Up Repositories`.
 
-2. Open up the SuSE configuration tool yast. Yast must be run as the root user.
+2. Open up the SuSE configuration tool `yast`. `yast` must be run as the root user.
 
     `sudo yast`
 
@@ -40,13 +40,13 @@ The HANA, express edition virtual machine uses SuSE Linux Enterprise Server (SLE
 
 8. Press `F10` key to save your changes.
 
-9. Press `F9` to exit yast.
+9. Press `F9` to exit `yast`.
 
 10. Exit the shell to make sure that your changes are picked up by the current shell.
 
 ## Setting Up Software Repositories and Installing Git
 
-The HANA, express edition SuSE Linux Enterprise operating system includes the `ZYpp` system management library (`libzypp`) for managing software packages and the `zypper` command line tool for interfacing with `libzypp`. `Libzypp` stores packages in software repositories. The following instructions show how to configure the repositories needed by `libzypp` to install `git`. `Git` requires some packages from the perl repository on the `download.opensuse.org` site and several packages from the Source Code Management `scm` repository.
+The HANA, express edition SuSE Linux Enterprise operating system includes the `ZYpp` system management library (`libzypp`) for managing software packages and the `zypper` command line tool for interfacing with `libzypp`. `Libzypp` stores packages in software repositories. The following instructions show how to configure the repositories needed by `libzypp` to install `git`. `Git` requires some packages from the `perl` repository on the `download.opensuse.org` site and several packages from the Source Code Management `scm` repository.
 
 1. Add the Perl repository, and name it `PerlRepository`:
 
@@ -68,7 +68,7 @@ The HANA, express edition SuSE Linux Enterprise operating system includes the `Z
 
 ## Verifying the Git Installation
 
-Verify your `git` installation by cloning a git repository to your HANA, express edition virtual machine. You can do this using any `git` repository to which you have access. For this example, you will clone the `PyHDB` repository from github.com. Feel free to clone a different repository.
+Verify your `git` installation by cloning a git repository to your HANA, express edition virtual machine. You can do this using any `git` repository to which you have access. For this example, you will clone the `PyHDB` repository from <www.github.com>. Feel free to clone a different repository.
 
 1. Make a directory to store your `git` repositories:
 

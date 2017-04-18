@@ -82,7 +82,7 @@ Data node/s can be added using Add Node button.
 
 [ACCORDION-BEGIN [Step 4: ](View the cluster management console)]
 
-Click on the **Set up SAP Hana Vora!** button to open the cluster management console. The console shows four nodes (`Manager`, `Master`, `Worker`, `Worker2`) being launched. The Messages section shows the status of the configuration.
+Click on the **Set up SAP Vora!** button to open the cluster management console. The console shows four nodes (`Manager`, `Master`, `Worker`, `Worker2`) being launched. The Messages section shows the status of the configuration.
 
 The host and services status can be viewed in the list of instance cards. For each node card, the top bar shows the status of node in the cloud and bottom bar shows the status of node in terms of `Ambari` and Vora services.
 
