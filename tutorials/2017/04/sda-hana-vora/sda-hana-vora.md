@@ -68,7 +68,7 @@ hostname -f
 With the SAP HANA, express edition virtual machine, you should have something like that:
   - host short name: `hxehost`
   - host fully qualified name: `hxehost.localdomain.com`
-  - IP address: should start with "192.168.48.XXX"
+  - IP address: should start with `192.168.48.XXX`
 
 [DONE]
 [ACCORDION-END]
@@ -117,7 +117,7 @@ hostname -f
 With the SAP Vora, developer edition virtual machine, you should have something like that:
   - host short name: `linux-6rxg`
   - host fully qualified name: `linux-6rxg.suse`
-  - IP address: should start with "192.168.48.XXX"
+  - IP address: should start with `192.168.48.XXX`
 
 [DONE]
 [ACCORDION-END]
