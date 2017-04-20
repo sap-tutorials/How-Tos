@@ -1,7 +1,7 @@
 ---
 title: How to Install SAP HANA 2.0, express edition Clients
 description: Download and install the client tools locally.
-primary_tag: products>sap-hana\,-express-edition 
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites
@@ -58,7 +58,7 @@ Install the Download Manager to your client machine and download the client pack
 
 2. In Download Manager, in the **Image** pull-down, select either  **Virtual Machine** or **Binary Installer**.
 
-    ![Download Manager](HXE_download_manager_clients.png)
+    ![Download Manager](download_manager_clients_12sp01.png)
 
 3. Click **Browse** and select a directory where your client package will be saved.
 
