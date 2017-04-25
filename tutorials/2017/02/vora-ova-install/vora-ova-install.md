@@ -184,7 +184,7 @@ For example if you want to copy some files with data from your host machine to `
 hdfs dfs -put /mnt/hgfs/shared_folder/some_file /user/vora/
 ```
 
->If the sharing doesn’t work, then the try executing `vmhgfs-fuse /mnt/hgfs/`
+>If the sharing doesn't work, then the try executing `vmhgfs-fuse /mnt/hgfs/`
 
 [DONE]
 [ACCORDION-END]
