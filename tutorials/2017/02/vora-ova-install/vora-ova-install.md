@@ -140,7 +140,7 @@ You can open the Spark shell and try out some Scala code that uses Vora. For tha
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 10: ](Install the VMware tools)]
+[ACCORDION-BEGIN [Step 10: ](Install the VMware tools - optional)]
 
 VMware Tools is a suite of utilities that enhances the performance of the virtual machine's guest operating system and improves management of the virtual machine. For more information please check official [VMware documentation](https://pubs.vmware.com/workstation-12/index.jsp#com.vmware.ws.using.doc/GUID-6F26D7EF-8D29-46E9-A48E-0BCBB138D333.html).
 
@@ -166,7 +166,9 @@ The installation process will take a few minutes. It will use default settings w
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 11: ](Share the folder from the host system)]
+[ACCORDION-BEGIN [Step 11: ](Share the folder from the host system - optional)]
+
+Shared folder allows you to exchange files between host and guest operating systems. The below procedure may not work for all combinations of operating systems and virtual machine players. Please refer to the vendor's documentation for your specific setup.
 
 Select **`Player > Manage > Virtual Machine Settings > Options > Shared Folders`**.
 
