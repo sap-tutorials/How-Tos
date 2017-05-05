@@ -145,7 +145,7 @@ ALTER SYSTEM ALTER CONFIGURATION ('webdispatcher.ini', 'system') SET('profile', 
 
 Type `quit` to exit the SQL console.
 
-You can check the installation by opening URL http://<<hostname>>:80XX/sap/hana/ide/ and logging in with user SYSTEM:
+You can check the installation by opening URL `http://<<hostname>>:80XX/sap/hana/ide/` and logging in with user SYSTEM:
 
 ![XS check](XS access.png)
 
@@ -200,14 +200,14 @@ The following items are meant for further exploration of the SAP HANA, express e
 - [Fuzzy Search](https://blogs.sap.com/2016/10/26/hxe-fuzzy-search/)
 - [Creating and accessing a Calculation View from MS Excel using MDX](https://www.sap.com/developer/tutorials/studio-view-data-calculation-mdx.html) or [using anonymous OData services](https://blogs.sap.com/2017/05/02/sap-hana-on-a-whim-a-bing-map-in-my-ms-excel-from-an-anonymous-odata-service/)
 - [Setting up the Google App Engine](https://www.sap.com/developer/tutorials/gae-setup.html) and [Installing `HDB` library for Node.js](https://www.sap.com/developer/tutorials/gae-nodehdb.html)
-- [Fuzzy search on the Google App Engine with node.js](https://blogs.sap.com/2017/03/08/google-app-engine-meets-sap-hana-express-edition/)
+- [Fuzzy search on the Google App Engine with `Node.js`](https://blogs.sap.com/2017/03/08/google-app-engine-meets-sap-hana-express-edition/)
 
 [ACCORDION-END]
 
 
 [ACCORDION-BEGIN [OPTION B:](Install DBeaver and Connect)]
 
-The following tutorial explains how to install a SQL client, in this case, DBeaver, and connect to SAP HANA, express edition, using the JDBC driver.
+The following tutorial explains how to install a SQL client, in this case, `DBeaver`, and connect to SAP HANA, express edition, using the JDBC driver.
 
 [Install `DBeaver`](https://www.sap.com/developer/tutorials/hxe-cj1-download-sql-client.html)
 
