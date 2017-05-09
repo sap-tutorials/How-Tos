@@ -221,16 +221,24 @@ The following tutorial explains how to create a table and insert data manually o
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `B.2`:](Coming soon - Connect using node.js)]
+[ACCORDION-BEGIN [**Step `B.2`:](Connect using node.js)]
+
+The following tutorial explains how to setup your local environment to use Node.js to connect to HXE.
+
+[Upload and Import](https://www.sap.com/developer/tutorials/hxe-nodejs-setup.html)
 
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [**Step `B.3`:](Coming soon - Access the database using node.js)]
+[ACCORDION-BEGIN [**Step `B.3`:](Access the database using node.js)]
+
+The following tutorial shows how to use Node.js to get data from HXE.
+
+[Upload and Import](https://www.sap.com/developer/tutorials/hxe-nodejs-connect.html)
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `B.4`:](Coming soon - Test SQL fuzzy search on the data)]
+[ACCORDION-BEGIN [**Step `B.4`:](Coming soon - Parse your table data and display it)]
 
 [ACCORDION-END]
 
