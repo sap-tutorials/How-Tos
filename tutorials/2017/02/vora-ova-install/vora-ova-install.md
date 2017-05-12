@@ -13,9 +13,14 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 
 This How-to details the procedure to download, install and verify SAP Vora version 1.4 developer edition packaged as a virtual machine appliance.
 
+>SAP Vora is a software working in the **distributed environment**, i.e. the one that usually consists of at least several computing nodes. But in case of the **developer edition** the SAP Vora software has been modified to allow you to practice with a single node instance.
+
 SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
 
->SAP Vora is a software working in the **distributed environment**, i.e. the one that usually consists of at least several computing nodes. But in case of the **developer edition** the SAP Vora software has been modified to allow you to practice with a single node instance.
+Refer to the last section of this How-to for most common troubleshooting activities. If solution is not available there, then:
+ - Post a question on https://answers.sap.com/tags/73555000100800000134 if you have SAP Community account,
+ - Post a question on https://stackoverflow.com/questions/tagged/vora if you have account at Stack Overflow,
+ - Open a ticket via https://support.wdf.sap.corp/ using `HAN-VO` component if you are an SAP employee.
 
 ### Time to Complete
 **35 Min**.
@@ -500,8 +505,6 @@ This might be a network problem. Try removing cache files and restart the engine
 - ```sudo rm -rf /var/local/vora/scheduler```
 - ```sudo /sbin/shutdown now -r```
 
-Please contact us so we can find a fix for your setup.
-
 _I see an error message about a "`native-hadoop library`" and my query is failing_
 
 If you mean ```Unable to load native-hadoop library for your platform...using builtin-java classes where applicable``` your query
@@ -515,6 +518,14 @@ You can then go on executing the other paragraphs of this notebook.
 
 _The Zeppelin paragraphs stay in status pending forever_
 Check the logs in ```/opt/zeppelin/logs```. Sometimes it helps to restart Zeppelin with ```/opt/zeppelin/bin/zeppelin-daemon.sh restart```.
+
+_Official SAP Vora Troubleshooting Guide_
+Find it at SAP Vora [documentation page](https://help.sap.com/viewer/p/SAP_VORA)
+
+_If solution is not available above_
+ - Post a question on https://answers.sap.com/tags/73555000100800000134 if you have SAP Community account,
+ - Post a question on https://stackoverflow.com/questions/tagged/vora if you have account at Stack Overflow,
+ - Open a ticket via https://support.wdf.sap.corp/ using `HAN-VO` component if you are an SAP employee.
 
 [DONE]
 [ACCORDION-END]
