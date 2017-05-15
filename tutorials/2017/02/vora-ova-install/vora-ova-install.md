@@ -19,7 +19,7 @@ SAP Vora, developer edition, is covered by the Developer License Agreement, whic
 
 Refer to the last section of this How-to for most common troubleshooting activities. If solution is not available there, then:
  - Post a question on [SAP Community Answers](https://answers.sap.com/tags/73555000100800000134) if you have SAP Community account,
- - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have account there,
+ - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have an account there,
  - Open an internal ticket in SAP Customer Support System using `HAN-VO` component if you are an SAP employee.
 
 ### Time to Complete
@@ -524,7 +524,7 @@ Find it at [SAP Vora documentation](https://help.sap.com/viewer/p/SAP_VORA) page
 
 _If solution is not available above_
  - Post a question on [SAP Community Answers](https://answers.sap.com/tags/73555000100800000134) if you have SAP Community account,
- - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have account there,
+ - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have an account there,
  - Open an internal ticket in SAP Customer Support System using `HAN-VO` component if you are an SAP employee.
 
 [DONE]
