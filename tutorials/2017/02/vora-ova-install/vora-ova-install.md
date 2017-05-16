@@ -1,8 +1,8 @@
 ---
 title: How to setup the SAP Vora developer edition virtual machine
 description: Download and install the SAP Vora 1.4 developer edition packaged as a virtual machine appliance
-primary_tag: products>sap-hana-vora
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
  - **Software required:**
@@ -11,11 +11,9 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
 
-This How-to details the procedure to download, install and verify SAP Vora version 1.4 developer edition packaged as a virtual machine appliance.
+This How-to details the procedure to download, install and verify SAP Vora version 1.4 developer edition packaged as a virtual machine appliance. SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
 
 >SAP Vora is a software working in the **distributed environment**, i.e. the one that usually consists of at least several computing nodes. But in case of the **developer edition** the SAP Vora software has been modified to allow you to practice with a single node instance.
-
-SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
 
 Refer to the last section of this How-to for most common troubleshooting activities. If solution is not available there, then:
  - Post a question on [SAP Community Answers](https://answers.sap.com/tags/73555000100800000134) if you have SAP Community account,
