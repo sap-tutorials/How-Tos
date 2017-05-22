@@ -1,8 +1,8 @@
 ---
 title: How to setup the SAP Vora developer edition virtual machine
 description: Download and install the SAP Vora 1.4 developer edition packaged as a virtual machine appliance
-primary_tag: products>sap-hana-vora
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
  - **Software required:**
@@ -11,11 +11,14 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
 
-This How-to details the procedure to download, install and verify SAP Vora version 1.4 developer edition packaged as a virtual machine appliance.
-
-SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
+This How-to details the procedure to download, install and verify SAP Vora version 1.4 developer edition packaged as a virtual machine appliance. SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
 
 >SAP Vora is a software working in the **distributed environment**, i.e. the one that usually consists of at least several computing nodes. But in case of the **developer edition** the SAP Vora software has been modified to allow you to practice with a single node instance.
+
+Refer to the last section of this How-to for most common troubleshooting activities. If solution is not available there, then:
+ - Post a question on [SAP Community Answers](https://answers.sap.com/tags/73555000100800000134) if you have SAP Community account,
+ - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have an account there,
+ - Open an internal ticket in SAP Customer Support System using `HAN-VO` component if you are an SAP employee.
 
 ### Time to Complete
 **35 Min**.
@@ -154,6 +157,9 @@ If your VM doesn't have CD/DVD yet, you have to add it first:
 Select **`Player > Manage > Install VMware Tools`**, then open the terminal and execute the following:
 
 ```bash
+sudo su
+mkdir -p /mnt/cdrom
+mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom
 cp /media/VMware Tools/VMwareTools* ~
 cd ~
 tar -xf VMwareTools*
@@ -178,6 +184,9 @@ In the example `C:\Users\I076835\Documents\Virtual Machines\Shared with VMs` is 
 ![Wizard](voraovasetup01.jpg)
 
 Now you can see shared folder from the host machine under `/mnt/hgfs/`path.
+
+Execute `vmhgfs-fuse /mnt/hgfs/`
+
 ![Shared folder](voraovasetup02.jpg)
 
 For example if you want to copy some files with data from your host machine to `HDFS` storage backend in the VM use:
@@ -185,8 +194,6 @@ For example if you want to copy some files with data from your host machine to `
 ```bash
 hdfs dfs -put /mnt/hgfs/shared_folder/some_file /user/vora/
 ```
-
->If the sharing doesn't work, then the try executing `vmhgfs-fuse /mnt/hgfs/`
 
 [DONE]
 [ACCORDION-END]
@@ -500,8 +507,6 @@ This might be a network problem. Try removing cache files and restart the engine
 - ```sudo rm -rf /var/local/vora/scheduler```
 - ```sudo /sbin/shutdown now -r```
 
-Please contact us so we can find a fix for your setup.
-
 _I see an error message about a "`native-hadoop library`" and my query is failing_
 
 If you mean ```Unable to load native-hadoop library for your platform...using builtin-java classes where applicable``` your query
@@ -515,6 +520,14 @@ You can then go on executing the other paragraphs of this notebook.
 
 _The Zeppelin paragraphs stay in status pending forever_
 Check the logs in ```/opt/zeppelin/logs```. Sometimes it helps to restart Zeppelin with ```/opt/zeppelin/bin/zeppelin-daemon.sh restart```.
+
+_Official SAP Vora Troubleshooting Guide_
+Find it at [SAP Vora documentation](https://help.sap.com/viewer/p/SAP_VORA) page
+
+_If solution is not available above_
+ - Post a question on [SAP Community Answers](https://answers.sap.com/tags/73555000100800000134) if you have SAP Community account,
+ - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have an account there,
+ - Open an internal ticket in SAP Customer Support System using `HAN-VO` component if you are an SAP employee.
 
 [DONE]
 [ACCORDION-END]
