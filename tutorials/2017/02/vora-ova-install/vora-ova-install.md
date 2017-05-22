@@ -157,6 +157,9 @@ If your VM doesn't have CD/DVD yet, you have to add it first:
 Select **`Player > Manage > Install VMware Tools`**, then open the terminal and execute the following:
 
 ```bash
+sudo su
+mkdir -p /mnt/cdrom
+mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom
 cp /media/VMware Tools/VMwareTools* ~
 cd ~
 tar -xf VMwareTools*
@@ -181,6 +184,9 @@ In the example `C:\Users\I076835\Documents\Virtual Machines\Shared with VMs` is 
 ![Wizard](voraovasetup01.jpg)
 
 Now you can see shared folder from the host machine under `/mnt/hgfs/`path.
+
+Execute `vmhgfs-fuse /mnt/hgfs/`
+
 ![Shared folder](voraovasetup02.jpg)
 
 For example if you want to copy some files with data from your host machine to `HDFS` storage backend in the VM use:
@@ -188,8 +194,6 @@ For example if you want to copy some files with data from your host machine to `
 ```bash
 hdfs dfs -put /mnt/hgfs/shared_folder/some_file /user/vora/
 ```
-
->If the sharing doesn't work, then the try executing `vmhgfs-fuse /mnt/hgfs/`
 
 [DONE]
 [ACCORDION-END]
