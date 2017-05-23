@@ -160,7 +160,7 @@ Select **`Player > Manage > Install VMware Tools`**, then open the terminal and 
 sudo su
 mkdir -p /mnt/cdrom
 mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom
-cp /media/VMware Tools/VMwareTools* ~
+cp /mnt/cdrom/VMwareTools* ~
 cd ~
 tar -xf VMwareTools*
 sudo ./vmware-tools-distrib/vmware-install.pl --default
@@ -176,6 +176,8 @@ The installation process will take a few minutes. It will use default settings w
 
 Shared folder allows you to exchange files between host and guest operating systems. The below procedure may not work for all combinations of operating systems and virtual machine players. Please refer to the vendor's documentation for your specific setup.
 
+Execute `vmhgfs-fuse /mnt/hgfs/`
+
 Select **`Player > Manage > Virtual Machine Settings > Options > Shared Folders`**.
 
 Change **Folder sharing** to `Always enabled` and click **Add**. In the wizard browse the host system folder you want to share with your VM and provide the name under which it will be visible.
@@ -184,8 +186,6 @@ In the example `C:\Users\I076835\Documents\Virtual Machines\Shared with VMs` is 
 ![Wizard](voraovasetup01.jpg)
 
 Now you can see shared folder from the host machine under `/mnt/hgfs/`path.
-
-Execute `vmhgfs-fuse /mnt/hgfs/`
 
 ![Shared folder](voraovasetup02.jpg)
 
