@@ -1,8 +1,8 @@
 ---
 title: SAP Vora 1.3 AWS Marketplace Edition FAQ
 description: SAP Vora definitions, system requirements, and other production version related FAQs
-primary_tag: products>sap-hana-vora
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
  - None
