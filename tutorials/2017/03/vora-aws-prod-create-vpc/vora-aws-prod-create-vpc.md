@@ -1,8 +1,8 @@
 ---
 title: Create a Virtual Private Cloud (VPC) in AWS for SAP Vora AWS Marketplace Production Edition
 description: This is a step by step guide to create a Virtual Private Cloud (VPC) in AWS for SAP Vora 1.3.
-primary_tag: products>sap-hana-vora
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
  - Amazon Web Services account. Create AWS account or use existing account.

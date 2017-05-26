@@ -1,8 +1,8 @@
 ---
 title: How to set up and administer a production SAP Vora 1.3 Cluster
 description: This is a step by step guide to setup and administer a production SAP Vora 1.3 Cluster in AWS.
-primary_tag: products>sap-hana-vora
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites
 
