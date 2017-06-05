@@ -1,6 +1,7 @@
 ---
 title: Internet of Things (IoT) Setup your environment for Tessel
 description: Setup and configure your environment to work with a Tessel device
+primary_tag: topic>internet-of-things
 tags: [  tutorial>beginner, topic>internet-of-things, products>sap-hana, products>sap-cloud-platform, tutorial>how-to ]
 ---
 ## Prerequisites  
@@ -20,7 +21,7 @@ Here you will prepare your development environment on a laptop to work with a Te
 
 1. Install the following tools:    - [Node.js v. 0.12](https://nodejs.org/en/blog/release/v0.12.18/)
         * [Node.js Latest LTS Version v. 6](https://nodejs.org/en/download/) has recently been tried on Windows and MacOS and worked well with the Tessel1. But did not work with some Linux versions    - [Google Chrome](http://www.google.com/chrome/)    - [Postman (REST Client)](https://www.getpostman.com/apps) as Chrome extension or the app. You can use as well some other REST API Client of your choice.    - Install good HTML/JavaScript editor. If you don't have one, simply search on the web for something appropriate like [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](http://www.sublimetext.com/), etc...
-### Optional - Additional Configuration Steps for the SAP HANA Cloud Platform
+### Optional - Additional Configuration Steps for the SAP Cloud Platform
 
 1. Sign up for your free developer account at [SAP Cloud Platform trial](http://developers.sap.com/cloud)
 2. Install a current version of [Eclipse Java EE](http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/keplersr2)

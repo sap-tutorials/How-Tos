@@ -1,7 +1,8 @@
 ---
 title: How to Install SAP HANA 2.0, express edition Clients
 description: Download and install the client tools locally.
-tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition ]
+primary_tag: products>sap-hana\,-express-edition
+tags: [  tutorial>beginner, tutorial>how-to, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites
  - You (or someone in your organization) has already installed SAP HANA 2.0, express edition on another machine using either the [Installing Binary](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing the VM Image](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorial.
@@ -57,7 +58,7 @@ Install the Download Manager to your client machine and download the client pack
 
 2. In Download Manager, in the **Image** pull-down, select either  **Virtual Machine** or **Binary Installer**.
 
-    ![Download Manager](HXE_download_manager_clients.png)
+    ![Download Manager](download_manager_clients_12sp01.png)
 
 3. Click **Browse** and select a directory where your client package will be saved.
 
@@ -185,7 +186,6 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
 
     ```bash
     xs api https://<hostname>:3<instance_number>30 -cacert "<copied_filepath>/default.root.crt.pem"
-
     ```
 
 

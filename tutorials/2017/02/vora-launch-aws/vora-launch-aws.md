@@ -1,7 +1,8 @@
 ---
 title: How to run SAP Vora on Amazon Web Services
 description: Step by step guide to Launch SAP Vora Developer Edition in AWS on Vora 1.3
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 
 ## Prerequisites

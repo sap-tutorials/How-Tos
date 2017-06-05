@@ -1,7 +1,8 @@
 ---
 title: SAP Cloud Platform predictive services, How to update the database pool configuration of the SAP Cloud Platform predictive services
 description: Adjust the database pool setting of the SAP Cloud Platform predictive services to control the load on your HANA instance
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-for-predictive-service ]
+primary_tag: products>sap-cloud-platform-predictive-service
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predictive-service ]
 ---
 
 

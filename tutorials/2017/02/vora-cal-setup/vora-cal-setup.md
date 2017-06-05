@@ -1,7 +1,8 @@
 ---
 title: How to setup the SAP Vora developer edition in SAP CAL
 description: Setup the SAP Vora 1.3 developer edition using the SAP Cloud Appliance Library
-tags: [  tutorial>how-to, tutorial>beginner, topic>cloud, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, topic>cloud, products>sap-vora ]
 ---
 ## Prerequisites  
  - **Systems used:**

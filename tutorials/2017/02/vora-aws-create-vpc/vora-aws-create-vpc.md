@@ -1,17 +1,18 @@
 ---
 title: Create a VPC in AWS for SAP Vora Developer Edition
 description: Step by step guide to create a VPC in AWS for SAP Vora Developer Edition in AWS on Vora 1.3
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
  - Amazon Web Services account. Create AWS account or use existing account.
 
 ## Next Steps
- - [Set up Security Groups in AWS VPC](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html)
+ - View other [SAP Vora How-Tos](https://www.sap.com/developer/tutorial-navigator.how-to.html?tag=products:data-management/sap-hana-vora) or visit the [SAP Vora Developer Page](https://www.sap.com/developer/topics/vora.html).
 
 
 ## How-To Details
-This How-to is a step by step guide to create a VPC in AWS for SAP Vora Developer Edition in AWS on Vora 1.3
+This How-to is a step by step guide to create a VPC in AWS for SAP Vora SAP Vora Developer Edition
 
 ### Time to Complete
 **20 Min**.
@@ -119,4 +120,4 @@ Select this VPC while launching a SAP Vora Manager instance.
 [ACCORDION-END]
 
 ## Next Steps
-- [Set up Security Groups in AWS VPC](http://www.sap.com/developer/how-tos/2017/02/vora-aws-security-groups.html)
+ - View other [SAP Vora How-Tos](https://www.sap.com/developer/tutorial-navigator.how-to.html?tag=products:data-management/sap-hana-vora) or visit the [SAP Vora Developer Page](https://www.sap.com/developer/topics/vora.html).

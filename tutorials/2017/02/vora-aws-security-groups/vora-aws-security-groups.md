@@ -1,7 +1,8 @@
 ---
 title: Set up Security Groups in AWS VPC for SAP Vora 1.3
 description: Step by step guide to set up security groups in your AWS virtual private cloud for SAP Vora 1.3
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
  - [Create a VPC in AWS for SAP Vora Developer Edition in AWS](http://www.sap.com/developer/how-tos/2017/02/vora-aws-create-vpc.html)

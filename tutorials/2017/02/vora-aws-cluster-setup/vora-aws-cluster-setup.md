@@ -1,7 +1,8 @@
 ---
 title: How to setup and administer an SAP Vora 1.3 Cluster for AWS
 description: Step by step guide to setting up and administering an SAP Vora 1.3 Cluster
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
+primary_tag: products>sap-vora
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
 1. [How to run SAP Vora on Amazon Web Services](http://www.sap.com/developer/how-tos/2017/02/vora-launch-aws.html) is completed, and
@@ -13,7 +14,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-hana-vora ]
 
 
 ## Next Steps
- - Return to the [SAP Vora Developer page] (link coming soon)
+ - Return to the [SAP Vora Developer](https://www.sap.com/developer/topics/vora.html) Page
 
 
 ## How-To Details
@@ -81,7 +82,7 @@ Data node/s can be added using Add Node button.
 
 [ACCORDION-BEGIN [Step 4: ](View the cluster management console)]
 
-Click on the **Set up SAP Hana Vora!** button to open the cluster management console. The console shows four nodes (`Manager`, `Master`, `Worker`, `Worker2`) being launched. The Messages section shows the status of the configuration.
+Click on the **Set up SAP Vora!** button to open the cluster management console. The console shows four nodes (`Manager`, `Master`, `Worker`, `Worker2`) being launched. The Messages section shows the status of the configuration.
 
 The host and services status can be viewed in the list of instance cards. For each node card, the top bar shows the status of node in the cloud and bottom bar shows the status of node in terms of `Ambari` and Vora services.
 
@@ -220,4 +221,4 @@ For SAP Vora console software updates, click **RESTART TO UPDATE NOW**. The upda
 [ACCORDION-END]
 
 ## Next Steps
-- Return to the [SAP Vora Developer page] (link coming soon)
+- Return to the [SAP Vora Developer](https://www.sap.com/developer/topics/vora.html) Page
