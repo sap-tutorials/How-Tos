@@ -1,6 +1,6 @@
 ---
-title: Create a Fiori for iOS app in 15 minutes
-description: Create a Fiori for iOS app in 15 minutes
+title: Create a Fiori for iOS app in 45 minutes
+description: Create a Fiori for iOS app in 45 minutes
 primary_tag: products>sap-cloud-platform-sdk-for-ios
 tags: [  tutorial>how-to, tutorial>intermediate, operating-system>ios, topic>mobile, topic>odata, products>sap-cloud-platform, products>sap-cloud-platform-sdk-for-ios ]
 ---
@@ -30,7 +30,9 @@ When you are ready, your SAP Fiori for iOS application will resemble the followi
 
 [ACCORDION-BEGIN [Step 1: ](Open SAP Cloud Platform mobile service for development and operations cockpit)]
 
-Open the SAP Cloud Platform mobile service for development and operations cockpit at `https://hcpmsadmin-<your user id>trial.dispatcher.hanatrial.ondemand.com/`. After logging in, you should see the cockpit's landing page:
+Open the SAP Cloud Platform mobile service for development and operations cockpit at `https://hcpmsadmin-<your user id>trial.dispatcher.hanatrial.ondemand.com/`
+
+After logging in, you should see the cockpit's landing page:
 
 ![SAPcpms cockpit](fiori-ios-scpms-create-demo-app-01.png)
 
