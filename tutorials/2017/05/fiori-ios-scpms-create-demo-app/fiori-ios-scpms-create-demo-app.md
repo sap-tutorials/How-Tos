@@ -83,6 +83,7 @@ Click **Next**. In the next page of the wizard, enter the following connection d
 |----|----|
 | URL | `https://sapdevsdd27584c4.us2.hana.ondemand.com/codejam/wwdc/services/DeliveryService.xsodata` |
 | Proxy Type | `Internet` |
+| Maximum Connections | `10` |
 | Rewrite Mode | `Rewrite URL` |
 
 ![Connectivity Page](fiori-ios-scpms-create-demo-app-38.png)
@@ -205,7 +206,9 @@ In the **Optional Features** page, you have the option to generate a **Master-De
 
 ![Optional Features](fiori-ios-scpms-create-demo-app-12.png)
 
-Make sure all checkboxes are selected and click **Finish** to complete the wizard.
+Make sure the checkboxes **Generate Master-Detail Application**, **Enable Logging** and **Enable Log Upload** are selected and click **Finish** to complete the wizard.
+
+> Most likely the checkbox for **Remote Notifications** is disabled. This happens because no APNS endpoint is configured for the application definition in SAP Cloud Platform mobile service for development and operations. Once configured with a valid certificate, this option becomes available.
 
 
 [DONE]
@@ -242,9 +245,7 @@ Folder `Proxy Classes` contains the OData proxy classes generated from the OData
 
 Click the **Run** button to build and run the generated application.
 
-![App first loaded](fiori-ios-scpms-create-demo-app-15.png)
-
-Dismiss the Push Notifications alert, and the app starts with an overview of the available **Collections** of the OData service:
+The app starts with an overview of the available **Collections** of the OData service:
 
 ![Collections screen](fiori-ios-scpms-create-demo-app-17.png)
 
@@ -442,6 +443,8 @@ This adds a reference to the `AppDelegate` class, a reference to the SDK's loggi
 Switch to the **Storyboard** and select the **Tracking Info Table View**. In the **Identity inspector**, set the **Custom Class** to `TrackingInfoViewController`:
 
 ![Link Table View Controller to subclass](fiori-ios-scpms-create-demo-app-25.png)
+
+> To avoid a "*prototype table cells must have reuse identifiers*" warning, you can provide an identifier for the table view's prototype cell, or alternatively, set the **Prototype Cells** value to `0`.
 
 [DONE]
 [ACCORDION-END]
