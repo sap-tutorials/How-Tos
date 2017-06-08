@@ -6,7 +6,7 @@ tags: [  tutorial>how-to, tutorial>intermediate, operating-system>ios, topic>mob
 ---
 ## Prerequisites  
 - **Proficiency:** Intermediate
-- **Tutorials:** [Sign up for a free trial account on SAP Cloud Platform](https://www.sap.com/developer/tutorials/hcp-create-trial-account.html)
+- **Tutorials:** [Sign up for a free trial account on SAP Cloud Platform](https://www.sap.com/developer/tutorials/hcp-create-trial-account.html) and [Enable SAP Cloud Platform mobile service for development and operations](https://www.sap.com/developer/tutorials/fiori-ios-hcpms-setup.html)
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
@@ -23,6 +23,12 @@ When you are ready, your SAP Fiori for iOS application will resemble the followi
 
 ![Final SAP Fiori for iOS application](fiori-ios-scpms-create-demo-app-27.png)
 
+> Before you start, make sure you:
+
+> - have a trial account on SAP Cloud Platform. See [Sign up for a free trial account on SAP Cloud Platform](https://www.sap.com/developer/tutorials/hcp-create-trial-account.html) for more information.
+> - enabled SAP Cloud Platform mobile service for development and operations. See [Enable SAP Cloud Platform mobile service for development and operations](https://www.sap.com/developer/tutorials/fiori-ios-hcpms-setup.html) for more information.
+
+
 ### Time to Complete
 **45 Min**.
 
@@ -35,7 +41,6 @@ Open the SAP Cloud Platform mobile service for development and operations cockpi
 After logging in, you should see the cockpit's landing page:
 
 ![SAPcpms cockpit](fiori-ios-scpms-create-demo-app-01.png)
-
 
 [DONE]
 [ACCORDION-END]
@@ -123,13 +128,56 @@ Set the **Security Configuration** to `None`:
 
 >   This message is crucial if you would have developed an application which uses a certain authentication mechanism, and by changing to a different authentication mechanism, previous user registrations may become invalid. However, since we didn't yet develop an application which uses the former specified authentication, you can simply ignore the message and click **OK**.
 
+.
+
 Click **Save** to store the configuration.
 
 
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 5: ](Open the SAP Cloud Platform SDK for iOS Assistant)]
+[ACCORDION-BEGIN [Step 5: ](Configure SAP Cloud Platform SDK for iOS Assistant)]
+
+> **Note**: If you have already configured the SAP Cloud Platform SDK for iOS Assistant, you can **skip this step** and proceed with "Step 6 - Run the SAP Cloud Platform SDK for iOS Assistant".
+
+.
+
+This step provides simplified steps to configure the SAP Cloud Platform SDK for iOS Assistant application using the SAP Cloud Platform mobile service for development and operations cockpit.
+
+In SAP Cloud Platform mobile service for development and operations, click the **Important Links** tab in the lower left bottom. The **Important Links** section opens:
+
+![Important Links](fiori-ios-scpms-create-demo-app-45.png)
+
+Locate the tile **SAP Cloud Platform SDK for iOS Assistant** and click the **Importing URLs directly into Assistant** link. You should now see the following pop-up:
+
+![Import URLs](fiori-ios-scpms-create-demo-app-46.png)
+
+Click the **Open SAP Cloud Platform SDK for iOS Assistant** button. The SAP Cloud Platform SDK for iOS Assistant application will start. The **New Account** settings dialog will open, and both **Admin API URL** and **Admin UI URL** parameters are pre-populated automatically:
+
+![Import URLs](fiori-ios-scpms-create-demo-app-47.png)
+
+Provide the following additional details:
+
+| Field | Value |
+|----|----|
+| Name | A descriptive name for the configuration, for instance `SAP Cloud Platform Mobile Services` |
+| Authentication Type | `Basic Authentication` |
+| User | Your trial account user |
+| Password | Password for your trial account user |
+
+![Import URLs](fiori-ios-scpms-create-demo-app-48.png)
+
+Click **Save** when finished, and click **OK** to dismiss the **Settings** dialog.
+
+[DONE]
+[ACCORDION-END]
+
+
+[ACCORDION-BEGIN [Step 6: ](Run the SAP Cloud Platform SDK for iOS Assistant)]
+
+> **Note**: If you went through "Step 5 - Configure SAP Cloud Platform SDK for iOS Assistant", the SAP Cloud Platform SDK for iOS Assistant is already running and you may continue to "Step 7 - Create an Xcode Project".
+
+.
 
 On your local machine, navigate to your `./<SAP Cloud Platform SDK for iOS>` folder.
 
@@ -142,7 +190,7 @@ Double-click the **SAP Cloud Platform SDK for iOS Assistant** icon to start the 
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 6: ](Create an Xcode Project)]
+[ACCORDION-BEGIN [Step 7: ](Create an Xcode Project)]
 
 Click the **Plus** button on the top-right of the SDK Assistant. The first page of the Xcode Project generation wizard lets you define the Project Properties.
 
@@ -167,7 +215,7 @@ Click **Next** to advance to the **SAP Cloud Platform mobile service for develop
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 7: ](SAP Cloud Platform mobile service for development and operations Configuration details)]
+[ACCORDION-BEGIN [Step 8: ](SAP Cloud Platform mobile service for development and operations Configuration details)]
 
 In the **SAP Cloud Platform mobile service for development and operations Configuration** page, select the **Use Existing** tab button.
 
@@ -189,7 +237,7 @@ Click **Next** to advance to the **OData Services** step.
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 8: ](OData Services)]
+[ACCORDION-BEGIN [Step 9: ](OData Services)]
 
 In the **OData Services** page, the primary OData service connection you have specified in **Step 3 - Add a back end connection** is displayed.
 
@@ -200,7 +248,7 @@ Click **Next** to advance to the **Optional Features** step.
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 9: ](Optional Features)]
+[ACCORDION-BEGIN [Step 10: ](Optional Features)]
 
 In the **Optional Features** page, you have the option to generate a **Master-Detail Application**, enable **logging** and **log uploads**, and enable **remote notifications**.
 
@@ -214,15 +262,15 @@ Make sure the checkboxes **Generate Master-Detail Application**, **Enable Loggin
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 10: ](Upload metadata.xml file)]
+[ACCORDION-BEGIN [Step 11: ](Upload metadata.xml file)]
 
-After you have clicked **Finish** in the previous step, the SDK Assistant now loads the OData service's metadata. This metadata describes the data model, and can be accessed via `<service URL>$metadata`. For your service, the metadata URL would be [https://sapdevsdd27584c4.us2.hana.ondemand.com/codejam/wwdc/services/DeliveryService.xsodata/$metadata](https://sapdevsdd27584c4.us2.hana.ondemand.com/codejam/wwdc/services/DeliveryService.xsodata/$metadata)
+After you have clicked **Finish** in the previous step, the SDK Assistant now loads the OData service's metadata. This metadata describes the data model, and can be accessed via `<service URL>$metadata`. For your service, the metadata URL would be `https://sapdevsdd27584c4.us2.hana.ondemand.com/codejam/wwdc/services/DeliveryService.xsodata/$metadata`
 
 
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 11: ](Examine the generated Xcode Project)]
+[ACCORDION-BEGIN [Step 12: ](Examine the generated Xcode Project)]
 
 After the SDK Assistant has finished, **Xcode** will launch and open the just generated `MyDeliveries` project.
 
@@ -241,7 +289,7 @@ Folder `Proxy Classes` contains the OData proxy classes generated from the OData
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 12: ](Build and run the generated application)]
+[ACCORDION-BEGIN [Step 13: ](Build and run the generated application)]
 
 Click the **Run** button to build and run the generated application.
 
@@ -253,7 +301,7 @@ The app starts with an overview of the available **Collections** of the OData se
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 13: ](Examine the generated application)]
+[ACCORDION-BEGIN [Step 14: ](Examine the generated application)]
 
 If you click on the `Packages` collection, you navigate to a **Master** list with all available `Package` entities:
 
@@ -267,13 +315,13 @@ If you click on one of the `Package` entities, you navigate to a **Detail** page
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 14: ](Enhance the generated application)]
+[ACCORDION-BEGIN [Step 15: ](Enhance the generated application)]
 
 The generated application demonstrates the OData proxy classes are working, browse their properties, and demonstrates push notifications and the various authentication mechanisms. For productive use, it is recommended to start with a new, empty project, and use parts of the generated app into your own project.
 
 However, to show how to access backend data via OData in an object-oriented way, we will extend the generated application.
 
-Examine the OData service's metadata, which can be accessed via [https://sapdevsdd27584c4.us2.hana.ondemand.com/codejam/wwdc/services/DeliveryService.xsodata/$metadata](https://sapdevsdd27584c4.us2.hana.ondemand.com/codejam/wwdc/services/DeliveryService.xsodata/$metadata):
+Examine the OData service's metadata, which can be accessed via `https://sapdevsdd27584c4.us2.hana.ondemand.com/codejam/wwdc/services/DeliveryService.xsodata/$metadata`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
@@ -370,7 +418,7 @@ We will now show for each `PackageType` its related `DeliveryStatusType`'s, show
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 15: ](Create a new Table View Controller)]
+[ACCORDION-BEGIN [Step 16: ](Create a new Table View Controller)]
 
 To list the tracking info for each package using SAP Fiori Timeline controls, the most simple approach would be to create a new Table View Controller and implement the code needed to display the statuses.
 
@@ -383,7 +431,7 @@ With the just added Table View Controller selected, give it the name `Tracking I
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 16: ](Create new subclass of a UITableViewController class)]
+[ACCORDION-BEGIN [Step 17: ](Create new subclass of a UITableViewController class)]
 
 **Right-click** the `ViewControllers` folder in your project, and from the context menu choose **New File...**.
 
@@ -449,7 +497,7 @@ Switch to the **Storyboard** and select the **Tracking Info Table View**. In the
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 17: ](Add navigation Table View Cell to Detail Table View)]
+[ACCORDION-BEGIN [Step 18: ](Add navigation Table View Cell to Detail Table View)]
 
 Drag a **Table View Cell** onto the **Detail Table View**, and set the following properties in the **Attribute inspector**:
 
@@ -469,7 +517,7 @@ With the segue selected, go to the **Attributes inspector** and provide the name
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 18: ](Implement Table View Cell for Packages)]
+[ACCORDION-BEGIN [Step 19: ](Implement Table View Cell for Packages)]
 
 Open file `./MyDeliveries/TableDelegates/DetailTableDelegates/PackagesTypeDetailTableDelegate.swift`.
 
@@ -508,7 +556,7 @@ However, if you click on it, nothing happens... You will solve that in the next 
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 19: ](Implement navigation logic)]
+[ACCORDION-BEGIN [Step 20: ](Implement navigation logic)]
 
 In the previous step, you have noticed the navigation to the **Tracking Info** scene did not happen. That is caused since the `DetailViewController.swift` file has turned off its ability to select table cells.
 
@@ -596,7 +644,7 @@ With this code, you create a query to load all `DeliveryStatus` entities for the
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 20: ](Explore SAP Fiori Timeline cells with the SAP Fiori for iOS Mentor app)]
+[ACCORDION-BEGIN [Step 21: ](Explore SAP Fiori Timeline cells with the SAP Fiori for iOS Mentor app)]
 
 You now have enabled navigation, as well as created a query to load all related `DeliveryStatus` entities. However, you haven't bound the results to table cells yet.
 
@@ -638,7 +686,7 @@ The generated code can now be implemented into the appropriate places in the `Tr
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 21: ](Implement the SAP Fiori Timeline cells)]
+[ACCORDION-BEGIN [Step 22: ](Implement the SAP Fiori Timeline cells)]
 
 In this step, you implement Fiori Timeline cells to show the `DeliveryStatus` entities in a logical way.
 
@@ -656,6 +704,8 @@ tableView.separatorStyle = .none
 ```
 
 > **NOTE** The above code originated from the **SAP Fiori for iOS Mentor** app, but has been slightly modified to show both `FUITimelineCell` and `FUITimelineMarkerCell` control.
+
+.
 
 Next, locate method `numberOfSections(in tableView:)`.
 
@@ -823,12 +873,15 @@ The first method `tableView(_ tableView:, cellForRowAt indexPath:)` decides base
 
 > These two private methods are implemented based on the code from the **SAP Fiori for iOS Mentor** app, but the code from the Mentor app has been split into two separate functions and control binding has already been implemented for easier implementation in this tutorial.
 
+.
+
 The final two private methods are helpers to format the timestamp into something more readable, and to get the correct `FUITimelineNode` image indicator based on the `DeliveryStatus` property `StatusType`.
+
 [DONE]
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 22: ](Run the application)]
+[ACCORDION-BEGIN [Step 23: ](Run the application)]
 
 Build and run the application. Navigate to the `Packages` master page and select a package. If you now click on the **Show Tracking Info...** cell, you'll navigate to the **Tracking Info** scene, and the `Package`'s related `DeliveryStatus` records are now shown in descending order using two flavors of the **Fiori Timeline** cell control.
 
