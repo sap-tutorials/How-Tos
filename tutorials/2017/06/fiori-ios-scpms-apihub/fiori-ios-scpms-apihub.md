@@ -608,11 +608,11 @@ In this method, the `FUIObjectTableViewCell` with identifier `classificationCell
 
 [ACCORDION-BEGIN [Step 15: ](Build and run the application)]
 
-If you now build and run the application, everything should work end to end now. Take a picture from a not too hard to understand item, for instance a wine bottle:
+If you now build and run the application, everything should work end to end now. Take a picture of a single item, for instance these sunglasses:
 
-![App](fiori-ios-scpms-apihub-26.png)
+![App](fiori-ios-scpms-apihub-26.jpg)
 
-If you now click the **Use Photo** button, the image is now sent to the SAP API Hub REST endpoint, and if all goes well, you should see the JSON response in the console, and the table view is now populated with `FUIObjectTableViewCell` objects displaying the matching classifications, as well as the score as a confidence in percentage:
+If you now click the **Use Photo** button, the image is sent to the SAP API Hub REST endpoint, and if all goes well, you should see the JSON response in the console, and the table view is now populated with `FUIObjectTableViewCell` objects displaying the matching classifications, as well as the score as a confidence in percentage:
 
 ![App](fiori-ios-scpms-apihub-27.png)
 
