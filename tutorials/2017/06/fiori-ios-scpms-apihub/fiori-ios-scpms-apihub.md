@@ -322,6 +322,20 @@ private let logger: Logger = Logger.shared(named: "ImageClassifierTVC")
 
 Variable `classifications` will hold the returned classifications for the submitted image; constant `picker` holds a reference to the image picker, and constant `logger` holds a reference to the `Logger` class in `SAPCommon` framework.
 
+However, for the delegates and the logger to work, they need to be initialized first. Change the `ImageClassifierTVC` class `viewDidLoad()` method to the following:
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+
+    Logger.root.logLevel = LogLevel.info
+
+    picker.delegate = self
+}
+```
+
+This sets the initial logger level to `info`, and assigns the image picker delegate to the class.
+
 [DONE]
 [ACCORDION-END]
 
@@ -427,7 +441,11 @@ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMe
         filename = String(describing: chosenImage.hashValue)
     }
 
-    self.sendImage(image: chosenImage, filename: "\(filename).jpg")
+    // API Hub doesn't allow images submitted over 1MB in size.
+    // Resizing the image to a width of 600px should suffice.
+    let resizedImage = chosenImage.resized(toWidth: 600.0)
+
+    self.sendImage(image: resizedImage!, filename: "\(filename).jpg")
 
     dismiss(animated:true, completion: nil)
 
@@ -469,6 +487,22 @@ private func sendImage(image: UIImage, filename: String) {
 }
 ```
 
+At the very bottom of the file, add the following extension:
+
+```swift
+extension UIImage {
+    func resized(toWidth width: CGFloat) -> UIImage? {
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        UIGraphicsBeginImageContextWithOptions(canvasSize, false, scale)
+        defer { UIGraphicsEndImageContext() }
+        draw(in: CGRect(origin: .zero, size: canvasSize))
+        return UIGraphicsGetImageFromCurrentImageContext()
+    }
+}
+```
+
+This resizes any image from the camera or the Photo Library to width of 600 pixels, and scales the height proportionally. Since the API Hub does not allow files exceeding 1 megabyte, in this particular case resizing the image to a smaller size is preferred over increasing the image compression.
+
 If you now build run the app on a physical iOS device -- *it does not work on the Simulator since it has no camera* -- your app should look like this:
 
 ![App](fiori-ios-scpms-apihub-24.png)
@@ -495,12 +529,12 @@ Implement the following in the `sendImage(image:, filename:)` class:
 ```swift
 private func sendImage(image: UIImage, filename: String) {
     //adding request headers
-    let headers = [
-        "Content-Type": "multipart/form-data",
-        "Accept": "application/json",
-        "APIKey": "<Your API Hub key here>"
-    ]
     let boundary = "Boundary-\(UUID().uuidString)"
+    let headers = [
+        "Accept": "application/json",
+        "APIKey": "<Your API Hub key here>",
+        "Content-Type": "multipart/form-data; boundary=\(boundary)"
+    ]
 
     var request = URLRequest(url: URL(string: "https://sandbox.api.sap.com/ml/imageclassifier/inference_sync")!,
                                       cachePolicy: .useProtocolCachePolicy,
@@ -515,9 +549,11 @@ private func sendImage(image: UIImage, filename: String) {
         filename: filename)
 
     let session = SAPURLSession()
+
     //sending request
     let dataTask = session.dataTask(with: request) { data, response, error in
-        guard let data = data, error == nil else { // check for fundamental networking error
+        guard let data = data, error == nil else {
+            // check for fundamental networking error
             return
         }
 
@@ -525,11 +561,12 @@ private func sendImage(image: UIImage, filename: String) {
             let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? AnyObject
 
             if let parseJSON = json {
-                self.logger.debug("response :\(parseJSON)")
+                self.logger.info("response :\(parseJSON)")
                 let rootKey = parseJSON.allKeys[0]
                 let dictArray = parseJSON[rootKey] as! [NSDictionary]
+
+                // retrieve 'results' node from JSON and store results in classifications field
                 self.classifications = dictArray[0].value(forKey: "results") as! [NSDictionary]
-                self.logger.debug("results :\(self.classifications)")
             }
 
             DispatchQueue.main.async(execute: { () -> Void in
@@ -594,7 +631,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
 
     let cell = tableView.dequeueReusableCell(withIdentifier: "classificationCell", for: indexPath) as! FUIObjectTableViewCell
 
-    cell.headlineText    = item.value(forKey: "label") as? String
+    cell.headlineText   = item.value(forKey: "label") as? String
     cell.footnoteText   = "Confidence: \(String(describing: Int(round(Double(((item.value(forKey: "score") as! NSNumber) as! Double) * 100))))) %"
 
     return cell
@@ -602,6 +639,19 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
 ```
 
 In this method, the `FUIObjectTableViewCell` with identifier `classificationCell` you created in step 10 is now populated with the value `label` as its classification, and the score is displayed as a percentage, indicating the confidence the classification matches the submitted image.
+
+Because the table cell is now an SAP Fiori Object Cell, the table view's row height needs to be adjusted. In method `viewDidLoad()`, add the following lines:
+
+```swift
+self.preferredContentSize = CGSize(width: 320, height: 480)
+
+tableView.estimatedRowHeight = 98
+tableView.rowHeight = UITableViewAutomaticDimension
+tableView.backgroundColor = UIColor.preferredFioriColor(forStyle: .backgroundBase)
+tableView.separatorStyle = .none
+```
+
+This ensures the table cell is rendered correctly.
 
 [DONE]
 [ACCORDION-END]
