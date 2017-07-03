@@ -1,6 +1,6 @@
 ---
 title: Enable Multi-Cloud Web IDE
-description: description
+description: Learn how to enable the multi cloud version of Web IDE
 primary_tag: products>sap-web-ide
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform, products>sap-web-ide ]
 ---
