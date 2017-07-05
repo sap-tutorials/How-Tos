@@ -5,7 +5,7 @@ primary_tag: products>sap-vora
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ---
 ## Prerequisites  
- - **Software required:**
+ - **Software required**
    - Personal computer with a compatible hypervisor, like VMware Workstation Player
 
 ## Next Steps
@@ -65,7 +65,12 @@ The import process will take a few minutes.
 
 [ACCORDION-BEGIN [Step 4: ](Start the virtual machine)]
 
-Choose **Play virtual machine**. After some time you will see the login screen. Enter the credentials below and click **Log In**.
+Choose **Play virtual machine**.
+
+>VMware Player console takes over control over keyboard and mouse. `Ctrl+Alt` takes focus away from the console and allows you to work with other applications on the host machine.
+>You can open up to and switch between 6 terminals using `Ctrl+Alt+F1` (default one) through `Ctrl-Alt+F6`.
+
+After some time you will see the login screen. Enter the credentials below.
 
 Use following password for the first logon:
 
@@ -77,6 +82,8 @@ Use following password for the first logon:
 The first time you login as user `vora` you are asked to change your password.
 
 ![First logon](vora14ovasetup01.jpg)
+
+>Please note that the default keyboard layout for this virtual machine is ___English (US)___ (`qwerty`). You may want to adjust it for your layout by starting YaST tool with `sudo yast` command, and then going to **Hardware** > **System Keyboard Layout**.
 
 [DONE]
 [ACCORDION-END]
@@ -97,22 +104,27 @@ To do this, open a terminal in the virtual machine and:
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 6: ](Make a note of your IP address)]
-
-You need to know your IP address to connect to Vora services. In the terminal execute the command below:
-
-```bash
-/sbin/ifconfig eth0
+[ACCORDION-BEGIN [Step 6: ](Check SAP Vora services are booted)]
+It takes a few minutes for SAP Vora services to initialize. To check status of initialization execute the command
+```sh
+systemctl list-units vora*
 ```
 
-Note the IP address after `inet addr:`. It is referred to as `IP_ADDRESS` in the rest of this document.
-
+You should see Vora Manager's Master and Worker as "running".
+![vora services running](vora14ovasetup05.jpg)
 
 [DONE]
 [ACCORDION-END]
 
 
 [ACCORDION-BEGIN [Step 7: ](Open SAP Vora Manager)]
+You need to know your IP address to connect to Vora services. In the terminal execute the command below:
+
+```sh
+/sbin/ifconfig eth0
+```
+
+Note the IP address after `inet addr:`. It is referred to as `IP_ADDRESS` in the rest of this document.
 
 Start your web browser. Open the Vora Manager at `http://IP_ADDRESS:19000`, log in with the user `admin` and the password `admin`. Choose the **Services** tab.
 
@@ -127,46 +139,57 @@ You should see that all SAP Vora services have a green check mark, indicating th
 
 Open the SAP Vora Tools web application from `http://IP_ADDRESS:9225`
 
-The user is `admin` and the password is `admin`.
+The user is `admin` and the default password is `admin`.
 
 ![Vora Tools](vora14ovasetup04.jpg)
 
 [DONE]
 [ACCORDION-END]
 
+[ACCORDION-BEGIN [Step 9: ](Enable SSH - optional)]
 
-[ACCORDION-BEGIN [Step 9: ](Using Spark shell)]
+Connecting to the VM via SSH is disabled by default due to security reasons. If you want to be able to connect via SSH, you can enable it in the VM by executing the command:
 
-You can open the Spark shell and try out some Scala code that uses Vora. For that run `/opt/vora/lib/vora-spark/bin/start-spark-shell.sh` from OS level.
+```sh
+sudo systemctl restart sshd
+```
+
+SSH daemon is not started automatically after the virtual machine is powered off. You need to start it next time your virtual machine is powered on again. Or you can enable it start automatically using the command
+```sh
+sudo systemctl enable sshd
+```
+
+Make sure you understand the security implication of enabling the SSH service.
+
 
 [DONE]
 [ACCORDION-END]
 
-
 [ACCORDION-BEGIN [Step 10: ](Install the VMware tools - optional)]
 
-VMware Tools is a suite of utilities that enhances the performance of the virtual machine's guest operating system and improves management of the virtual machine. For more information please check official [VMware documentation](https://pubs.vmware.com/workstation-12/index.jsp#com.vmware.ws.using.doc/GUID-6F26D7EF-8D29-46E9-A48E-0BCBB138D333.html).
+VMware Tools is a suite of utilities that enhances the performance of the virtual machine's guest operating system and improves management of the virtual machine. For more information please check official [Overview of VMware Tools](https://kb.vmware.com/kb/340).
 
-If your VM doesn't have CD/DVD yet, you have to add it first:
- - Edit virtual machine settings (`Ctrl-D`) -> Add... (not possible if VM is suspended)
- - Choose CD/DVD Drive -> Next
- - Use physical drive -> Next
+The installers for VMware Tools are ISO image files. An ISO image file looks like a CD-ROM to your guest operating system. If your VM doesn't have CD/DVD yet, you have to add it first:
+ - Edit virtual machine settings (`Ctrl-D`) > **Add...** (not possible if VM is suspended)
+ - Choose CD/DVD Drive -> **Next**
+ - Use physical drive -> **Next**
  - Finish
 
+Select **Player** > **Manage** > **Install VMware Tools**, then open the terminal and execute the following:
 
-Select **`Player > Manage > Install VMware Tools`**, then open the terminal and execute the following:
-
-```bash
-sudo su
+```sh
+sudo su -
 mkdir -p /mnt/cdrom
 mount -t iso9660 -o ro /dev/cdrom /mnt/cdrom
-cp /mnt/cdrom/VMwareTools* ~
-cd ~
+cp /mnt/cdrom/VMwareTools* /tmp
+cd /tmp
 tar -xf VMwareTools*
-sudo ./vmware-tools-distrib/vmware-install.pl --default
+vmware-tools-distrib/vmware-install.pl --default
 ```
 
-The installation process will take a few minutes. It will use default settings with no further user input required.
+The installation process will take a few minutes. It will use default settings with no further user input required. If you want to review the output of installation you can scroll the screen in VMware Workstation Player using `Shift+PgUp` and `Shift+PgDn`.
+
+It's time to set clock synchronization between your host and guest systems. Go to virtual machine settings (`Ctrl-D`) > **Options** > **VMware Tools** and check **Synchronize guest time with host** option. Click **OK**.
 
 [DONE]
 [ACCORDION-END]
@@ -174,11 +197,11 @@ The installation process will take a few minutes. It will use default settings w
 
 [ACCORDION-BEGIN [Step 11: ](Share the folder from the host system - optional)]
 
-Shared folder allows you to exchange files between host and guest operating systems. The below procedure may not work for all combinations of operating systems and virtual machine players. Please refer to the vendor's documentation for your specific setup.
+There is a new directory `/mnt/hgfs` created as a result of VMware Tools installation in the previous step. `HGFS` stands for Host-Guest File System.
 
-Execute `vmhgfs-fuse /mnt/hgfs/`
+It is a place to be used for shared folders. Shared folder allows you to exchange files between host and guest operating systems. The below procedure may not work for all combinations of operating systems and virtual machine players. Please refer to the vendor's documentation for your specific setup.
 
-Select **`Player > Manage > Virtual Machine Settings > Options > Shared Folders`**.
+Select **Player > Manage > Virtual Machine Settings > Options > Shared Folders**.
 
 Change **Folder sharing** to `Always enabled` and click **Add**. In the wizard browse the host system folder you want to share with your VM and provide the name under which it will be visible.
 
@@ -191,52 +214,60 @@ Now you can see shared folder from the host machine under `/mnt/hgfs/`path.
 
 For example if you want to copy some files with data from your host machine to `HDFS` storage backend in the VM use:
 
-```bash
-hdfs dfs -put /mnt/hgfs/shared_folder/some_file /user/vora/
+```sh
+hdfs dfs -put /mnt/hgfs/shared_from_host/some_file.csv /user/vora/
 ```
 
 [DONE]
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 12: ](Check out that all Vora services are running)]
+[ACCORDION-BEGIN [Step 12: ](Using Spark shell)]
 
-- Open a browser and go to the Vora Manager at http://IP_ADDRESS:19000
-- Login with the user 'admin' and the password 'admin'
-- Click on the tab 'Services'
-- You should see all services in the state running with a green check mark
+You can open the Spark shell and try out some Scala code that uses Vora. For that run `/opt/vora/lib/vora-spark/bin/start-spark-shell.sh` from OS level.
 
 [DONE]
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 13: ](Run the examples)]
+[ACCORDION-BEGIN [Step 13: ](Run the examples from Spark shell)]
 
 SAP Vora comes with some examples that you can run and examine.
 
-You can run the examples by executing ```/etc/vora/run_examples.sh hdfs```.
+You can run the examples as `vora` user by executing `/etc/vora/run_examples.sh hdfs`.
 Ignore any "Address already in use" error messages.
 
-You can scroll up with SHIFT+PAGE-UP to see the full output. It is also convenient to write the output of into a file to examine the results later: ```/etc/vora/run_examples.sh hdfs > output_from_examples.log```.
+It is convenient to write the output of execution into a file to examine the results later:
+```sh
+/etc/vora/run_examples.sh hdfs > output_from_examples.log
+```
 
-You can also look at the source code which is at ```/opt/vora/lib/vora-spark/examples```.
-The examples source code can also be copied and pasted into spark-shell so they can be
-executed step by step.
+You can also look at the source code which is at `/opt/vora/lib/vora-spark/examples`.
 
-To check if everything works you can also run the examples one by one and check if the output
-matches the expectations.
+The examples source code can also be copied and pasted into `spark-shell`, so it can be executed step by step.
 
-- Find the jar file with the Vora examples: ```export DATASOURCE_DIST=/opt/vora/lib/vora-spark/lib/spark-sap-datasources-*-assembly.jar```
-- Copy the test data to HDFS: ```/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.tools.CopyExampleFilesToHdfs $DATASOURCE_DIST```
-- When ```echo $?``` returns ```0``` you were successful
+To check if everything works you can also run the examples one by one and check if the output matches the expectations.
+
+- Find the jar file with the Vora examples:
+```sh
+export DATASOURCE_DIST=/opt/vora/lib/vora-spark/lib/spark-sap-datasources-*-assembly.jar
+```
+- Copy the test data to HDFS:
+```sh
+/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.tools.CopyExampleFilesToHdfs $DATASOURCE_DIST
+```
+- When `echo $?` returns `0` you were successful
 
 Now you can run the single examples and check the output. Ignore all the Spark debug output about starting and finishing jobs.
-If the expected snippet occurs in the output means, that the example ran successful.  
 
-`LoadDataIntoVora`: ```/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.LoadDataIntoVora $DATASOURCE_DIST```
+If the expected snippet occurs in the output means, that the example ran successful.
+
+`LoadDataIntoVora`:
+```sh
+/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.LoadDataIntoVora $DATASOURCE_DIST
+```
 This is expected to be outputted twice:
-
-```sql
+```
 +-----------------+--------+------+-------+-------+
 |         CARRNAME|AIRPFROM|AIRPTO|DEPTIME|ARRTIME|
 +-----------------+--------+------+-------+-------+
@@ -251,9 +282,12 @@ This is expected to be outputted twice:
 +-----------------+--------+------+-------+-------+
 ```
 
-`HashPartitioning`: ```/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.HashPartitioning $DATASOURCE_DIST```
+`HashPartitioning`:
+```sh
+/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.HashPartitioning $DATASOURCE_DIST
+```
 This is the expected output:
-```sql
+```
 +-----------------+--------+------+--------+-------+-------+
 |         CARRNAME|AIRPFROM|AIRPTO|DISTANCE|DEPTIME|ARRTIME|
 +-----------------+--------+------+--------+-------+-------+
@@ -268,9 +302,12 @@ This is the expected output:
 +-----------------+--------+------+--------+-------+-------+
 ```
 
-`GraphEngine`: ```/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.GraphEngine $DATASOURCE_DIST```
+`GraphEngine`:
+```sh
+/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.GraphEngine $DATASOURCE_DIST
+```
 This is the expected output:
-```sql
+```
 +--------------+
 |      CITYFROM|
 +--------------+
@@ -297,9 +334,12 @@ This is the expected output:
 +--------------+
 ```
 
-`DocStoreEngine`: ```/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.DocStoreEngine $DATASOURCE_DIST```
+`DocStoreEngine`:
+```sh
+/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.DocStoreEngine $DATASOURCE_DIST
+```
 This is the expected output:
-```sql
+```
 +--------------------+
 |             COLUMN1|
 +--------------------+
@@ -324,9 +364,12 @@ This is the expected output:
 +--------------------+
 ```
 
-`TimeSeriesEngine`: ```/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.TimeSeriesEngine $DATASOURCE_DIST```
+`TimeSeriesEngine`:
+```sh
+/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.TimeSeriesEngine $DATASOURCE_DIST
+```
 This is the expected output:
-```sql
+```
 +--------------------+------+
 |                  TS|CONNID|
 +--------------------+------+
@@ -353,9 +396,12 @@ This is the expected output:
 +--------------------+------+
 ```
 
-`DiskEngine`: ```/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.DiskEngine $DATASOURCE_DIST```
+`DiskEngine`:
+```sh
+/opt/spark/bin/spark-submit --class com.sap.spark.vora.examples.DiskEngine $DATASOURCE_DIST
+```
 This is the expected output:
-```sql
+```
 +------+
 |carrid|
 +------+
@@ -388,27 +434,27 @@ This is the expected output:
 
 [ACCORDION-BEGIN [Step 14: ](Use the Vora Tools)]
 
-Vora Tools is the front end to Vora, where you can execute SQL statements.
-We will create a small table and run queries on it.
+Vora Tools is the front end to Vora, where you can execute SQL statements. You will create a small table and run queries on it.
+
+Make sure you are logged as a `vora` user, or switch to it with `su vora`.
 
 - Create a csv file with dummy data
-```bash
-su vora
-cd
+```sh
+cd ~
 echo "11, peter" >> t1.csv
 echo "32, paul " >> t1.csv
 echo "66, mary" >> t1.csv
 echo "3, vora" >> t1.csv
 ```
 - Copy the file to HDFS
-    - ```hdfs dfs -put t1.csv /user/vora/t1.csv```
-    - Ignore the warning ```Unable to load native-hadoop library for your platform...using builtin-java classes where applicable```
-    - You can list the directory contents to check if the copying worked: ```hdfs dfs -ls /user/vora```
-- Open up the Vora tools at `http://IP_ADDRESS:9225` and choose the SQL tab
+    - `hdfs dfs -put t1.csv /user/vora/t1.csv`
+    - Ignore the warning `Unable to load native-hadoop library for your platform...using builtin-java classes where applicable` if displayed
+    - You can list the directory contents to check if the copying worked: `hdfs dfs -ls /user/vora`
+- Open up the Vora Tools at `http://IP_ADDRESS:9225` and choose the SQL tab
 - You can execute some commands in the text fields
 
 ```SQL
-CREATE TABLE t1 (age INT, name STRING) USING com.sap.spark.vora OPTIONS (files "/user/vora/t1.csv")";
+CREATE TABLE t1 (age INT, name STRING) USING com.sap.spark.engines.relational OPTIONS (files "/user/vora/t1.csv");
 SHOW TABLES;
 SELECT * FROM t1;
 ```
@@ -442,11 +488,11 @@ To play with the notebooks:
 
 [ACCORDION-BEGIN [Step 16: ](SAP Vora documentation)]
 
-There is also the SAP Vora documentation, which is just about running Vora and not about the developer edition. This documentation is useful but doesn't apply to the developer edition in all cases, as it is targeted to a cluster installation of Vora and not a single-node VM setup.
+There is also the SAP Vora documentation for SAP Vora product, and not only about the developer edition. This documentation is useful, although not applicable to the developer edition in all cases, as it is targeted to a cluster installation of SAP Vora and not a single-node VM setup.
 
-- Overview: http://help.sap.com/hana_vora_re
-- Admin guide:  http://help.sap.com/Download/Multimedia/hana_vora/SAP_HANA_Vora_Installation_Admin_Guide_1.3_en.pdf
-- Developer guide: http://help.sap.com/saphelp_hanavora/helpdata/en/88/07408b92b4489cb2d0c53698ff420e/frameset.htm
+- Overview: https://help.sap.com/viewer/p/SAP_VORA
+- Administration guide: https://help.sap.com/viewer/p/SAP_VORA -> "SAP Vora Installation and Administration Guide"
+- Developer guide: https://help.sap.com/viewer/p/SAP_VORA -> "SAP Vora Developer Guide"
 
 
 [DONE]
@@ -503,23 +549,22 @@ Usually you need to press ALT+CTRL to activate the host mouse again.
 _The Vora manager doesn't start, I can't connect to `http://IP_ADDRESS:19000/` site_
 
 This might be a network problem. Try removing cache files and restart the engine:
-- ```sudo rm -rf /var/local/vora/discovery```
-- ```sudo rm -rf /var/local/vora/scheduler```
-- ```sudo /sbin/shutdown now -r```
+```sh
+sudo rm -rf /var/local/vora/discovery
+sudo rm -rf /var/local/vora/scheduler
+sudo /sbin/shutdown now -r
+```
 
 _I see an error message about a "`native-hadoop library`" and my query is failing_
 
 If you mean ```Unable to load native-hadoop library for your platform...using builtin-java classes where applicable``` your query
 fails because of a different reason. You can ignore this message. The library for HDFS can either be written in Java (used in the developer edition) or native (not used in the developer edition). Hadoop is just a little too verbose here.
 
-_I can't execute the first statement in the Time-Series Zeppelin notebook_
-
-This is an error that only occurs in the first 1.4 version of the developer edition.
-Although it seems it doesn't work, the ```CREATE PARTITION FUNCTION PF_TS2``` is usually executed successfully. You can check if it has worked, if the next command ```CREATE PARTITION SCHEME``` can be executed successfully, as the creation of the partition scheme depends on a successful execution of the creation of the partition function.
-You can then go on executing the other paragraphs of this notebook.
-
 _The Zeppelin paragraphs stay in status pending forever_
 Check the logs in ```/opt/zeppelin/logs```. Sometimes it helps to restart Zeppelin with ```/opt/zeppelin/bin/zeppelin-daemon.sh restart```.
+
+_My VMware Player's terminal is not responding_
+You can switch to a new terminal with `CTRL-ALT-F2`. Go back with `CTRL-ALT-F1`. `CTRL-ALT-F1` up to `CTRL-ALT-F6` allow you opening up to six terminals.
 
 _Official SAP Vora Troubleshooting Guide_
 Find it at [SAP Vora documentation](https://help.sap.com/viewer/p/SAP_VORA) page
