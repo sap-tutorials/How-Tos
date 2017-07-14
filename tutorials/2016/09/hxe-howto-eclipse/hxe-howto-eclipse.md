@@ -65,7 +65,7 @@ Restart Eclipse as prescribed after adding HANA Plugin.
 
 Change perspective to SAP HANA Administrative Console Window > Perspective > SAP HANA Administrative Console
 
-![image 1](4.png)
+![image 1](4.PNG)
 
 [DONE]
 [ACCORDION-END]
@@ -81,7 +81,7 @@ Configuration:
 - Mode: _Multiple containers_ > _System database_
 - Description: `HANAExpress` Edition
 
-![image 1](1.png)
+![image 1](1.PNG)
 
 [DONE]
 [ACCORDION-END]
@@ -99,7 +99,7 @@ Connection Properties:
 - Enable SAP start service Connection
 - Finish
 
-![image 1](2.png)
+![image 1](2.PNG)
 
 [DONE]
 [ACCORDION-END]
@@ -108,7 +108,7 @@ Connection Properties:
 
 Confirm connection as shown below:
 
-![image 1](3.png)
+![image 1](3.PNG)
 
 [DONE]
 [ACCORDION-END]
