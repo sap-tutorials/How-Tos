@@ -9,7 +9,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
    - Personal computer with a compatible hypervisor, like VMware Workstation Player
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
+ - [Working with Tables and Views using Apache Zeppelin](https://www.sap.com/developer/tutorials/vora-ova-zeppelin0.html)
 
 This How-to details the procedure to download, install and verify SAP Vora version 1.4 developer edition packaged as a virtual machine appliance. SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
 
@@ -370,4 +370,4 @@ _If solution is not available above_
 [ACCORDION-END]
 
 ## Next Steps
- - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
+- [Working with Tables and Views using Apache Zeppelin](https://www.sap.com/developer/tutorials/vora-ova-zeppelin0.html)
