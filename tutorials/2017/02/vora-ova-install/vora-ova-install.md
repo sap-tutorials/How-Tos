@@ -29,11 +29,13 @@ Refer to the last section of this How-to for most common troubleshooting activit
 
 [ACCORDION-BEGIN [Step 1: ](Download the OVA File)]
 
-Sign up for the free virtual machine image (the `.ova` file) of SAP Vora 1.4, developer edition from the SAP Store:
+Sign up for and request the free virtual machine appliance (the `.ova` file) of SAP Vora 1.4, developer edition from the SAP Store by clicking on **Trial Version** button on:
 
 https://store.sap.com/sap/cp/ui/resources/store/html/SolutionDetails.html?sap-language=EN&pid=0000014484
 
-You need to have free registration at SAP Store. Once the product is requested you will receive an e-mail with the link to download an archive file with `.ova` file in it. The size of an archive file is about 2GB.
+You need to have free registration at SAP Store.
+
+Once the product is requested you will receive an e-mail with the link to download an archive file with `.ova` file in it. The size of an archive file is about 2GB.
 
 [DONE]
 [ACCORDION-END]
@@ -41,12 +43,11 @@ You need to have free registration at SAP Store. Once the product is requested y
 
 [ACCORDION-BEGIN [Step 2: ](Install a hypervisor)]
 
-VMware Workstation Player is a hypervisor compatible with SAP Vora 1.4, developer edition. You can install any supported hypervisor, but examples in this how-to use VMware Workstation Player.
+VMware Workstation Player is a hypervisor compatible with SAP Vora 1.4, developer edition. You can install any other supported hypervisor, like VirtualBox, but examples in this how-to are based on the VMware Workstation Player.
 
 Download VMware Workstation Player from <https://my.vmware.com/en/web/vmware/free#desktop_end_user_computing/vmware_workstation_player/12_0>, run the installer and register when prompted.
 
 >Ensure you are downloading the correct version for your development machine.
-
 
 [DONE]
 [ACCORDION-END]
@@ -55,7 +56,7 @@ Download VMware Workstation Player from <https://my.vmware.com/en/web/vmware/fre
 
 [ACCORDION-BEGIN [Step 3: ](Import the downloaded OVA file)]
 
-Open the VMware Workstation Player and in the menu choose **`Player > File > Open`**, select the SAP Vora OVA file and click **Open**, then click **Import**.
+Open the VMware Workstation Player and in the menu choose **`Player > File > Open`**, select the SAP Vora `.ova` file. Click **Open** and then **Import**.
 
 The import process will take a few minutes.
 
@@ -68,18 +69,16 @@ The import process will take a few minutes.
 Choose **Play virtual machine**.
 
 >VMware Player console takes over control over keyboard and mouse. `Ctrl+Alt` takes focus away from the console and allows you to work with other applications on the host machine.
->You can open up to and switch between 6 terminals using `Ctrl+Alt+F1` (default one) through `Ctrl-Alt+F6`.
+>You can open up to and switch between 6 terminal screens using `Ctrl+Alt+F1` (default one) through `Ctrl-Alt+F6`.
 
-After some time you will see the login screen. Enter the credentials below.
-
-Use following password for the first logon:
+Enter the credentials below when see logon screen.
 
 |Field Name     | Value                            |
 |---------------|----------------------------------|
 | **user name** | `vora`                           |
 | **password**  | `VDEVora1`                       |
 
-The first time you login as user `vora` you are asked to change your password.
+The first time you login as user `vora` you will be asked to change your password. Make sure you remember the new password.
 
 ![First logon](vora14ovasetup01.jpg)
 
@@ -93,10 +92,10 @@ The first time you login as user `vora` you are asked to change your password.
 
 For security reasons, you should change the default passwords for `root` user.
 
-To do this, open a terminal in the virtual machine and:
-- Execute  `su`  and type the default password for the `root` user: `VDEVora1`
+- Execute  command `su`  to switch to the `root` user
+- Type the default password for the `root` user: `VDEVora1`
 - You will be asked to enter and retype the new password for `root` user
-- Execute  `exit`  so you're again acting as user `vora`.
+- Execute  `exit`,  so you're again acting as a user `vora`
 
 ![root password change](vora14ovasetup02.jpg)
 
@@ -110,7 +109,7 @@ It takes a few minutes for SAP Vora services to initialize. To check status of i
 systemctl list-units vora*
 ```
 
-You should see Vora Manager's Master and Worker as "running".
+You should see Vora Manager's Master and Worker services as "running".
 ![vora services running](vora14ovasetup05.jpg)
 
 [DONE]
@@ -135,13 +134,15 @@ You should see that all SAP Vora services have a green check mark, indicating th
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 8: ](Open SAP Vora Tools)]
+[ACCORDION-BEGIN [Step 8: ](User management with SAP Vora Tools)]
 
 Open the SAP Vora Tools web application from `http://IP_ADDRESS:9225`
 
 The user is `admin` and the default password is `admin`.
 
 ![Vora Tools](vora14ovasetup04.jpg)
+
+Optionally, you can click on **User Management** icon and edit the user `admin` to change its default password. Make sure you remember the new password.
 
 [DONE]
 [ACCORDION-END]
@@ -154,13 +155,13 @@ Connecting to the VM via SSH is disabled by default due to security reasons. If 
 sudo systemctl restart sshd
 ```
 
-SSH daemon is not started automatically after the virtual machine is powered off. You need to start it next time your virtual machine is powered on again. Or you can enable it start automatically using the command
+SSH daemon is not started automatically after the virtual machine is powered off. You need to start it next time your virtual machine is powered on again. Or you can enable it start automatically using the command:
+
 ```sh
 sudo systemctl enable sshd
 ```
 
-Make sure you understand the security implication of enabling the SSH service.
-
+>Make sure you understand the security implication of enabling the SSH service.
 
 [DONE]
 [ACCORDION-END]
@@ -175,9 +176,11 @@ The installers for VMware Tools for guest systems are ISO image files. An ISO im
  - Edit virtual machine settings (`Ctrl-D`) > **Add...** (not possible if VM is suspended)
  - Choose CD/DVD Drive -> **Next**
  - Use physical drive -> **Next**
- - Finish
+ - **Finish**
 
-Select **Player** > **Manage** > **Install VMware Tools**, then open the terminal and execute the following:
+Select **Player** > **Manage** > **Install VMware Tools**, this will make VMware Tools installation media available to the guest's OS at virtual CD-ROM `/dev/cdrom`.
+
+Go back to the terminal and execute the following:
 
 ```sh
 sudo su -
@@ -191,7 +194,7 @@ vmware-tools-distrib/vmware-install.pl --default
 
 The installation process will take a few minutes. It will use default settings with no further user input required. If you want to review the output of installation you can scroll the screen in VMware Workstation Player using `Shift+PgUp` and `Shift+PgDn`.
 
-It's time to set clock synchronization between your host and guest systems. Go to virtual machine settings (`Ctrl-D`) > **Options** > **VMware Tools** and check **Synchronize guest time with host** option. Click **OK**.
+Now you can set a clock synchronization between your host and guest systems. Go to virtual machine settings (`Ctrl-D`) > **Options** > **VMware Tools** and check **Synchronize guest time with host** option. Click **OK**.
 
 [DONE]
 [ACCORDION-END]
@@ -226,7 +229,7 @@ hdfs dfs -put /mnt/hgfs/shared_from_host/some_file.csv /user/vora/
 
 [ACCORDION-BEGIN [Step 12: ](Use the Vora Tools)]
 
-Vora Tools is the front end to Vora, where you can execute SQL statements. You will create a small table and run queries on it.
+Vora Tools is the front end to SAP Vora, where you can execute SQL statements. You will create a small table and run queries on it.
 
 Make sure you are logged as a `vora` user, or switch to it with `su vora`.
 
@@ -256,42 +259,7 @@ SELECT * FROM t1;
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 13: ](Use Apache Zeppelin)]
-
-The SAP Vora, developer edition comes also with an installation of Apache Zeppelin 0.6.0 and some example notebooks.
-The example notebooks show ways to connect and communicate with various Vora engines.
-
-To play with the notebooks:
-
-- Open up Apache Zeppelin at `http://IP_ADDRESS:9099`
-- You will see a few notebooks which focus on different Vora topics such as SAP Vora Tutorial, Tables and Views, Document Store, Disk Engine, Graph Engine, Time Series, etc.
-- You can execute the paragraphs in the notebooks by clicking the blue arrow on the right.
-- The SAP Vora Tutorial notebook will give you a little tutorial introducing Vora.
-    - "Execute the Vora Examples" will execute a shell script that executes all the examples.
-    - Start "Show the tables" which will connect via JDBC to Vora and show all tables currently known to Vora. Again click the blue arrow to start.
-    - "Query tables in Vora" will also use JDBC to do simple SQL querying on Vora tables.
-        - Bear in mind that you must first register all tables with the "`%jdbc` register all tables..." paragraph so that the table SCUSTOM is known to the Spark context.
-    - "Usage of the `SapSQLContext` in Spark" shows how you can write Scala code and access Vora programmatically.
-- In order to play with notebooks other than SAP Vora Tutorial, run the `0_Data` notebook first to make sure you have required tables.
-
-[DONE]
-[ACCORDION-END]
-
-
-[ACCORDION-BEGIN [Step 16: ](SAP Vora documentation)]
-
-There is also the SAP Vora documentation for SAP Vora product, and not only about the developer edition. This documentation is useful, although not applicable to the developer edition in all cases, as it is targeted to a cluster installation of SAP Vora and not a single-node VM setup.
-
-- Overview: https://help.sap.com/viewer/p/SAP_VORA
-- Administration guide: https://help.sap.com/viewer/p/SAP_VORA -> "SAP Vora Installation and Administration Guide"
-- Developer guide: https://help.sap.com/viewer/p/SAP_VORA -> "SAP Vora Developer Guide"
-
-
-[DONE]
-[ACCORDION-END]
-
-
-[ACCORDION-BEGIN [Step 14: ](Installing updates)]
+[ACCORDION-BEGIN [Step 13: ](Installing OS updates - optional)]
 
 The developer edition is not meant to be in a productive use case, but still you may want to get important security updates.
 You can get a registration code from SUSE that is valid for 60 days and use it to get updates.
@@ -308,7 +276,7 @@ You can get a registration code from SUSE that is valid for 60 days and use it t
 - You can also see the registration code in "Subscriptions" when you log into your account at https://partner.suse.com/
 - Run the updates
     - Start Yast: ```sudo /sbin/yast```
-    - Choose Software -> Online Update  
+    - Choose Software -> Online Update
     - "Run configuration workflow now" => Choose Yes
     - Mark "Registration Code"
     - Hit F10 for "Next"
@@ -323,7 +291,7 @@ You can get a registration code from SUSE that is valid for 60 days and use it t
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 15: ](Troubleshooting)]
+[ACCORDION-BEGIN [Step 14: ](Troubleshooting)]
 
 _My computer freezes when I start up Vora in the VM_
 
@@ -365,6 +333,18 @@ _If solution is not available above_
  - Post a question on [SAP Community Answers](https://answers.sap.com/tags/73555000100800000134) if you have SAP Community account,
  - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have an account there,
  - Open an internal ticket in SAP Customer Support System using `HAN-VO` component if you are an SAP employee.
+
+[DONE]
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [Step 15: ](SAP Vora documentation)]
+
+There is also the SAP Vora documentation for SAP Vora product, and not only about the developer edition. This documentation is useful, although not applicable to the developer edition in all cases, as it is targeted to a cluster installation of SAP Vora and not a single-node VM setup.
+
+- Overview: https://help.sap.com/viewer/p/SAP_VORA
+- Administration guide: https://help.sap.com/viewer/p/SAP_VORA -> "SAP Vora Installation and Administration Guide"
+- Developer guide: https://help.sap.com/viewer/p/SAP_VORA -> "SAP Vora Developer Guide"
+
 
 [DONE]
 [ACCORDION-END]
