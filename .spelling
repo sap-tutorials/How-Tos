@@ -3,6 +3,8 @@ Ambari
 AngularJS
 App.view.xml
 Apriori
+ARMv6
+ARMv7
 Auth
 backend
 Bieser
@@ -71,6 +73,7 @@ pre-pended
 proxied
 pulldown
 rac-support
+Raspbian
 Redhat
 ReviewNinja
 Rudnicki
@@ -91,6 +94,7 @@ truststore
 tutorials.html
 UI5
 util
+VirtualBox
 VMware
 Vora
 weather_app
@@ -107,6 +111,7 @@ xsjs
 xsodata
 x86_64
 Yast
+YaST
 Zypper
 Lifecycle
 
