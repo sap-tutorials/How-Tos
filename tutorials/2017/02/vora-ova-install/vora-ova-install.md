@@ -9,7 +9,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
    - Personal computer with a compatible hypervisor, like VMware Workstation Player
 
 ## Next Steps
- - [Working with Tables and Views using Apache Zeppelin](https://www.sap.com/developer/tutorials/vora-ova-zeppelin0.html)
+ - [Getting started with SAP Vora 1.4 virtual machine](https://www.sap.com/developer/groups/vora-ova-get-started.html)
 
 This How-to details the procedure to download, install and verify SAP Vora version 1.4 developer edition packaged as a virtual machine appliance. SAP Vora, developer edition, is covered by the Developer License Agreement, which you will need to accept in order to be able to get access to it.
 
@@ -125,11 +125,17 @@ You need to know your IP address to connect to Vora services. In the terminal ex
 
 Note the IP address after `inet addr:`. It is referred to as `IP_ADDRESS` in the rest of this document.
 
-Start your web browser. Open the Vora Manager at `http://IP_ADDRESS:19000`, log in with the user `admin` and the password `admin`. Choose the **Services** tab.
+Start your web browser. Open the Vora Manager at `http://IP_ADDRESS:19000`, log in with the user `admin` and the password `admin`.
 
-You should see that all SAP Vora services have a green check mark, indicating that they have been started and are running correctly.
+Choose the **Services** tab. You should see that all SAP Vora services have a green check mark, indicating that they have been started and are running correctly.
 
 ![Vora Services](vora14ovasetup03.jpg)
+
+To check the version of SAP Vora software click on **Connection status** icon.
+
+![Vora version](vora14ovasetup03b.jpg)
+
+You can do users management from SAP Vora Manager, but as well from SAP Vora Tools as described in the next step.
 
 [DONE]
 [ACCORDION-END]
@@ -350,4 +356,4 @@ There is also the SAP Vora documentation for SAP Vora product, and not only abou
 [ACCORDION-END]
 
 ## Next Steps
-- [Working with Tables and Views using Apache Zeppelin](https://www.sap.com/developer/tutorials/vora-ova-zeppelin0.html)
+- [Getting started with SAP Vora 1.4 virtual machine](https://www.sap.com/developer/groups/vora-ova-get-started.html)
