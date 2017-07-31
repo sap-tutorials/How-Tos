@@ -21,7 +21,7 @@ In this How-To tutorial, you will test **SAP Leonardo's Machine Learning** capab
 
 ---
 
-[ACCORDION-BEGIN [Step 1: ](Create XCode application)]
+[ACCORDION-BEGIN [Step 1: ](Create Xcode application)]
 
 Open Xcode and create a new project. Select **Single View Application** from the dialog and click **Next**.
 
