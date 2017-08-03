@@ -239,8 +239,8 @@ Next, you will create the XS OData service. **Right-click** the `sapgeo` package
 Add the following code to the newly created `SAPGeoService.xsodata` file:
 
 ```
-"service" {
-    "SAPGEO"."GeoLocation" as "GeoLocation"
+service {
+    "SAPGEO"."GeoLocation" as "GeoLocation";
 }
 ```
 
