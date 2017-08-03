@@ -104,12 +104,14 @@ For security reasons, you should change the default passwords for `root` user.
 
 
 [ACCORDION-BEGIN [Step 6: ](Check SAP Vora services are booted)]
-It takes a few minutes for SAP Vora services to initialize. To check status of initialization execute the command
+It takes a few minutes for SAP Vora services to initialize. To check status of initialization execute following commands in that order:
 ```sh
+systemctl list-units hadoop*
+systemctl list-units apache*
 systemctl list-units vora*
 ```
 
-You should see Vora Manager's Master and Worker services as "running".
+At the end you should see Vora Manager's Master and Worker services as "running".
 ![vora services running](vora14ovasetup05.jpg)
 
 [DONE]
@@ -233,7 +235,7 @@ hdfs dfs -put /mnt/hgfs/shared_from_host/some_file.csv /user/vora/
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [Step 12: ](Use the Vora Tools)]
+[ACCORDION-BEGIN [Step 12: ](Check the Vora Tools - Optional)]
 
 Vora Tools is the front end to SAP Vora, where you can execute SQL statements. You will create a small table and run queries on it.
 
