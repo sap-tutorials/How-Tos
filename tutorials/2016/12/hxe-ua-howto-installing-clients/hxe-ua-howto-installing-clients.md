@@ -64,28 +64,46 @@ Install the Download Manager to your client machine and download the client pack
 
 4. Select only **Clients**. Clear the *Select* boxes of all other packages.
 
-5. Click **Download**. The **`clients.zip`** file downloads to your save directory.
+5. Click **Download**. The **`clients_<OS>.zip`** file, or **`clients_windows.zip`** for Windows, downloads to your save directory.
 
-6. Extract **`clients.zip`**:
+6. Extract the compressed clients file:
 
-    - For Windows machines, use a compression utility like WinZip.
+    - For Windows and Mac machines, use a compression utility.
 
-    - For Linux, navigate to the directory in which you wish to extract the client files and use the unzip command.
+    - For Linux, navigate to the directory in which you wish to extract the client files and use the tar command.
 
     ```bash
     cd <preferred_filepath>
-    sudo unzip <download_filepath>/clients.zip
+    sudo tar <download_filepath>/clients_<OS>.zip
     ```
 
     These files are extracted:
 
-    - `hdb_client_linux.tgz`
+    **`clients_linux_x86_64.tgz`**
 
-    - `hdb_client_windows.zip`
+    - `hdb_client_linux_x86_64.tgz`
 
     - `xs.onpremise.runtime.client_linuxx86_64.zip`
 
+    **`clients_linux_ppc64le.tgz`**
+
+    - `hdb_client_linux_ppc64le.tgz`
+
+    - `xs.onpremise.runtime.client_linuxppc64le.zip`
+
+    **`clients_windows.zip`**
+
+    - `hdb_client_windows_x86_32.zip`
+
+    - `hdb_client_windows_x86_64.zip`
+
     - `xs.onpremise.runtime.client_ntamd64.zip`
+
+    **`clients_mac.tgz`**
+
+    - `hdb_client_mac.tgz`
+
+    - `xs.onpremise.runtime.client_darwinintel64.zip`
 
 [ACCORDION-END]
 
@@ -105,7 +123,7 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
 
 #### Installation Instructions
 
-1. Using a compression utility such as WinZip or Unzip, extract either `xs.onpremise.runtime.client_ntamd64.zip` for Windows or `xs.onpremise.runtime.client_linuxx86_64.zip` for Linux.
+1. Using a compression utility, extract either `xs.onpremise.runtime.client_ntamd64.zip` for Windows, `xs.onpremise.runtime.client_darwinintel64.zip` for Mac, `xs.onpremise.runtime.client_linuxx86_64.zip` for Linux, or `xs.onpremise.runtime.client_linuxppc64le.zip` for PowerPC.
 
     The system will create this folder:
 
@@ -160,7 +178,7 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
     <installation_path>/<SID>/xs/controller_data/controller/ssl-pub/router
     ```
 
-    > For example, where `<installation_path>`=`/hana/shared` and `<SID>`=`HDB`:
+    > For example, where `<installation_path>` = `/hana/shared` and `<SID>` = `HDB`:
 
     ```
     /hana/shared/HDB/xs/controller_data/controller/ssl-pub/router/default.root.crt.pem
@@ -211,18 +229,25 @@ In this procedure, you learn how to use the XS CLI client to connect to SAP HANA
 
 To install the SAP HANA client on a Windows machine, use either a graphical user interface or a command line.
 
-1. Using a compression utility like WinRAR or WinZip, extract `hdb_client_windows.zip`. (The file `hdb_client_windows.zip` is located in the `clients.zip` file you downloaded earlier in this how-to.)
+1. Using a compression utility, extract `hdb_client_windows_x86_32.zip` or `hdb_client_windows_x86_64`. (These files are located in the `clients_windows.zip` file you downloaded earlier.)
 
     The following file path is created:
+
+    ```
+    hdb_client_windows\HDB_CLIENT_WINDOWS_X86_32
+    ```
+
+    or
+
     ```
     hdb_client_windows\HDB_CLIENT_WINDOWS_X86_64
     ```
 
-2. In file explorer go to the `HDB_CLIENT_WINDOWS_X86_64` folder.
+2. In file explorer go to the `HDB_CLIENT_WINDOWS_X86_32` or `HDB_CLIENT_WINDOWS_X86_64` folder.
 
     Or:
 
-    Open a command prompt and navigate to `HDB_CLIENT_WINDOWS_X86_64`.
+    Open a command prompt and navigate to `HDB_CLIENT_WINDOWS_X86_32` or `HDB_CLIENT_WINDOWS_X86_64`.
 
 3. In file explorer, double-click:
 
@@ -245,20 +270,49 @@ To install the SAP HANA client on a Windows machine, use either a graphical user
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 3 (Linux): ](Install the SAP HANA HDB Client)]
+[ACCORDION-BEGIN [Step 3 (Mac): ](Install the SAP HANA HDB Client)]
 
-To install the SAP HANA client on a Linux machine, do the following:
+To install the SAP HANA client on a Linux PowerPC machine, do the following:
 
-1. Navigate to the directory where you wish to unpack the `hdb_client_linux.tgz` files.
+1. Navigate to the directory where you wish to unpack the `hdb_client_mac.tgz` files.
 
     ```bash
     cd <your_destination>
     ```
 
-2. Unpack `hdb_client_linux.tgz`:
+2. Unpack `hdb_client_linux_mac.tgz`:
 
     ```bash
-    sudo tar -xvzf <unzipped_filepath>/hdb_client_linux.tgz
+    sudo tar -xvzf <unzipped_filepath>/hdb_client_mac.tgz
+    ```
+
+    The directory `HDB_CLIENT_MACOS` is created.
+
+3. Move into the `HDB_CLIENT_MACOS` directory and run `hdbinst`.
+
+    ```bash
+    cd HDB_CLIENT_MACOS
+    sudo ./hdbinst
+    ```
+
+    Follow the onscreen instructions to install the SAP HANA client.
+
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [Step 3 (Linux): ](Install the SAP HANA HDB Client)]
+
+To install the SAP HANA client on a Linux machine, do the following:
+
+1. Navigate to the directory where you wish to unpack the `hdb_client_linux_x86_64.tgz` files.
+
+    ```bash
+    cd <your_destination>
+    ```
+
+2. Unpack `hdb_client_linux_x86_64.tgz`:
+
+    ```bash
+    sudo tar -xvzf <unzipped_filepath>/hdb_client_linux_x84_64.tgz
     ```
 
     The directory `HDB_CLIENT_LINUX_X86_64` is created.
@@ -267,6 +321,35 @@ To install the SAP HANA client on a Linux machine, do the following:
 
     ```bash
     cd HDB_CLIENT_LINUX_X86_64
+    sudo ./hdbinst
+    ```
+
+    Follow the onscreen instructions to install the SAP HANA client.
+
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [Step 3 (PowerPC): ](Install the SAP HANA HDB Client)]
+
+To install the SAP HANA client on a Linux machine, do the following:
+
+1. Navigate to the directory where you wish to unpack the `hdb_client_linux_ppc64le.tgz` files.
+
+    ```bash
+    cd <your_destination>
+    ```
+
+2. Unpack `hdb_client_linux_ppc64le.tgz`:
+
+    ```bash
+    sudo tar -xvzf <unzipped_filepath>/hdb_client_linux_ppc64le.tgz
+    ```
+
+    The directory `HDB_CLIENT_LINUX_PPC64LE` is created.
+
+3. Move into the `HDB_CLIENT_LINUX_PPC64LE` directory and run `hdbinst`.
+
+    ```bash
+    cd HDB_CLIENT_LINUX_PPC64LE
     sudo ./hdbinst
     ```
 
