@@ -19,7 +19,7 @@ Perform these steps to resolve issues when installing SAP HANA 2.0, express edit
 
 ---
 
-[ACCORDION-BEGIN [Step 1: ](Issue &#151; HDB Daemon not Running)]
+[ACCORDION-BEGIN [Issue &#151; ](HDB Daemon not Running)]
 
 You are installing SAP HANA, express edition on a Linux server using `hdblcm`. You receive this error:  
 
@@ -52,7 +52,7 @@ If the status is inactive, start socket activation:
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 2: ](Issue &#151; Virtual Machine: Checking Resource Usage)]
+[ACCORDION-BEGIN [Issue &#151; ](Virtual Machine: Checking Resource Usage)]
 
 You are having memory issues on your VM and want to check resource usage.
 
@@ -82,7 +82,7 @@ Look for the **Use%** for the `/dev/sda1 filesystem`. If it is down to just a fe
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 3: ](Issue &#151; SAP HANA XS Applications Run Error)]
+[ACCORDION-BEGIN [Issue &#151;](SAP HANA XS Applications Run Error)]
 
 You are trying to run a SAP HANA service on your SAP HANA 2.0, express edition installation and are receiving an error.
 
@@ -115,13 +115,11 @@ It may take a few minutes for the system to get started. Run `xs apps` again to 
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 4: ](Issue &#151; Download Manager Shows Error)]
+[ACCORDION-BEGIN [Issue &#151;](Download Manager Shows Error)]
 
 Error: `Failed to concatenate downloaded files`
 
 You are downloading packages using the Download Manager. The Status area and Progress Detail area show the error `Failed to concatenate downloaded files`.
-
-![Download Manager](hxe_dm_failure.PNG)
 
 ### Solution
 
@@ -144,7 +142,7 @@ Change the **Save directory**. Download again.
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 5: ](Issue &#151; Locate Download Manager Log File)]
+[ACCORDION-BEGIN [Issue &#151;](Locate Download Manager Log File)]
 
 You are downloading packages using the Download Manager when you terminate Download Manager before download completes, or Download Manager quits unexpectedly.
 
@@ -159,7 +157,7 @@ Windows: **`%TEMP%\hxedm_[yymmdd].log`**
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 6: ](Issue &#151; Update Fails with Error Message)]
+[ACCORDION-BEGIN [Issue &#151;](Update Fails with Error Message)]
 
 When upgrading SAP HANA, express edition 2.0 SP 00 to SAP HANA, express edition 2.0 SP 01, the update fails with an error message. The error message is:
 
