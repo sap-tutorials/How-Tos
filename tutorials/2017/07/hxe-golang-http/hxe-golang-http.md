@@ -1,6 +1,7 @@
 ---
 title: How to write a simple go application that queries HANA, express edition.
 description: A How-To that shows how to write a simple go application that queries HANA, express edition.
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
