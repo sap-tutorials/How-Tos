@@ -2,10 +2,10 @@
 title: Deploy an application built to connect to SAP HANA Express Edition, on App engine of the Google Cloud Platform (GCP)
 description: Deploy an application built to connect to SAP HANA Express Edition, on App engine of the Google Cloud Platform (GCP)
 primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
+tags: [  tutorial>how-to, tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
 ---
 
-## Prerequisites and Assumptions
+## Prerequisites
  - **Proficiency:** Beginner
  - You have a working application to connect to SAP HANA, Express Edition.
  - You have a Google Account and/or have registered for the free trial on `cloud.google.com`.
@@ -27,47 +27,55 @@ This tutorial will guide you through the process to deploy a sample application 
 
 [ACCORDION-BEGIN [Step 1: ](Configure Google Cloud SDK)]
 
-1. Install `gcloud` SDK on your development environment using the link.
-    [Google SDK](https://cloud.google.com/sdk/). Follow the prompts and take the default if provided.
+Install gcloud SDK on your development environment using the instructions from [Google SDK](https://cloud.google.com/sdk/). Follow the prompts and take the default if provided.
 
-2. Once the SDK is installed open a terminal and type the following command to make sure the installation is working.
-    ```
-    $ `gcloud` info
-    ```
+
+Once the SDK is installed open a terminal and type the following command to make sure the installation is working.
+```
+$ gcloud info
+
+```
 
 [DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Deploy a Node JS Application)]
 
-1. Go to the directory of where your Node JS Application is located.
-   ```
-   $ cd hxeapp
+Go to the directory of where your Node JS Application is located.
 
-   ```
+```
+$ cd hxeapp
+```
 
-2. Create a file called `app.yaml`:
-   ```
-   hxeapp$ touch app.yaml
-   ```
-   Copy the contents below to the `app.yaml` file.
+Create a file called `app.yaml`:
+```
+hxeapp$ touch app.yaml
 
-   ```
-   env: flex
-   runtime: nodejs
+```
 
-   ```
-3. Deploy to the Google cloud
-    ```
-   hxeapp$ `gcloud` app deploy
-   ```
-   >**Note:**
-   > The deployment will take ~5 minutes
+Copy the contents below to the `app.yaml` file.
 
-4. After successful deployment, open the application by the following command.
-   ```
-   `gcloud` app browse
-   ```
+```
+env: flex
+runtime: nodejs
+
+```
+
+Deploy to the Google cloud
+
+```
+hxeapp$ gcloud app deploy
+```
+>**Note:**
+> The deployment will take ~5 minutes
+
+</br>
+
+After successful deployment, open the application by the following command.
+
+```
+gcloud app browse
+```
 
 [DONE]
 [ACCORDION-END]
@@ -75,19 +83,21 @@ This tutorial will guide you through the process to deploy a sample application 
 
 [ACCORDION-BEGIN [Step 3: ](Deploy a Python/Flask Application)]
 
-1. Go to the directory of where your Python/Flask Application is located.
-   ```
-   $ cd hxeapp
+Go to the directory of where your Python/Flask Application is located.
+```
+$ cd hxeapp
+```
 
-   ```
 
-2. Create a file called `app.yaml`:
-   ```
-   hxeapp$ touch app.yaml
-   ```
-   Copy the contents below to the `app.yaml` file. Make sure your main python file is renamed to `main.py`
+Create a file called `app.yaml`:
 
-   ```
+```
+hxeapp$ touch app.yaml
+```
+
+Copy the contents below to the `app.yaml` file. Make sure your main python file is renamed to `main.py`
+
+```
    runtime: python27
    api_version: 1
    threadsafe: true
@@ -103,48 +113,58 @@ This tutorial will guide you through the process to deploy a sample application 
    - name: ssl
      version: 2.7.11
 
-   ```
-3. Create a file called `appconfig.py`.
-   ```
-   hxeapp$ touch appconfig.py
-   ```
+```
 
-   Copy the contents below to the `appconfig.py` file.
-   ```
+Create a file called `appconfig.py`.
+```
+hxeapp$ touch appconfig.py
+```
+
+Copy the contents below to the `appconfig.py` file.
+```
    from google.appengine.ext import vendor
    vendor.add('lib')
-   ```
+```
 
-4. Deploy to the Google cloud
-    ```
-   hxeapp$ `gcloud` app deploy
-   ```
-   >**Note:**
-   > The deployment will take ~5 minutes
+Deploy to the Google cloud
 
-5. After successful deployment, open the application by the following command.
-   ```
-   `gcloud` app browse
-   ```
+```
+hxeapp$ gcloud app deploy
+```
+
+>**Note:**
+> The deployment will take ~5 minutes
+
+</br>
+
+After successful deployment, open the application by the following command.
+
+
+```
+gcloud app browse
+```
+
 [DONE]
 [ACCORDION-END]
 
 
 [ACCORDION-BEGIN [Step 4: ](Deploy a GO Application)]
 
-1. Go to the directory of where your GO Application is located.
-   ```
-   $ cd hxeapp
+Go to the directory of where your GO Application is located.
+```
+$ cd hxeapp
 
-   ```
+```
 
-2. Create a file called `app.yaml`:
-   ```
-   hxeapp$ touch app.yaml
-   ```
-   Copy the contents below to the `app.yaml` file.
+Create a file called `app.yaml`:
 
-   ```
+```
+hxeapp$ touch app.yaml
+```
+
+Copy the contents below to the `app.yaml` file.
+
+```
    runtime: go
    api_version: go1
    env: flex
@@ -153,79 +173,91 @@ This tutorial will guide you through the process to deploy a sample application 
    - url: /.*
      script: _go_app
 
-   ```
-3. Deploy to the Google cloud
-    ```
-   hxeapp$ `gcloud` app deploy
-   ```
-   >**Note:**
-   > The deployment will take ~5 minutes
+```
 
-4. After successful deployment, open the application by the following command.
-   ```
-   `gcloud` app browse
-   ```
+Deploy to the Google cloud
+
+```
+hxeapp$ gcloud app deploy
+
+```
+
+>**Note:**
+> The deployment will take ~5 minutes
+
+After successful deployment, open the application by the following command.
+
+```
+gcloud app browse
+```
 
 [DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Deploy a Ruby on Rails application)]
 
+Go to the directory of where your Ruby on Rails Application is located.
+```
+$ cd hxeapp
 
-1. Go to the directory of where your Ruby on Rails Application is located.
-   ```
-   $ cd hxeapp
+```
 
-   ```
+Create a file `app.yaml` :
 
-2. Create a file `app.yaml` :
-   ```
-   hxeapp$ touch app.yaml
-   ```
-   Copy the below code to the `app.yaml` file:
+```
+hxeapp$ touch app.yaml
+```
 
-    ```
-    entrypoint: bundle exec rackup --port $PORT
-    env: flex
-    runtime: ruby
+Copy the below code to the `app.yaml` file:
 
-    ```
-    >**Note:**
-    > If YARN is not installed on the machine, please install YARN using the instructions,
-    >[YARN Install](https://yarnpkg.com/lang/en/docs/install/) before running the above command.
+```
+entrypoint: bundle exec rackup --port $PORT
+env: flex
+runtime: ruby
+```
 
-3. Run the following command and copy the generated key in the console output.
+>**Note:**
+> If YARN is not installed on the machine, please install YARN using the instructions,
+>[YARN Install](https://yarnpkg.com/lang/en/docs/install/) before running the above command.
 
-    ```
-    hxeapp$ bundle exec rails secret
 
-    ```
+Run the following command and copy the generated key in the console output.
 
-4. Add the below code to `app.yaml` file.
-    ```
-    env_variables:
-      SECRET_KEY_BASE: <YOUR_GENERATED_LONG KEY>
+```
+hxeapp$ bundle exec rails secret
+```
 
-    ```
-5. Run the following command.
+Add the below code to `app.yaml` file.
 
-    ```
-    hxeapp$ RAILS_ENV=production bundle exec rails assets:precompile
+```
+env_variables:
+SECRET_KEY_BASE: <YOUR_GENERATED_LONG KEY>
 
-    ```
-6. Execute the command below to deploy the application.
+```
 
-    ```
-    hxeapp$ `gcloud` app deploy
+Run the following command.
 
-    ```
+```
+hxeapp$ RAILS_ENV=production bundle exec rails assets:precompile
+
+```
+
+Execute the command below to deploy the application.
+
+```
+hxeapp$ gcloud app deploy
+
+```
 >**Note:**
 > The deployment will take ~5 minutes.
 
-7. After successful deployment, open the application by the following command.
-   ```
-   `gcloud` app browse
-   ```
+</br>
+
+After successful deployment, open the application by the following command.
+
+```
+gcloud app browse
+```
 
 [DONE]
 [ACCORDION-END]
@@ -233,40 +265,48 @@ This tutorial will guide you through the process to deploy a sample application 
 [ACCORDION-BEGIN [Step 6: ](Deploy a Sinatra/Ruby application)]
 
 
-1. Go to the directory of where your Sinatra/Ruby Application is located.
-   ```
-   $ cd hxeapp
+Go to the directory of where your Sinatra/Ruby Application is located.
 
-   ```
+```
+$ cd hxeapp
 
-2. Create a file `app.yaml` :
-   ```
-   hxeapp$ touch app.yaml
-   ```
-   Copy the below code to the `app.yaml` file:
+```
 
-    ```
-    runtime: ruby
-    env: flex
-    entrypoint: bundle exec ruby app.rb
+Create a file `app.yaml` :
 
-    ```
-    >**Note:**
-    > Make sure the `sinatra` gem is listed in your Gemfile in the Application folder.
+```
+hxeapp$ touch app.yaml
+```
+Copy the below code to the `app.yaml` file:
 
-3. Execute the command below to deploy the application.
+```
+runtime: ruby
+env: flex
+entrypoint: bundle exec ruby app.rb
+```
+</br>
 
-    ```
-    hxeapp$ `gcloud` app deploy
+>**Note:**
+> Make sure the `sinatra` gem is listed in your Gemfile in the Application folder.
 
-    ```
+</br>
+
+Execute the command below to deploy the application.
+
+```
+hxeapp$ gcloud app deploy
+```
+
 >**Note:**
 > The deployment will take ~5 minutes.
 
-4. After successful deployment, open the application by the following command.
-   ```
-   `gcloud` app browse
-   ```
+</br>
+
+After successful deployment, open the application by the following command.
+
+```
+gcloud app browse
+```
 
 [DONE]
 [ACCORDION-END]

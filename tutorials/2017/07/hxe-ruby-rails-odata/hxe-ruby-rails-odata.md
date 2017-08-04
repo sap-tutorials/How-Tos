@@ -2,7 +2,7 @@
 title: Creata a Tiny World Ruby on Rails Application using OData services to connect to SAP HANA, Express Edition
 description: Create a sample Ruby on Rails application which connects to SAP HANA, Express Edition using OData Services
 primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
+tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to  ]
 ---
 
 ## Prerequisites
@@ -27,28 +27,31 @@ This tutorial will guide you through the process to create a sample Ruby on Rail
 
 [ACCORDION-BEGIN [Step 1: ](Create a new Rails application)]
 
-1. In your local environment open a terminal and Create a new Rails application
+In your local environment open a terminal and Create a new Rails application
 
-    ```
+```
     ~$ rails new Odatatest
     ~$ cd Odatatest/
 
-    ```
-2. Run the following commands.
+```
 
-    ```
+Run the following commands.
+
+```
     ~Odatatest$ rails generate controller odata show
 
-    ```
-3. Navigate to the file `Odatatest/Gemfile`. Add the following code after all the gems.
+```
 
-    ```
+Navigate to the file `Odatatest/Gemfile`. Add the following code after all the gems.
+
+```
     gem 'ruby_odata'
 
-    ```
-4. Navigate to the file `Odatatest/app/controllers/odata_controller.rb`. Replace the `show` method with the following code:
+```
 
-  ```
+Navigate to the file `Odatatest/app/controllers/odata_controller.rb`. Replace the `show` method with the following code:
+
+```
   def show
     svc = OData::Service.new "http://<YOUR_HOSTNAME>:8090/ODataTutorial/product.xsodata", { :username => "<YOUR_USERNAME>", :password=> "<YOUR_PASSWORD>" }
     svc.Product
@@ -58,12 +61,14 @@ This tutorial will guide you through the process to create a sample Ruby on Rail
        'LINENAME', 'LINEDESCRIPTION', 'DISCONTINUED', 'CAPACITY', 'SCREENSIZE']
   end
 
-  ```
-  >**Note:**
-  > The URL used here assumes that the OData service is deployed as mentioned in the prerequisite tutorial.
+```
+>**Note:**
+> The URL used here assumes that the OData service is deployed as mentioned in the prerequisite tutorial.
 
-5. Navigate to the file `Odatatest/app/views/odata/show.html.erb`. Replace the file contents with the following code.
-    ```
+
+Navigate to the file `Odatatest/app/views/odata/show.html.erb`. Replace the file contents with the following code.
+
+```
     <h1>Odata#show</h1>
     <p>Results From ODATA service</p>
     <table class="table table-condensed" border="1">
@@ -104,23 +109,23 @@ This tutorial will guide you through the process to create a sample Ruby on Rail
           </tbody>
         </table>
 
-    ```
+```
 
 [ACCORDION-BEGIN [Step 2: ](Run the application to test.)]
 
-1. Run the following commands at the root of the project directory.
+Run the following commands at the root of the project directory.
 
-    ```
+```
     ~Odatatest$ bundle install
 
     ~Odatatest$ rails server
 
-    ```
+```
 
-2. Browse the application at http://localhost:3000/odata/show.
+Browse the application at http://localhost:3000/odata/show.
 The results should look like below.
 
-    ![Output of OData service](1.png)
+![Output of OData service](1.png)
 
 [DONE]
 [ACCORDION-END]

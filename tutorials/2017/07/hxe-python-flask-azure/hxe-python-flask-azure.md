@@ -22,7 +22,7 @@ This How-To shows how to create a web application with Flask for Azure's App Ser
 
 [ACCORDION-BEGIN [Step 1: ](Setup a HANA Database Accessible from Azure's App Service)]
 
-1. Make sure that you have the HANA, express edition database running, and that it is accessible from Azure's App Service. For instructions on how to perform a binary installation of HANA, express edition on an Azure virtual machine see the [Installing SAP HANA, express edition, on Microsoft Azure and `openSUSE`](https://www.sap.com/developer/tutorials/hxe-azure-open-suse.html).
+Make sure that you have the HANA, express edition database running, and that it is accessible from Azure's App Service. For instructions on how to perform a binary installation of HANA, express edition on an Azure virtual machine see the [Installing SAP HANA, express edition, on Microsoft Azure and `openSUSE`](https://www.sap.com/developer/tutorials/hxe-azure-open-suse.html).
 
 [DONE]
 [ACCORDION-END]
@@ -35,85 +35,92 @@ You will now modify the Flask application to enable it to query the HANA databas
 
     `templates/hello.html` - An HTML formatted template that uses the flask rendering functionality to merge data generated results from `__init__.py` to create the html page. `hello.html` must be in the `templates` directory.
 
-1. Follow procedure defined by Azure to create an application using the Flask web framework. Do not configure Git publishing for your newly created web app as instructed in the Azure Doc Tutorial step #6. You will clone the generated Git repository later to have access to the application code.
-   [Azure Python Web App - follow steps 1-5](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/app-service-web/web-sites-python-create-deploy-flask-app.md)
+Follow procedure defined by Azure to create an application using the Flask web framework. Do not configure Git publishing for your newly created web app as instructed in the Azure Doc Tutorial step #6. You will clone the generated Git repository later to have access to the application code.
 
-2. Confirm the application framework is working by clicking the `Browse` link in the Application Services Overview window or follow the link provided in the `URL` field.
-   ![Results in Browser](1.png).
+[Azure Python Web App - follow steps 1-5](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/app-service-web/web-sites-python-create-deploy-flask-app.md)
 
-3. Clone the generated application git repository using the provided `Git clone url` in the Application Services Overview window:
+Confirm the application framework is working by clicking the `Browse` link in the Application Services Overview window or follow the link provided in the `URL` field.
+
+![Results in Browser](1.png).
+
+Clone the generated application git repository using the provided `Git clone url` in the Application Services Overview window:
+
 ```
 git clone <Git clone url from Application Services Overview>
 ```
 
-4. Navigate to the `application` directory to find the files cloned from the Git repository, if you don't find the applications including the `requirements.txt` your clone command didn't work, verify the Deployment Credentials, or Deployment options, you may need to `Disconnect` and setup a new Git Local repository:
+Navigate to the `application` directory to find the files cloned from the Git repository, if you don't find the applications including the `requirements.txt` your clone command didn't work, verify the Deployment Credentials, or Deployment options, you may need to `Disconnect` and setup a new Git Local repository:
 
-   ![Results from `ls` in application folder](2.PNG).
-5. Edit the `requirements.txt` file to have the following packages:
+![Results from `ls` in application folder](2.PNG).
+
+Edit the `requirements.txt` file to have the following packages:
 ```
 Flask<1
 pyhdb
 ```
-6. Delete the file `.skipPythonDeployment` in the `application` directory, this is required to assure Azure does a full deployment of the application.
 
-7. Navigate to the folder named `FlaskWebProject1` and modify the `__init__.py` file to include the following code. Update the `HXE host IP Address` and `HXE system DB password` in the below code:
+Delete the file `.skipPythonDeployment` in the `application` directory, this is required to assure Azure does a full deployment of the application.
+
+Navigate to the folder named `FlaskWebProject1` and modify the `__init__.py` file to include the following code. Update the `HXE host IP Address` and `HXE system DB password` in the below code:
 
 ```
-# [START application]
-import logging
-from flask import Flask
-from flask import render_template
-import pyhdb
+    # [START application]
+    import logging
+    from flask import Flask
+    from flask import render_template
+    import pyhdb
 
-app = Flask(__name__)
+    app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-  # define connection to the HXE database
-  user_provided_host='<HXE host IP Address>'
-  user_provided_password='<HXE system DB password>'
-  user_provided_port=39013
-  user_provided_user='system'
-  connection = pyhdb.connect(
-          host = user_provided_host,
-          port = user_provided_port,
-          user = user_provided_user,
-          password = user_provided_password
-          )
-  if not connection.isconnected():
-      return 'HXE Server is not accessible'
-  cursor=connection.cursor();
-  cursor.execute ("SELECT * from M_DATABASE")
-  allrows = ''
-  row = cursor.fetchone()
-  while row is not None:
-      print (row)
-      allrows = allrows + str(row)
-      row = cursor.fetchone()
-  cursor.close()
-  if row is None:
-      return render_template(
-              'hello.html',
+    @app.route('/')
+    def hello_world():
+      # define connection to the HXE database
+      user_provided_host='<HXE host IP Address>'
+      user_provided_password='<HXE system DB password>'
+      user_provided_port=39013
+      user_provided_user='system'
+      connection = pyhdb.connect(
               host = user_provided_host,
               port = user_provided_port,
               user = user_provided_user,
-              name = allrows)
-  else:
-      return 'Select failed'
+              password = user_provided_password
+              )
+      if not connection.isconnected():
+          return 'HXE Server is not accessible'
+      cursor=connection.cursor();
+      cursor.execute ("SELECT * from M_DATABASE")
+      allrows = ''
+      row = cursor.fetchone()
+      while row is not None:
+          print (row)
+          allrows = allrows + str(row)
+          row = cursor.fetchone()
+      cursor.close()
+      if row is None:
+          return render_template(
+                  'hello.html',
+                  host = user_provided_host,
+                  port = user_provided_port,
+                  user = user_provided_user,
+                  name = allrows)
+      else:
+          return 'Select failed'
 
-@app.errorhandler(500)
-def server_error(e):
-    #log the error and stacktrace
-    logging.exception ('an error occurred during a request.')
-    return 'An internal error occured.', 500
+    @app.errorhandler(500)
+    def server_error(e):
+        #log the error and stacktrace
+        logging.exception ('an error occurred during a request.')
+        return 'An internal error occured.', 500
 
-if __name__ == '__main__':
-  app.run(host='127.0.0.1', port=8080, debug=True)
-#[END application]
+    if __name__ == '__main__':
+      app.run(host='127.0.0.1', port=8080, debug=True)
+    #[END application]
 ```
-8. Delete the `views.py` file, this file is not needed and will conflict with the new code in `__init__.py`
 
-9. Navigate to the `templates` folder and create a new file `hello.html` with the below content:
+Delete the `views.py` file, this file is not needed and will conflict with the new code in `__init__.py`
+
+Navigate to the `templates` folder and create a new file `hello.html` with the below content:
+
 ```
 <!doctype html>
 <title>HXE Select from HXE</title>
@@ -142,18 +149,22 @@ if __name__ == '__main__':
 {% endif %}
 ```
 
-10. Add the `hello.html` file to the git repository:
-   ```
-   git add hello.html
-   ```
-11. Commit all of the changes to the repository:
-   ```
-   $ git commit -a -m "updates for HXE application"
-   ```
-12. Push the updated files to Azure to the Git repository:
-   ```
-   git push
-   ```
+Add the `hello.html` file to the git repository:
+```
+git add hello.html
+```
+
+Commit all of the changes to the repository:
+
+```
+$ git commit -a -m "updates for HXE application"
+
+```
+
+Push the updated files to Azure to the Git repository:
+```
+git push
+```
 [DONE]
 [ACCORDION-END]
 

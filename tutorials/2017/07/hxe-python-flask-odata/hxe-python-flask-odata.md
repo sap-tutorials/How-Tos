@@ -2,7 +2,7 @@
 title: Create a Tiny World Python Application using the Flask framework, to consume OData services to connect to SAP HANA, Express Edition.
 description: Create a sample Python application using the Flask Web framework, which connects to SAP HANA, Express Edition using OData Services
 primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
+tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to  ]
 ---
 
 ## Prerequisites  
@@ -29,15 +29,15 @@ This tutorial will guide you through the process of creating a sample Python/Fla
 > The tutorial assumes you have a local Unix machine. Please use equivalent commands if running a Windows Environment.
 
 
-1. Open terminal and create a directory.
-    ```
+Open terminal and create a directory.
+```
     ~$ mkdir TinyWorldFlaskApp
     ~$ cd TinyWorldFlaskApp/
 
-    ```
-2. Run the following commands.
+```
+Run the following commands.
 
-    ```
+```
     ~TinyWorldFlaskApp$ touch main.py
     ~TinyWorldFlaskApp$ touch requirements.txt
     ~TinyWorldFlaskApp$ mkdir templates
@@ -46,10 +46,10 @@ This tutorial will guide you through the process of creating a sample Python/Fla
     ~TinyWorldFlaskApp/templates$ touch odata.html
     ~$ cd ..
 
-    ```
-3. Copy the below code to the file `main.py` in this directory and edit the code to change IP Address, OData Service Name and Credentials:
+```
+Copy the below code to the file `main.py` in this directory and edit the code to change IP Address, OData Service Name and Credentials:
 
-  ```
+```
 
         from flask import Flask, render_template, request
         from pyslet.odata2.client import Client
@@ -101,13 +101,16 @@ This tutorial will guide you through the process of creating a sample Python/Fla
 
         if __name__ == '__main__':
           app.run(host='0.0.0.0', port=80)
-  ```
-4. Copy the below code to the  `requirements.txt` file in the directory.
+```
 
+Copy the below code to the  `requirements.txt` file in the directory.
+
+```
         Flask==0.12.1
         pyslet
+```        
 
-8. Copy the following code to the file `odata.html` under the `templates` directory.
+Copy the following code to the file `odata.html` under the `templates` directory.
 
 ```
   Hello World From HANA Express through OData!
@@ -151,25 +154,25 @@ This tutorial will guide you through the process of creating a sample Python/Fla
   </table>
 
 ```
-
+[DONE]
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Run the application locally to test.)]
 
-1. Run the following commands at the root of the project directory.
+Run the following commands at the root of the project directory.
 
-    ```
+```
     ~TinyWorldFlaskApp$ pip install virtualenv
     ~TinyWorldFlaskApp$ virtualenv env
     ~TinyWorldFlaskApp$ source env/bin/activate
     ~TinyWorldFlaskApp$ pip install -r requirements.txt
     ~TinyWorldFlaskApp$ python main.py
-    ```
+```
 
-2. Browse the application at http://localhost:8080/odata.
+Browse the application at http://localhost:8080/odata.
 The results would look like below.
 
-    ![Output of OData service](1.png)
-
+![Output of OData service](1.png)
 
 You now have a working Python/Flask application connecting to SAP HANA, Express Edition using OData services.
 
