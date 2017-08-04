@@ -2,7 +2,7 @@
 title: Deploy an OData service to expose data from SAP HANA, Express Edition deployed on the Google Cloud Platform.
 description: Deploy a sample OData service to expose data from a table in the tenant database of SAP HANA, Express Edition, that is deployed on Compute Engine on Google Cloud Platform.
 primary_tag: products>sap-hana\,-express-edition
-tags: [  tutorial>beginner, topic>REST, OData, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
+tags: [  tutorial>beginner, topic>REST, topic>odata, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
 ---
 
 ## Prerequisites  
