@@ -1,6 +1,6 @@
 ---
-title: Deploy an application built to connect to SAP HANA Express Edition, on App engine of AWS Platform (GCP)
-description: Deploy an application built to connect to SAP HANA Express Edition, on App engine of AWS
+title: Deploy an application built to connect to SAP HANA Express Edition, on Azure App Service.
+description: Deploy an application built to connect to SAP HANA Express Edition, on Azure App Service.
 primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
 ---
