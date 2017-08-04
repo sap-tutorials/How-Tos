@@ -23,9 +23,15 @@ SAP HANA, express edition is available as a Virtual Machine or a binary version.
 
 ---
 
-1. Follow the chart below to decide which version of SAP HANA, express edition to download.
+[ACCORDION-BEGIN [Step 1: ](Decide which version of SAP HANA, express edition to download)]
 
-    ![HANA Express flowchart](hxe-ua-versions.png)
+Follow the chart below to decide which version of SAP HANA, express edition to download.
+
+![HANA Express flowchart](hxe-ua-versions.png)
+
+[DONE]
+[ACCORDION-END]
+
 
 
 ## Next Steps
