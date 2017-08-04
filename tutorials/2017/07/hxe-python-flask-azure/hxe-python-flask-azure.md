@@ -1,6 +1,7 @@
 ---
 title: A Flask application on Azure App Service that queries HANA, express edition.
 description: A How-To that demonstrates how to create a Flask/Python application for Azure's App Service that queries a HANA, express edition database.
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
