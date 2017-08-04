@@ -1,6 +1,6 @@
 ---
-title: Deploy an application built to connect to `SAP HANA, express edition`, on Amazon Web Services (AWS) Elastic Beanstalk.
-description: Deploy an application built to connect to `SAP HANA, express edition`, on AWS Elastic Beanstalk.
+title: Deploy an application built to connect to SAP HANA, express edition, on Amazon Web Services (AWS) Elastic Beanstalk.
+description: Deploy an application built to connect to SAP HANA, express edition, on AWS Elastic Beanstalk.
 primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, products>sap-hana\,-express-edition  ]
 ---
