@@ -109,7 +109,7 @@ If you are inside a corporate firewall and use a proxy for connecting to HTTP an
 > **Note:**
 > If you modify the proxy settings through Cockpit, you must manually restart the Cockpit services for the changes to apply. Enter the following commands through your command line:
 >
-> ```
+> ```bash
 > xs restart cockpit-hdb-svc
 > xs restart cockpit-xsa-svc
 > xs restart cockpit-telemetry-svc
