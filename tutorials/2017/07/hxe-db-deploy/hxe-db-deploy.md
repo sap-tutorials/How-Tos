@@ -1,6 +1,7 @@
 ---
 title: Different Ways to Run the HANA, express edition database.
 description: A How-To that consolidates the links to tutorials showing how to set up the HANA, express edition database in different environments.
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
