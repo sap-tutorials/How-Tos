@@ -186,7 +186,7 @@ Update of SAP HANA Cockpit failed
 3. Run the following command to update the SAPUI5 SDK 1.44 application.
 
     ```bash
-    xs install <extract_path>/HANA_EXPRESS_20/DATA_UNITS/HANA_COCKPIT_20/XSACUI5FESV344_10.zip
+    xs install <extract_path>/HANA_EXPRESS_20/DATA_UNITS/XSA_CONTENT_10/XSACUI5FESV344_10.zip
     ```
 
 [DONE]
