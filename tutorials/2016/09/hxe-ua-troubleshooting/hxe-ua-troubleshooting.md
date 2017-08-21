@@ -157,40 +157,6 @@ Windows: **`%TEMP%\hxedm_[yymmdd].log`**
 [DONE]
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Issue &#151;](Update Fails with Error Message)]
-
-When upgrading SAP HANA, express edition 2.0 SP 00 to SAP HANA, express edition 2.0 SP 01, the update fails with an error message. The error message is:
-
-```
-Installation of archive file(s) '/usr/sap/HXE_2_SP1/HANA_EXPRESS_20/DATA_UNITS/HANA_COCKPIT_20/XSACCOCKPIT02_5.zip' failed.
-Installation of the component XSAC_COCKPIT (sap.com) 2.2.5 failed during deployment.
-Installation of SAP HANA Cockpit failed
-Update of SAP HANA Express Edition components failed.
-Installation of XS Advanced components failed
-Update of SAP HANA Cockpit failed
-```
-### Solution
-
-1. As `<SID>adm` user, login to `XSA`.
-
-    ```bash
-    xs login -u xsa_admin -p <password>
-    ```
-
-2. Run the following command to update the Cockpit application.
-
-    ```bash
-    xs install <extract_path>/HANA_EXPRESS_20/DATA_UNITS/HANA_COCKPIT_20/XSACCOCKPIT02_5.zip
-    ```
-
-3. Run the following command to update the SAPUI5 SDK 1.44 application.
-
-    ```bash
-    xs install <extract_path>/HANA_EXPRESS_20/DATA_UNITS/HANA_COCKPIT_20/XSACUI5FESV344_10.zip
-    ```
-
-[DONE]
-[ACCORDION-END]
 
 ## Next Steps
 - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
