@@ -35,7 +35,7 @@ Click on the **Configuration** tab and use the value `use_default_route` as a fi
 
 [ACCORDION-BEGIN [Step 2: ](Add a new key-value pair)]
 
-Right-click on `public hostname resolution` and on **Add parameter**. Use `map_localhost` as the key and your external IP as shown in the Compute Engine as the value.
+Right-click on `public hostname resolution` and on **Add parameter**. Use `map_hxehost` as the key and your external IP as shown in the Compute Engine as the value.
 
 ![Add key-value pair](3.png)
 
