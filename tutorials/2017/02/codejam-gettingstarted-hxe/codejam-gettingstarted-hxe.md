@@ -232,6 +232,10 @@ The following tutorial shows how to use Node.js to get data from HXE.
 
 [ACCORDION-BEGIN [OPTION C:](Development with XS Advanced)]
 
+You can start exploring the XS Advanced Cockpit here:
+
+https://www.sap.com/developer/tutorials/xsa-explore-basics.html
+
 You can get started with XS Advanced development following this tutorial series:
 
 https://www.sap.com/developer/groups/hana-xsa-get-started.html
