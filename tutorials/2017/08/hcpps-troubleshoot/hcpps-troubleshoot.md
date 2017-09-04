@@ -4,8 +4,13 @@ description: This guide highlights the most common issues encountered by users w
 primary_tag: products>sap-cloud-platform-predictive-service
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predictive-service ]
 ---
-## Prerequisites  
- - XXXXXXXX
+## Prerequisites
+
+This troubleshooting is applicable for the following tutorial groups:
+
+  - [Configure the SAP Cloud Platform predictive services](https://www.sap.com/developer/groups/ps-configure.html)
+  - [Test the SAP Cloud Platform predictive services using a REST client](https://www.sap.com/developer/groups/ps-test-rest.html)
+  - [Build an SAPUI5 application to interact with the SAP Cloud Platform predictive services](https://www.sap.com/developer/groups/ps-sapui5.html)
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
@@ -31,7 +36,7 @@ As this is a living document, make sure you bookmark it check periodically the u
 
 If you have an issue enabling the service, unfortunately there is nothing you can do as end-user to fix it, you will have to deal with SAP support for the SAP Cloud Platform.
 
-However, let me explain you what actually happens when you click on the ![enable](0-enable.png) button which will enable the **Go to Service** link.
+However, let me explain you what actually happens when you click on the ![button](0-enable.png) button which will enable the **Go to Service** link.
 
 The ![enable](0-enable.png) button will trigger an "activation" request to the SAP Cloud Platform "activation" service.
 
@@ -135,7 +140,7 @@ If the application cannot start and hangs on with a "Starting" status for a whil
 
 This one might be related to multiple causes and the best way to diagnose is to check the logs available under **Monitoring** > **Logging**.
 
-Check the latest "Default Traces" item using the display ![display trace](0-display.png) or download ![download trace](0-download.png) icon.
+Check the latest "Default Traces" item using the display ![my icon](0-display.png) or download ![my icon](0-download.png) icon.
 
 The trace content will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service ](https://answers.sap.com/tags/73555000100800000130) community page.
 
@@ -167,7 +172,7 @@ Check the application status.
 
 If the application is started, then the best way to diagnose the issue is to check the logs available under **Monitoring** > **Logging**.
 
-Check the latest "Default Traces" item using the display ![display trace](0-display.png) or download ![download trace](0-download.png) icon.
+Check the latest "Default Traces" item using the display ![my icon](0-display.png) or download ![my icon](0-download.png) icon.
 
 The trace content will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service ](https://answers.sap.com/tags/73555000100800000130) community page.
 
@@ -391,7 +396,7 @@ If this test works, then you can start checking the following common issues.
 
 ----
 
-### **500 Internal Server Error - Invalid reference to destination 'psapi' in account 'XXXXXXXtrial'**
+### **500 Internal Server Error - Invalid reference to destination `psapi` in account `XXXXXXXtrial`**
 
 ----
 
@@ -416,7 +421,7 @@ In order to access the predictive services and to comply with [Cross-origin reso
      - `/ps` is the URL that will be used as the proxy URL in your SAPUI5 application
      - `psapi` is the name of the destination configured in the SAP Cloud Platform Cockpit with the `aac4paservicess` application URL
 
-    Make sure you save ![button](0-save.png) the file and run the application again using the run ![button](0-run.png) if you apply any changes.
+    Make sure you save ![my icon](0-save.png) the file and run the application again using the run ![my icon](0-run.png) if you apply any changes.
 
 1. Check the **Destination**
 
