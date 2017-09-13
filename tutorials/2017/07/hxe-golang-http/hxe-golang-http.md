@@ -291,7 +291,7 @@ func InitializeConfig()(error) {
 | AWS Elastic Beanstalk  | "PORT"               | "5000"  |
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Build and Deploy the Application)]
@@ -309,7 +309,7 @@ func InitializeConfig()(error) {
 
 ![Results in Browser](1.png).
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

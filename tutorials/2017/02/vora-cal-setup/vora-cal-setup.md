@@ -35,7 +35,7 @@ The instance creation and management is done via [SAP Cloud Appliance Library](h
 
 >While SAP does not charge you for [developer editions of products](http://www.sap.com/developer/trials-downloads.html), Amazon will charge you for the usage of their infrastructure resources in the cloud, like computing, storage, network etc.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -80,7 +80,7 @@ The instance build will start. It should take about 45 minutes.
 
 ![The creation of the SAP Vora developer edition instance is started](vorasetup05.jpg)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -106,7 +106,7 @@ Important thing is CAL's **Schedule** configuration. Using it will help you to s
 Ideally you should remember to manually **Suspend** the instance every time you take a break in using the instance. This will stop the instance in AWS, so the cloud provider will not charge you for using resources when you do not work with SAP Vora.
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -121,7 +121,7 @@ As well you can see that CAL `Access Points` correspond to `Security Group` in A
 ![Security group in AWS](vorasetup10.jpg)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 

@@ -49,7 +49,7 @@ If the status is inactive, start socket activation:
 `systemctl` start `uuidd.socket`
 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Issue &#151; ](Virtual Machine: Checking Resource Usage)]
@@ -79,7 +79,7 @@ You can also run the following command to see if you are running out of disk spa
 Look for the **Use%** for the `/dev/sda1 filesystem`. If it is down to just a few GB, you may have run out of disk space when performing your recent operation.
 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Issue &#151;](SAP HANA XS Applications Run Error)]
@@ -112,7 +112,7 @@ xs start <app>
 
 It may take a few minutes for the system to get started. Run `xs apps` again to see if the app has started and that under `instances` the app shows `1/1`.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Issue &#151;](Download Manager Shows Error)]
@@ -139,7 +139,7 @@ or
 
 Change the **Save directory**. Download again.     
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Issue &#151;](Locate Download Manager Log File)]
@@ -154,7 +154,7 @@ Linux: **`/tmp/hxedm[yymmdd].log`**
 
 Windows: **`%TEMP%\hxedm_[yymmdd].log`**
 
-[DONE]
+
 [ACCORDION-END]
 
 

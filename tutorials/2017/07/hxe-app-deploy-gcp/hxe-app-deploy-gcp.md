@@ -36,7 +36,7 @@ $ gcloud info
 
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Deploy a Node JS Application)]
@@ -77,7 +77,7 @@ After successful deployment, open the application by the following command.
 gcloud app browse
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -144,7 +144,7 @@ After successful deployment, open the application by the following command.
 gcloud app browse
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -191,7 +191,7 @@ After successful deployment, open the application by the following command.
 gcloud app browse
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Deploy a Ruby on Rails application)]
@@ -259,7 +259,7 @@ After successful deployment, open the application by the following command.
 gcloud app browse
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 6: ](Deploy a Sinatra/Ruby application)]
@@ -308,7 +308,7 @@ After successful deployment, open the application by the following command.
 gcloud app browse
 ```
 
-[DONE]
+
 [ACCORDION-END]
 ---
 

@@ -37,7 +37,7 @@ Fill in the name, CIDR block and tenancy in fields and click **Create VPC**.
 
 ![create vpc](vpc3.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -52,7 +52,7 @@ Click on **Route table** in the left panel and click on the route table that is 
 ![Create subnet](subnet2.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -74,7 +74,7 @@ Click on **Create Route Table** and select the route table created. In the tab b
 ![Route table](route-table.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -86,7 +86,7 @@ Modify the Auto-assignable public IP, so that the Public IP gets assigned to the
 
 ![Modify public IP](modify-ip2.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -106,7 +106,7 @@ Click **Yes** to edit DNS host names.
 
 ![Enable DNS](dns4.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 6: ](Set as default VPC)]
@@ -116,7 +116,7 @@ Select this VPC while launching a SAP Vora Manager instance.
 ![Set default VPC](default-vpc.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

@@ -127,7 +127,7 @@ The results should look like below.
 
 ![Output of OData service](1.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 You now have a working Ruby on Rails application that connects to SAP HANA, Express Edition using OData services.

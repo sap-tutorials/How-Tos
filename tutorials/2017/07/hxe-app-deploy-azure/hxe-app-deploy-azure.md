@@ -81,7 +81,7 @@ If your application is written in Go and uses the go `http` package for the web 
 
 ![Results in Browser](1.png). 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Deploy a Sinatra Application to Azure)]
@@ -97,7 +97,7 @@ After you push your code successfully to Azure using git, and add the inbound se
 ![Output of OData service in AZURE](2.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 ---

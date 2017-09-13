@@ -28,7 +28,7 @@ Select SAP Development Tools for Eclipse
 - Neon (4.6), add the URL https://tools.hana.ondemand.com/neon/
 - Mars (4.5), add the URL https://tools.hana.ondemand.com/mars/
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Select features)]
@@ -37,28 +37,28 @@ Press Enter to display the available features.
 
 Select the desired features and choose Next.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Review wizard page)]
 
 On the next wizard page, you get an overview of the features to be installed. Choose Next.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Accept license agreements)]
 
 Confirm the license agreements and select Finish to start the installation. (Depending on the features chosen the installation may take up to 10 minutes.)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Restart Eclipse)]
 
 Restart Eclipse as prescribed after adding HANA Plugin.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 6: ](Open SAP HANA Administrative Console)]
@@ -67,7 +67,7 @@ Change perspective to SAP HANA Administrative Console Window > Perspective > SAP
 
 ![image 1](4.PNG)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 7: ](Specify system)]
@@ -83,7 +83,7 @@ Configuration:
 
 ![image 1](1.PNG)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 8: ](Specify connection properties)]
@@ -101,7 +101,7 @@ Connection Properties:
 
 ![image 1](2.PNG)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 9: ](Confirm connection)]
@@ -110,7 +110,7 @@ Confirm connection as shown below:
 
 ![image 1](3.PNG)
 
-[DONE]
+
 [ACCORDION-END]
 
 

@@ -35,7 +35,7 @@ While creating security group add the TCP Ports as shown below and click **Creat
 ![Add ports](security-picture3.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -56,7 +56,7 @@ Now the security group is all set and can be reused while creating a Vora Cluste
 
 As long as clusters are created in the same VPC, the same security group can be used. If you want to create another cluster or clusters in other another VPC, new security groups must be created.
 
-[DONE]
+
 [ACCORDION-END]
 ---
 

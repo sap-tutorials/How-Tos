@@ -22,19 +22,19 @@ Postman will allow you to interact with REST API. In addition we will setup the 
 [ACCORDION-BEGIN [Step 1: ](Install Google Chrome)]
 If you haven't done so yet, please install [Google Chrome](http://www.google.com/chrome/browser/desktop/).
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Install the Postman extension for Chrome)]
 Open **Google Chrome** and install the [Chrome Postman extension](http://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop/).
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Install the Postman Interceptor extension for Chrome)]
 Install the [Postman Interceptor extension](https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo).
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Configure Postman)]
@@ -66,7 +66,7 @@ Enable the "Automatically follow redirects" option as highlighted.
 
 you are now all set to move to your next tutorial.
 
-[DONE]
+
 [ACCORDION-END]
 
 
