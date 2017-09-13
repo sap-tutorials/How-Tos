@@ -2,8 +2,9 @@
 title: Troubleshoot the SAP Cloud Platform Predictive Services
 description: This guide highlights the most common issues encountered by users while using the SAP Cloud Platform Predictive Services.
 primary_tag: products>sap-cloud-platform-predictive-service
-tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predictive-service ]
+tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predictive-service]
 ---
+
 ## Prerequisites
 
 This troubleshooting is applicable for the following tutorial groups:
@@ -23,22 +24,21 @@ This guide has been built and structured to cover the different situations where
 
 And if you find an easier way to fix any issues listed here, or new issues with a  way to fix it, you are more than welcome to use the "Provide feedback" on the page to share your solution.
 
-If you face an issue that is not listed here, please submit this one on the [SAP Cloud Platform Predictive Service ](https://answers.sap.com/tags/73555000100800000130) community page.
+If you face an issue that is not listed here, please submit this one on the [SAP Cloud Platform Predictive Service](https://answers.sap.com/tags/73555000100800000130) community page.
 
 As this is a living document, make sure you bookmark it check periodically the updates!
 
 ### Time to Complete
 **10 Min**.
 
----
 
-[ACCORDION-BEGIN [Topic: ](Enabling the service)]
+[ACCORDION-BEGIN [Topic:](Enabling the service)]
 
 If you have an issue enabling the service, unfortunately there is nothing you can do as end-user to fix it, you will have to deal with SAP support for the SAP Cloud Platform.
 
-However, let me explain you what actually happens when you click on the ![button](0-enable.png) button which will enable the **Go to Service** link.
+However, let me explain you what actually happens when you click on the ![icon](0-enable.png) button which will enable the **Go to Service** link.
 
-The ![enable](0-enable.png) button will trigger an "activation" request to the SAP Cloud Platform "activation" service.
+The ![icon](0-enable.png) button will trigger an "activation" request to the SAP Cloud Platform "activation" service.
 
 The SAP Cloud Platform have multiple activation strategy/architecture based on the service you are looking at.
 
@@ -64,7 +64,7 @@ With your personal developer/trial account, the service doesn't require any lice
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Topic: ](Access the service link)]
+[ACCORDION-BEGIN [Topic:](Access the service link)]
 
 Once the SAP Cloud Platform Predictive Service is enabled, then the **Go to Service** will be activated and expose the "proxy" URL.
 
@@ -72,7 +72,7 @@ Again here, if you can't access the "proxy" URL, there is nothing you can do as 
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Topic: ](Deploying service)]
+[ACCORDION-BEGIN [Topic:](Deploying service)]
 
 One of the most common problem here when deploying the predictive service application to your account is: "which password should I use?"
 
@@ -92,7 +92,7 @@ As you are deploying the predictive service application to your SAP Cloud Platfo
 
 ### **Error during the deployment**
 
-If the application cannot be deployed, you should get a message on the screen and you can check the warning icon ![warning](0-warning.png) on the bottom left corner of the screen for more details.
+If the application cannot be deployed, you should get a message on the screen and you can check the warning icon ![icon](0-warning.png) on the bottom left corner of the screen for more details.
 
 ----
 
@@ -112,7 +112,7 @@ Once the deployment process is completed you will get a message and a link to th
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Topic: ](Starting service application)]
+[ACCORDION-BEGIN [Topic:](Starting service application)]
 
 The deployed predictive service application which exposes the REST API is "just" a Java application deployed to your SAP Cloud Platform account and will consume compute units just like any other Java application.
 
@@ -140,13 +140,15 @@ If the application cannot start and hangs on with a "Starting" status for a whil
 
 This one might be related to multiple causes and the best way to diagnose is to check the logs available under **Monitoring** > **Logging**.
 
-Check the latest "Default Traces" item using the display ![my icon](0-display.png) or download ![my icon](0-download.png) icon.
+Check the latest "Default Traces" item using the ![icon](00-glasses.png) 
 
-The trace content will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service ](https://answers.sap.com/tags/73555000100800000130) community page.
+You can also download the file locally using the ![icon](0-download.png) icon.
+
+The trace content will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service](https://answers.sap.com/tags/73555000100800000130) community page.
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Topic: ](Accessing the service application URL)]
+[ACCORDION-BEGIN [Topic:](Accessing the service application URL)]
 
 Now that the deployed predictive service application is started we should be able to access the embedded web portion which gives you access to a documentation section and the administration panels.
 
@@ -172,9 +174,11 @@ Check the application status.
 
 If the application is started, then the best way to diagnose the issue is to check the logs available under **Monitoring** > **Logging**.
 
-Check the latest "Default Traces" item using the display ![my icon](0-display.png) or download ![my icon](0-download.png) icon.
+Check the latest "Default Traces" item using the ![icon](00-glasses.png) 
 
-The trace content will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service ](https://answers.sap.com/tags/73555000100800000130) community page.
+You can also download the file locally using the ![icon](0-download.png) icon.
+
+The trace content will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service](https://answers.sap.com/tags/73555000100800000130) community page.
 
 ----
 
@@ -244,15 +248,15 @@ This can happen for multiple reasons:
 
     ![error](05-3.png)
 
-    > If you don't have any entry displayed, then select `java:comp/env/jdbc/DefaultDB` in the drop down and click on the plus ![plus](0-plus.png) icon.
+    > If you don't have any entry displayed, then select `java:comp/env/jdbc/DefaultDB` in the drop down and click on the plus ![icon](0-plus.png) icon.
 
-    Click on **Re-Initialize** ![plus](0-re-nitialize.png) icon. A message box should appear with a detailed error message providing you guidelines about how to fix it.
+    Click on **Re-Initialize** ![icon](0-re-nitialize.png) icon. A message box should appear with a detailed error message providing you guidelines about how to fix it.
 
     You can also delete and recreate the binding if re-initializing is not working from here.
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Topic: ](Consuming the service from a REST client)]
+[ACCORDION-BEGIN [Topic:](Consuming the service from a REST client)]
 
 In the tutorial, it is recommended to install the Postman extension for Google Chrome, but any other REST client should work as fine as long as you can configure properly the different parameters of each request.
 
@@ -312,7 +316,7 @@ When the item is not found, then the service will return a **404 Not Found** and
 
 In the tutorial, it is recommended to install the Postman Interceptor extension for Google Chrome which will allow Postman to use your current browser session and its cookies.
 
-Therefore your credentials won't be validated what you are using for the **``Basic Auth`** fields.
+Therefore your credentials won't be validated what you are using for the **`Basic Auth`** fields.
 
 However, if your session expires in Google Chrome you won't be able to access the services anymore unless the `aac4paservices` application is properly configured and the provided credentials are correct.
 
@@ -350,7 +354,7 @@ and in the Postman context:
 
     Go back to the `aac4paservicess` overview page in the SAP Cloud Platform Cockpit, then under **Security** > **Authentication Configuration**.
 
-    Make sure that **Custom Configuration** is active ![status](0-active.png) and if not click on **Activate Custom Configuration**.
+    Make sure that **Custom Configuration** is active ![icon](0-active.png) and if not click on **Activate Custom Configuration**.
 
     Make sure that the **User name and password** and **Client certificate**.
 
@@ -384,7 +388,7 @@ and in the Postman context:
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Topic: ](Consuming the service from a SAPUI5 application)]
+[ACCORDION-BEGIN [Topic:](Consuming the service from a SAPUI5 application)]
 
 When building your SAPUI5 application to interact with the predictive services, we will assumes that you have configured your **Authentication Configuration** properly.
 
@@ -400,7 +404,7 @@ If this test works, then you can start checking the following common issues.
 
 ----
 
-In order to access the predictive services and to comply with [Cross-origin resource sharing (a.k.a. CORS](https://fr.wikipedia.org/wiki/Cross-origin_resource_sharing), the SAPUI5 application will register in the `neo-app.json` the **Destination** to be used to proxy the `aac4paservicess` application URL.
+In order to access the predictive services and to comply with [Cross-origin resource sharing (`a.k.a.` CORS](https://fr.wikipedia.org/wiki/Cross-origin_resource_sharing), the SAPUI5 application will register in the `neo-app.json` the **Destination** to be used to proxy the `aac4paservicess` application URL.
 
 1. Check the `neo-app.json`
 
@@ -421,7 +425,9 @@ In order to access the predictive services and to comply with [Cross-origin reso
      - `/ps` is the URL that will be used as the proxy URL in your SAPUI5 application
      - `psapi` is the name of the destination configured in the SAP Cloud Platform Cockpit with the `aac4paservicess` application URL
 
-    Make sure you save ![my icon](0-save.png) the file and run the application again using the run ![my icon](0-run.png) if you apply any changes.
+    Make sure you save the file using the ![icon](0-save.png) button.
+
+	You can run the application again using the ![icon](0-run.png) button if you applied any changes.
 
 1. Check the **Destination**
 
@@ -448,7 +454,7 @@ In order to access the predictive services and to comply with [Cross-origin reso
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Topic: ](Consuming the service in general)]
+[ACCORDION-BEGIN [Topic:](Consuming the service in general)]
 
 In this section, we will highlight common issues that doesn't fit in the other section (the a fallback section).
 
@@ -472,7 +478,7 @@ Alternatively, to avoid this issue you can limit the number of pooled connection
 
 Make sure you check all these common issues.
 
-Executing this diagnostic will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service ](https://answers.sap.com/tags/73555000100800000130) community page.
+Executing this diagnostic will be helpful if you create a support case or submit a question on the [SAP Cloud Platform Predictive Service](https://answers.sap.com/tags/73555000100800000130) community page.
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
