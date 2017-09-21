@@ -32,7 +32,7 @@ Open required ports in the `edit inbound rules` dialog in AWS.
 
 ![open ports](open-ports.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -55,7 +55,7 @@ Read the End User License Agreement and accept it to proceed further
 ![EULA](eula.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -76,7 +76,7 @@ The steps above are needed only for first-time setup. Later, the console passwor
 
 Data node/s can be added using Add Node button.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -102,7 +102,7 @@ The four nodes are:
 It is recommended that all the services on these nodes are up and running for proper functioning of the Vora cluster. Data node/s can be added by using the **Add Node** button.
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -115,7 +115,7 @@ In case of configuration failure, retry using the **CONFIGURE** button.
 
 ![Configure](configure.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 6: ](Log in to the Apache Ambari console)]  
@@ -126,7 +126,7 @@ Log in to the Apache Ambari console at `http://<public ip of Manager>:8080`. The
 
 ![Ambari console](ambari2.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 7: ](Vora Manager UI)]
@@ -141,7 +141,7 @@ The services tab lists each of the services with its configuration and node assi
 
 ![Vora manager UI](vora-manager3.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 8: ](Vora Tools)]
@@ -150,7 +150,7 @@ Vora Tools can be accessed via the link on SAP Vora Console page or at `http://<
 
 The credentials for Vora Tools are `admin:<console password which was set in the setup phase>`.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -189,7 +189,7 @@ If the node has been removed from the Ambari and if its still available in the c
 ![Configure node](configure-node2.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 10: ](Manage unmanaged nodes)]
@@ -201,7 +201,7 @@ If Ambari shows an additional node currently not being managed by the cluster, i
 ![Unmanaged node](unmanaged2.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 11: ](Updates in Vora console)]
@@ -217,7 +217,7 @@ For SAP Vora console software updates, click **RESTART TO UPDATE NOW**. The upda
 ![Software updates](software-updates.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

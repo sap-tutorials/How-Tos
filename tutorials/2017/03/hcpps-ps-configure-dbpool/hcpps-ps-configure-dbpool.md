@@ -41,7 +41,7 @@ On the left side menu bar, you can expand **Monitoring > JMX Console**.
 
 ![aac4paservices JMX Console](01.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Access the database pool size parameter)]
@@ -52,7 +52,7 @@ As you can see the default value is 4.
 
 ![aac4paservices JMX Console](02.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Modify the database pool size parameter)]
@@ -69,7 +69,7 @@ An new entry will appear in the **Operation results**.
 >
 > It is not required to restart the application after the parameter is updated. and if the application is restarted, the change will be maintained.
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

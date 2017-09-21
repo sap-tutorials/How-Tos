@@ -70,7 +70,7 @@ With the SAP HANA, express edition virtual machine, you should have something li
   - host fully qualified name: `hxehost.localdomain.com`
   - IP address: should start with `192.168.48.XXX`
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Installing SAP Vora, developer edition)]
@@ -119,7 +119,7 @@ With the SAP Vora, developer edition virtual machine, you should have something 
   - host fully qualified name: `linux-6rxg.suse`
   - IP address: should start with `192.168.48.XXX`
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Install the SAP HANA Spark controller)]
@@ -204,7 +204,7 @@ export HANA_SPARK_ADDITIONAL_JARS=/opt/vora/lib/vora-spark/lib/spark-sap-datasou
     </configuration>
     ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Starting the SAP HANA Spark controller)]
@@ -242,7 +242,7 @@ cd /usr/sap/spark/controller/bin
 ./hanaes start
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Network Configuration - Local machine)]
@@ -287,7 +287,7 @@ You should now be able to ping using the host names from your host and your syst
 
 Let's now make each machine see each other.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 6: ](Network Configuration - SAP HANA)]
@@ -313,7 +313,7 @@ With the SAP Vora, developer edition virtual machine, you should add something l
 
 You should now be able to ping the SAP Vora machine using this new host name from the SAP HANA host.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 7: ](Network Configuration - SAP Vora)]
@@ -340,14 +340,14 @@ With the SAP HANA, express edition virtual machine, you should add something lik
 
 You should now be able to ping the SAP HANA machine using this new  host name from the SAP Vora host.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 8: ](Verify your SAP HANA installation)]
 
 In the [How to download and install the HANA Eclipse plugin](https://www.sap.com/developer/how-tos/2016/09/hxe-howto-eclipse.html) tutorial, you will find instructions regarding how to install and configure the HANA Eclipse plugin, so you will be able to connect to you HANA system.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 9: ](Verify your SAP Vora installation)]
@@ -379,7 +379,7 @@ netstat -ano | grep LISTEN | grep -e "7860" -e "8032" -e "8040" -e "9099" -e "92
 
 This should return 7 entries.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 10: ](Connect SAP HANA to SAP Vora)]
@@ -470,7 +470,7 @@ create virtual table "<HANA schema>"."<HANA virtual table name>"
 
 >Note: I recommend to upper case table names on both side to avoid any issues when creating the virtual tables.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 11: ](Connect SAP Vora to SAP HANA)]
@@ -490,7 +490,7 @@ OPTIONS (
 )
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

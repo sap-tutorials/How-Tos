@@ -27,7 +27,7 @@ When you install SAP HANA 2.0, express edition, Telemetry is enabled by default.
 
 >**Important**: Your privacy is critical to SAP. Telemetry collects anonymous usage information while ensuring complete privacy. No identifying information or private information is collected, and you can opt out of telemetry at any time.
 
-[DONE]
+
 [ACCORDION-END]
 -->
 
@@ -59,7 +59,7 @@ In Cockpit, select **Cockpit Settings > Proxy**.
 
 - If you made any changes, click  **Save**.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Information: ](Cockpit Section Links)]
@@ -74,7 +74,7 @@ The Notifications and Feedback section has three links:
 
 ![Notifications and Feedback](notifications_and_feedback.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Link: ](Notifications)]
@@ -84,7 +84,7 @@ The **Notifications** link will send you to the notification center in Cockpit. 
 > Note:
 > In order to receive messages from SAP, data collection must be enabled.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Link: ](Configuring Data Collection)]
@@ -115,7 +115,7 @@ If you are inside a corporate firewall and use a proxy for connecting to HTTP an
 > xs restart cockpit-telemetry-svc
 > ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Link: ](Provide feedback)]
@@ -125,7 +125,7 @@ In the **Provide feedback** link, you can provide feedback about your experience
 > Note:
 > The prompt is for feedback only. If you have a support question, post it to the *Community* section on the [SAP HANA, express edition](https://www.sap.com/developer/topics/sap-hana-express.community.html) home page.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Alternative: ](Disable and Enable Data Collection via Command Line)]
@@ -148,7 +148,7 @@ To re-enable data collection, run:
 
 >**Tip**: If you installed using the Virtual Machine method, `<sid>` is `HXE`.
 
-[DONE]
+
 [ACCORDION-END]
 
 <!--
@@ -156,7 +156,7 @@ To re-enable data collection, run:
 
 If you want to learn more about the `hxe_telemetry.sh` script, type **`./hxe_telemetry.sh --help`**
 
-[DONE]
+
 [ACCORDION-END]
 -->
 

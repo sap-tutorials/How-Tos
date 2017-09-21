@@ -25,7 +25,7 @@ This How-To shows how to create a web application with Flask for Azure's App Ser
 
 Make sure that you have the HANA, express edition database running, and that it is accessible from Azure's App Service. For instructions on how to perform a binary installation of HANA, express edition on an Azure virtual machine see the [Installing SAP HANA, express edition, on Microsoft Azure and `openSUSE`](https://www.sap.com/developer/tutorials/hxe-azure-open-suse.html).
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Update Application to Access HXE)]
@@ -166,7 +166,7 @@ Push the updated files to Azure to the Git repository:
 ```
 git push
 ```
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: Test Flask Application](Test Your Application to Azure's App Service)]
@@ -180,7 +180,7 @@ git push
 
 ![Results in Browser](3.PNG).
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

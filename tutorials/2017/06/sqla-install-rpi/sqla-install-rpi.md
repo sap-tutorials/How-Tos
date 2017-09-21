@@ -37,7 +37,7 @@ sudo apt full-upgrade
 
 It can take even up to one hour to finish the previous command depending on the number of packages to be upgraded.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Register for SAP SQL Anywhere Developer Edition)]
@@ -45,7 +45,7 @@ Register for the SAP SQL Anywhere Developer Edition: https://www.sap.com/cmp/syb
 
 Once you have received confirmation e-mail, check its content for links to download software packages for different versions, links to documentation and a link to user forums.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -62,7 +62,7 @@ tar -xfv sqla17developerlinuxarm.tar.gz
 ls sqlany17/
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Run the setup script)]
@@ -103,7 +103,7 @@ found in the samples directory of the install. For example, run:
   source "/opt/sqlanywhere17/samples/sample_config32.sh"
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Check the installed software)]
@@ -116,7 +116,7 @@ dbsrv17 -v
 
 ![Check the db version](sqla01_02.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 ---
@@ -127,7 +127,7 @@ dbsrv17 -v
 [ACCORDION-BEGIN [Step 6: ](Check SAP SQL Anywhere documentation)]
 Check complete documentation: http://dcx.sap.com/index.html#sqla170/en/html/822e707dc8624445a615b7180321d900.html
 
-[DONE]
+
 [ACCORDION-END]
 
 

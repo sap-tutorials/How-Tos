@@ -54,7 +54,7 @@ On your client machine(s), do the following:
     sudo sh - c 'echo <ip_address_of_host>    <alias> >> /etc/hosts'
     ```
 
-[DONE]
+
 [ACCORDION-END]
 
 > Note:
@@ -93,7 +93,7 @@ On your client machine(s), do the following:
 
     ![unixODBC install success](odbcinst.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Create the .odbc.ini File)]
@@ -134,7 +134,7 @@ On your client machine(s), do the following:
     databasename = client
     ```
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -156,7 +156,7 @@ If successful, a list of commands displays:
 
 ![Successful Connection](odbcconnect_success.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 

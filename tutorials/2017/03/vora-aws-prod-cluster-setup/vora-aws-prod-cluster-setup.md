@@ -38,7 +38,7 @@ After launching, we come to a page with preselected AWS instance type as `m4.2xl
 
 ![choose instance type](1.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 2: ](Select your VPC)]
@@ -49,7 +49,7 @@ Choose the Network as VPC created earlier and enable **Auto-assign Public IP**. 
 
 ![roles](2b.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 3: ](Update the Security Group)]
@@ -60,7 +60,7 @@ Edit the Security Group and choose the Security group created earlier.
 
 ![config security group](3b.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 4: ](Launch your instance)]
@@ -69,7 +69,7 @@ Launch instance after verifying all the selection by clicking **Launch**.
 
 ![review instance launch](4.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 5: ](Select the `ssh` key pair)]
@@ -78,7 +78,7 @@ Choose the `ssh` key pair. If none exists, create one and store it safe for conn
 
 ![select ssh key pair](5.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 6: ](Verify instance status)]
@@ -88,7 +88,7 @@ View the Instance status in the Console. Wait till the instance **Status Check**
 ![review instance launch](6.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -98,7 +98,7 @@ Make sure that the required ports in the edit inbound rules dialog of the instan
 
 ![open ports](cluster-picture1.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -121,7 +121,7 @@ Read the End User License Agreement and accept it to proceed further
 ![EULA](cluster-picture5.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -137,7 +137,7 @@ The steps above are needed only for first-time setup. Later, the console passwor
 
 Data node (or nodes) can be added using the **Add Node** button.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -176,7 +176,7 @@ In case of configuration failure, retry using the **CONFIGURE** button.
 
 ![Configure](cluster-picture9.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 12: ](Log in to the Apache Ambari console)]  
@@ -187,7 +187,7 @@ Log in to the Apache Ambari console at `http://<public ip of Manager>:8443`. The
 
 ![Ambari console](cluster-picture11.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 13: ](Vora Manager UI)]
@@ -202,7 +202,7 @@ Click on the Vora UI under resources or enter `http://<publicip>:9443` in the br
 
 ![Vora manager UI](cluster-picture14.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 14: ](Vora Tools)]
@@ -210,7 +210,7 @@ Click on the Vora UI under resources or enter `http://<publicip>:9443` in the br
 Vora Tools can be accessed via the link on SAP Vora Console page or at `http://<public ip of manager instance>:9453`.
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -224,7 +224,7 @@ Click on **Create new note** to create a new notebook.
 
 ![Add note](cluster-picture16.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 16: ](Add Data Node or nodes)]
@@ -261,7 +261,7 @@ If the node has been removed from Ambari and if its still available in the cloud
 ![Unmanaged node](cluster-picture24.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN[Step 17: ](Manage unmanaged nodes)]
@@ -273,7 +273,7 @@ If the node has been removed from Ambari and if its still available in the cloud
 
 ![Unmanaged node](cluster-picture26.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -294,7 +294,7 @@ For SAP Vora console software updates, click **RESTART TO UPDATE NOW**. The upda
 ![Software updates](cluster-picture30.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

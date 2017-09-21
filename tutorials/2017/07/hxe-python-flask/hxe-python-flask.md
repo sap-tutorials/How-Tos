@@ -168,7 +168,7 @@ The results would look like below.
 
 You now have a working Python/Flask application connecting to SAP HANA.
 
-[DONE]
+
 [ACCORDION-END]
 
 ---

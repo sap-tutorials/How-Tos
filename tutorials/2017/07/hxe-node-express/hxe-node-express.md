@@ -43,7 +43,7 @@ This tutorial will guide you through the process to deploy a sample Node.js appl
    ```
    % npm install -g express-generator
    ```
-   [DONE]
+   
    [ACCORDION-END]
 
    [ACCORDION-BEGIN [Step 2: ](Develop Simple Node.js Application)]
@@ -122,7 +122,7 @@ This tutorial will guide you through the process to deploy a sample Node.js appl
     VERSION: '2.00.010.00.1491294693',
     USAGE: 'DEVELOPMENT' } ]
    ```
-   [DONE][ACCORDION-END]
+   [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: Extend Application](Extend Simple Node.js Application to Run as a Web Application)]
 
@@ -260,7 +260,7 @@ block content
    Notice that the browser displays information like what was displayed in earlier output.
 
 
-[DONE]
+
 [ACCORDION-END]
 
 ---

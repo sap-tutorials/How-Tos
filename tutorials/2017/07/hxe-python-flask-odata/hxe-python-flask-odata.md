@@ -154,7 +154,7 @@ Copy the following code to the file `odata.html` under the `templates` directory
   </table>
 
 ```
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Run the application locally to test.)]
@@ -176,7 +176,7 @@ The results would look like below.
 
 You now have a working Python/Flask application connecting to SAP HANA, Express Edition using OData services.
 
-[DONE]
+
 [ACCORDION-END]
 
 ---

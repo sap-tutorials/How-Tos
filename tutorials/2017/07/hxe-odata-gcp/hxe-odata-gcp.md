@@ -63,7 +63,7 @@ This `OData` service can then be consumed in various applications similar to con
 
 9. Make sure you are able to log on to the system.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Create an XS Project)]
@@ -78,7 +78,7 @@ This `OData` service can then be consumed in various applications similar to con
 
 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Create an XS OData Service)]
@@ -131,7 +131,7 @@ This `OData` service can then be consumed in various applications similar to con
       [Import Data into SAP HANA](https://www.sap.com/developer/tutorials/studio-import-data.html)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 ---

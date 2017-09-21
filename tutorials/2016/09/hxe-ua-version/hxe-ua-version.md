@@ -29,7 +29,7 @@ Follow the chart below to decide which version of SAP HANA, express edition to d
 
 ![HANA Express flowchart](hxe-ua-versions.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 

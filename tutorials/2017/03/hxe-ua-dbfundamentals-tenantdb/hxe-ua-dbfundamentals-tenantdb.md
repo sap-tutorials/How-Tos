@@ -51,7 +51,7 @@ How to create a tenant database using either HANA Cockpit or an SQL command line
 
     ![Successfully Created Tenant Database](success.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Option 2: ](Using an SQL Command Line)]
@@ -70,7 +70,7 @@ CREATE DATABASE TENANTDB SYSTEM USER PASSWORD Password1
 
 This creates the tenant database "TENANTDB" with the SYSTEM user password "`Password1`".
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

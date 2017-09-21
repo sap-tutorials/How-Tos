@@ -92,7 +92,7 @@ This tutorial will guide you through the process of deploying a sample `HANA, ex
    http://hxeapp-dev.2tmfx3b2bn.us-west-2.elasticbeanstalk.com/
    ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Deploy a Python/Flask Application)]
@@ -139,7 +139,7 @@ This tutorial will guide you through the process of deploying a sample `HANA, ex
     % eb open
     ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Deploy a GO Application)]
@@ -235,7 +235,7 @@ This tutorial will guide you through the process of deploying a sample `HANA, ex
 
     ![Results in Browser](2.png).
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Deploy a Ruby - Sinatra Application)]
@@ -267,7 +267,7 @@ This tutorial will guide you through the process of deploying a sample `HANA, ex
 
     ![Sample Page](5.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 ---

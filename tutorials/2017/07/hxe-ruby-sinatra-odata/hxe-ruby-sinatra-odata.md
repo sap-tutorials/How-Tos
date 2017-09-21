@@ -112,7 +112,7 @@ This tutorial will guide you through the process to deploy a sample application 
 
     ![Output of OData service](2.png)
 
-[DONE]
+
 [ACCORDION-END]
 ---
 
