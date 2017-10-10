@@ -65,6 +65,7 @@ Restart Eclipse as prescribed after adding HANA Plugin.
 
 Change perspective to SAP HANA Administrative Console Window > Perspective > SAP HANA Administrative Console
 
+![image 1](four.png)
 
 
 [ACCORDION-END]
@@ -98,6 +99,7 @@ Connection Properties:
 - Enable SAP start service Connection
 - Finish
 
+![image 1](two.png)
 
 
 [ACCORDION-END]
@@ -106,6 +108,7 @@ Connection Properties:
 
 Confirm connection as shown below:
 
+![image 1](three.png)
 
 
 [ACCORDION-END]
