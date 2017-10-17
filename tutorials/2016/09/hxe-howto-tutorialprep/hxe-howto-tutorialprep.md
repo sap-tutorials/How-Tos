@@ -51,7 +51,7 @@ ALL passwords | <user defined> (referred to as `HANAROCKS2016` or `HanaRocks2017
 
 **Note** : The command `xs` will only be available if you have installed XS Classic or XS Advanced. The server-only installation as of HANA 2.0 SPS01 version does not bring `xs` by default.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Create user)]
@@ -75,7 +75,7 @@ Reminder: version 1.0 SP12 default instance number is 00, in below `hdbsql` comm
 ```
 
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](For XS Advanced installation - Add role to XSA)]
@@ -86,7 +86,7 @@ Add XSA "space role" for workshop user in the development space:
 % xs set-space-role WORKSHOP_01 HANAExpress development SpaceDeveloper
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Verify user connection  to HANA, express edition)]
@@ -101,7 +101,7 @@ Expected result:
 
 ![image 1](1.PNG)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](XS Installation only - Verify user connection to XSA)]
@@ -116,7 +116,7 @@ Expected result:
 
 ![image 1](2.PNG)
 
-[DONE]
+
 [ACCORDION-END]
 
 

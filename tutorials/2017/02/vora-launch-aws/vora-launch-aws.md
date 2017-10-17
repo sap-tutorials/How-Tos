@@ -54,7 +54,7 @@ Read and accept the EULA
 
 Get the link to the Image (AMI) in the AWS console
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -76,7 +76,7 @@ The ID is shown here:
 
 ![AMI ID](ami-id.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -95,7 +95,7 @@ Edit the Security Group and choose the Security group created earlier.
 ![Security groups](sec-gps3.png)
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -111,7 +111,7 @@ Click on **Launch Instances**.
 
 ![Security groups](select-key.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](View the instance)]
@@ -124,7 +124,7 @@ View the instance status in the console. Wait until the instance status check sh
 
 Now the SAP Vora instance is ready for cluster configuration and management.
 
-[DONE]
+
 [ACCORDION-END]
 
 

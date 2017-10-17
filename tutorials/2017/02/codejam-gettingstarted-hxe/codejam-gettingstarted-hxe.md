@@ -5,7 +5,7 @@ primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>how-to, tutorial>beginner, tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition  ]
 ---
 ## Prerequisites  
- - **Systems used:** SAP HANA 1.00 SPS12, SAP HANA 2.00 SPS00, SAP HANA 2.00 SPS01 - SAP HANA, express edition
+ - **Systems used:** SAP HANA 1.00 SPS12, SAP HANA 2.00 SPS00, SAP HANA 2.00 SPS01, SAP HANA 2 SPS02 - SAP HANA, express edition
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
@@ -32,65 +32,45 @@ Now proceed to [SAP HANA, express edition](https://www.sap.com/developer/topics/
 
 ![HXE](2.png)
 
-> Remember you will need a laptop or machine with at least **12 GB** of ram as the virtual machine requires **8 GB** of ram - we will focus on the `Server Only` image during the event. You can also choose a cloud provider but please note those require a credit card to sign up for most.
+> Remember you will need a laptop or machine with at least **8 GB** of RAM for server-only or **16GB** of RAM for XS Advanced applications. You can also choose a cloud provider but please note those require a credit card to sign up even if they offer free initial credits.
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 2:](Get your version HXE)]
+[ACCORDION-BEGIN [Step 2:](Get your version of HXE)]
 
+Depending on your choice and your available resources, you can install SAP HANA, express edition, as a Virtual Machine on your computer or on a cloud provider.
+
+**You will move into other tutorials and always back to this one**. It is advisable that you keep this open in one tab.
+
+_Google Cloud Platform Launcher_
+If you are looking for the server-only version and would like to use Google Cloud Platform, there is a `one-click` setup option that is [explained in this guide](https://www.sap.com/developer/tutorials/hxe-gcp-getting-started-launcher.html).
+
+_Virtual Machine or Binary manual Installation_
 In order to get your copy of the download, either the virtual machine or the binaries to install on your own Linux installation you will need to [register](https://www.sap.com/cmp/ft/crm-xu16-dat-hddedft/index.html).
 
 ![Register](3.png)
 
-[ACCORDION-END]
+Once you have registered, proceed to setup you SAP HANA, express edition, using the right tutorial series depending on your choice:
+- Virtual Machine method: https://www.sap.com/developer/groups/hxe-install-vm.html
+- Binary Installer method: https://www.sap.com/developer/groups/hxe-install-binary.html
 
-[ACCORDION-BEGIN [Step 3:](Get your VM software)]
-
-While you begin to download your Virtual Machine image or the binaries, again we are focused on the `Server Only` image during the event. You should head over to [Google](http://www.google.com) and search for a VM player for your system unless you are running a Linux operating system and plan to install the binaries (and proper dependencies) directly.
-
-For Windows we recommend the VMware Workstation Player which is a free offering and for Mac OS X we recommend Virtual Box. But the choice is entirely up to you.
-
-[ACCORDION-END]
-
-[ACCORDION-BEGIN [Step 4:](Import your OVA or install your binaries)]
-
-Once you have the VM installed and your download is complete you will need to `open` your image via the VM software which will result in an import taking place.
-
-If you chose the option to download the binaries instead you will need to follow the steps required for installing the system from scratch. You can also check out the [following guide](https://blogs.sap.com/2017/02/07/hana-express-edition-on-google-cloud-platform-and-ubuntu/) which walks your through the process.
-
-> At this point you can can continue with steps 5, 6 but remember to follow the steps from the PDF that came with your download on what you need to do the first time you start the system. or you can wait until the day of the event and we will help you through steps 5, 6, 7 and 8.
+_Manual binary installations with alternative free operating systems_
+- Only for SPS01 and earlier - Google Cloud platform and Ubuntu: https://blogs.sap.com/2017/02/07/hana-express-edition-on-google-cloud-platform-and-ubuntu/
+- `openSUSE` on MS Azure: https://blogs.sap.com/2017/05/22/setting-up-your-free-sap-hana-express-edition-on-ms-azure-on-opensuse/
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 5:](Download Eclipse)]
 
-While the import is taking place you will need to download a copy of the Eclipse software which will allow you to add the appropriate plugins to connect to your new SAP HANA, express edition, server.
 
-We recommend [Eclipse Neon](http://www.eclipse.org/downloads/packages/), the Java EE version in case you later want to explore the SAP Cloud Platform.
+[ACCORDION-BEGIN [------------------------------OPTIONS-------------------------------](Choose between OPTION A: HANA Studio, OPTION B: Server-only and external access or OPTION C: XS Advanced Development )]
 
-[ACCORDION-END]
+You are now presented with three paths. None is a dependency of the other and you can follow the three of them, however, if you have installed XS Advanced, it makes sense to go only for that option.
 
-[ACCORDION-BEGIN [Step 6:](Install the Plugins and Connect)]
+**Option A, HANA Studio with XS Classic**, requires one additional installation step with versions SPS12, SPS00 and SPS01. **It is not available with SPS02.**
 
-Now that Eclipse has been installed you will need to add the appropriate plugins. The following guide will take your though [those steps](https://www.sap.com/developer/how-tos/2016/09/hxe-howto-eclipse.html).
+**Option B, server-only and external tools**, does not require the additional XS Classic installation and uses other tools available in the market.  
 
-Finally you are connected to your SAP HANA, express edition, system.
-
-[ACCORDION-END]
-
-[ACCORDION-BEGIN [Step 7:](Create a new user)]
-
-Before you begin running amok in your system we do recommend you create a new user and not use the `SYSTEM` user.
-
-The [following guide](https://www.sap.com/developer/how-tos/2016/09/hxe-howto-tutorialprep.html) will walk you through those steps. You can name your user anything you like or even create 2 users (including the one from the guide `WORKSHOP_01`)
-
-From this point on we hit the actual `working with HXE` steps and that means a bit of coding, modeling and more.
-
-[ACCORDION-END]
-
-[ACCORDION-BEGIN [OPTIONS](Choose between Option A - XS Classic with HANA Studio - or Option B - Server-only and external access)]
-
-You are now presented with two paths. None is a dependency of the other and you can follow both. Option **A**, requires one additional installation step with versions SPS12, SPS00 and SPS01. Option **B** does not require the additional XS Classic installation and uses other tools available in the market.  
+**Option C, XS Advanced development** does not require any additional setup and is only available if you have XS Advanced installed.
 
 [ACCORDION-END]
 
@@ -151,7 +131,15 @@ You can check the installation by opening URL `http://<<hostname>>:80XX/sap/hana
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `A.1`: ]( Coding begins)]
+[ACCORDION-BEGIN [**A: Step `A.1`: ]( Coding with SAP HANA Studio)]
+
+You will need to download a copy of the Eclipse software which will allow you to add the appropriate plugins to connect to your new SAP HANA, express edition, server.
+
+We recommend [Eclipse Neon](http://www.eclipse.org/downloads/packages/), the Java EE version in case you later want to explore the SAP Cloud Platform.
+
+Now that Eclipse has been installed you will need to add the appropriate plugins. The following guide will take your though [those steps](https://www.sap.com/developer/how-tos/2016/09/hxe-howto-eclipse.html).
+
+Finally you are connected to your SAP HANA, express edition, system.
 
 Now that you are connected and have your new users created it is time to actually do a little coding. The following tutorials will walk you through your first project with the Eclipse software and your HXE server.
 
@@ -163,7 +151,7 @@ Now that you are connected and have your new users created it is time to actuall
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `A.2`:](Advanced System Settings)]
+[ACCORDION-BEGIN [**A: Step `A.2`:](Advanced System Settings)]
 
 If you are so inclined you can also enhance your current server installation and add in the browser based tooling to forgo the using of Eclipse for working with the server as well.
 
@@ -171,7 +159,7 @@ This [blog post](https://blogs.sap.com/2016/10/28/enhancing-hxe-server-image/) w
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `A.3`:](Coding from the browser)]
+[ACCORDION-BEGIN [**A: Step `A.3`:](Coding from the browser)]
 
 If you choose to install the browser based tools in Step `A.2` then you can move on to the following tutorials for creating your first project via that environment.
 
@@ -182,7 +170,7 @@ If you choose to install the browser based tools in Step `A.2` then you can move
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `A.4`:](Personalize HXE)]
+[ACCORDION-BEGIN [**A: Step `A.4`:](Personalize HXE)]
 
 The following tutorials and blogs are just some optional items to help you understand your SAP HANA, express edition install and personalize it a bit to suit you.
 
@@ -192,7 +180,7 @@ The following tutorials and blogs are just some optional items to help you under
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `A.5`:](Advanced Topics)]
+[ACCORDION-BEGIN [**A: Step `A.5`:](Advanced Topics)]
 
 The following items are meant for further exploration of the SAP HANA, express edition server and things that are possible with it.
 
@@ -209,19 +197,19 @@ The following items are meant for further exploration of the SAP HANA, express e
 
 The following tutorial explains how to install a SQL client, in this case, `DBeaver`, and connect to SAP HANA, express edition, using the JDBC driver.
 
-[Install `DBeaver`](https://www.sap.com/developer/tutorials/hxe-cj1-download-sql-client.html)
+Access the tutorial to [Install `DBeaver`](https://www.sap.com/developer/tutorials/hxe-cj1-download-sql-client.html)
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `B.1`:](Create a Schema and Add Data into your tables)]
+[ACCORDION-BEGIN [**B: Step `B.1`:](Create a Schema and Add Data into your tables)]
 
 The following tutorial explains how to create a table and insert data manually or using the **Import** SQL command to upload from a CSV file in the database server.
 
-[Upload and Import](https://www.sap.com/developer/tutorials/hxe-cj1-create-table-upload-data.html)
+Continue to [Upload and Import](https://www.sap.com/developer/tutorials/hxe-cj1-create-table-upload-data.html) data.
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `B.2`:](Connect using node.js)]
+[ACCORDION-BEGIN [**B: Step `B.2`:](Connect using node.js)]
 
 The following tutorial explains how to setup your local environment to use Node.js to connect to HXE.
 
@@ -230,7 +218,7 @@ The following tutorial explains how to setup your local environment to use Node.
 [ACCORDION-END]
 
 
-[ACCORDION-BEGIN [**Step `B.3`:](Access the database using node.js)]
+[ACCORDION-BEGIN [**B: Step `B.3`:](Access the database using node.js)]
 
 The following tutorial shows how to use Node.js to get data from HXE.
 
@@ -238,7 +226,24 @@ The following tutorial shows how to use Node.js to get data from HXE.
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [**Step `B.4`:](Coming soon - Parse your table data and display it)]
+[ACCORDION-BEGIN [**B: Step `B.4`:](Coming soon - Parse your table data and display it)]
+
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [OPTION C:](Development with XS Advanced)]
+
+You can start exploring the XS Advanced Cockpit here:
+
+https://www.sap.com/developer/tutorials/xsa-explore-basics.html
+
+You can get started with XS Advanced development following this tutorial series:
+
+https://www.sap.com/developer/groups/hana-xsa-get-started.html
+
+And here is how to integrate data from a database schema into your application:
+
+https://www.sap.com/developer/tutorials/xsa-create-user-provided-anonymous-service.html
+
 
 [ACCORDION-END]
 

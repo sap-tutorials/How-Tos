@@ -37,7 +37,7 @@ You need to have free registration at SAP Store.
 
 Once the product is requested you will receive an e-mail with the link to download an archive file with `.ova` file in it. The size of an archive file is about 2GB.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -49,7 +49,7 @@ Download VMware Workstation Player from <https://my.vmware.com/en/web/vmware/fre
 
 >Ensure you are downloading the correct version for your development machine.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -60,7 +60,7 @@ Open the VMware Workstation Player and in the menu choose **`Player > File > Ope
 
 The import process will take a few minutes.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -84,7 +84,7 @@ The first time you login as user `vora` you will be asked to change your passwor
 
 >Please note that the default keyboard layout for this virtual machine is ___English (US)___ (`qwerty`). You may want to adjust it for your layout by starting YaST tool with `sudo yast` command, and then going to **Hardware** > **System Keyboard Layout**.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -99,7 +99,7 @@ For security reasons, you should change the default passwords for `root` user.
 
 ![root password change](vora14ovasetup02.jpg)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -114,7 +114,7 @@ systemctl list-units vora*
 At the end you should see Vora Manager's Master and Worker services as "running".
 ![vora services running](vora14ovasetup05.jpg)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -139,7 +139,7 @@ To check the version of SAP Vora software click on **Connection status** icon.
 
 You can do users management from SAP Vora Manager, but as well from SAP Vora Tools as described in the next step.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 8: ](User management with SAP Vora Tools)]
@@ -152,7 +152,7 @@ The user is `admin` and the default password is `admin`.
 
 Optionally, you can click on **User Management** icon and edit the user `admin` to change its default password. Make sure you remember the new password.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 9: ](Enable SSH - optional)]
@@ -171,7 +171,7 @@ sudo systemctl enable sshd
 
 >Make sure you understand the security implication of enabling the SSH service.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 10: ](Install the VMware Tools on guest system - optional)]
@@ -204,7 +204,7 @@ The installation process will take a few minutes. It will use default settings w
 
 Now you can set a clock synchronization between your host and guest systems. Go to virtual machine settings (`Ctrl-D`) > **Options** > **VMware Tools** and check **Synchronize guest time with host** option. Click **OK**.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -231,7 +231,7 @@ For example if you want to copy some files with data from your host machine to `
 hdfs dfs -put /mnt/hgfs/shared_from_host/some_file.csv /user/vora/
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -263,7 +263,7 @@ SELECT * FROM t1;
 ```
 
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -295,7 +295,7 @@ You can get a registration code from SUSE that is valid for 60 days and use it t
         - Move up and down in the list with the CURSOR keys. Hit SPACE to toggle installation. Move with TAB to "Accept" and hit ENTER to install the chosen updates.
         - Once done, you can move to "Abort" and leave the update menu.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -342,7 +342,7 @@ _If solution is not available above_
  - Post a question on [Stack Overflow](https://stackoverflow.com/questions/tagged/vora) if you have an account there,
  - Open an internal ticket in SAP Customer Support System using `HAN-VO` component if you are an SAP employee.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 15: ](SAP Vora documentation)]
@@ -354,7 +354,7 @@ There is also the SAP Vora documentation for SAP Vora product, and not only abou
 - Developer guide: https://help.sap.com/viewer/p/SAP_VORA -> "SAP Vora Developer Guide"
 
 
-[DONE]
+
 [ACCORDION-END]
 
 ## Next Steps

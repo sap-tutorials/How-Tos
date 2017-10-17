@@ -19,7 +19,7 @@ Perform these steps to resolve issues when installing SAP HANA 2.0, express edit
 
 ---
 
-[ACCORDION-BEGIN [Step 1: ](Issue &#151; HDB Daemon not Running)]
+[ACCORDION-BEGIN [Issue &#151; ](HDB Daemon not Running)]
 
 You are installing SAP HANA, express edition on a Linux server using `hdblcm`. You receive this error:  
 
@@ -49,10 +49,10 @@ If the status is inactive, start socket activation:
 `systemctl` start `uuidd.socket`
 
 
-[DONE]
+
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 2: ](Issue &#151; Virtual Machine: Checking Resource Usage)]
+[ACCORDION-BEGIN [Issue &#151; ](Virtual Machine: Checking Resource Usage)]
 
 You are having memory issues on your VM and want to check resource usage.
 
@@ -79,10 +79,10 @@ You can also run the following command to see if you are running out of disk spa
 Look for the **Use%** for the `/dev/sda1 filesystem`. If it is down to just a few GB, you may have run out of disk space when performing your recent operation.
 
 
-[DONE]
+
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 3: ](Issue &#151; SAP HANA XS Applications Run Error)]
+[ACCORDION-BEGIN [Issue &#151;](SAP HANA XS Applications Run Error)]
 
 You are trying to run a SAP HANA service on your SAP HANA 2.0, express edition installation and are receiving an error.
 
@@ -112,16 +112,14 @@ xs start <app>
 
 It may take a few minutes for the system to get started. Run `xs apps` again to see if the app has started and that under `instances` the app shows `1/1`.
 
-[DONE]
+
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 4: ](Issue &#151; Download Manager Shows Error)]
+[ACCORDION-BEGIN [Issue &#151;](Download Manager Shows Error)]
 
 Error: `Failed to concatenate downloaded files`
 
 You are downloading packages using the Download Manager. The Status area and Progress Detail area show the error `Failed to concatenate downloaded files`.
-
-![Download Manager](hxe_dm_failure.PNG)
 
 ### Solution
 
@@ -141,10 +139,10 @@ or
 
 Change the **Save directory**. Download again.     
 
-[DONE]
+
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 5: ](Issue &#151; Locate Download Manager Log File)]
+[ACCORDION-BEGIN [Issue &#151;](Locate Download Manager Log File)]
 
 You are downloading packages using the Download Manager when you terminate Download Manager before download completes, or Download Manager quits unexpectedly.
 
@@ -156,43 +154,9 @@ Linux: **`/tmp/hxedm[yymmdd].log`**
 
 Windows: **`%TEMP%\hxedm_[yymmdd].log`**
 
-[DONE]
+
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 6: ](Issue &#151; Update Fails with Error Message)]
-
-When upgrading SAP HANA, express edition 2.0 SP 00 to SAP HANA, express edition 2.0 SP 01, the update fails with an error message. The error message is:
-
-```
-Installation of archive file(s) '/usr/sap/HXE_2_SP1/HANA_EXPRESS_20/DATA_UNITS/HANA_COCKPIT_20/XSACCOCKPIT02_5.zip' failed.
-Installation of the component XSAC_COCKPIT (sap.com) 2.2.5 failed during deployment.
-Installation of SAP HANA Cockpit failed
-Update of SAP HANA Express Edition components failed.
-Installation of XS Advanced components failed
-Update of SAP HANA Cockpit failed
-```
-### Solution
-
-1. As `<SID>adm` user, login to `XSA`.
-
-    ```bash
-    xs login -u xsa_admin -p <password>
-    ```
-
-2. Run the following command to update the Cockpit application.
-
-    ```bash
-    xs install <extract_path>/HANA_EXPRESS_20/DATA_UNITS/HANA_COCKPIT_20/XSACCOCKPIT02_5.zip
-    ```
-
-3. Run the following command to update the SAPUI5 SDK 1.44 application.
-
-    ```bash
-    xs install <extract_path>/HANA_EXPRESS_20/DATA_UNITS/HANA_COCKPIT_20/XSACUI5FESV344_10.zip
-    ```
-
-[DONE]
-[ACCORDION-END]
 
 ## Next Steps
 - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)

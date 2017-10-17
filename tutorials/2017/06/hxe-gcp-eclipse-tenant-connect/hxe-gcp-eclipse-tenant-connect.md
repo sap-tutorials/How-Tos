@@ -30,12 +30,12 @@ Click on the **Configuration** tab and use the value `use_default_route` as a fi
 
 ![Look for default route](2.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Add a new key-value pair)]
 
-Right-click on `public hostname resolution` and on **Add parameter**. Use `map_localhost` as the key and your external IP as shown in the Compute Engine as the value.
+Right-click on `public hostname resolution` and on **Add parameter**. Use `map_hxehost` as the key and your external IP as shown in the Compute Engine as the value.
 
 ![Add key-value pair](3.png)
 
@@ -45,7 +45,7 @@ This is what `public_hostname_resolution` should look like:
 
 ![Hostname mapping](4.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -54,7 +54,7 @@ You can now proceed to connect to your tenant DB as a **New System**:
 
 ![Connect to a tenant DB](5.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 

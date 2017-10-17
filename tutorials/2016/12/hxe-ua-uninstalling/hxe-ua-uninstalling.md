@@ -32,7 +32,7 @@ Uninstall the SAP Host Agent:
 
 `sudo /usr/sap/hostctrl/exe/saphostexec -uninstall`
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Uninstalling the SAP EA Designer Component)]
@@ -51,7 +51,7 @@ To delete the component but retain the HDI container and repository database, us
 `xs uninstall XSAC_HANA_EA_D`
 
 
-[DONE]
+
 [ACCORDION-END]
 
 

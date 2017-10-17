@@ -52,7 +52,7 @@ How to create a backup for you database using either HANA Cockpit, HANA Studio, 
 
     ![Successful Backup](successful_backup.png)
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Option 2: ](SAP HANA Studio)]
@@ -80,7 +80,7 @@ How to create a backup for you database using either HANA Cockpit, HANA Studio, 
 
 5. Review your backup settings and click __Finish__ to begin creating your backup. Creating your backup will take a few minutes.
 
-[DONE]
+
 [ACCORDION-END]
 
 
@@ -167,7 +167,7 @@ How to create a backup for you database using either HANA Cockpit, HANA Studio, 
 
     A list of your backup files is displayed.
 
-[DONE]
+
 [ACCORDION-END]
 
 

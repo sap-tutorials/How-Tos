@@ -34,7 +34,7 @@ Refer to the Tessel website <https://t1-start.tessel.io/install> for detailed in
 >In rare cases of problems with automatic installation of the driver on Windows machines please use [`Zadig` utility](http://zadig.akeo.ie/) to manually install `WinUSB` driver for the Tessel device in Windows OS.
 >If Tessel is not visible on the list of devices in `Zadig`, then go to **Options** and select **List All Devices**.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Test Tessel communication with your computer)]
@@ -47,7 +47,7 @@ TM-00-04-f000da30-0062434f-4a8145c2
 ```
 If it shows the serial number of the connected Tessel device, then you are good to proceed with exercises.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 3: ](Check and update firmware)]
@@ -69,7 +69,7 @@ If your version is different, then
 `tessel update --force`
 will update the Tessel's firmware to the latest version.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Install text editor)]
@@ -82,7 +82,7 @@ Before you run this code, you do need to ensure that you have a proper text edit
 
 Code for this small JavaScript application is simple and straight forward but you do need to understand some basics of the language.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Create JavaScript file)]
@@ -91,7 +91,7 @@ Create a new folder named `tessel-code` on your hard drive in some place easy to
 
 Inside the `tessel-code` folder, create a new file named `blinky.js`.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 6: ](Add JavaScript code)]
@@ -112,7 +112,7 @@ setInterval(function () {
 }, 100);
 ```
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 7: ](View Tessel code files)]
@@ -121,7 +121,7 @@ Now go to your command prompt, Terminal or shell and change to the `tessel-code`
 
 Once in that directory, run the command `dir` (Windows) or `ls` (Mac/Linux) to show the files in the folder and ensure your `blinky.js` file is there.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 8: ](Run the app)]
@@ -134,14 +134,14 @@ If you are successful then you should see two small LEDs on the device rapidly t
 
 >For extra credit, modify `blinky.js` so the lights blink in unison.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 9: ](Connect your Tessel to Wi-Fi)]
 
 Tessel device has a Wi-Fi chip installed on the board. Connect your Tessel device as described at <https://t1-start.tessel.io/wifi> and do `wifi.js` example from that web page.
 
-[DONE]
+
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 10: ](Try sensors)]
@@ -159,7 +159,7 @@ In particular the Climate sensor you will enhance later in the exercises to prov
 
 > When working with the different modules you should create a separate folder under your `tessel-code` folder, the reason for this is that when you install the libraries for the module it's best to do this in a new directory because when you create your JavaScript code and then run that on the device it deploys the libraries at the same time and thus best to not have everything inside the same exact folder.
 
-[DONE]
+
 [ACCORDION-END]
 
 
