@@ -23,6 +23,8 @@ One solution to be able to passively act on your current location is by using ge
 
 In this tutorial, you will first create an SAP HANA MDC database which will hold location data as geofences. You then expose this data via an OData service. Then you will build an app using this OData service, add logic to display the stored geofences, as well as perform action when your device enters these geofences.
 
+
+
 ### Time to Complete
 **75 Min**.
 
@@ -54,7 +56,7 @@ The database has been created if you see the status **Started** in the **Overvie
 ![Create the SAP HANA MDC database](fiori-ios-scpms-geolocation-03.png)
 
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Log on to the SAP HANA Cockpit)]
@@ -73,7 +75,7 @@ Click **OK**, and you will now see the **SAP HANA Database Administration** over
 
 ![Log on to the SAP HANA Cockpit](fiori-ios-scpms-geolocation-06.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 
@@ -85,7 +87,7 @@ Once logged in, you should see the workbench' landing page:
 
 ![Log on to the SAP HANA Web-based Development Workbench](fiori-ios-scpms-geolocation-07.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 4: ](Assign administration and development roles to SYSTEM user)]
@@ -117,7 +119,7 @@ Click **OK** once done. The roles are now assigned:
 
 ![Assign administration and development roles to SYSTEM user](fiori-ios-scpms-geolocation-10.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 5: ](Create database schema and tables)]
@@ -159,7 +161,7 @@ The just created table is used to store the geofence data you will use in the mo
 
 > **NOTE 2:** Instead of using separate `latitude` and `longitude` columns, SAP HANA supports geospatial columns of type `ST_POINT` and `ST_POLYGON`. These columns, however, are stored in a binary format, and are currently not supported by OData version 2 which you will be using for this tutorial (there is limited supported in OData version 4). For simplicity of the service and not doing any conversions, a simple table with separate `latitude`, `longitude` and `radius` columns is used instead to store the geofence properties, but this could be easily adapted for use with a `ST_POINT` or `ST_POLYGON` column.
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 6: ](Add location data to the database)]
@@ -185,7 +187,7 @@ Select some more points nearby, and create an additional 3 to 4 records with the
 
 > For best results, make sure the circular regions do not overlap and do have some significant radius (at least 10 meters or more).
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 7: ](Create XS OData service)]
@@ -256,7 +258,7 @@ Take a note of the URL, because you will need it later: `https://sapgeo<your acc
 
 For fun, try to add `/GeoLocation` at the end of the URL, and you should see the entities you created in **Step 6**
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 8: ](Create mobile application definition)]
@@ -327,7 +329,7 @@ Click **Finish** to complete the wizard. The dialog will close, and the connecti
 
 Click the **Ping** button next to the destination to check whether the OData service is accessible from the destination.
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 9: ](Create Xcode project with SDK Assistant)]
@@ -388,24 +390,42 @@ After the SDK Assistant has finished, **Xcode** will launch and open the just ge
 
 ![Create Xcode project with SDK Assistant](fiori-ios-scpms-geolocation-33.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 10: ](Test the generated Xcode project)]
 
 In Xcode, assign the appropriate development account to the project's **Team** property in the **General > Signing** panel, and then build and run the app in the simulator.
 
-![Test the generated Xcode project](fiori-ios-scpms-geolocation-34.png)
+![Test the generated Xcode project](fiori-ios-scpms-geolocation-34a.png)
 
-Once the app has started, dismiss the push notifications message by clicking **Allow**, and fill in your SAP Cloud Platform account credentials in the login screen.
+Once the app has started, dismiss the push notifications message by clicking **Allow**.
 
-After you have logged in, you should see the following screen:
+The on-boarding landing page is now displayed:
 
-![Test the generated Xcode project](fiori-ios-scpms-geolocation-35.png)
+![Test the generated Xcode project](fiori-ios-scpms-geolocation-34b.png)
+
+Click the blue **Start** button, and in the SAML login screen, provide your SAP Cloud Platform credentials:
+
+![Test the generated Xcode project](fiori-ios-scpms-geolocation-34c.png)
+
+After you click **Log on**, the **Touch ID** screen is displayed:
+
+![Test the generated Xcode project](fiori-ios-scpms-geolocation-34d.png)
+
+If you are running in the simulator, click **Not Now**, and the **Passcode** screen is displayed:
+
+![Test the generated Xcode project](fiori-ios-scpms-geolocation-34e.png)
+
+Enter an 8-digit numerical passcode, click **Next**, and confirm the passcode. Click **Done** when finished, and the single entity collection is now shown:
+
+![Test the generated Xcode project](fiori-ios-scpms-geolocation-35a.png)
 
 Click on the `GeoLocation` list item, and you should see the list of entities you created with the SQL INSERT statements in **Step 6**.
 
+![Test the generated Xcode project](fiori-ios-scpms-geolocation-35b.png)
 
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 11: ](Add a map view)]
@@ -424,7 +444,7 @@ With the map control still selected, click the little "triangle TIE-fighter" but
 
 ![Add a map view](fiori-ios-scpms-geolocation-38.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 12: ](Add a custom controller class to the map view)]
@@ -451,7 +471,7 @@ Go back to the **Storyboard**, select the **Map View Controller**, and in the **
 ![Add a custom controller class to the map view](fiori-ios-scpms-geolocation-42.png)
 
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 13: ](Enable navigation to the map view)]
@@ -478,7 +498,7 @@ If you now build and run the app and click the **Show Map** button in the toolba
 
 In the next steps, you will implement logic to visually show the geofence data stored in the SAP HANA MDC.
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 14: ](Display your current location on the map)]
@@ -520,12 +540,17 @@ locationManager.delegate = self
 locationManager.requestAlwaysAuthorization()
 ```
 
-Here you set the view controller as the delegate for both the `mapView` and `locationManager` instances. You also set the required location permissions to **Always**. This is needed because you want the app to monitor geofences also when the app is not running. To allow the user to grant this authorization, open `Info.plist` and add the following entry:
+Here you set the view controller as the delegate for both the `mapView` and `locationManager` instances. You also set the required location permissions to **Always**. This is needed because you want the app to monitor geofences also when the app is not running. To allow the user to grant this authorization, open `Info.plist` and add the following two entries:
 
 | Field | Value |
 |----|----|
-| Key | `Privacy - Location Always Usage Description` |
+| Key | `Privacy - Location When In Use Usage Description` |
 | Value | `SAPGeo requires your location in order to notify you when you enter a geofence` |
+
+| Field | Value |
+|----|----|
+| Key | `Privacy - Location Always And When In Use Usage Description` |
+| Value | `SAPGeo requires your location also when you are not using the app` |
 
 ![Display your current location on the map](fiori-ios-scpms-geolocation-49.png)
 
@@ -580,7 +605,7 @@ On the map, scroll to the selected location, and you should now see a blue dot w
 
 ![Display your current location on the map](fiori-ios-scpms-geolocation-51.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 15: ](Display the stored geofences on the map)]
@@ -596,11 +621,12 @@ The OData service returns instances of `GeoLocation`. While this is perfectly fi
 Replace the content of the file with the following code:
 
 ```swift
+
 import MapKit
 import CoreLocation
 
 class SAPGeoLocation: NSObject, NSCoding, MKAnnotation {
-    let identifier: String
+    let identifier: String?
     let title: String?
     let subtitle: String?
     let coordinate: CLLocationCoordinate2D
@@ -615,7 +641,7 @@ class SAPGeoLocation: NSObject, NSCoding, MKAnnotation {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        identifier    = aDecoder.decodeObject(forKey: SAPGeoLocationKey.identifier) as! String
+        identifier    = aDecoder.decodeObject(forKey: SAPGeoLocationKey.identifier) as? String
         title         = aDecoder.decodeObject(forKey: SAPGeoLocationKey.title) as? String
         subtitle      = aDecoder.decodeObject(forKey: SAPGeoLocationKey.subtitle) as? String
         let latitude  = aDecoder.decodeDouble(forKey: SAPGeoLocationKey.latitude)
@@ -740,7 +766,7 @@ You will use the `appDelegate` instance to get a reference to the OData service.
  Loads all geolocations from OData service on SAP Cloud Platform
  */
 func loadLocations() {
-    appDelegate.sapGeoService.loadGeoLocation() { (geolocations, error) in
+    appDelegate.sapGeoService.fetchGeoLocation() { (geolocations, error) in
         guard let geolocations = geolocations else {
             return
         }
@@ -776,7 +802,7 @@ Zoom in (with the simulator, use **Alt-Click** for two-finger pinch) and you sho
 
 ![Display the stored geofences on the map](fiori-ios-scpms-geolocation-55.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 16: ](Add map zoom button)]
@@ -816,7 +842,7 @@ Run the app, select a pin on the map, and click the **Zoom to geofence** button.
 
 ![Add map zoom button](fiori-ios-scpms-geolocation-58.png)
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 17: ](Store geofences for offline usage)]
@@ -835,12 +861,6 @@ Storing it in the SDK's `SecureKeyValueStore` is also a possibility, but since i
 
 So for least complexity, in this tutorial the geofences are stored in the `UserDefaults` database, which makes them persistent even when the app is not running.
 
-First, open `Constants.swift` and add the following constant:
-
-```swift
-static let geofencesKey = "geofences"
-```
-
 Add the following method to the `MapViewController` class:
 
 ```swift
@@ -856,7 +876,7 @@ private func storeLocationsToUserDefaults(locations: [SAPGeoLocation]) {
         listSAPGeoLocations.append(sapGeoLocation)
     }
 
-    UserDefaults.standard.set(listSAPGeoLocations, forKey: Constants.geofencesKey)
+    UserDefaults.standard.set(listSAPGeoLocations, forKey: "geofences")
 }
 ```
 
@@ -864,7 +884,7 @@ This method stores the whole array of `SAPGeoLocation` objects into a single `Us
 
 Locate the `loadLocations()` function, and uncomment the commented out line, so it now calls the newly added `storeLocationsToUserDefaults()` method.
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 18: ](Register geofences for monitoring)]
@@ -890,7 +910,7 @@ private func registerGeofence(location: SAPGeoLocation) {
  - Returns: Instance of `CLCircularRegion`
  */
 private func getRegionForLocation(location: SAPGeoLocation) -> CLCircularRegion {
-    let region = CLCircularRegion(center: location.coordinate, radius: location.radius, identifier: location.identifier)
+    let region = CLCircularRegion(center: location.coordinate, radius: location.radius, identifier: location.identifier!)
     region.notifyOnEntry = true
     region.notifyOnExit = false
     return region
@@ -905,9 +925,9 @@ Method `getRegionForLocation(location:)` takes an `SAPGeoLocation` instance as i
 
 Method `registerGeofence(location:)` then instructs the location manager to start monitoring the supplied `SAPGeoLocation` geofence.
 
-Finally, locate the `renderLocationsOnMap(locations:)` function, and uncomment the commented out line, so it now calls the newly added `getRegionForLocation(location:)` method.
+Finally, locate the `renderLocationsOnMap(locations:)` function, and uncomment the commented out line, so it now calls the newly added `registerGeofence(location:)` method.
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 19: ](Detect geofence events)]
@@ -1003,7 +1023,7 @@ func handleEvent(forRegion region: CLRegion!, didEnter: Bool) {
  - Returns: Instance of `SAPGeoLocation` or `nil` if the geofence could not be found
  */
 func getGeoLocation(fromRegionIdentifier identifier: String) -> SAPGeoLocation? {
-    let storedLocations = UserDefaults.standard.array(forKey: Constants.geofencesKey) as? [NSData]
+    let storedLocations = UserDefaults.standard.array(forKey: "geofences") as? [NSData]
     let sapGeoLocations = storedLocations?.map { NSKeyedUnarchiver.unarchiveObject(with: $0 as Data) as? SAPGeoLocation }
     let index = sapGeoLocations?.index { $0?.identifier == identifier }
     return index != nil ? sapGeoLocations?[index!] : nil
@@ -1012,7 +1032,7 @@ func getGeoLocation(fromRegionIdentifier identifier: String) -> SAPGeoLocation? 
 
 Method `getGeoLocation(fromRegionIdentifier:)` retrieves an instance of `SAPGeoLocation` which has been stored in `UserDetails`. Method `handleEvent(forRegion:didEnter:)` takes the `CLRegion` geofence received from the `CLLocationManagerDelegate` delegate, and displays a notification.
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 20: ](Testing your geofences)]
@@ -1053,7 +1073,7 @@ Also, if you dismiss the app to the background, you will receive a notification:
 
 You may find the simulator acts quite inaccurate at times when testing geofence events. Build and deploy the app on a physical device and enjoy a greater accuracy!
 
-
+[DONE]
 [ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 21: ](Where to go from here)]
@@ -1066,7 +1086,7 @@ You could also use Offline OData for storing geofence data, which may give you d
 
 Or use the event to trigger a separate REST service on SAP Cloud Platform which sends a signal to an IoT device, for instance a connected gate or garage door... The geofencing possibilities are endless!
 
-
+[DONE]
 [ACCORDION-END]
 
 
