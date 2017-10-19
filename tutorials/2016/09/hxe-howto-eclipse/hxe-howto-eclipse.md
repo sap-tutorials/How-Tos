@@ -70,9 +70,9 @@ Change perspective to SAP HANA Administrative Console Window > Perspective > SAP
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Step 7: ](Specify system)]
+[ACCORDION-BEGIN [Step 7A: ](Specify system)]
 
-For non-Docker environments follow instructions below.
+For non-Docker environments follow instructions in 7A.
 
 Add your `HANAExpress` Add System > Specify System
 
@@ -85,6 +85,10 @@ Configuration:
 
 ![image 1](new_system.png)
 
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [Step 7B: ](Specify system - Docker)]
+
 For Docker containers follow these instructions:
 
 Add your `HANAExpress` Add System > Specify System
@@ -92,7 +96,7 @@ Add your `HANAExpress` Add System > Specify System
 Configuration:
 
 - Hostname: `HANAExpress` Hostname (use `/sbin/ifconfig` to find IP address of host)
-- Instance number: <arbitary unique instance number>
+- Instance number: `<arbitary unique instance number>`
 - Mode: _Multiple containers_ > _Tenant database_
 - Name: `SYSTEMDB:39017`
 - Description: `HANAExpress` Edition
