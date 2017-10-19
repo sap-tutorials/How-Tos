@@ -89,7 +89,7 @@ Configuration:
 
 [ACCORDION-BEGIN [Step 7B: ](Specify system - Docker)]
 
-For Docker containers follow these instructions to add a connection your HANAExpress SYSTEMDB:
+For Docker containers follow these instructions to add a connection your HANAExpress SYSTEMDB.
 
 Add your `HANAExpress` Add System > Specify System
 
