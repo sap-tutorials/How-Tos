@@ -72,7 +72,7 @@ Change perspective to SAP HANA Administrative Console Window > Perspective > SAP
 
 [ACCORDION-BEGIN [Step 7A: ](Specify system)]
 
-For non-Docker environments follow instructions in 7B.
+For Docker environments follow instructions in 7B.
 
 Add your `HANAExpress` Add System > Specify System
 
