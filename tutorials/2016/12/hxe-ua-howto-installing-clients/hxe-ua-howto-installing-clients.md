@@ -58,7 +58,7 @@ Install the Download Manager to your client machine and download the client pack
 
 > **Note:** The Download Manager requires Oracle Java SE Runtime Environment 8 (JRE 8) or higher, 64-bit, on your client machine.
 
-1. Save the Download Manager installation file to your client machine and open it. For instructions on downloading and running the Download Manager, see either the [Installing SAP HANA 2.0, express edition (Binary Installer Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing SAP HANA 2.0, express edition (Virtual Machine Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorials, or go straight to the SAP HANA, express edition [registration page](https://www.sap.com/cmp/ft/crm-xu16-dat-hddedft/index.html).
+1. Save the Download Manager installation file to your client machine and open it. For instructions on downloading and running the Download Manager, see either the [Installing SAP HANA 2.0, express edition (Binary Installer Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-binary.html) or [Installing SAP HANA 2.0, express edition (Virtual Machine Method)](http://www.sap.com/developer/tutorials/hxe-ua-installing-vm-image.html) tutorials, or go straight to the SAP HANA, express edition [registration](https://www.sap.com/cmp/ft/crm-xu16-dat-hddedft/index.html).
 
 2. In Download Manager, in the **Image** pull-down, select either  **Virtual Machine** or **Binary Installer**.
 
