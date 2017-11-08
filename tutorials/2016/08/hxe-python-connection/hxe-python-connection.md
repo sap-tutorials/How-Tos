@@ -29,14 +29,14 @@ Once downloaded, you can follow the instructions from the [SAP HANA Client Insta
 
 Once the **SAP HANA Client Software Packages** installation is completed, you can now proceed with the Python driver setup.
 
-The driver is a Python package that needs to be installed using Python utility program (either `pip` or `easy_install`). Ther driver package will be available at:
+The driver is a Python package that needs to be installed using Python utility program (either `pip` or `easy_install`). The driver package will be available at:
 
 | Platform                  | Location                                          |
 |---------------------------|---------------------------------------------------|
 | Microsoft Windows         | `C:\Program Files\SAP\hdbclient\hdbcli-X.Y.Z.zip` |
 | Linux and UNIX            | `/usr/sap/hdbclient/hdbcli-X.Y.Z.zip`             |
 
-Depending on your target platform and the Python utility program avaiable on your system, choose one of the following command:
+Depending on your target platform and the Python utility program available on your system, choose one of the following command:
 
 - `pip` install
 
