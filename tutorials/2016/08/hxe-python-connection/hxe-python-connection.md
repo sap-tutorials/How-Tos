@@ -72,10 +72,8 @@ Create a new Python file named `hxe-connect.py`, Then past the following content
 
 ```python
 import sys
-sys.path.append('/usr/sap/hdbclient/hdbcli')
-sys.path.append('/usr/sap/hdbclient')
 
-import dbapi
+from hdbcli import dbapi
 
 connection = dbapi.connect('<server-host>', <port>, '<username>', '<password>')
 
