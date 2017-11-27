@@ -157,6 +157,40 @@ Windows: **`%TEMP%\hxedm_[yymmdd].log`**
 
 [ACCORDION-END]
 
+[ACCORDION-BEGIN [Issue &#151;](Unable to Obtain an `IPv4` Address in `VMWare`)]
+
+**Issue**: You are unable to obtain an `IPv4` `hxehost` IP address. You are using a `VMWare` hypervisor.
+
+`VMWare` defaults to bridged networking. You may need to adjust `VMWare's` network adapter settings in certain circumstances.
+
+If you are behind a proxy or a firewall, your institution's network may prevent `VMWare` from assigning an `IPv4` address when you attempt to locate your `hxehost` IP address.
+
+**Solution**:
+
+1. In `VMWare`, change your network adapter settings from Bridged to NAT.
+
+2. Wait a few minutes.
+
+3. At the command prompt, enter `sudo ifconfig` to see if an `IPv4` address is now assigned. You do not need to restart your VM.
+
+
+[ACCORDION-END]
+
+[ACCORDION-BEGIN [Issue &#151;](`VMWare` Fusion on Mac OS X: `hxexsa.ova` Installation Fails)]
+
+**Issue**: You use `VMWare` Fusion on Mac OS X. You import and start `hxexsa.ova`. You receive an error message.
+
+This error displays: "XSA cockpit apps failed to start at this point of time. Please retry by running `hxe_cockpit.sh` script"
+
+**Solution**:
+
+- Shut down the instance.
+
+- Re-import `hxexsa.ova`.
+
+- Start SAP HANA 2.0, express edition installation again, and this time choose to run XSA configuration in the background.
+
+[ACCORDION-END]
 
 ## Next Steps
 - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
