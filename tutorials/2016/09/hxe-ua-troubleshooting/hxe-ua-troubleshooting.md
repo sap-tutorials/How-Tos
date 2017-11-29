@@ -157,17 +157,17 @@ Windows: **`%TEMP%\hxedm_[yymmdd].log`**
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Issue &#151;](Unable to Obtain an `IPv4` Address in `VMWare`)]
+[ACCORDION-BEGIN [Issue &#151;](Unable to Obtain an `IPv4` Address in `VMware`)]
 
-**Issue**: You are unable to obtain an `IPv4` `hxehost` IP address. You are using a `VMWare` hypervisor.
+**Issue**: You are unable to obtain an `IPv4` `hxehost` IP address. You are using a `VMware` `hypervisor`.
 
-`VMWare` defaults to bridged networking. You may need to adjust `VMWare's` network adapter settings in certain circumstances.
+`VMware` defaults to `bridged` networking. You may need to adjust `VMware's` network adapter settings in certain circumstances.
 
-If you are behind a proxy or a firewall, your institution's network may prevent `VMWare` from assigning an `IPv4` address when you attempt to locate your `hxehost` IP address.
+If you are behind a proxy or a firewall, your institution's network may prevent `VMware` from assigning an `IPv4` address when you attempt to locate your `hxehost` `IP` address.
 
 **Solution**:
 
-1. In `VMWare`, change your network adapter settings from Bridged to NAT.
+1. In `VMware`, change your network adapter settings from `Bridged` to `NAT`.
 
 2. Wait a few minutes.
 
@@ -176,11 +176,11 @@ If you are behind a proxy or a firewall, your institution's network may prevent 
 
 [ACCORDION-END]
 
-[ACCORDION-BEGIN [Issue &#151;](`VMWare` Fusion on Mac OS X: `hxexsa.ova` Installation Fails)]
+[ACCORDION-BEGIN [Issue &#151;](`VMware` Fusion on `Mac OS X`: `hxexsa.ova` Installation Fails)]
 
-**Issue**: You use `VMWare` Fusion on Mac OS X. You import and start `hxexsa.ova`. You receive an error message.
+**Issue**: You use `VMware` Fusion on `Mac OS X`. You import and start `hxexsa.ova`. You receive an error message.
 
-This error displays: "XSA cockpit apps failed to start at this point of time. Please retry by running `hxe_cockpit.sh` script"
+This error displays: "`XSA` cockpit apps failed to start at this point of time. Please retry by running `hxe_cockpit.sh` script"
 
 **Solution**:
 
@@ -188,7 +188,7 @@ This error displays: "XSA cockpit apps failed to start at this point of time. Pl
 
 - Re-import `hxexsa.ova`.
 
-- Start SAP HANA 2.0, express edition installation again, and this time choose to run XSA configuration in the background.
+- Start SAP HANA 2.0, express edition installation again, and this time choose to run `XSA` configuration in the background.
 
 [ACCORDION-END]
 
