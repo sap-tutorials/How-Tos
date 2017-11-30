@@ -15,7 +15,7 @@ tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, prod
 
 ## Details
 ### You will learn  
-This tutorial will guide you through the process of creating a sample Python/Flask application to connect to SAP HANA, Express Edition.
+This tutorial will guide you through the process of creating a sample Python/Flask application to connect to SAP HANA, Express Edition. 
 
 ### Time to Complete
 **15 Min**

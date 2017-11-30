@@ -7,7 +7,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ## Prerequisites
 
 - See the How-To Details
- 
+
 
 ## Next Steps
 
@@ -17,7 +17,7 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-vora ]
 ## How-To Details
 This How-to is a step-by-step guide to setting up and administering an SAP Vora 1.3 Cluster. Prior to staring this procedure please ensure the following are complete or available:
 
-- An SAP Vora instance running with 2/2 status checks passed in AWS console.
+- An SAP Vora instance running with 2/2 status checks passed in AWS console. 
 - The Manager instance is running under a VPC created following steps from [Create a VPC in AWS for SAP Vora AWS Marketplace Production Edition](https://www.sap.com/developer/how-tos/2017/03/vora-aws-prod-create-vpc.html)
 - The required ports are open. Refer to [Create a Security Group in AWS for SAP Vora AWS Marketplace Production Edition](https://www.sap.com/developer/how-tos/2017/03/vora-aws-prod-security-groups.html)
 - AWS Access key and secret key
