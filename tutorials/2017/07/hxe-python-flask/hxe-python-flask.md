@@ -119,7 +119,7 @@ This tutorial will guide you through the process of creating a sample Python/Fla
     pyhdb==0.3.3
     ```
 
-8. Copy the following code to the file `hello.html` under the `templates` directory.
+6. Copy the following code to the file `hello.html` under the `templates` directory.
 
     ```
     <!doctype html>
@@ -148,6 +148,8 @@ This tutorial will guide you through the process of creating a sample Python/Fla
     <h1>M_DATABASE contents missing</h1>
     {% endif %}
     ```
+
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Run the application locally to test.)]
 
