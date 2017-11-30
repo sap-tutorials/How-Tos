@@ -169,7 +169,7 @@ Run the following commands at the root of the project directory.
     ~TinyWorldFlaskApp$ python main.py
 ```
 
-Browse the application at http://localhost:8080/odata.
+Browse the application at `http://localhost:8080/odata`.
 The results would look like below.
 
 ![Output of OData service](1.png)

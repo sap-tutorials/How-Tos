@@ -122,7 +122,7 @@ Run the following commands at the root of the project directory.
 
 ```
 
-Browse the application at http://localhost:3000/odata/show.
+Browse the application at `http://localhost:3000/odata/show`.
 The results should look like below.
 
 ![Output of OData service](1.png)

@@ -160,7 +160,7 @@ if __name__ == "__main__":
     ```
     ![Sample Output of Deployment](1.PNG)
 
-2. Browse the application at http://127.0.0.1:8080.
+2. Browse the application at `http://127.0.0.1:8080`.
 The results would look like below.
 
     ![Screenshot of browser output](2.PNG)
