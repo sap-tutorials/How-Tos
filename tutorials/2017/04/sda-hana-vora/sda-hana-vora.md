@@ -356,20 +356,20 @@ You can check the following link to verify that all your process are running:
 
 - Hadoop DFS Health page :
 
-  `http://linux-6rxg.suse:50070/dfshealth.html#tab-overview`
+    `http://linux-6rxg.suse:50070/dfshealth.html#tab-overview`
 
 - Hadoop Node and Resource manager endpoint
 
-  `http://linux-6rxg.suse:8032/`
-  `http://linux-6rxg.suse:8040/`
+    `http://linux-6rxg.suse:8032/`
+    `http://linux-6rxg.suse:8040/`
 
 - SAP Vora manager
 
-  `http://linux-6rxg.suse:19000/vora-manager/web/`
+    `http://linux-6rxg.suse:19000/vora-manager/web/`
 
 - SAP Vora tools
 
-  `http://linux-6rxg.suse:9225/web/`
+    `http://linux-6rxg.suse:9225/web/`
 
 You can also run the following command to validate that port up and running:
 
