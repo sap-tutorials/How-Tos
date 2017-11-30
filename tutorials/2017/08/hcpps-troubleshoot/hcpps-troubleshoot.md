@@ -276,11 +276,11 @@ In the tutorial, `C4PAURL` is used to reference your application URL, but is not
 
 For example, in the "Dataset" call you will have to use the following URL:
 
-  - `C4PAURL/dataset/sync`
+  `C4PAURL/dataset/sync`
 
 Which would give you something like this (where XXXXXXXXXXX is your account identifier:
 
-  - `https://aac4paservicesXXXXXXXXXXXtrial.hanatrial.ondemand.com/com.sap.aa.c4pa.services/dataset/sync`
+  `https://aac4paservicesXXXXXXXXXXXtrial.hanatrial.ondemand.com/com.sap.aa.c4pa.services/dataset/sync`
 
 ----
 
