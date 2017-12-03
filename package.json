@@ -26,6 +26,7 @@
     "npm": "=>2.11.3"
   },
   "dependencies": {
+    "html-entities": "^1.2.1",
     "color-log": "^0.0.2",
     "command-line-args": "^4.0.7",
     "inquirer": "^3.3.0",
