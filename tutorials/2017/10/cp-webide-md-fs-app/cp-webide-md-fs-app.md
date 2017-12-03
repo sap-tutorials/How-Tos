@@ -20,7 +20,7 @@ In this tutorial, you will learn how to create an application that contains a ma
 
 [ACCORDION-BEGIN [Step 1: ](Open SAP Web IDE)]
 1. From the SAP Cloud Platform cockpit, choose the services option in the left-hand navigation menu.  
-2. Find SAP Web IDE by using the search or by scrolling down to the **DevOps** area.  
+2. Find SAP Web IDE by using the search or by scrolling down to the **`DevOps`** area.  
 3. Choose the SAP Web IDE tile, which will take you to the SAP Web IDE overview page.  
 4. Choose **Go to Service**, which will launch SAP Web IDE.
 

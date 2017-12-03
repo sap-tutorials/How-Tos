@@ -25,7 +25,7 @@ Most Django based web applications use database back-ends for data persistence. 
 - configure Django settings for HANA, express edition
 - run [the Django Project tutorial](https://docs.djangoproject.com/en/1.10/intro/tutorial01/) using HANA, express edition as the database.
 
-*Note: The `PyHDB` connector is an open source pure Python client for HANA. `PyHDB` does not support the full Python DBAPI Specification v2.0, nor does it support the full `SAP HANA SQL Command Network Protocol.`
+>Note: The `PyHDB` connector is an open source pure Python client for HANA. `PyHDB` does not support the full `Python DBAPI Specification v2.0`, nor does it support the full `SAP HANA SQL Command Network Protocol`.
 
 
 ### Time to Complete

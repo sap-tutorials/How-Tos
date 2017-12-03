@@ -27,7 +27,7 @@ This tutorial will guide you through the process to deploy a sample application 
 
 [ACCORDION-BEGIN [Step 1: ](Configure Google Cloud SDK)]
 
-Install gcloud SDK on your development environment using the instructions from [Google SDK](https://cloud.google.com/sdk/). Follow the prompts and take the default if provided.
+Install `gcloud` SDK on your development environment using the instructions from [Google SDK](https://cloud.google.com/sdk/). Follow the prompts and take the default if provided.
 
 
 Once the SDK is installed open a terminal and type the following command to make sure the installation is working.
@@ -287,7 +287,7 @@ entrypoint: bundle exec ruby app.rb
 </br>
 
 >**Note:**
-> Make sure the `sinatra` gem is listed in your Gemfile in the Application folder.
+> Make sure the `sinatra` gem is listed in your `Gemfile` in the Application folder.
 
 </br>
 

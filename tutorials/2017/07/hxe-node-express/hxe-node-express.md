@@ -43,7 +43,7 @@ This tutorial will guide you through the process to deploy a sample Node.js appl
    ```
    % npm install -g express-generator
    ```
-   
+
    [ACCORDION-END]
 
    [ACCORDION-BEGIN [Step 2: ](Develop Simple Node.js Application)]
@@ -147,7 +147,7 @@ This tutorial will guide you through the process to deploy a sample Node.js appl
 
    Modify `package.json` to include `hdb` driver.
 
-   Edit `package.json` and add below line in the dependencies section. 
+   Edit `package.json` and add below line in the dependencies section.
 
    ```
    "hdb": "~0.12.4"
@@ -176,7 +176,7 @@ This tutorial will guide you through the process to deploy a sample Node.js appl
 }
 ```
 
-2. Call npm install to pull the dependencies
+2. Call `npm` `install` to pull the dependencies
 
    ```
    % npm install
