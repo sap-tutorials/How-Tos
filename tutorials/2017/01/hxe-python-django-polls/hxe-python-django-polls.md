@@ -1,6 +1,7 @@
 ---
 title: How to use Django with HANA, express edition
 description: A How-To that shows how to integrate Django with the SAP HANA, express edition by identifying HANA specific changes needed to complete the Django `polls` tutorial.
+primary_tag: products>sap-hana
 tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
