@@ -107,7 +107,7 @@ This tutorial will guide you through the process to deploy a sample application 
       (dev_appserver.py does not support Ruby currently)
 
       ```
-6. Browse the application at http://localhost:4567.
+6. Browse the application at `http://localhost:4567`.
      The results should look like below.
 
     ![Output of OData service](2.png)

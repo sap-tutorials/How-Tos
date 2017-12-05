@@ -15,7 +15,7 @@ tags: [  tutorial>beginner, topic>big-data, topic>cloud, products>sap-hana, prod
 
 ## Details
 ### You will learn  
-This tutorial will guide you through the process of creating a sample Python/Flask application to connect to SAP HANA, Express Edition.
+This tutorial will guide you through the process of creating a sample Python/Flask application to connect to SAP HANA, Express Edition. 
 
 ### Time to Complete
 **15 Min**
@@ -28,6 +28,7 @@ This tutorial will guide you through the process of creating a sample Python/Fla
 
 
 1. Open terminal and create a directory.
+
     ```
     ~$ mkdir TinyWorldFlaskApp
     ~$ cd TinyWorldFlaskApp/
@@ -42,66 +43,67 @@ This tutorial will guide you through the process of creating a sample Python/Fla
     ~TinyWorldFlaskApp$ cd templates
     ~TinyWorldFlaskApp/templates$ touch hello.html
     ~$ cd ..
-
     ```
+
 3. Copy the below code to the file `application.py` in this directory:
 
-```
-# [START application]
-import logging
-from flask import Flask
-from flask import render_template
-import pyhdb
+    ```
+    # [START application]
+    import logging
+    from flask import Flask
+    from flask import render_template
+    import pyhdb
 
-application = Flask(__name__)
+    application = Flask(__name__)
 
-@application.route('/')
-def connHXE():
-    # define connection to the HXE database you have access to
-    # replace the IP address and password below
-      user_provided_host='<xxx.xxx.xxx.xxx>'
-      user_provided_password='<password>'
-      user_provided_port=39013
-      user_provided_user='system'
+    @application.route('/')
+    def connHXE():
+        # define connection to the HXE database you have access to
+        # replace the IP address and password below
+          user_provided_host='<xxx.xxx.xxx.xxx>'
+          user_provided_password='<password>'
+          user_provided_port=39013
+          user_provided_user='system'
 
-      connection = pyhdb.connect(
-        user_provided_host,
-        user_provided_port,
-        user_provided_user,
-        user_provided_password
-        )
-      if not connection.isconnected():
-          return 'HXE Server is not accessible'
-      cursor=connection.cursor();
-      cursor.execute("SELECT * from M_DATABASE")
-      allrows = ''
-      row = cursor.fetchone()
-      while row is not None:
-        print (row)
-        allrows = allrows + str(row)
-        row = cursor.fetchone()
-      cursor.close()
-      if row is None:
-          return render_template (
-	    'hello.html',
-	    host = user_provided_host,
-	    port = user_provided_port,
-	    user = user_provided_user,
-	    name= allrows )
-      else:
-          return 'Select failed'
+          connection = pyhdb.connect(
+            user_provided_host,
+            user_provided_port,
+            user_provided_user,
+            user_provided_password
+            )
+          if not connection.isconnected():
+              return 'HXE Server is not accessible'
+          cursor=connection.cursor();
+          cursor.execute("SELECT * from M_DATABASE")
+          allrows = ''
+          row = cursor.fetchone()
+          while row is not None:
+            print (row)
+            allrows = allrows + str(row)
+            row = cursor.fetchone()
+          cursor.close()
+          if row is None:
+              return render_template (
+    	    'hello.html',
+    	    host = user_provided_host,
+    	    port = user_provided_port,
+    	    user = user_provided_user,
+    	    name= allrows )
+          else:
+              return 'Select failed'
 
-@application.errorhandler(500)
-def server_error(e):
-    #log the error and stacktrace
-    logging.exception ('An error occurred during a request.')
-    return 'An internal error occured.', 500
+    @application.errorhandler(500)
+    def server_error(e):
+        #log the error and stacktrace
+        logging.exception ('An error occurred during a request.')
+        return 'An internal error occured.', 500
 
-#run the app.
-if __name__ == "__main__":
-    application.run(host='127.0.0.1', port =8080, debug=True)
-#[END application]
-  ```
+    #run the app.
+    if __name__ == "__main__":
+        application.run(host='127.0.0.1', port =8080, debug=True)
+    #[END application]
+    ```
+
 4. Edit the `application.py` file to specify your HXE IP address and the system user password:
 
     ```
@@ -112,40 +114,42 @@ if __name__ == "__main__":
 
 5. Copy the below lines to the  `requirements.txt` file in this directory.
 
-        Flask==0.12.1
-        pyhdb==0.3.3
+    ```
+    Flask==0.12.1
+    pyhdb==0.3.3
+    ```
 
+6. Copy the following code to the file `hello.html` under the `templates` directory.
 
-8. Copy the following code to the file `hello.html` under the `templates` directory.
+    ```
+    <!doctype html>
+    <title>HXE Select from HXE</title>
+    {% if host %}
+    <h1>IP Address: {{ host }}</h1>
+    {% else %}
+    <h1>IP Address missing</h1>
+    {% endif %}
+    {% if port %}
+    <h1>HXE Port Number: {{ port }}</h1>
+    {% else %}
+    <h1>HXE Port Number missing</h1>
+    {% endif %}
+    {% if user %}
+    <h1>HXE User Name: {{ user }}</h1>
+    {% else %}
+    <h1>HXE User Name missing</h1>
+    {% endif %}
+    {% if name %}
+    <h1>M_DATABASE contents:</h1>
+      {% for n in name %}</h1>
+      {{n}}
+      {% endfor %}
+    {% else %}
+    <h1>M_DATABASE contents missing</h1>
+    {% endif %}
+    ```
 
-```
-<!doctype html>
-<title>HXE Select from HXE</title>
-{% if host %}
-<h1>IP Address: {{ host }}</h1>
-{% else %}
-<h1>IP Address missing</h1>
-{% endif %}
-{% if port %}
-<h1>HXE Port Number: {{ port }}</h1>
-{% else %}
-<h1>HXE Port Number missing</h1>
-{% endif %}
-{% if user %}
-<h1>HXE User Name: {{ user }}</h1>
-{% else %}
-<h1>HXE User Name missing</h1>
-{% endif %}
-{% if name %}
-<h1>M_DATABASE contents:</h1>
-  {% for n in name %}</h1>
-  {{n}}
-  {% endfor %}
-{% else %}
-<h1>M_DATABASE contents missing</h1>
-{% endif %}
-```
-
+[ACCORDION-END]
 
 [ACCORDION-BEGIN [Step 2: ](Run the application locally to test.)]
 
@@ -160,7 +164,7 @@ if __name__ == "__main__":
     ```
     ![Sample Output of Deployment](1.PNG)
 
-2. Browse the application at http://127.0.0.1:8080.
+2. Browse the application at `http://127.0.0.1:8080`.
 The results would look like below.
 
     ![Screenshot of browser output](2.PNG)
@@ -173,7 +177,6 @@ You now have a working Python/Flask application connecting to SAP HANA.
 
 ---
 
-## Next Steps
 ## Next Steps
  - If you intend to deploy your application to Google App Engine, go to the [Google App Engine deployment tutorial](https://www.sap.com/developer/how-tos/2017/07/hxe-app-deploy-gcp.html)
  - If you intend to deploy your application to Azure App Service, go to the [Azure App Service deployment tutorial](https://www.sap.com/developer/how-tos/2017/07/hxe-app-deploy-azure.html)

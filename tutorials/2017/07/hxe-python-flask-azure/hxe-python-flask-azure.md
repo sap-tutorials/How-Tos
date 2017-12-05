@@ -10,7 +10,7 @@ tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-editi
  - Familiarity with Azure App Service(AAS).
  - An account on Azure. If you do not already have an Azure account, you can go to the [Azure Portal Page](https://portal.azure.com) and set one up.
  - Git installed on your client system. You can follow these instructions to [download git](https://git-scm.com/downloads).
- - Follow the Azure procedure to create a simple Python web service application, [Azure Python Web App](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/app-service-web/web-sites-python-create-deploy-flask-app.md)
+ - Follow the Azure procedure to create a simple Python web service application.
 
 ## Next Steps
  - Complete other tutorials.
@@ -37,8 +37,6 @@ You will now modify the Flask application to enable it to query the HANA databas
     `templates/hello.html` - An HTML formatted template that uses the flask rendering functionality to merge data generated results from `__init__.py` to create the html page. `hello.html` must be in the `templates` directory.
 
 Follow procedure defined by Azure to create an application using the Flask web framework. Do not configure Git publishing for your newly created web app as instructed in the Azure Doc Tutorial step #6. You will clone the generated Git repository later to have access to the application code.
-
-[Azure Python Web App - follow steps 1-5](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/app-service-web/web-sites-python-create-deploy-flask-app.md)
 
 Confirm the application framework is working by clicking the `Browse` link in the Application Services Overview window or follow the link provided in the `URL` field.
 

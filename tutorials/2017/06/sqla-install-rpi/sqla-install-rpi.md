@@ -84,9 +84,9 @@ Follow installation prompts to:
  9. Review the `README` file.
 
 The setup is finished and the following components should be installed:
-- SQL Anywhere Client (32-bit)
-- SQL Anywhere Server (32-bit)
-- MobiLink Client (32-bit)
+- `SQL Anywhere Client (32-bit)`
+- `SQL Anywhere Server (32-bit)`
+- `MobiLink Client (32-bit)`
 - Samples
 
 Note the following statement displayed during the installation process

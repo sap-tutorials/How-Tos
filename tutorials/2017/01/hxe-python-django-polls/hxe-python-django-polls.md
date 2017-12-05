@@ -1,6 +1,7 @@
 ---
 title: How to use Django with HANA, express edition
 description: A How-To that shows how to integrate Django with the SAP HANA, express edition by identifying HANA specific changes needed to complete the Django `polls` tutorial.
+primary_tag: products>sap-hana
 tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
@@ -10,8 +11,13 @@ tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-e
 ## Next Steps
  - This is a standalone How-To on basic integration of the Django web framework with HANA, express edition. [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
 
+## Details
+Most Django based web applications use database back-ends for data persistence. This how-to tutorial will show you how to configure Django and your application to use HANA, express-edition as the backend database. You will learn how to:
 
- __ NOTE: SAP HANA, express edition version 2.0 implications on 'How-Tos' and 'Tutorials' __
+  - configure Django settings for HANA, express edition
+  - run [the Django Project tutorial](https://docs.djangoproject.com/en/1.10/intro/tutorial01/) using HANA, express edition as the database.
+
+>Note: The `PyHDB` connector is an open source pure Python client for HANA. `PyHDB` does not support the full `Python DBAPI Specification v2.0`, nor does it support the full `SAP HANA SQL Command Network Protocol`.
 
  The available HANA, express edition versions (1.0 SP12 and 2.0 SP00) have different default instance numbers. The published Tutorials and How-Tos refer to the default HANA 2.0 SP00 instance numbers. When using the SP12 version please use the old default instance number and port (3`<instance number>`15):
 
@@ -19,13 +25,6 @@ tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-e
  :-------------------  | :------------------ | :---------------
  1.0 SP12              |  00                 | 30013
  2.0 SP00              |  90                 | 39013
-
-## How-To Details
-Most Django based web applications use database back-ends for data persistence. This how-to tutorial will show you how to configure Django and your application to use HANA, express-edition as the backend database. You will learn how to
-- configure Django settings for HANA, express edition
-- run [the Django Project tutorial](https://docs.djangoproject.com/en/1.10/intro/tutorial01/) using HANA, express edition as the database.
-
-*Note: The `PyHDB` connector is an open source pure Python client for HANA. `PyHDB` does not support the full Python DBAPI Specification v2.0, nor does it support the full `SAP HANA SQL Command Network Protocol.`
 
 
 ### Time to Complete
@@ -43,33 +42,34 @@ Most Django based web applications use database back-ends for data persistence. 
 
     a. Create a file called `test_hxe_conn.py` and add the following python code to it. Modify the value based on your needs, using the hints in the comments. At a minimum, you will need to change the host `ip` address and the password.
 
-  ```
-  import pyhdb
+    ```
+    import pyhdb
 
-  # Define the connection to the HXE database
-  connection = pyhdb.connect(
-      # replace with the ip address of your HXE Host (This may be a virtual machine)
-      host="10.172.91.122",
-      # 39013 is the systemDB port for HXE on the default instance of 90.
-      # Replace 90 with your instance number as needed (e.g. 30013 for instance 00)
-      port=39013,
-      #Replace user and password with your user and password.
-      user="system",
-      password="mypassword"
-      )
+    # Define the connection to the HXE database
+    connection = pyhdb.connect(
+        # replace with the ip address of your HXE Host (This may be a virtual machine)
+        host="10.172.91.122",
+        # 39013 is the systemDB port for HXE on the default instance of 90.
+        # Replace 90 with your instance number as needed (e.g. 30013 for instance 00)
+        port=39013,
+        #Replace user and password with your user and password.
+        user="system",
+        password="mypassword"
+        )
 
-  #Connect to the database and issue a dummy query to verify connectivity
-  cursor = connection.cursor()
-  cursor.execute("SELECT 'Hello Django HANA World' FROM DUMMY")
-  #This should return "Hello Django HANA World"
-  myString = cursor.fetchone()[0]
-  print myString
-  #Close the cursor
-  connection.close()
-  ```
-  b. Run your test script in the python shell: `python test_hxe_conn.py`. If you are able to connect, the following string should be returned: `Hello Django HANA World`. If you are unable to connect, make sure that the connectivity setting--host, user, port and password--are correct for your database.
+    #Connect to the database and issue a dummy query to verify connectivity
+    cursor = connection.cursor()
+    cursor.execute("SELECT 'Hello Django HANA World' FROM DUMMY")
+    #This should return "Hello Django HANA World"
+    myString = cursor.fetchone()[0]
+    print myString
+    #Close the cursor
+    connection.close()
+    ```
 
-  c. At this point, you have verified that you can use the `pyhdb` database driver to connect to HANA, express edition. Now you need to verify that Django can communicate with the `pyhdb` driver. To do this, you need to download the `django_hana` module from https://github.com/mathebox/django_hana_pyhdb.
+      b. Run your test script in the python shell: `python test_hxe_conn.py`. If you are able to connect, the following string should be returned: `Hello Django HANA World`. If you are unable to connect, make sure that the connectivity setting--host, user, port and password--are correct for your database.
+
+      c. At this point, you have verified that you can use the `pyhdb` database driver to connect to HANA, express edition. Now you need to verify that Django can communicate with the `pyhdb` driver. To do this, you need to download the `django_hana` module from https://github.com/mathebox/django_hana_pyhdb.
 
       - Navigate to https://github.com/mathebox/django_hana_pyhdb in a browser.
       - Select `Clone or download`.
@@ -99,7 +99,7 @@ Now that you have verified the installation of Django and verified connectivity 
     }
     ```
     b. Because HANA does not support Timezone, you will also need to change the value of `USE_TZ` in `djhxe/settings.py` from True to False: `USE_TZ=False`.
-    *Note: As a result of this change, there will be time zone values shown in the online tutorial that do not show in your results.*
+    >Note: As a result of this change, there will be time zone values shown in the online tutorial that do not show in your results.*
 
 
 ## Next Steps
