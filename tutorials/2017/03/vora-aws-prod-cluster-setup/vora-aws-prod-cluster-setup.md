@@ -300,3 +300,4 @@ For SAP Vora console software updates, click **RESTART TO UPDATE NOW**. The upda
 ## Next Steps
 
  - View other [SAP Vora How-Tos](https://www.sap.com/developer/tutorial-navigator.how-to.html?tag=products:data-management/sap-hana-vora) or visit the [SAP Vora Developer](https://www.sap.com/developer/topics/vora.html) Page.
+ 

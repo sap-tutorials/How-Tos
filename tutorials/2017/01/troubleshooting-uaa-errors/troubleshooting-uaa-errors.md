@@ -88,10 +88,9 @@ If you look at the message thrown by the client, you will find that although you
 This means we need to make sure communications into those ports are free of blocks:
 
 <ol type="a">
-<li>  Make sure the instance has the proper ports enabled. In CAL, the configuration would look like this for this scenario from `Access points` section in the Virtual Machines tab:<br>
+<li>  Make sure the instance has the proper ports enabled. In CAL, the configuration would look like this for this scenario from `Access points` section in the Virtual Machines tab:<br />
 
-<br>
-<img src="https://raw.githubusercontent.com/SAPDocuments/How-Tos/master/tutorials/2017/01/troubleshooting-uaa-errors/3.png" alt="image 1"/>  </br> </li>
+<img src="https://raw.githubusercontent.com/SAPDocuments/How-Tos/master/tutorials/2017/01/troubleshooting-uaa-errors/3.png" alt="image 1"/>  <br /> </li>
 
   <li> If you are running behind a local or corporate firewall, VPN and/or proxy, make sure traffic is coming in and out.
 
