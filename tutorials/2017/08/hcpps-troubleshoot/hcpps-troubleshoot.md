@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the SAP Cloud Platform Predictive Services
-description: This guide highlights the most common issues encountered by users while using the SAP Cloud Platform Predictive Services.
+title: Troubleshoot the SAP Predictive Services
+description: This guide highlights the most common issues encountered by users while using the SAP Predictive Services.
 primary_tag: products>sap-cloud-platform-predictive-service
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predictive-service]
 ---
@@ -9,16 +9,16 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predict
 
 This troubleshooting is applicable for the following tutorial groups:
 
-  - [Configure the SAP Cloud Platform predictive services](https://www.sap.com/developer/groups/ps-configure.html)
-  - [Test the SAP Cloud Platform predictive services using a REST client](https://www.sap.com/developer/groups/ps-test-rest.html)
-  - [Build an SAPUI5 application to interact with the SAP Cloud Platform predictive services](https://www.sap.com/developer/groups/ps-sapui5.html)
+  - [Configure the SAP Predictive Services](https://www.sap.com/developer/groups/ps-configure.html)
+  - [Test the SAP Predictive Services using a REST client](https://www.sap.com/developer/groups/ps-test-rest.html)
+  - [Build an SAPUI5 application to interact with the SAP Predictive Services](https://www.sap.com/developer/groups/ps-sapui5.html)
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
 
 
 ## How-To Details
-The intent of this trouble shooting guide is to highlight few of the most common issues encountered while starting using the SAP Cloud Platform Predictive Services.
+The intent of this trouble shooting guide is to highlight few of the most common issues encountered while starting using the SAP Predictive Services.
 
 This guide has been built and structured to cover the different situations where you may face these issue.
 
@@ -140,7 +140,7 @@ If the application cannot start and hangs on with a "Starting" status for a whil
 
 This one might be related to multiple causes and the best way to diagnose is to check the logs available under **Monitoring** > **Logging**.
 
-Check the latest "Default Traces" item using the ![icon](00-glasses.png)
+Check the latest "Default Traces" item using the ![icon](00-glasses.png) 
 
 You can also download the file locally using the ![icon](0-download.png) icon.
 
@@ -174,7 +174,7 @@ Check the application status.
 
 If the application is started, then the best way to diagnose the issue is to check the logs available under **Monitoring** > **Logging**.
 
-Check the latest "Default Traces" item using the ![icon](00-glasses.png)
+Check the latest "Default Traces" item using the ![icon](00-glasses.png) 
 
 You can also download the file locally using the ![icon](0-download.png) icon.
 
@@ -276,11 +276,11 @@ In the tutorial, `C4PAURL` is used to reference your application URL, but is not
 
 For example, in the "Dataset" call you will have to use the following URL:
 
-  `C4PAURL/dataset/sync`
+  - `C4PAURL/dataset/sync`
 
 Which would give you something like this (where XXXXXXXXXXX is your account identifier:
 
-  `https://aac4paservicesXXXXXXXXXXXtrial.hanatrial.ondemand.com/com.sap.aa.c4pa.services/dataset/sync`
+  - https://aac4paservicesXXXXXXXXXXXtrial.hanatrial.ondemand.com/com.sap.aa.c4pa.services/dataset/sync
 
 ----
 
@@ -472,7 +472,7 @@ On the trial landscape, only 6GB of RAM is allocated per tenant. You may think t
 
 Your trial HANA MDC instance should get back on its feet shortly, but if you are as impatient as I'm the best way to resolve this issue is to restart your trial HANA MDC instance.
 
-Alternatively, to avoid this issue you can limit the number of pooled connection to you HANA MDC instance from the `aac4paservicess` application by following the following guide: [How to update the database pool configuration of the SAP Cloud for predictive services](http://www.sap.com/developer/how-tos/2017/03/hcpps-ps-configure-dbpool.html)
+Alternatively, to avoid this issue you can limit the number of pooled connection to you HANA MDC instance from the `aac4paservicess` application by following the following guide: [How to update the database pool configuration of the SAP Predictive Services](http://www.sap.com/developer/how-tos/2017/03/hcpps-ps-configure-dbpool.html)
 
 [ACCORDION-END]
 
