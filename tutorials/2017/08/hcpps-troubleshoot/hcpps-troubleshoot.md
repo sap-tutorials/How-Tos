@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot the SAP Predictive Services
-description: This guide highlights the most common issues encountered by users while using the SAP Predictive Services.
+title: Troubleshoot the SAP Predictive services
+description: This guide highlights the most common issues encountered by users while using the SAP Predictive services.
 primary_tag: products>sap-cloud-platform-predictive-service
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predictive-service]
 ---
@@ -9,16 +9,16 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predict
 
 This troubleshooting is applicable for the following tutorial groups:
 
-  - [Configure the SAP Predictive Services](https://www.sap.com/developer/groups/ps-configure.html)
-  - [Test the SAP Predictive Services using a REST client](https://www.sap.com/developer/groups/ps-test-rest.html)
-  - [Build an SAPUI5 application to interact with the SAP Predictive Services](https://www.sap.com/developer/groups/ps-sapui5.html)
+  - [Configure the SAP Predictive services](https://www.sap.com/developer/groups/ps-configure.html)
+  - [Test the SAP Predictive services using a REST client](https://www.sap.com/developer/groups/ps-test-rest.html)
+  - [Build an SAPUI5 application to interact with the SAP Predictive services](https://www.sap.com/developer/groups/ps-sapui5.html)
 
 ## Next Steps
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
 
 
 ## How-To Details
-The intent of this trouble shooting guide is to highlight few of the most common issues encountered while starting using the SAP Predictive Services.
+The intent of this trouble shooting guide is to highlight few of the most common issues encountered while starting using the SAP Predictive services.
 
 This guide has been built and structured to cover the different situations where you may face these issue.
 
@@ -186,13 +186,13 @@ The trace content will be helpful if you create a support case or submit a quest
 
 ----
 
-When I click on the **Predictive Services API Documentation** tile or the **Administration** tile, I receive the following error message:
+When I click on the **Predictive services API Documentation** tile or the **Administration** tile, I receive the following error message:
 
 ```
 HTTP Status 403 - Access to the requested resource has been denied
 ```
 
-- With the **Predictive Services API Documentation** tile, this message is displayed when your account is not granted the **`C4PA-User`** role.
+- With the **Predictive services API Documentation** tile, this message is displayed when your account is not granted the **`C4PA-User`** role.
 
 - With the **Administration** tile, this message is displayed when your account is not granted the **`C4PA-Admin`** role.  
 
@@ -472,7 +472,7 @@ On the trial landscape, only 6GB of RAM is allocated per tenant. You may think t
 
 Your trial HANA MDC instance should get back on its feet shortly, but if you are as impatient as I'm the best way to resolve this issue is to restart your trial HANA MDC instance.
 
-Alternatively, to avoid this issue you can limit the number of pooled connection to you HANA MDC instance from the `aac4paservicess` application by following the following guide: [How to update the database pool configuration of the SAP Predictive Services](http://www.sap.com/developer/how-tos/2017/03/hcpps-ps-configure-dbpool.html)
+Alternatively, to avoid this issue you can limit the number of pooled connection to you HANA MDC instance from the `aac4paservicess` application by following the following guide: [How to update the database pool configuration of the SAP Predictive services](http://www.sap.com/developer/how-tos/2017/03/hcpps-ps-configure-dbpool.html)
 
 [ACCORDION-END]
 
