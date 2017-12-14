@@ -21,9 +21,7 @@ For more details about the Python driver SAP HANA, please refer to the [online d
 
 [ACCORDION-BEGIN [Step 1: ](Install the SAP HANA client)]
 
-You can download the **SAP HANA Client Software Packages** from the [SAP Store](https://store.sap.com/sap/cpa/ui/resources/store/html/SolutionDetails.html?pid=0000012950).
-
-Once downloaded, you can follow the instructions from the [SAP HANA Client Installation and Update Guide](https://help.sap.com/hana/SAP_HANA_Client_Installation_Update_Guide_en.pdf).
+Follow the instructions from the following [How to](https://www.sap.com/developer/how-tos/2016/12/hxe-ua-howto-installing-clients.html) to complete your SAP HANA client installation.
 
 [ACCORDION-END]
 
