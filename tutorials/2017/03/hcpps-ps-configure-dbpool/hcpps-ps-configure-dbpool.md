@@ -1,6 +1,6 @@
 ---
-title: SAP Cloud Platform predictive services, How to update the database pool configuration of the SAP Cloud Platform predictive services
-description: Adjust the database pool setting of the SAP Cloud Platform predictive services to control the load on your HANA instance
+title: SAP Predictive services, How to update the database pool configuration of the SAP Predictive services
+description: Adjust the database pool setting of the SAP Predictive services to control the load on your HANA instance
 primary_tag: products>sap-cloud-platform-predictive-service
 tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predictive-service ]
 ---
@@ -8,10 +8,10 @@ tags: [  tutorial>how-to, tutorial>beginner, products>sap-cloud-platform-predict
 
 ## Prerequisites
   - **Proficiency:** Beginner
-  - **Tutorials:** [Enable, deploy and configure the SAP Cloud Platform predictive services](http://www.sap.com/developer/tutorials/hcpps-ps-configure.html)
+  - **Tutorials:** [Enable, deploy and configure the SAP Predictive services](http://www.sap.com/developer/tutorials/hcpps-ps-configure.html)
 
 ## Next Steps
- - [Install a REST client to interact with the SAP Cloud Platform predictive services](http://www.sap.com/developer/tutorials/hcpps-rest-client-install.html)
+ - [Install a REST client to interact with the SAP Predictive services](http://www.sap.com/developer/tutorials/hcpps-rest-client-install.html)
  - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
 
 ## How-To Details
@@ -20,15 +20,15 @@ The HANA MDC instances available on the SAP Cloud Platform trial environment are
 
 Therefore it is really important to control the load else your HANA MDC will simply restart because not enough resources are available.
 
-The SAP Cloud Platform predictive services are by default configured to run at most 4 jobs in parallel.
+The SAP Predictive services are by default configured to run at most 4 jobs in parallel.
 
-A job is created whenever you run one the SAP Cloud Platform predictive services in asynchronous mode.
+A job is created whenever you run one the SAP Predictive services in asynchronous mode.
 
 The number of concurrent jobs is limited by the number of available database connections in the pool.
 
 Luckily this parameter is exposed as one of the JMX (Java Management Extensions) parameters of the `aac4paservices` Java application.
 
-It can be configured without changing any piece of code in the SAP Cloud Platform predictive services deployed application via the JMX Console.
+It can be configured without changing any piece of code in the SAP Predictive services deployed application via the JMX Console.
 
 ### Time to Complete
   **10 minutes**
@@ -73,5 +73,5 @@ An new entry will appear in the **Operation results**.
 [ACCORDION-END]
 
 ## Next Steps
-- [Install a REST client to interact with the SAP Cloud Platform predictive services](http://www.sap.com/developer/tutorials/hcpps-rest-client-install.html)
+- [Install a REST client to interact with the SAP Predictive services](http://www.sap.com/developer/tutorials/hcpps-rest-client-install.html)
 - [View all How-Tos](http://www.sap.com/developer/tutorial-navigator.how-to.html)
