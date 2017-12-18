@@ -192,5 +192,35 @@ This error displays: "`XSA` cockpit apps failed to start at this point of time. 
 
 [ACCORDION-END]
 
+[ACCORDION-BEGIN [Issue &#151;](Upgrade Script Hangs While Upgrading VM Installation)]
+
+**Issue**: When you run `hxe_upgrade.sh`, you notice the upgrade hangs.
+
+**Solution**: The VM is low on memory. Run the `hxe_gc` memory management script.
+
+1. Open a new terminal to your VM.
+
+2. Run the memory management script.
+
+    The `hxe_gc` memory management script frees up available VM memory.
+
+    - In your VM, log in as `hxeadm` and enter:
+
+    ```
+    cd /usr/sap/HXE/home/bin
+    ```
+
+    - Execute:
+
+    ```
+    hxe_gc.sh
+    ```
+
+    - When prompted for System database user (SYSTEM) password, enter the New HANA database master password you specified during SAP HANA, express edition installation.
+
+    The cleanup process runs. The command prompt returns when the cleanup process is finished.
+
+[ACCORDION-END]
+
 ## Next Steps
 - [View similar How-Tos](http://www.sap.com/developer/tutorials.html) or [View all How-Tos](http://www.sap.com/developer/tutorials.html)
