@@ -1,6 +1,7 @@
 ---
 title: How to use SQLAlchemy with HANA, express edition
 description: A How-To that shows how to integrate SQLAlchemy with the SAP HANA, express edition by identifying HANA specific changes needed to complete the SQLAlchemy `users` tutorial.
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>intermediate, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
