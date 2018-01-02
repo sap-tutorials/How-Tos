@@ -177,7 +177,7 @@ export HANA_SPARK_ADDITIONAL_JARS=/opt/vora/lib/vora-spark/lib/spark-sap-datasou
             <name>sap.hana.es.server.port</name>
             <value>7860</value>
             <final>true</final>
-            <description>Port of the host for HANA</description>
+            <description>Port used by the Spark controller to exchange requests with SAP HANA</description>
         </property>
         <property>
             <name>spark.executor.memory</name>

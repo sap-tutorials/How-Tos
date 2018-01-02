@@ -1,6 +1,7 @@
 ---
 title: How to install and setup git on HANA, express edition.
 description: A How-To that shows how to install and setup the git source code management system on a HANA, express edition virtual machine.
+primary_tag: products>sap-hana\,-express-edition
 tags: [  tutorial>beginner, products>sap-hana, products>sap-hana\,-express-edition, tutorial>how-to ]
 ---
 ## Prerequisites  
