@@ -259,7 +259,7 @@ See these `How-Tos`:
 
 - [How to connect to SAP HANA database server in Python](http://www.sap.com/developer/how-tos/2016/08/hxe-python-connection.html)
 
-#### Uninstall the SAP HAND HDB Client
+#### Uninstall the SAP HANA HDB Client
 
 Each installation has its own uninstallation tool. Use the `hdbuninst` command to uninstall the client software from your command prompt.
 
