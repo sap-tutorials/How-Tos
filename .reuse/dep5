@@ -1,0 +1,8 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: How-Tos
+Upstream-Contact: Joshua Margo (joshua.margo@sap.com)
+Source: https://github.com/sap-tutorials/How-Tos
+
+Files: *
+Copyright:  2022 SAP SE or an SAP affiliate company and https://github.com/sap-tutorials/How-Tos contributors
+License: CC-BY-4.0

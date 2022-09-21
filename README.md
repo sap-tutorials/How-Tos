@@ -1,4 +1,5 @@
 [![CircleCI](https://circleci.com/gh/SAPDocuments/How-Tos.svg?style=svg)](https://circleci.com/gh/SAPDocuments/How-Tos)
+[![REUSE status](https://api.reuse.software/badge/github.com/sap-tutorials/How-Tos)](https://api.reuse.software/info/github.com/sap-tutorials/How-Tos)
 
 # How-Tos for www.sap.com
 Welcome to the Markdown How-To repository for How-To documents on the [SAP developer pages](http://www.sap.com/developer.html).
